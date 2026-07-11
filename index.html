@@ -386,7 +386,14 @@
     return `<span class="conf ${confCls[cf]||'c0'}"><span class="d"></span>${confLbl[cf]||'à vérifier'}</span>`;
   }
   function mapUrl(e){
-    const q = [e.l, e.v].filter(Boolean).join(', ');
+    // ne garde que la venue principale : coupe les listes multi-lieux pour une carte précise
+    let lieu = (e.l || '')
+      .replace(/^multiples venues?\s*:\s*/i, '')
+      .split(/\s\+\s|\s;\s/)[0]
+      .split(/\set lieux\s/i)[0]
+      .trim();
+    if (/^(toute la|dans toute|partout)/i.test(lieu)) lieu = '';
+    const q = [lieu, e.v].filter(Boolean).join(', ');
     return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
   }
   function mapLink(e){
