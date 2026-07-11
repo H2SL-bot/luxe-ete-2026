@@ -1,24 +1,16 @@
 <title>Luxe en France — Été 2026</title>
 <style>
+  /* Thème natif : nuit Riviera (sombre), identité du site. Le clair reste disponible via le bouton thème. */
   :root{
-    --bg:#fafaf7; --bg2:#ffffff; --bg3:#f1efe8;
-    --ink:#1a2230; --ink2:#5a6374; --line:#e3e1d8;
-    --or:#a07c2e; --or-soft:rgba(160,124,46,.10); --or-line:rgba(160,124,46,.35);
-    --azur:#16657f; --azur-soft:rgba(22,101,127,.09);
-    --good:#1e7a52; --good-soft:rgba(30,122,82,.10);
-    --shadow:0 1px 2px rgba(20,25,35,.05),0 8px 28px rgba(20,25,35,.06);
+    --bg:#0f151f; --bg2:#161d2a; --bg3:#1b2331;
+    --ink:#eceadf; --ink2:#97a0b0; --line:#273143;
+    --or:#d3b06a; --or-soft:rgba(211,176,106,.10); --or-line:rgba(211,176,106,.40);
+    --azur:#74b9d6; --azur-soft:rgba(116,185,214,.10);
+    --good:#4cc38a; --good-soft:rgba(76,195,138,.12);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
     --serif:"Didot","Bodoni 72","Bodoni MT",Georgia,serif;
     --sans:"Avenir Next",Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#0f151f; --bg2:#161d2a; --bg3:#1b2331;
-      --ink:#eceadf; --ink2:#97a0b0; --line:#273143;
-      --or:#d3b06a; --or-soft:rgba(211,176,106,.10); --or-line:rgba(211,176,106,.40);
-      --azur:#74b9d6; --azur-soft:rgba(116,185,214,.10);
-      --good:#4cc38a; --good-soft:rgba(76,195,138,.12);
-      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
-    }
+    color-scheme: dark;
   }
   :root[data-theme="light"]{
     --bg:#fafaf7; --bg2:#ffffff; --bg3:#f1efe8;
@@ -27,6 +19,7 @@
     --azur:#16657f; --azur-soft:rgba(22,101,127,.09);
     --good:#1e7a52; --good-soft:rgba(30,122,82,.10);
     --shadow:0 1px 2px rgba(20,25,35,.05),0 8px 28px rgba(20,25,35,.06);
+    color-scheme: light;
   }
   :root[data-theme="dark"]{
     --bg:#0f151f; --bg2:#161d2a; --bg3:#1b2331;
@@ -600,7 +593,7 @@
   /* ── thème ── */
   document.getElementById('themeBtn').addEventListener('click', () => {
     const root = document.documentElement;
-    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : true; // sombre par défaut
     root.dataset.theme = dark ? 'light' : 'dark';
   });
 
