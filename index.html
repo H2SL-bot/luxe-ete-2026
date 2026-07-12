@@ -85,7 +85,13 @@
   .filterbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px 0}
   .filrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
   .filrow + .filrow{margin-top:8px}
+  .navrow{padding-bottom:9px;margin-bottom:3px;border-bottom:1px solid var(--line)}
+  .navchip{display:inline-block;border:1px solid var(--line);background:var(--bg2);color:var(--ink);border-radius:99px;padding:5px 14px;font-size:12.5px;font-weight:600;text-decoration:none;font-family:var(--sans);transition:border-color .15s,background .15s}
+  .navchip:hover{border-color:var(--or);text-decoration:none}
+  .navchip-star{background:var(--or);border-color:var(--or);color:#1a1206;font-weight:700}
+  .navchip-star:hover{background:var(--or);filter:brightness(1.08)}
   .fillabel{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);min-width:64px}
+  section[id]{scroll-margin-top:200px}
   .chip{border:1px solid var(--line);background:var(--bg2);color:var(--ink);border-radius:99px;padding:4px 13px;font-size:12.5px;cursor:pointer;font-family:var(--sans);transition:border-color .15s}
   .chip:hover{border-color:var(--or)}
   .chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
@@ -298,6 +304,16 @@
 
 <nav class="filterbar" aria-label="Filtres">
   <div class="wrap">
+    <div class="filrow navrow">
+      <span class="fillabel">Aller à</span>
+      <a class="navchip navchip-star" href="#prestige" data-target="prestige">★ Classement Prestige</a>
+      <a class="navchip" href="#today-sec" data-target="today-sec">Aujourd’hui</a>
+      <a class="navchip" href="#calendar" data-target="calendar">Calendrier</a>
+      <a class="navchip" href="#agenda-sec" data-target="agenda-sec">Agenda</a>
+      <a class="navchip" href="#continu" data-target="continu">En continu</a>
+      <a class="navchip" href="#intl" data-target="intl">International</a>
+      <a class="navchip" href="#entrees" data-target="entrees">Être invité</a>
+    </div>
     <div class="filrow">
       <span class="fillabel">Zone</span>
       <div id="f-zone" class="filrow" style="gap:8px"></div>
@@ -918,6 +934,17 @@
     const dark = root.dataset.theme ? root.dataset.theme === 'dark' : true; // sombre par défaut
     root.dataset.theme = dark ? 'light' : 'dark';
   });
+
+  /* ── menu de navigation (défilement avec décalage sous la barre fixe) ── */
+  document.querySelectorAll('.navchip[data-target]').forEach(a => a.addEventListener('click', ev => {
+    ev.preventDefault();
+    const sec = document.getElementById(a.dataset.target);
+    if (!sec) return;
+    const bar = document.querySelector('.filterbar');
+    const offset = (bar ? bar.getBoundingClientRect().height : 180) + 12;
+    const y = sec.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+  }));
 
   function renderAll(){
     renderFilters(); renderStats(); renderCountdown(); renderToday(); renderNow(); renderPrestige(); renderCal(); renderAgenda(); renderContinu();
