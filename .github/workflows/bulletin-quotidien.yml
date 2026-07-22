@@ -43,9 +43,17 @@ jobs:
           git log --since="$DEPUIS" --format='%an|%s' origin/main > /tmp/commits.txt || true
           TOTAL=$(wc -l < /tmp/commits.txt | tr -d ' ')
 
-          # Le plancher signe ses commits ; tout le reste est du travail "intelligent".
+          # Chaque acteur SIGNE ses commits. On ne devine pas, on identifie.
+          #   - le plancher      : radar-passe-quotidienne
+          #   - la routine Claude : radar-routine-claude (imposé par DOCTRINE.md)
+          # Tout le reste (commits humains depuis un poste) n'est NI l'un NI
+          # l'autre et ne doit surtout pas être compté comme du travail
+          # automatique : sinon une session de travail manuelle ferait croire
+          # que la routine tourne alors qu'elle est muette.
           PLANCHER=$(grep -c '^radar-passe-quotidienne|' /tmp/commits.txt || true)
-          AUTRES=$(( TOTAL - PLANCHER ))
+          AUTRES=$(grep -c '^radar-routine-claude|' /tmp/commits.txt || true)
+          HUMAINS=$(( TOTAL - PLANCHER - AUTRES ))
+          echo "humains=$HUMAINS" >> "$GITHUB_OUTPUT"
 
           # La date affichée sur le site public : le juge de paix côté visiteur.
           DATE_SITE=$(curl -sL --max-time 25 https://constanceparis7.com \
@@ -74,9 +82,10 @@ jobs:
           PLANCHER: ${{ steps.verdict.outputs.plancher }}
           AUTRES: ${{ steps.verdict.outputs.autres }}
           DATE_SITE: ${{ steps.verdict.outputs.date_site }}
+          HUMAINS: ${{ steps.verdict.outputs.humains }}
         with:
           script: |
-            const { ETAT, TOTAL, PLANCHER, AUTRES, DATE_SITE } = process.env;
+            const { ETAT, TOTAL, PLANCHER, AUTRES, DATE_SITE, HUMAINS } = process.env;
             const jour = new Date().toLocaleDateString('fr-FR',
               { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Paris' });
 
@@ -107,6 +116,7 @@ jobs:
               `| Publications en 18 h | ${TOTAL} |`,
               `| — dont routine Claude | ${AUTRES} |`,
               `| — dont plancher automatique | ${PLANCHER} |`,
+              `| — dont travail manuel (ne compte pas) | ${HUMAINS} |`,
               '',
               `[Voir le détail](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
             ].join('\n');

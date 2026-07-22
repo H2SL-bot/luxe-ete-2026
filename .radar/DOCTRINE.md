@@ -126,6 +126,24 @@ Le filet de surveillance tolère 2 jours sans mise à jour : avec une passe
 quotidienne, une matinée ratée reste sous le seuil et se rattrape le
 lendemain. Le seuil n'est donc pas à changer.
 
+## SIGNATURE OBLIGATOIRE DES COMMITS (22/07/2026)
+
+**AVANT tout commit, posez votre identité git :**
+
+```
+git config user.name  "radar-routine-claude"
+git config user.email "radar-routine@users.noreply.github.com"
+```
+
+Ce n'est pas cosmétique. Un bulletin quotidien automatique
+(`.github/workflows/bulletin-quotidien.yml`) dit chaque matin à Gérald si la
+routine a travaillé, et il le détermine **par la signature des commits**. Le
+plancher signe `radar-passe-quotidienne`, vous signez `radar-routine-claude`,
+tout le reste est considéré comme du travail manuel et n'est pas compté.
+
+Si vous ne signez pas, votre travail passera pour manuel et Gérald recevra une
+alerte « la routine n'a rien publié » alors que vous aurez tourné.
+
 ## PUBLICATION — FILET AUTOMATIQUE (22/07/2026)
 
 Poussez sur `main`. **Si le push sur `main` est refusé, poussez sur une branche
