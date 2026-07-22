@@ -126,6 +126,35 @@ Le filet de surveillance tolère 2 jours sans mise à jour : avec une passe
 quotidienne, une matinée ratée reste sous le seuil et se rattrape le
 lendemain. Le seuil n'est donc pas à changer.
 
+## LAISSER UNE TRACE DANS LE DÉPÔT — AVANT ET APRÈS (22/07/2026)
+
+Gérald ne doit RIEN avoir à faire, jamais — pas même ouvrir un e-mail. Le
+système doit donc se diagnostiquer seul. Pour cela, laissez deux traces dans le
+dépôt, et poussez-les.
+
+**1. DÈS LE DÉBUT, avant tout travail** (c'est le plus important : si vous
+mourez en route, cette trace prouvera au moins que vous aviez démarré) :
+
+```
+mkdir -p .radar/journal
+date -u +'%Y-%m-%dT%H:%M:%SZ  DEMARRAGE' >> .radar/journal/passages.log
+git config user.name  "radar-routine-claude"
+git config user.email "radar-routine@users.noreply.github.com"
+git add .radar/journal/passages.log
+git commit -m "Passage : démarrage"
+git push origin HEAD:main || git push origin HEAD:claude/passage-$(date -u +%Y%m%d-%H%M)
+```
+
+Si même ce push échoue, ce n'est pas grave : continuez la passe. Mais notez-le
+dans votre compte rendu, c'est un signal capital.
+
+**2. À LA FIN**, écrivez votre compte rendu complet dans
+`.radar/journal/dernier-compte-rendu.md` (écrasez le précédent) et ajoutez une
+ligne `... FIN — <résumé en une phrase>` à `passages.log`. Poussez le tout.
+
+Ce journal est lu par les contrôles automatiques et par toute session future.
+C'est ce qui permet de savoir ce qui s'est passé sans déranger Gérald.
+
 ## SIGNATURE OBLIGATOIRE DES COMMITS (22/07/2026)
 
 **AVANT tout commit, posez votre identité git :**
