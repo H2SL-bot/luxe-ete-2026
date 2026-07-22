@@ -26,7 +26,13 @@ Usage :
 import argparse, json, os, re, shutil, sys, gzip
 
 REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
-SRC = os.path.join(REPO, "index.html")
+
+# SOURCE DE VÉRITÉ. Une fois la bascule faite, index.html ne contient plus que
+# le français : la version complète (12 langues) vit dans index-full.html.
+# C'est donc ELLE qu'il faut relire pour régénérer — sinon on repartirait d'un
+# fichier déjà amputé et on perdrait les traductions.
+_FULL = os.path.join(REPO, "index-full.html")
+SRC = _FULL if os.path.exists(_FULL) else os.path.join(REPO, "index.html")
 DEFAULT_OUT = os.environ.get("RADAR_TMP", "/tmp") + "/split-essai"
 LANGS = ["en", "es", "it", "pt", "de", "ru", "ar", "zh", "ja", "ko", "hi", "tr"]
 
@@ -122,11 +128,24 @@ def build(out_dir, src=SRC):
             + boot_anchor)
     new_html = new_html.replace(boot_anchor, boot, 1)
 
+    # 3) version complète (artifact autonome) — ÉCRITE EN PREMIER.
+    #    PIÈGE (constaté le 22/07/2026) : avec --apply, out_dir == REPO et src
+    #    EST index.html. Copier src APRÈS avoir écrit l'index allégé copiait
+    #    donc l'allégé sur lui-même et DÉTRUISAIT la version complète — les 12
+    #    langues de l'artifact étaient perdues. On écrit `html`, lu en mémoire
+    #    avant toute écriture, et jamais une copie de fichier.
+    with open(os.path.join(out_dir, "index-full.html"), "w", encoding="utf-8") as f:
+        f.write(html)
+
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(new_html)
 
-    # 3) version complète (artifact autonome)
-    shutil.copyfile(src, os.path.join(out_dir, "index-full.html"))
+    # garde-fou : l'index complet doit rester strictement plus lourd que l'allégé
+    _full = os.path.getsize(os.path.join(out_dir, "index-full.html"))
+    _light = os.path.getsize(os.path.join(out_dir, "index.html"))
+    if _full <= _light:
+        sys.exit("split_i18n: index-full.html (%d o) n'est pas plus lourd que "
+                 "l'index allégé (%d o) — la version complète a été écrasée." % (_full, _light))
 
     gz = lambda b: len(gzip.compress(b.encode("utf-8"), 6))
     print("=== split_i18n ===")
@@ -145,12 +164,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=DEFAULT_OUT)
     ap.add_argument("--apply", action="store_true", help="écrit dans le dépôt public")
+    ap.add_argument("--src", default=SRC, help="source complète à relire (défaut : index-full.html si présent)")
     a = ap.parse_args()
     out = REPO if a.apply else a.out
     if a.apply:
         print("⚠️  écriture DANS LE DÉPÔT :", REPO)
     os.makedirs(out, exist_ok=True)
-    build(out)
+    print("source :", a.src)
+    build(out, src=a.src)
 
 
 if __name__ == "__main__":

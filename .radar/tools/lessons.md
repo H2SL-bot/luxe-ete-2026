@@ -165,3 +165,24 @@ versionné — un verrou commité bloquerait la passe suivante.
 - **Limite de session atteinte en fin de vague** (5 lots de traduction sur 29
   perdus, reset à 12h). Comportement correct : la passe publie ce qui est prêt et
   inscrit le reste au backlog, plutôt que de tout retenir.
+
+## 22/07/2026 — split_i18n --apply détruisait la version complète
+
+SYMPTÔME : après `split_i18n.py --apply`, index.html ET index-full.html
+faisaient tous deux 1,26 Mo. Les 12 langues de la version complète étaient
+perdues (l'artifact autonome serait devenu monolingue).
+
+CAUSE : l'outil écrivait l'index allégé dans index.html, PUIS faisait
+`shutil.copyfile(src, index-full.html)` — or avec --apply, src EST index.html,
+déjà écrasé. Il se copiait lui-même. Invisible en essai à blanc, où le dossier
+de sortie est distinct de la source.
+
+CORRECTIF : index-full.html est écrit EN PREMIER, à partir du HTML lu en
+mémoire (jamais une copie de fichier) ; un garde-fou fait échouer l'outil si
+index-full.html n'est pas strictement plus lourd que l'index allégé. La source
+de vérité relue est désormais index-full.html quand il existe, ce qui rend
+l'outil idempotent.
+
+RÈGLE GÉNÉRALE : un outil qui écrit dans son propre dossier source doit écrire
+la copie de sauvegarde AVANT d'écraser l'original, et vérifier après coup que
+les deux diffèrent comme prévu.
