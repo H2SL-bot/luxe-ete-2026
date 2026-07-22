@@ -1,0 +1,130 @@
+name: Bulletin quotidien du radar
+
+# RÉPOND CHAQUE MATIN À UNE SEULE QUESTION :
+# « est-ce que la routine Claude a travaillé cette nuit, oui ou non ? »
+#
+# Gérald ne doit pas avoir à le demander, ni à faire confiance à quiconque.
+# Ce workflow regarde les faits — les commits arrivés sur main — et lui écrit
+# le verdict. Il tourne chez GitHub : pas de machine, pas de clé, pas de Claude.
+#
+# Deux acteurs publient sur ce dépôt, et on sait les distinguer :
+#   - la ROUTINE CLAUDE (07h03) : le travail intelligent, nouveaux événements,
+#     traductions, séjours.
+#   - le PLANCHER (08h40, radar-passe-quotidienne) : l'entretien garanti.
+# Si seul le plancher a publié, le site vit mais ne s'enrichit plus : c'est
+# précisément l'anomalie qu'il faut voir tôt.
+
+on:
+  schedule:
+    - cron: "20 8 * * *" # ~10h20 Paris l'été — après la routine (07h03) et le plancher (08h40)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  bulletin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Établir le verdict
+        id: verdict
+        run: |
+          set -o pipefail
+          DEPUIS=$(date -u -d '18 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+          echo "fenêtre examinée : depuis $DEPUIS"
+
+          # Tous les commits de la fenêtre, avec leur auteur.
+          git log --since="$DEPUIS" --format='%an|%s' origin/main > /tmp/commits.txt || true
+          TOTAL=$(wc -l < /tmp/commits.txt | tr -d ' ')
+
+          # Le plancher signe ses commits ; tout le reste est du travail "intelligent".
+          PLANCHER=$(grep -c '^radar-passe-quotidienne|' /tmp/commits.txt || true)
+          AUTRES=$(( TOTAL - PLANCHER ))
+
+          # La date affichée sur le site public : le juge de paix côté visiteur.
+          DATE_SITE=$(curl -sL --max-time 25 https://constanceparis7.com \
+            | grep -o 'vérifiées le [^<"]*' | head -1 | sed 's/vérifiées le //' | xargs || true)
+
+          echo "total=$TOTAL"       >> "$GITHUB_OUTPUT"
+          echo "plancher=$PLANCHER" >> "$GITHUB_OUTPUT"
+          echo "autres=$AUTRES"     >> "$GITHUB_OUTPUT"
+          echo "date_site=$DATE_SITE" >> "$GITHUB_OUTPUT"
+
+          if [ "$AUTRES" -gt 0 ]; then
+            echo "etat=ok" >> "$GITHUB_OUTPUT"
+          elif [ "$PLANCHER" -gt 0 ]; then
+            echo "etat=plancher_seul" >> "$GITHUB_OUTPUT"
+          else
+            echo "etat=rien" >> "$GITHUB_OUTPUT"
+          fi
+
+          echo "--- commits de la fenêtre ---"; cat /tmp/commits.txt || true
+
+      - name: Écrire le bulletin
+        uses: actions/github-script@v7
+        env:
+          ETAT: ${{ steps.verdict.outputs.etat }}
+          TOTAL: ${{ steps.verdict.outputs.total }}
+          PLANCHER: ${{ steps.verdict.outputs.plancher }}
+          AUTRES: ${{ steps.verdict.outputs.autres }}
+          DATE_SITE: ${{ steps.verdict.outputs.date_site }}
+        with:
+          script: |
+            const { ETAT, TOTAL, PLANCHER, AUTRES, DATE_SITE } = process.env;
+            const jour = new Date().toLocaleDateString('fr-FR',
+              { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Paris' });
+
+            const verdicts = {
+              ok: {
+                titre: '✅ La routine a travaillé',
+                texte: `La routine Claude a publié ${AUTRES} mise(s) à jour cette nuit. Le radar s'enrichit normalement.`
+              },
+              plancher_seul: {
+                titre: '⚠️ Seul le plancher a tourné',
+                texte: "La routine Claude n'a rien publié : le site reste à jour et exact (le plancher a fait l'entretien), **mais il ne s'enrichit plus de nouveaux événements**. Si cela se répète, il faut regarder le compte rendu de la routine reçu par e-mail."
+              },
+              rien: {
+                titre: '🛑 Rien n\'a tourné',
+                texte: "Ni la routine Claude, ni le plancher n'ont publié. Le site est peut-être en train de se figer — à regarder aujourd'hui."
+              }
+            };
+            const v = verdicts[ETAT] || verdicts.rien;
+
+            const corps = [
+              `## ${v.titre} — ${jour}`,
+              '',
+              v.texte,
+              '',
+              '| | |',
+              '|---|---|',
+              `| Date affichée sur le site | ${DATE_SITE || '(illisible)'} |`,
+              `| Publications en 18 h | ${TOTAL} |`,
+              `| — dont routine Claude | ${AUTRES} |`,
+              `| — dont plancher automatique | ${PLANCHER} |`,
+              '',
+              `[Voir le détail](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
+            ].join('\n');
+
+            // Un seul fil, commenté chaque jour : l'historique reste lisible.
+            const TITRE = 'Bulletin quotidien du radar';
+            const liste = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'all', labels: 'bulletin'
+            });
+            let fil = liste.data.find(i => i.title === TITRE);
+            if (!fil) {
+              fil = (await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title: TITRE, body: 'Ce fil reçoit chaque matin l\'état du radar.', labels: ['bulletin']
+              })).data;
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: fil.number, body: corps
+            });
