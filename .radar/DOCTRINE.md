@@ -126,6 +126,18 @@ Le filet de surveillance tolère 2 jours sans mise à jour : avec une passe
 quotidienne, une matinée ratée reste sous le seuil et se rattrape le
 lendemain. Le seuil n'est donc pas à changer.
 
+## PUBLICATION — FILET AUTOMATIQUE (22/07/2026)
+
+Poussez sur `main`. **Si le push sur `main` est refusé, poussez sur une branche
+`claude/<quelque-chose>` : un workflow GitHub la reverse automatiquement dans
+`main` dans la minute** (`.github/workflows/publier-branche-claude.yml`). Le site
+se met donc à jour dans les deux cas — la publication ne dépend plus du réglage
+« Allow unrestricted branch pushes ».
+
+Signalez tout de même le repli dans votre compte rendu, pour qu'on sache que le
+réglage manque. En cas de conflit de fusion, le workflow n'écrase rien et ouvre
+une issue GitHub.
+
 ## PROCÉDURE — LA PASSE (matin, 7h03)
 
 0. Cloner les 2 dépôts, `export RADAR_REPO=<clone public>`, puis

@@ -1,0 +1,106 @@
+name: Publier une branche claude sur main
+
+# POURQUOI CE FICHIER EXISTE
+#
+# Le site n'est visible par le public que depuis la branche `main`. Or une
+# routine Claude ne peut pousser sur `main` que si le réglage « Allow
+# unrestricted branch pushes » est activé sur elle. Sans ce réglage, elle se
+# rabat sur une branche `claude/*` : le travail est fait, mais le site reste
+# figé — et personne ne le voit.
+#
+# Ce workflow supprime cette dépendance. Dès qu'une branche `claude/*` reçoit
+# un commit, il la reverse dans `main`. La publication ne dépend donc plus
+# d'un réglage d'interface que personne ne pense à vérifier.
+#
+# Il tourne chez GitHub, avec le jeton que GitHub injecte lui-même : aucune
+# clé à stocker, rien qui expire.
+
+on:
+  push:
+    branches:
+      - "claude/**"
+  workflow_dispatch: {}
+
+# Un seul report à la fois : deux passes qui se chevauchent ne peuvent pas
+# se marcher dessus sur main.
+concurrency:
+  group: publier-sur-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  reverser:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer tout l'historique
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Reverser la branche dans main
+        id: report
+        run: |
+          set -o pipefail
+          BRANCHE="${GITHUB_REF#refs/heads/}"
+          echo "branche source : $BRANCHE"
+          git config user.name  "radar-publication"
+          git config user.email "radar-publication@users.noreply.github.com"
+
+          git fetch origin "$BRANCHE"
+
+          # Rien de neuf ? on s'arrête là, sans bruit.
+          if git merge-base --is-ancestor "origin/$BRANCHE" HEAD; then
+            echo "deja_publie=oui" >> "$GITHUB_OUTPUT"
+            echo "Rien à reverser : main contient déjà ce travail."
+            exit 0
+          fi
+
+          # Fusion classique. En cas de conflit, on n'écrase RIEN :
+          # on abandonne proprement et l'étape suivante ouvre une issue.
+          if git merge --no-edit -m "Publication automatique de $BRANCHE sur main" "origin/$BRANCHE"; then
+            git push origin HEAD:main
+            echo "resultat=publie" >> "$GITHUB_OUTPUT"
+            echo "Publié sur main."
+          else
+            git merge --abort || true
+            echo "resultat=conflit" >> "$GITHUB_OUTPUT"
+            echo "Conflit de fusion : main n'a pas été modifiée."
+            exit 1
+          fi
+
+      - name: Signaler un conflit
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branche = context.ref.replace('refs/heads/', '');
+            const titre = `Publication bloquée : conflit entre ${branche} et main`;
+            const ouvertes = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'surveillance'
+            });
+            const corps = [
+              `La branche \`${branche}\` n'a pas pu être reversée dans \`main\` : conflit de fusion.`,
+              '',
+              '**Le site n\'est donc pas à jour.** Rien n\'a été écrasé — `main` est intacte.',
+              '',
+              `À faire : résoudre le conflit à la main, puis fusionner \`${branche}\`.`,
+              '',
+              `Exécution : ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+            ].join('\n');
+            const dejaLa = ouvertes.data.find(i => i.title === titre);
+            if (dejaLa) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: dejaLa.number, body: corps
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title: titre, body: corps, labels: ['surveillance']
+              });
+            }
