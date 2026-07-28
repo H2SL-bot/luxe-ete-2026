@@ -28,11 +28,13 @@
    feu d'artifice pyromélodique Monaco (1/08, Port Hercule + Jardin Exotique
    sur réservation SMS), Starlite Marbella (saison jusqu'au 29/08).
 
-## Backlog (à reprendre à la prochaine passe)
-- Backfill iv en it/de/ru/ko/hi/tr pour les 12 mêmes fiches : les 2 agents de
-  traduction ont été coupés par la limite de session (reset 15:00 UTC).
-  6 langues publiées aujourd'hui, 6 restantes. Détail dans lessons.md.
-- ~24 autres fiches avec iv encore sans traductions (lots suivants).
+## Backlog
+- SOLDÉ LE JOUR MÊME (demande expresse de Gérald, ~15h30 UTC) : le backfill iv
+  en it/de/ru/ko/hi/tr a été repris après le reset du quota et publié — les
+  12 fiches prioritaires sont désormais complètes dans les 12 langues
+  (390 valeurs iv_o/iv_g/iv_w au total sur la journée). validate/perfcheck
+  re-passés au vert, site et artifact republiés.
+- Reste : ~24 autres fiches avec iv encore sans traductions (lots suivants).
 
 ## Événements des 48 h
 - 29/07 : Polo Parade sur le vieux port (Saint-Tropez) ; SOUL! An Exclusive
