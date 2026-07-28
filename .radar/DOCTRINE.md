@@ -258,9 +258,12 @@ une issue GitHub.
    RÈGLE DE FUSION : apparier les traductions par le NOM de la fiche, jamais par
    sa position dans le tableau (une passe concurrente peut avoir inséré des
    événements entre-temps).
-4ter. BACKFILL `sej` — FAIT le 28/07/2026 au soir (96/96 séjours dans les
-   12 langues, 966 textes, 4 juges, corrections appliquées). Ne subsiste que
-   l'entretien : tout NOUVEAU séjour se traduit avec sa fiche.
+4ter. BACKFILL `sej` — RÈGLE PERMANENTE depuis la LOI DU SITE : chaque passe,
+   (a) composer ~10-15 séjours pour les fiches de la fenêtre live qui n'en ont
+   pas (prestige d'abord ; recherche web réelle + vérification adversariale —
+   la vague 1 du 28/07 au soir a porté le compte à 112/470) ; (b) traduire par
+   lots les séjours sans sej_pitch dans certaines langues (les 16 de la vague 1
+   sont à traduire). Jamais traduire noms propres ni URLs.
    RÉVISION HINDI — TERMINÉE le 28/07/2026 au soir : 8/8 lots relus
    (470 fiches), 144 corrections appliquées après contre-vérification
    adversariale, harmonisation faite (« मिशेलिन स्टार » unique, तरणताल).
