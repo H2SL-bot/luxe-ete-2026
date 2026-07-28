@@ -22,3 +22,4 @@
 {"events": 470, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 400253, "data_gzip": 3870040, "fr_only_gzip": 328350, "date": "2026-07-28"}
 {"events": 470, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 400253, "data_gzip": 3870198, "fr_only_gzip": 328350, "date": "2026-07-28"}
 {"events": 470, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 416782, "data_gzip": 3892398, "fr_only_gzip": 344995, "date": "2026-07-28"}
+{"events": 470, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 416782, "data_gzip": 3934375, "fr_only_gzip": 344995, "date": "2026-07-28"}
