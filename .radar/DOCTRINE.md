@@ -117,7 +117,7 @@ langue portent le même nom, c'est normal). PRÉSERVER `tr` à la réinjection.
 Échapper « </ » en « <\/ ». Le head SEO, le bloc ld+json et le bloc i18n
 (interface 13 langues) ne se touchent pas.
 
-## CADENCE — UNE PASSE PAR JOUR (7h Paris)
+## CADENCE — UNE PASSE PAR JOUR (5h55 Paris — demande de Gérald du 28/07/2026)
 
 Décision de Gérald du 22/07/2026 : **la passe du soir est supprimée.** Elle
 vérifiait les événements à +2 jours, ce que la passe du matin fait déjà sur
@@ -194,7 +194,7 @@ Signalez tout de même le repli dans votre compte rendu, pour qu'on sache que le
 réglage manque. En cas de conflit de fusion, le workflow n'écrase rien et ouvre
 une issue GitHub.
 
-## PROCÉDURE — LA PASSE (matin, 7h03)
+## PROCÉDURE — LA PASSE (matin, 5h55)
 
 0. Cloner les 2 dépôts, `export RADAR_REPO=<clone public>`, puis
    `bash tools/precheck.sh` (verrou, cadence, run interrompu, validate).

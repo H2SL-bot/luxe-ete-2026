@@ -10,13 +10,13 @@ name: Passe quotidienne (plancher garanti)
 # arrive : il purge le périmé, teste les liens des événements imminents et
 # rafraîchit la date affichée. Sans machine, sans clé d'API, sans compte Claude.
 #
-# Il passe APRÈS la routine (07:03 Paris) pour ne pas lui couper l'herbe sous le
+# Il passe APRÈS la routine (05:55 Paris) pour ne pas lui couper l'herbe sous le
 # pied : si elle a déjà travaillé, il ne reste presque rien à faire et le
 # workflow s'arrête sans rien publier.
 
 on:
   schedule:
-    - cron: "40 6 * * *" # ~08h40 Paris l'été — bien après la routine de 07:03
+    - cron: "40 6 * * *" # ~08h40 Paris l'été — bien après la routine de 05:55
   workflow_dispatch: {} # + lancement manuel depuis l'onglet Actions
 
 concurrency:

@@ -8,7 +8,7 @@ name: Bulletin quotidien du radar
 # le verdict. Il tourne chez GitHub : pas de machine, pas de clé, pas de Claude.
 #
 # Deux acteurs publient sur ce dépôt, et on sait les distinguer :
-#   - la ROUTINE CLAUDE (07h03) : le travail intelligent, nouveaux événements,
+#   - la ROUTINE CLAUDE (05h55) : le travail intelligent, nouveaux événements,
 #     traductions, séjours.
 #   - le PLANCHER (08h40, radar-passe-quotidienne) : l'entretien garanti.
 # Si seul le plancher a publié, le site vit mais ne s'enrichit plus : c'est
@@ -16,7 +16,7 @@ name: Bulletin quotidien du radar
 
 on:
   schedule:
-    - cron: "20 8 * * *" # ~10h20 Paris l'été — après la routine (07h03) et le plancher (08h40)
+    - cron: "20 8 * * *" # ~10h20 Paris l'été — après la routine (05h55) et le plancher (08h40)
   workflow_dispatch: {}
 
 permissions:
