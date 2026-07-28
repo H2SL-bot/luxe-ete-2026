@@ -64,6 +64,26 @@ tous RÉELS avec URL). GARDE-FOU ABSOLU : uniquement accès publié (galas à
 billets/don, clubs/plages à réservation, concerts en villa vendus au public).
 JAMAIS de fête privée sans billetterie, JAMAIS de contact inventé.
 
+## LA LOI DU SITE — UN ÉVÉNEMENT = UNE INVITATION + UN SÉJOUR (directive fondatrice, 28/07/2026)
+
+La raison d'être de ConstanceParis7 : que Constance soit INVITÉE aux événements
+qu'elle liste. Chaque fiche doit donc ouvrir DEUX portes, quelle que soit la
+localisation :
+1. LA PORTE DE L'INVITATION (`iv`) : la voie la plus DIRECTE vers le carton —
+   bureau de presse, agence RP de l'événement, responsable invitations,
+   billetterie haut de gamme. Cible : 100 % des fiches mondaines. Toujours des
+   contacts PROFESSIONNELS PUBLIÉS ; ne JAMAIS inventer (c'est la crédibilité
+   de Constance qui se joue).
+2. LA PORTE DU SÉJOUR (`e.sej`) : palace(s) à côté, table(s) étoilée(s) ou
+   iconique(s), expérience(s) — tous RÉELS avec URL. UN ÉVÉNEMENT = UN SÉJOUR,
+   sans exception de lieu ni de taille.
+Toute NOUVELLE fiche naît COMPLÈTE (iv + sej + traductions). RATTRAPAGE de
+l'existant par vagues quotidiennes : fenêtre live (auj.→+90j) d'abord, les
+plus imminents et les mieux notés en tête, ~10-15 séjours par passe, recherche
+réelle + vérification adversariale, puis traduction aux passes suivantes.
+Exceptions de bon sens : les fiches-conseil et dossiers d'accès (c=acces)
+n'ont pas de séjour propre.
+
 ## VOILE D'AFFICHAGE (directive du 28/07/2026)
 
 L'internaute ne voit JAMAIS un événement terminé : un voile côté écran retire
