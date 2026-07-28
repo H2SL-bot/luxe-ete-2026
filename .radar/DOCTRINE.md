@@ -101,6 +101,19 @@ c'est le voile qui fait son travail.
   Miami ; printemps Cannes, GP Monaco, Met Gala…). Toujours sous filtre Riviera.
 - PURGE à chaque passe complète : supprimer les événements d2 < aujourd'hui-30j
   (baisse de compte normale — l'indiquer au compte rendu).
+- CARTE DES DESTINATIONS À CONQUÉRIR (Gérald, 28/07/2026 — « toutes les
+  soirées d'exception du monde entier ») : intégrer PROGRESSIVEMENT, ~1
+  destination nouvelle par passe quand la fenêtre live est saine, toujours
+  sous filtre Riviera et LOI DU SITE (invitation + séjour dès la naissance) :
+  Lac de Côme (Villa d'Este), Taormine, Comporta/Melides, Sotogrande (polo),
+  Riviera d'Athènes/Spetses/Porto Heli, Hvar/Dubrovnik, Vienne (saison des
+  bals, Opernball), Megève/Kitzbühel, Los Angeles (LACMA Art+Film, Vanity
+  Fair Oscars, amfAR LA), Aspen, Rio (réveillon Copacabana Palace, Carnaval
+  VIP), Punta del Este, Buenos Aires (polo Palermo), Tulum/Careyes,
+  Riyad/AlUla, Singapour (GP de nuit), Hong Kong (Art Basel HK), Bali,
+  Mumbai/Udaipur (galas NMACC, grands mariages), Maldives (réveillons),
+  Mustique (Basil's Bar NYE), Harbour Island, Casa de Campo, F1 mondaine
+  (Las Vegas, Miami), Melbourne Cup (Birdcage).
 - BRANDING : « ConstanceParis7 » (logotype capitales, 7 en or — NE JAMAIS
   TOUCHER). Ligne d'édition « French Luxury Events · Été 2026 ». Vers le 25 août,
   proposer à Gérald le rafraîchissement « Automne 2026 » — sans renommer seul.
