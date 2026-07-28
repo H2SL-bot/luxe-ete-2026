@@ -72,3 +72,9 @@ https://constanceparis7.com/tableau-de-bord.html
 4. Push concurrent : deux commits (relevé de visites, mouchard fiches) poussés
    par Gérald pendant la passe → fusion propre, pages régénérées avec le
    nouveau gabarit, rien perdu des deux côtés.
+5. healthcheck.sh post-publication : http=000000 — la sonde n'a PAS de réseau
+   depuis cette session (même blocage qu'en 2.), ce n'est pas un site KO.
+   Pas de rollback (il aurait été injustifié) : le plancher a vérifié le site
+   en ligne à 10:32 UTC (200, 470 événements, date fraîche) et le workflow
+   surveillance.yml refera un contrôle réseau vers 18h23 Paris — il ouvrira
+   une issue si la publication de cette passe n'était pas servie.

@@ -230,3 +230,11 @@ vider le quota du compte par de gros travaux la veille au soir.
    repartent des données à jour ET gardent le mouchard. Règle : après toute
    fusion, TOUJOURS régénérer les pages avec le gen_pages.py fusionné avant
    de pousser, sinon on publie des pages sans le dernier gabarit.
+
+4. **healthcheck.sh est aveugle depuis une session cloud** : l'egress réseau y
+   est bloqué (http=000000 dans run-log, à ne pas confondre avec un site KO).
+   NE PAS déclencher rollback.sh sur un échec « 000 » venu d'une session
+   cloud : c'est la sonde qui n'a pas de réseau, pas le site qui est tombé.
+   Le vrai contrôle en ligne est .github/workflows/surveillance.yml (2x/jour,
+   avec réseau, ouvre une issue si le site est périmé ou KO) — c'est lui qui
+   fait foi. Preuves du jour : plancher 10:32 UTC = 200/470/date fraîche.
