@@ -34,7 +34,13 @@
   12 fiches prioritaires sont désormais complètes dans les 12 langues
   (390 valeurs iv_o/iv_g/iv_w au total sur la journée). validate/perfcheck
   re-passés au vert, site et artifact republiés.
-- Reste : ~24 autres fiches avec iv encore sans traductions (lots suivants).
+- PUIS, 2e demande expresse de Gérald (~17h UTC) : les 24 dernières fiches ont
+  été traitées dans la foulée (5 agents, 10 langues manquantes, 720 valeurs).
+  RÉSULTAT : plus AUCUNE fiche du site avec un accès iv non traduit —
+  la promesse d'accès est couverte à 100% dans les 12 langues.
+  Au passage, fusion des chantiers poussés par Gérald pendant le travail
+  (voile d'affichage des événements terminés, relevé visites, cron 5h55) ;
+  les pages et l'index ont été régénérés sur cette base fusionnée.
 
 ## Événements des 48 h
 - 29/07 : Polo Parade sur le vieux port (Saint-Tropez) ; SOUL! An Exclusive

@@ -238,3 +238,12 @@ vider le quota du compte par de gros travaux la veille au soir.
    Le vrai contrôle en ligne est .github/workflows/surveillance.yml (2x/jour,
    avec réseau, ouvre une issue si le site est périmé ou KO) — c'est lui qui
    fait foi. Preuves du jour : plancher 10:32 UTC = 200/470/date fraîche.
+
+5. **Fusion pendant travail long (bis, 28/07 soir)** : pendant le backfill des
+   24 fiches, main a reçu le « voile d'affichage » (index.html modifié).
+   Piège évité : index-full.html reconstruit AVANT la fusion aurait écrasé ce
+   changement au split. Procédure sûre appliquée : merge → rebuild_full.py
+   depuis l'index.html fusionné → ré-injection des traductions (scripts et
+   sources conservés dans le scratchpad, ré-exécution idempotente) → split.
+   Règle : TOUJOURS git fetch + merge AVANT split_i18n --apply, et garder les
+   données d'injection re-jouables tant que la passe n'est pas poussée.
