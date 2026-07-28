@@ -64,6 +64,22 @@ jobs:
           echo "autres=$AUTRES"     >> "$GITHUB_OUTPUT"
           echo "date_site=$DATE_SITE" >> "$GITHUB_OUTPUT"
 
+          # Les visites du site : le plancher relève chaque matin le compteur
+          # public (GoatCounter) dans stats/visites.ndjson — une ligne par jour.
+          # On lit les deux dernières lignes : cumul, et progression depuis hier.
+          V_TOTAL=""; V_DELTA=""
+          if [ -f stats/visites.ndjson ]; then
+            V_TOTAL=$(tail -n1 stats/visites.ndjson | grep -o '"visites": *[0-9]*' | grep -o '[0-9]*$' || true)
+            if [ "$(wc -l < stats/visites.ndjson)" -ge 2 ]; then
+              V_HIER=$(tail -n2 stats/visites.ndjson | head -n1 | grep -o '"visites": *[0-9]*' | grep -o '[0-9]*$' || true)
+              if [ -n "$V_TOTAL" ] && [ -n "$V_HIER" ]; then
+                V_DELTA=$((V_TOTAL - V_HIER))
+              fi
+            fi
+          fi
+          echo "visites=$V_TOTAL"      >> "$GITHUB_OUTPUT"
+          echo "visites_delta=$V_DELTA" >> "$GITHUB_OUTPUT"
+
           if [ "$AUTRES" -gt 0 ]; then
             echo "etat=ok" >> "$GITHUB_OUTPUT"
           elif [ "$PLANCHER" -gt 0 ]; then
@@ -83,9 +99,11 @@ jobs:
           AUTRES: ${{ steps.verdict.outputs.autres }}
           DATE_SITE: ${{ steps.verdict.outputs.date_site }}
           HUMAINS: ${{ steps.verdict.outputs.humains }}
+          VISITES: ${{ steps.verdict.outputs.visites }}
+          VISITES_DELTA: ${{ steps.verdict.outputs.visites_delta }}
         with:
           script: |
-            const { ETAT, TOTAL, PLANCHER, AUTRES, DATE_SITE, HUMAINS } = process.env;
+            const { ETAT, TOTAL, PLANCHER, AUTRES, DATE_SITE, HUMAINS, VISITES, VISITES_DELTA } = process.env;
             const jour = new Date().toLocaleDateString('fr-FR',
               { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Paris' });
 
@@ -117,6 +135,17 @@ jobs:
               `| — dont routine Claude | ${AUTRES} |`,
               `| — dont plancher automatique | ${PLANCHER} |`,
               `| — dont travail manuel (ne compte pas) | ${HUMAINS} |`,
+              '',
+              // Les visites : relevées chaque matin par le plancher. Un delta
+              // vide = premier relevé, l'historique commence tout juste.
+              '### Visites du site',
+              '',
+              '| | |',
+              '|---|---|',
+              `| Visiteurs (cumul) | ${VISITES || '(pas encore relevé)'} |`,
+              `| Depuis le relevé d'hier | ${VISITES_DELTA === '' ? '(premier relevé — la progression apparaîtra demain)' : (Number(VISITES_DELTA) >= 0 ? '+' : '') + VISITES_DELTA} |`,
+              '',
+              '[Tableau de bord des visites](https://constanceparis7.com/tableau-de-bord.html) · [Statistiques complètes](https://constanceparis7.goatcounter.com/)',
               '',
               `[Voir le détail](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
             ].join('\n');

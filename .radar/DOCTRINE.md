@@ -246,8 +246,27 @@ une issue GitHub.
     lessons.md, toute amélioration d'outil).
 12. Compte rendu bref à Gérald : ajouts/purges/corrections, traductions,
     3-5 nouveautés glamour, événements des 48 h, KPI accès `iv`, résultats
-    validate/healthcheck, confirmation adresse publique à jour, et toute
-    anomalie (dont Search Console). Rien de neuf = une phrase.
+    validate/healthcheck, confirmation adresse publique à jour, analyse des
+    visites (voir ANALYSE DES VISITES ci-dessous), et toute anomalie (dont
+    Search Console). Rien de neuf = une phrase.
+
+## ANALYSE DES VISITES (directive du 28/07/2026)
+
+Les statistiques du site sont publiques et anonymes (GoatCounter — jamais de
+nom, d'adresse IP ni de cookie) :
+  - tableau complet : https://constanceparis7.goatcounter.com/
+  - compteur JSON : https://constanceparis7.goatcounter.com/counter/TOTAL.json
+  - relevé quotidien : stats/visites.ndjson (une ligne par jour, écrite par
+    tools/relever_visites.py — le lancer si le relevé du jour manque ;
+    il refuse les doublons et ne bloque jamais si le compteur est illisible)
+  - vitrine : https://constanceparis7.com/tableau-de-bord.html
+
+À chaque passe, dans le compte rendu (étape 12) : 2 à 3 phrases de JOURNALISTE
+sur les visites — progression depuis la veille, fiches qui attirent, pays et
+sources qui montent (Instagram, Google), et tout croisement parlant
+(« les visiteurs du Golfe arrivent sur les fiches de galas via Google »).
+Statistiques illisibles = le dire en une phrase et passer ; ne JAMAIS bloquer
+la passe pour une statistique, ne JAMAIS inventer un chiffre.
 
 ## AUTO-AMÉLIORATION PERPÉTUELLE (mandat permanent)
 

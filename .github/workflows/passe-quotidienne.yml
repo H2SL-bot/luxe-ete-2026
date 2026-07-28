@@ -50,6 +50,15 @@ jobs:
           export RADAR_REPO="$GITHUB_WORKSPACE"
           python3 .radar/tools/validate.py
 
+      - name: Relever le compteur de visites
+        run: |
+          # Une ligne par jour dans stats/visites.ndjson : le bulletin y lit la
+          # progression (« +N depuis hier »), le tableau de bord public y
+          # dessine l'historique. Compteur illisible = on n'écrit rien, la
+          # passe continue — une statistique ne bloque jamais l'entretien.
+          export RADAR_REPO="$GITHUB_WORKSPACE"
+          python3 .radar/tools/relever_visites.py
+
       - name: Publier si quelque chose a changé
         id: publication
         run: |
