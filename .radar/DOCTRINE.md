@@ -225,6 +225,10 @@ une issue GitHub.
    RÈGLE DE FUSION : apparier les traductions par le NOM de la fiche, jamais par
    sa position dans le tableau (une passe concurrente peut avoir inséré des
    événements entre-temps).
+4ter. BACKFILL `sej` : fiches avec séjour (`e.sej`) sans `sej_pitch`/`sej_hotels0`…
+   dans certaines langues de `tr` → traduire par lots (au 28/07 : 12 séjours
+   restants dans 10 langues, 9 en hi/tr). Même règle que les iv : jamais
+   traduire les noms propres ni les URLs.
 4bis. BACKFILL `iv` : fiches avec `iv` mais sans `iv_o` dans certaines langues
    de `tr` → traduire `iv_o/iv_g/iv_w` par lots de 10-15/passe, priorité fenêtre
    live la mieux notée. (`iv.c` jamais traduit.)
