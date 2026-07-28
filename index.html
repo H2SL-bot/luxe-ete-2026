@@ -385,7 +385,7 @@
 
 <header class="mast">
   <div class="wrap">
-    <div class="eyebrow">Radar de l'été · données collectées et vérifiées le 28 juillet 2026</div>
+    <div class="eyebrow">Radar de l'été · données collectées et vérifiées le 27 juillet 2026</div>
     <div class="mast-grid">
       <div>
         <h1 class="wordmark">ConstanceParis<span class="seven">7</span></h1>
@@ -618,6 +618,14 @@
   function tokyoNow(){ const parts = new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).formatToParts(new Date()); const g = {}; parts.forEach(p => g[p.type] = p.value); const hh = g.hour === '24' ? '00' : g.hour; return {h:hh, m:g.minute, s:g.second}; }
   let NOW = parisNow();
 
+  /* Voile d'affichage : un événement terminé disparaît de l'écran, partout.
+     Les données le gardent 30 jours (purge du plancher) — rien n'est supprimé,
+     une date corrigée le fait réapparaître. Les dossiers d'accès restent. */
+  for (let vi = DATA.length - 1; vi >= 0; vi--) {
+    const ve = DATA[vi], vfin = ve.d2 || ve.d1;
+    if (ve.c !== 'acces' && vfin && vfin < NOW.iso) DATA.splice(vi, 1);
+  }
+
   function statut(e){
     if (e.d2 < NOW.iso) return 'passe';
     if (e.d1 > NOW.iso) return 'avenir';
@@ -781,8 +789,8 @@
     if (!evs.length){ el.innerHTML = '<p class="empty-msg">'+t('empty_filters')+'</p>'; return; }
     const byDay = {};
     evs.forEach(e => {
-      const monthStart = NOW.iso.slice(0,8) + '01';
-      const d = e.d1 < monthStart ? monthStart : e.d1;
+      // Un événement déjà commencé se range sous AUJOURD'HUI, pas au 1er du mois.
+      const d = e.d1 < NOW.iso ? NOW.iso : e.d1;
       (byDay[d] = byDay[d] || []).push(e);
     });
     const days = Object.keys(byDay).sort();
