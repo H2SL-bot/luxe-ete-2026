@@ -186,3 +186,24 @@ l'outil idempotent.
 RÈGLE GÉNÉRALE : un outil qui écrit dans son propre dossier source doit écrire
 la copie de sauvegarde AVANT d'écraser l'original, et vérifier après coup que
 les deux diffèrent comme prévu.
+
+## 28/07/2026 — la preuve est tombée, avec six jours de retard
+
+Le commit du test cloud du 22/07 (auteur « radar cloud », horodaté
+22/07 12:21:07, soit 70 secondes après le lancement) est apparu sur main
+le 28/07 vers 12:30. CE QUE ÇA PROUVE, définitivement :
+  1. une session cloud PEUT cloner le dépôt → l'accès GitHub fonctionne ;
+  2. une session cloud PEUT pousser DIRECTEMENT SUR MAIN → la permission
+     de publication fonctionne (aucune branche claude/*, aucun report).
+Les deux blocages redoutés n'existent pas. La configuration est bonne.
+
+CE QUE ÇA RÉVÈLE : l'exécution des sessions cloud peut être retardée ou
+livrée TRÈS tardivement (ici ~6 jours). Un silence n'est donc pas une
+preuve d'échec — c'est pour cela que la trace de démarrage désormais
+imposée par le prompt est précieuse : elle date le vrai passage.
+
+CAUSE RESTANTE DES SILENCES DU 22/07 : les sessions lancées pendant les
+périodes de quota épuisé meurent sans trace. Le test qui a réussi (12:21)
+est parti UNE MINUTE après la réinitialisation de midi. Conclusion
+pratique : la passe de 7h03 doit partir sur un quota frais — éviter de
+vider le quota du compte par de gros travaux la veille au soir.
