@@ -236,7 +236,11 @@ def main():
             "<meta property=\"og:type\" content=\"website\">"
             f"<meta property=\"og:title\" content=\"{esc(title)}\"><meta property=\"og:description\" content=\"{esc(desc)}\">"
             f"<meta property=\"og:url\" content=\"{canonical}\"><meta property=\"og:image\" content=\"{OG}\">"
-            f"<style>{CSS}</style>{ldblock}</head><body><div class=\"wrap\">"
+            f"<style>{CSS}</style>{ldblock}"
+            # Même mesure d'audience que la page d'accueil : sans elle, les
+            # arrivées Google directes sur une fiche étaient invisibles.
+            "<script data-goatcounter=\"https://constanceparis7.goatcounter.com/count\" async src=\"//gc.zgo.at/count.js\"></script>"
+            "</head><body><div class=\"wrap\">"
             f"<header class=\"site\"><a href=\"{prefix(lang)}/\" class=\"brand\">ConstanceParis<span class=\"s\">7</span></a>"
             "<div class=\"edition\">French Luxury Events</div></header>"
             f"{body}"

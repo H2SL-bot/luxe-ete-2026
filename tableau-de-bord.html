@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tableau de bord des visites — Constance Paris 7</title>
+<style>
+  :root{
+    --bg:#0f151f; --ink:#eceadf; --line:#273143;
+    --or:#d3b06a; --or-soft:rgba(211,176,106,.10); --or-line:rgba(211,176,106,.40);
+    --azur:#74b9d6; --azur-soft:rgba(116,185,214,.10);
+    --good:#4cc38a;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    --serif:"Didot","Bodoni 72","Bodoni MT",Georgia,serif;
+    --sans:"Avenir Next",Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#fafaf7; --ink:#1a2230; --line:#e3e1d8;
+      --or:#a07c2e; --or-soft:rgba(160,124,46,.10); --or-line:rgba(160,124,46,.35);
+      --azur:#16657f; --azur-soft:rgba(22,101,127,.08);
+      --shadow:0 1px 2px rgba(26,34,48,.08),0 10px 30px rgba(26,34,48,.10);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;line-height:1.55}
+  .page{max-width:1060px;margin:0 auto;padding:40px 20px 70px}
+  .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+           color:var(--or);text-align:center}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,5.4vw,46px);
+     text-align:center;margin:10px 0 6px}
+  .sous{text-align:center;opacity:.75;font-size:15px;max-width:600px;margin:0 auto 34px}
+  .tuiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+          gap:16px;margin-bottom:36px}
+  .tuile{border:1px solid var(--line);border-radius:14px;padding:22px 20px;
+         background:var(--or-soft);box-shadow:var(--shadow);text-align:center}
+  .tuile.azur{background:var(--azur-soft)}
+  .tuile .chiffre{font-family:var(--serif);font-size:clamp(34px,6vw,52px);
+                  color:var(--or);line-height:1.1}
+  .tuile.azur .chiffre{color:var(--azur)}
+  .tuile .libelle{font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+                  opacity:.8;margin-top:8px}
+  .maj{text-align:center;font-size:12px;opacity:.55;margin-bottom:44px}
+  h2{font-family:var(--serif);font-weight:400;font-size:24px;margin:0 0 6px}
+  .note{font-size:13px;opacity:.7;margin-bottom:18px}
+  .bloc{margin-bottom:48px}
+  .histo{display:flex;align-items:flex-end;gap:6px;height:150px;
+         border-bottom:1px solid var(--line);padding:0 4px}
+  .barre{flex:1;min-width:8px;max-width:52px;background:var(--or);opacity:.85;
+         border-radius:3px 3px 0 0;position:relative}
+  .barre:hover{opacity:1}
+  .barre .val{position:absolute;top:-20px;left:50%;transform:translateX(-50%);
+              font-size:11px;color:var(--or);white-space:nowrap}
+  .jours{display:flex;gap:6px;padding:6px 4px 0;font-size:10px;opacity:.6}
+  .jours span{flex:1;min-width:8px;max-width:52px;text-align:center;white-space:nowrap}
+  .vide{border:1px dashed var(--or-line);border-radius:14px;padding:26px;
+        text-align:center;opacity:.8;font-size:14px}
+  .cadre{border:1px solid var(--line);border-radius:14px;overflow:hidden;
+         box-shadow:var(--shadow);background:#fff}
+  .cadre iframe{display:block;width:100%;height:1550px;border:0}
+  .liens{text-align:center;margin-top:14px;font-size:14px}
+  a{color:var(--azur)}
+  .pied{margin-top:54px;padding-top:22px;border-top:1px solid var(--line);
+        text-align:center;font-size:12.5px;opacity:.65}
+  .retour{display:inline-block;margin-top:10px;font-size:13px;letter-spacing:.06em}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">Constance Paris 7</div>
+  <h1>Tableau de bord des visites</h1>
+  <p class="sous">Statistiques publiques et anonymes du site — aucun nom, aucune
+  adresse IP, aucun cookie. Mises à jour en continu.</p>
+
+  <div class="tuiles">
+    <div class="tuile"><div class="chiffre" id="visiteurs">…</div>
+      <div class="libelle">Visiteurs</div></div>
+    <div class="tuile"><div class="chiffre" id="pages">…</div>
+      <div class="libelle">Pages vues</div></div>
+    <div class="tuile azur"><div class="chiffre" id="delta">…</div>
+      <div class="libelle" id="delta-libelle">Depuis le dernier relevé</div></div>
+  </div>
+  <div class="maj" id="maj"></div>
+
+  <div class="bloc">
+    <h2>Jour après jour</h2>
+    <p class="note">Nouveaux visiteurs entre deux relevés du matin — l'historique
+    s'allonge d'une barre par jour.</p>
+    <div id="historique"></div>
+  </div>
+
+  <div class="bloc">
+    <h2>Le détail — pays, langues, sources, pages</h2>
+    <p class="note">Le tableau complet, en direct : d'où viennent les visiteurs
+    (pays et régions), dans quelle langue ils naviguent, par où ils arrivent
+    (Instagram, Google…) et quelles fiches ils regardent.</p>
+    <div class="cadre">
+      <iframe src="https://constanceparis7.goatcounter.com" loading="lazy"
+              title="Statistiques détaillées du site"></iframe>
+    </div>
+    <p class="liens"><a href="https://constanceparis7.goatcounter.com"
+       target="_blank" rel="noopener">Ouvrir les statistiques en grand ↗</a></p>
+  </div>
+
+  <div class="pied">
+    Mesure d'audience par GoatCounter — respectueuse de la vie privée,
+    sans cookies ni données personnelles.<br>
+    <a class="retour" href="/">← Retour au site</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var COMPTEUR = "https://constanceparis7.goatcounter.com/counter/TOTAL.json";
+  var RELEVES = "stats/visites.ndjson";
+  var releves = [];
+
+  function nombre(s){ var n = String(s).replace(/[^0-9]/g, ""); return n ? parseInt(n, 10) : null; }
+  function fr(n){ return n === null ? "…" : n.toLocaleString("fr-FR"); }
+  function dateFr(iso){
+    var d = new Date(iso + "T12:00:00");
+    return d.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
+  }
+
+  function majCompteur(){
+    fetch(COMPTEUR, { cache: "no-store" }).then(function(r){ return r.json(); })
+      .then(function(d){
+        var visiteurs = nombre(d.count_unique), pages = nombre(d.count);
+        document.getElementById("visiteurs").textContent = fr(visiteurs);
+        document.getElementById("pages").textContent = fr(pages);
+        document.getElementById("maj").textContent = "Compteur relevé à " +
+          new Date().toLocaleTimeString("fr-FR");
+
+        // Progression depuis le dernier relevé du matin (stats/visites.ndjson).
+        var delta = document.getElementById("delta");
+        var libelle = document.getElementById("delta-libelle");
+        if (releves.length && visiteurs !== null) {
+          var ref = releves[releves.length - 1];
+          var diff = visiteurs - ref.visites;
+          delta.textContent = (diff >= 0 ? "+" : "") + fr(diff);
+          libelle.textContent = "Depuis le relevé du " + dateFr(ref.date);
+        } else {
+          delta.textContent = "—";
+          libelle.textContent = "Premier relevé en cours";
+        }
+      })
+      .catch(function(){
+        document.getElementById("maj").textContent =
+          "Compteur momentanément illisible — nouvel essai dans une minute.";
+      });
+  }
+
+  function dessinerHistorique(){
+    var zone = document.getElementById("historique");
+    if (releves.length < 2) {
+      zone.innerHTML = '<div class="vide">L’historique se dessine jour après jour — ' +
+        "première barre demain matin, après le deuxième relevé.</div>";
+      return;
+    }
+    var jours = [];
+    for (var i = 1; i < releves.length; i++) {
+      jours.push({ date: releves[i].date, neuf: releves[i].visites - releves[i-1].visites });
+    }
+    jours = jours.slice(-30);
+    var maxi = Math.max.apply(null, jours.map(function(j){ return j.neuf; }).concat([1]));
+    var barres = "", labels = "";
+    jours.forEach(function(j){
+      var h = Math.max(4, Math.round(j.neuf / maxi * 130));
+      barres += '<div class="barre" style="height:' + h + 'px" title="' +
+        dateFr(j.date) + " : +" + j.neuf + ' visiteurs"><span class="val">+' + j.neuf + "</span></div>";
+      labels += "<span>" + dateFr(j.date) + "</span>";
+    });
+    zone.innerHTML = '<div class="histo">' + barres + '</div><div class="jours">' + labels + "</div>";
+  }
+
+  fetch(RELEVES, { cache: "no-store" })
+    .then(function(r){ if (!r.ok) throw 0; return r.text(); })
+    .then(function(t){
+      releves = t.trim().split("\n").filter(Boolean).map(function(l){ return JSON.parse(l); });
+    })
+    .catch(function(){ releves = []; })
+    .finally(function(){ dessinerHistorique(); majCompteur(); });
+
+  setInterval(majCompteur, 60000);
+})();
+</script>
+</body>
+</html>
