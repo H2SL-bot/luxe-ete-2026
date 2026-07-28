@@ -32,6 +32,10 @@ SITEMAP = f"{REPO}/sitemap.xml"
 HOME = "https://constanceparis7.com/"
 
 lastmod = sys.argv[1] if len(sys.argv) > 1 else date.today().isoformat()
+# Garde-fou (leçon du 28/07/2026) : un argument non-date (« --help »…) partait
+# tel quel dans <lastmod> et corrompait le sitemap.
+if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", lastmod):
+    sys.exit(f"gen_seo: argument invalide « {lastmod} » — attendu une date AAAA-MM-JJ")
 
 html = open(IDX, encoding="utf-8").read()
 

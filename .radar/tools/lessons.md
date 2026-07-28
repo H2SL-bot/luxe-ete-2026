@@ -207,3 +207,26 @@ périodes de quota épuisé meurent sans trace. Le test qui a réussi (12:21)
 est parti UNE MINUTE après la réinitialisation de midi. Conclusion
 pratique : la passe de 7h03 doit partir sur un quota frais — éviter de
 vider le quota du compte par de gros travaux la veille au soir.
+
+## 28/07/2026 — passe cloud : trois leçons
+
+1. **`gen_seo.py --help` corrompait le sitemap.** L'outil prenait argv[1] tel
+   quel comme date : « --help » est parti dans les 6172 <lastmod> du sitemap.
+   Détecté par relecture immédiate, corrigé en relançant avec la vraie date.
+   FILET : gen_seo.py refuse désormais tout argument non conforme à AAAA-MM-JJ.
+
+2. **Quota de session : 2 lots de traduction sur 4 perdus** (it/de/ru et
+   ko/hi/tr, « session limit, resets 15:00 UTC »). Comportement doctrine
+   appliqué : publier les 6 langues prêtes (en/es/pt/ar/zh/ja), backlog pour
+   les 6 autres. À la prochaine passe : reprendre le backfill iv des fiches
+   332, 347, 198, 286, 265, 208, 228, 235, 200, 216, 231, 245 en it/de/ru/
+   ko/hi/tr (source française dans iv de chaque fiche).
+
+3. **Push concurrent pendant la passe.** Gérald a poussé le chantier
+   « mesure d'audience » (mouchard GoatCounter dans le gabarit gen_pages)
+   pendant que la passe tournait : push refusé, 369 conflits sur pages
+   GÉNÉRÉES uniquement. Résolution sûre : prendre LEUR version des outils et
+   des pages, puis relancer gen_pages.py avec le NOUVEAU gabarit — les pages
+   repartent des données à jour ET gardent le mouchard. Règle : après toute
+   fusion, TOUJOURS régénérer les pages avec le gen_pages.py fusionné avant
+   de pousser, sinon on publie des pages sans le dernier gabarit.
