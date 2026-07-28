@@ -64,6 +64,15 @@ tous RÉELS avec URL). GARDE-FOU ABSOLU : uniquement accès publié (galas à
 billets/don, clubs/plages à réservation, concerts en villa vendus au public).
 JAMAIS de fête privée sans billetterie, JAMAIS de contact inventé.
 
+## VOILE D'AFFICHAGE (directive du 28/07/2026)
+
+L'internaute ne voit JAMAIS un événement terminé : un voile côté écran retire
+de toutes les rubriques toute fiche dont la date de fin est passée (dossiers
+d'accès exceptés), et l'agenda démarre au jour même. Rien n'est supprimé :
+les données gardent les terminés 30 jours (purge du plancher). Ne pas
+« réparer » une fiche absente de l'écran mais présente dans les données :
+c'est le voile qui fait son travail.
+
 ## HORIZON ROULANT
 
 - Couvrir en permanence AUJOURD'HUI → +90 JOURS.
