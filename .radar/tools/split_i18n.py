@@ -109,24 +109,35 @@ def build(out_dir, src=SRC):
     anchor = "const DATA = JSON.parse(document.getElementById('data').textContent);"
     if anchor not in new_html:
         sys.exit("split_i18n: ancre DATA introuvable — script applicatif modifié ?")
-    new_html = new_html.replace(anchor, anchor + "\n" + LOADER, 1)
+    # IDEMPOTENT : depuis que index-full.html est reconstruit à partir de
+    # l'index léger (rebuild_full.py), la source contient DÉJÀ le chargeur.
+    # On ne l'injecte que s'il est absent, sinon on le laisserait en double
+    # (redéclaration de I18N_LOADED → page cassée).
+    if "function loadLangData(" not in new_html:
+        new_html = new_html.replace(anchor, anchor + "\n" + LOADER, 1)
 
     # setLang devient asynchrone (attend la langue avant de rendre)
     old_set = "  function setLang(lang){\n    if (!I18N[lang]) return;\n    LANG = lang;"
     new_set = ("  function setLang(lang){\n    if (!I18N[lang]) return;\n"
                "    loadLangData(lang).then(function(){ applyLang(lang); });\n  }\n"
                "  function applyLang(lang){\n    LANG = lang;")
-    if old_set not in new_html:
+    if old_set in new_html:
+        new_html = new_html.replace(old_set, new_set, 1)
+    elif "loadLangData(lang).then(function(){ applyLang(lang); });" in new_html:
+        pass  # déjà asynchrone : source reconstruite depuis l'index léger
+    else:
         sys.exit("split_i18n: ancre setLang introuvable — script applicatif modifié ?")
-    new_html = new_html.replace(old_set, new_set, 1)
 
     # au démarrage : si une langue est mémorisée, on la charge puis on re-rend
     boot_anchor = "  applyStaticI18n();\n  renderAll();"
-    if boot_anchor not in new_html:
-        sys.exit("split_i18n: ancre de démarrage introuvable")
     boot = ("  if (LANG !== 'fr') { loadLangData(LANG).then(function(ok){ if (ok) { renderAll(); renderIntl(); renderEntrees(); } }); }\n"
             + boot_anchor)
-    new_html = new_html.replace(boot_anchor, boot, 1)
+    if "if (LANG !== 'fr') { loadLangData(LANG)" in new_html:
+        pass  # amorce déjà présente
+    elif boot_anchor in new_html:
+        new_html = new_html.replace(boot_anchor, boot, 1)
+    else:
+        sys.exit("split_i18n: ancre de démarrage introuvable")
 
     # 3) version complète (artifact autonome) — ÉCRITE EN PREMIER.
     #    PIÈGE (constaté le 22/07/2026) : avec --apply, out_dir == REPO et src

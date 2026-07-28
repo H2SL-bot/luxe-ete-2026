@@ -81,7 +81,15 @@ def main():
     a = ap.parse_args()
 
     if not os.path.exists(FULL):
-        sys.exit(f"passe_automatique: {FULL} introuvable — la bascule perf n'a pas eu lieu ?")
+        # index-full.html n'est plus versionné (il alourdissait chaque clonage) :
+        # on le reconstruit depuis index.html + i18n-data/, qui le contiennent
+        # intégralement.
+        outil = os.path.join(REPO, ".radar", "tools", "rebuild_full.py")
+        r = subprocess.run([sys.executable, outil], capture_output=True, text=True,
+                           env={**os.environ, "RADAR_REPO": REPO})
+        print(r.stdout[-400:] or r.stderr[-400:])
+        if r.returncode != 0 or not os.path.exists(FULL):
+            sys.exit("passe_automatique: impossible de reconstruire index-full.html")
 
     html = open(FULL, encoding="utf-8").read()
     m = DATA_RE.search(html)

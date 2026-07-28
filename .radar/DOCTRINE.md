@@ -83,11 +83,11 @@ les confondre :
 
 | Fichier | Rôle | Qui l'écrit |
 |---|---|---|
-| **`index-full.html`** | **SOURCE DE VÉRITÉ.** Document complet, les 12 langues embarquées dans `tr`. **C'est LUI qu'on lit et qu'on modifie.** | vous, à chaque passe |
+| **`index-full.html`** | **SOURCE DE VÉRITÉ de travail — PLUS VERSIONNÉ** (il faisait grossir le dépôt de 10,7 Mo/jour et alourdissait chaque clonage). **Absent d'un clone frais : le reconstruire AVANT tout avec `python3 .radar/tools/rebuild_full.py`** (somme exacte de index.html + i18n-data/, vérifiée fidèle au fichier près). C'est LUI qu'on lit et modifie ensuite. | vous, à chaque passe |
 | `index.html` | Ce que voit l'internaute : français seul + chargeur. ~9x plus léger (0,40 Mo gzip contre 3,82). **GÉNÉRÉ — ne jamais l'éditer à la main.** | `split_i18n.py` |
 | `i18n-data/<lang>.json` | Une langue par fichier, chargée à la demande, indexée par clé stable « d1\|nom ». **GÉNÉRÉ.** | `split_i18n.py` |
 
-**Conséquence pratique : lire et écrire `index-full.html`, puis lancer
+**Conséquence pratique : d'abord `python3 .radar/tools/rebuild_full.py` (recrée index-full.html), puis lire et écrire `index-full.html`, puis lancer
 `python3 .radar/tools/split_i18n.py --apply` qui régénère `index.html` et
 `i18n-data/`. Publier les trois.** Éditer `index.html` directement ferait perdre
 les traductions au prochain passage de l'outil.
