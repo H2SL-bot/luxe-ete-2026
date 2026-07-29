@@ -107,6 +107,26 @@ les données gardent les terminés 30 jours (purge du plancher). Ne pas
 « réparer » une fiche absente de l'écran mais présente dans les données :
 c'est le voile qui fait son travail.
 
+## LE RESTE-À-FAIRE, DANS L'ORDRE (état du 29/07/2026 — à tenir à jour)
+
+Le site publie 537 événements. Il n'est PAS complet : la LOI DU SITE n'est
+honorée qu'à moitié. Priorité de chaque passe, dans cet ordre strict :
+
+1. **TRADUIRE les fiches nues** — 65 fiches sont EN LIGNE mais lisibles en
+   français seulement (les 52 du tour du monde + 13 du renfort, publiées le
+   29/07). C'est le plus urgent : un visiteur non francophone tombe sur une
+   fiche illisible. ~10-15 fiches par passe, toutes langues manquantes.
+2. **COMPOSER LES SÉJOURS** — 372 fiches sans `sej`, dont 227 dans la fenêtre
+   live. Prestige d'abord (sv décroissant), ~10-15 par passe, recherche web
+   réelle + vérification adversariale, jamais publier un séjour non vérifié.
+3. **COMBLER LES VOIES D'INVITATION** — 243 fiches sans `iv` (on est à 54 %,
+   la cible est 100 %). C'est la raison d'être du site.
+4. Puis traduire les séjours nouvellement composés.
+
+À chaque passe, RECOMPTER ces quatre chiffres et les donner dans le compte
+rendu : c'est le seul tableau de bord honnête. Ne jamais annoncer le site
+« à jour » tant qu'ils ne sont pas à zéro.
+
 ## HORIZON ROULANT
 
 - Couvrir en permanence AUJOURD'HUI → +90 JOURS.
