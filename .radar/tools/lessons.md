@@ -247,3 +247,30 @@ vider le quota du compte par de gros travaux la veille au soir.
    sources conservés dans le scratchpad, ré-exécution idempotente) → split.
    Règle : TOUJOURS git fetch + merge AVANT split_i18n --apply, et garder les
    données d'injection re-jouables tant que la passe n'est pas poussée.
+
+## 2026-07-29
+
+1. **`.radar/tools/.lock` candidat à un commit.** Le hook de fin de session a
+   signalé ce fichier comme non suivi. C'est un verrou purement local
+   (anti-concurrence de `precheck.sh`) : il ne doit jamais être versionné.
+   FILET : ajouté à `.gitignore`.
+
+2. **Renommer une fiche (correction factuelle du nom) déclenche un faux
+   blocage `validate.py`.** Correction du 21/07 : « Festival de Ramatuelle —
+   42e édition » était faux (le festival fêtait son 40e anniversaire en 2025,
+   2026 = 41e). En renommant la fiche, `validate.py` a cru à une perte de
+   données (son contrôle « fiche non périmée disparue » compare par NOM à
+   `tools/.last-names.json`, écrit uniquement lors d'un run OK précédent).
+   Correctif appliqué : mise à jour manuelle de la clé dans
+   `.last-names.json` (même `d2`, nouveau nom) avant de relancer `validate.py`.
+   RÈGLE : tout renommage volontaire et sourcé d'une fiche existante doit
+   être répercuté dans `.last-names.json` dans la même passe, sinon la
+   publication reste bloquée à tort.
+
+3. **Deux nouvelles fiches nées sans `sej`.** En composant les fiches Villa
+   Ephrussi et Lisa Stansfield, le séjour (`sej`) a été oublié à la première
+   écriture — seul `iv` avait été rempli. Rattrapé avant traduction/publication
+   grâce à la relecture systématique du JSON source avant de lancer les agents
+   de traduction. RÈGLE : lors de la création d'une fiche, vérifier la
+   présence de `iv` ET `sej` ensemble avant de considérer la fiche « complète »
+   (LOI DU SITE) — ne pas se fier à la mémoire du prompt initial.
