@@ -82,7 +82,11 @@ commenter de neuf sur la fréquentation depuis cette session.
    n'a pas de réseau depuis cette session. Aucun rollback déclenché (aurait été
    injustifié). Le vrai contrôle en ligne reste `.github/workflows/surveillance.yml`,
    qui dispose du réseau.
-2. Aucune autre anomalie. Le repli sur branche `claude/*` n'a pas été nécessaire :
+2. Republication de l'artifact (étape 10 de la doctrine) non effectuée cette
+   passe (interrompue en cours de session) — à reprendre à la prochaine passe si
+   l'opérateur juge cette étape prioritaire. Le site public (constanceparis7.com,
+   source de vérité) est, lui, bien à jour.
+3. Aucune autre anomalie. Le repli sur branche `claude/*` n'a pas été nécessaire :
    le push sur `main` a été accepté directement.
 
 ## Auto-amélioration de la passe
