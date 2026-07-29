@@ -329,6 +329,58 @@ def main():
     print(f"KPI ACCÈS mondain (iv): {mond_acc}/{len(mond)} ({pct(mond_acc, len(mond))}%)   <- cœur de valeur")
     print(f"traductions présentes : {cnt - no_tr_total}/{cnt} ({pct(cnt - no_tr_total, cnt)}%)")
 
+    # ---- LES PAGES INDEXABLES DISENT-ELLES CE QUI FAIT LA VALEUR DU SITE ? ----
+    # Leçon du 29/07/2026 (signalement Google « Explorée, actuellement non
+    # indexée ») : les pages générées existaient mais taisaient le séjour clé en
+    # main ET, en français, la voie d'invitation — le cœur de valeur restait
+    # invisible de Google. Ce contrôle vérifie sur pièces, à chaque passe, que
+    # ce qui est dans les données arrive bien sur la page que Google lit.
+    import glob as _glob, re as _re, unicodedata as _ud
+    import html as _html
+    def _texte(f):
+        h = open(f, encoding="utf-8").read()
+        h = _re.sub(r"<script.*?</script>|<style.*?</style>", " ", h, flags=_re.S)
+        # décoder les entités : la page écrit « &amp; » là où la donnée dit « & »,
+        # sans quoi la comparaison lève de fausses alertes.
+        return _re.sub(r"\s+", " ", _html.unescape(_re.sub(r"<[^>]+>", " ", h)))
+    _dossier = os.path.join(os.path.dirname(os.path.abspath(DEFAULT_PATH)), "e")
+    if os.path.isdir(_dossier):
+        _muettes_sej, _muettes_iv, _maigres = [], [], []
+        # On n'essaie PAS de deviner le nom du fichier (la règle de nommage
+        # appartient à gen_pages.py) : on lit le <h1> de chaque page et on
+        # apparie sur le nom de l'événement. Robuste à tout changement de slug.
+        _par_titre = {}
+        for _f in _glob.glob(os.path.join(_dossier, "*.html")):
+            _h1 = _re.search(r"<h1>(.*?)</h1>", open(_f, encoding="utf-8").read(), _re.S)
+            if _h1:
+                _titre = _re.sub(r"<[^>]+>", "", _h1.group(1))
+                _titre = _html.unescape(_titre).strip()
+                _par_titre[_titre] = _f
+        _temoins = [e for e in data if e.get("sej") or e.get("iv")][:40]
+        for e in _temoins:
+            _f = _par_titre.get((e.get("n") or "").strip())
+            if not _f:
+                continue
+            _t = _texte(_f)
+            if e.get("sej") and (e["sej"].get("hotels") or e["sej"].get("tables")):
+                _noms = [x.get("n", "") for x in (e["sej"].get("hotels") or []) + (e["sej"].get("tables") or []) if x.get("n")]
+                if _noms and not any(n[:18] in _t for n in _noms):
+                    _muettes_sej.append(e.get("n", "")[:40])
+            _iv = e.get("iv") or {}
+            if (_iv.get("o") or _iv.get("w")) and not ((_iv.get("o") or _iv.get("w") or "")[:30] in _t):
+                _muettes_iv.append(e.get("n", "")[:40])
+            if len(_t.split()) < 120:
+                _maigres.append(e.get("n", "")[:40])
+        if _muettes_sej:
+            blk(f"{len(_muettes_sej)} page(s) indexable(s) ne publient PAS leur séjour clé en main "
+                f"(ex. {_muettes_sej[:3]}) — relancer gen_pages.py ; si le problème persiste, "
+                f"le gabarit de gen_pages.py a perdu le bloc « Le séjour clé en main ».")
+        if _muettes_iv:
+            blk(f"{len(_muettes_iv)} page(s) indexable(s) ne publient PAS la voie d'invitation "
+                f"(ex. {_muettes_iv[:3]}) — c'est la raison d'être du site : vérifier gen_pages.py.")
+        if _maigres:
+            wrn(f"{len(_maigres)} page(s) indexable(s) sous 120 mots (Google les explore sans les indexer) : {_maigres[:3]}")
+
     for w in warns:
         print("WARN  ", w)
     for b in blockers:

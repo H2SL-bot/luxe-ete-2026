@@ -274,3 +274,24 @@ vider le quota du compte par de gros travaux la veille au soir.
    de traduction. RÈGLE : lors de la création d'une fiche, vérifier la
    présence de `iv` ET `sej` ensemble avant de considérer la fiche « complète »
    (LOI DU SITE) — ne pas se fier à la mémoire du prompt initial.
+
+## 29/07/2026 — Google explorait sans indexer : les pages taisaient la valeur
+Search Console : « Explorée, actuellement non indexée » + « page en double ».
+Le technique était BON (canoniques auto-référencées, hreflang complet,
+redirections http→https et www→non-www normales — ces deux dernières expliquent
+à elles seules le motif « Page avec redirection », il n'y a rien à corriger).
+La vraie cause était le CONTENU : les pages générées faisaient 154 mots parce
+qu'elles ne publiaient ni le séjour clé en main ni — en français — la voie
+d'invitation. Deux bugs :
+  1. `T(e, "fr", "iv_o")` renvoyait None : en français la donnée vit dans
+     `e["iv"]["o"]`, pas dans un champ plat. Toutes les pages FR étaient donc
+     amputées de la raison d'être du site.
+  2. Le bloc `sej` n'était tout simplement pas rendu.
+Corrigé : 154 → 487 mots sur la fiche témoin, médiane 169 → 260, 141 pages
+enrichies. CONTRÔLE PERMANENT ajouté à validate.py : il apparie chaque page à
+sa fiche PAR LE <h1> (jamais en devinant le slug — la règle de nommage
+appartient à gen_pages.py) et BLOQUE si le séjour ou l'accès manque.
+Deux pièges rencontrés en l'écrivant, à ne pas reperdre :
+  - deviner le nom de fichier = 0 page retrouvée, garde-fou muet et inutile ;
+  - comparer sans décoder les entités HTML (`&` vs `&amp;`) = fausses alertes.
+Testé dans les deux sens : sabotage du gabarit → BLOCK, gabarit sain → OK.

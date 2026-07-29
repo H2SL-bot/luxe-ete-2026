@@ -84,6 +84,20 @@ réelle + vérification adversariale, puis traduction aux passes suivantes.
 Exceptions de bon sens : les fiches-conseil et dossiers d'accès (c=acces)
 n'ont pas de séjour propre.
 
+## LES PAGES GOOGLE DISENT CE QUI FAIT LA VALEUR (leçon du 29/07/2026)
+
+Signalement Search Console « Explorée, actuellement non indexée » : les pages
+indexables existaient mais TAISAIENT le cœur de valeur — le séjour clé en main
+n'y était pas, et sur les pages FRANÇAISES la voie d'invitation non plus (bug :
+`T()` cherchait un champ plat `iv_o` alors que le français vit dans
+`e["iv"]["o"]`). Des pages de 154 mots : Google les explorait sans les indexer.
+Corrigé le 29/07 (fiche type 154 → 487 mots). RÈGLE : tout ce qui fait la valeur
+d'une fiche (accès + séjour) DOIT arriver sur la page que Google lit, dans les
+13 langues. `validate.py` le vérifie désormais sur pièces à chaque passe et
+BLOQUE si une page indexable tait son séjour ou sa voie d'invitation (il
+signale aussi les pages sous 120 mots). Ne jamais neutraliser ce contrôle :
+c'est lui qui a rendu le site indexable.
+
 ## VOILE D'AFFICHAGE (directive du 28/07/2026)
 
 L'internaute ne voit JAMAIS un événement terminé : un voile côté écran retire
