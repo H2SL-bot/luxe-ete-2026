@@ -96,6 +96,10 @@ UI = {
  "by_place":{"fr":"Par lieu","en":"By place","es":"Por lugar","it":"Per luogo","pt":"Por local","de":"Nach Ort","ru":"По местам","ar":"حسب المكان","zh":"按地点","ja":"場所別","ko":"장소별","hi":"स्थान के अनुसार","tr":"Mekâna göre"},
  "footer":  {"fr":"ConstanceParis7 — le radar des événements du luxe, mis à jour chaque jour.","en":"ConstanceParis7 — the radar of luxury events, updated every day.","es":"ConstanceParis7 — el radar de los eventos de lujo, actualizado cada día.","it":"ConstanceParis7 — il radar degli eventi del lusso, aggiornato ogni giorno.","pt":"ConstanceParis7 — o radar dos eventos de luxo, atualizado todos os dias.","de":"ConstanceParis7 — das Radar der Luxus-Veranstaltungen, täglich aktualisiert.","ru":"ConstanceParis7 — радар событий мира роскоши, обновляется каждый день.","ar":"ConstanceParis7 — رادار فعاليات الفخامة، يُحدَّث كل يوم.","zh":"ConstanceParis7 — 奢华活动雷达，每日更新。","ja":"ConstanceParis7 — ラグジュアリー・イベントのレーダー。毎日更新。","ko":"ConstanceParis7 — 매일 업데이트되는 럭셔리 이벤트 레이더.","hi":"ConstanceParis7 — विलासिता के कार्यक्रमों का रडार, प्रतिदिन अद्यतन।","tr":"ConstanceParis7 — her gün güncellenen lüks etkinlik radarı."},
  "see_live":{"fr":"Voir tout le radar en direct","en":"See the full radar live","es":"Ver todo el radar en directo","it":"Vedi tutto il radar in diretta","pt":"Ver todo o radar em direto","de":"Das ganze Radar live ansehen","ru":"Смотреть весь радар в реальном времени","ar":"شاهد الرادار الكامل مباشرةً","zh":"查看完整实时雷达","ja":"完全版レーダーをライブで見る","ko":"전체 레이더 실시간 보기","hi":"पूरा रडार लाइव देखें","tr":"Radarın tamamını canlı izleyin"},
+ "stay":{"fr":"Le séjour clé en main","en":"The turnkey stay","es":"La estancia llave en mano","it":"Il soggiorno chiavi in mano","pt":"A estadia chave na mão","de":"Der schlüsselfertige Aufenthalt","ru":"Поездка «под ключ»","ar":"الإقامة المتكاملة","zh":"一站式行程","ja":"すべて手配済みの滞在","ko":"턴키 스테이","hi":"संपूर्ण प्रवास","tr":"Anahtar teslim konaklama"},
+ "stay_hotels":{"fr":"Où dormir","en":"Where to stay","es":"Dónde alojarse","it":"Dove dormire","pt":"Onde ficar","de":"Wo übernachten","ru":"Где остановиться","ar":"أين تقيم","zh":"住宿之选","ja":"滞在先","ko":"숙소","hi":"कहाँ ठहरें","tr":"Nerede kalınır"},
+ "stay_tables":{"fr":"Où dîner","en":"Where to dine","es":"Dónde cenar","it":"Dove cenare","pt":"Onde jantar","de":"Wo speisen","ru":"Где ужинать","ar":"أين تتناول العشاء","zh":"用餐之选","ja":"食事","ko":"다이닝","hi":"कहाँ भोजन करें","tr":"Nerede yemek yenir"},
+ "stay_exp":{"fr":"À vivre sur place","en":"What to experience","es":"Qué vivir","it":"Da vivere sul posto","pt":"O que viver","de":"Was erleben","ru":"Что испытать","ar":"تجارب لا تُفوَّت","zh":"必体验","ja":"体験","ko":"경험","hi":"क्या अनुभव करें","tr":"Yerinde yaşanacaklar"},
  "luxury_events":{"fr":"événements du luxe","en":"luxury events","es":"eventos de lujo","it":"eventi del lusso","pt":"eventos de luxo","de":"Luxus-Veranstaltungen","ru":"события роскоши","ar":"فعاليات الفخامة","zh":"奢华活动","ja":"ラグジュアリー・イベント","ko":"럭셔리 이벤트","hi":"विलासिता के कार्यक्रम","tr":"lüks etkinlikler"},
 }
 
@@ -193,6 +197,9 @@ def main():
             if key in ("n", "dt", "ds", "sw"):  # champs universels → repli FR (jamais vide)
                 return e.get(key)
             return None
+        # FR : les voies d'accès vivent dans e["iv"], pas dans des champs plats
+        if key.startswith("iv_"):
+            return (e.get("iv") or {}).get(key[3:])
         return e.get(key)
 
     def cat_label(c, lang):
@@ -305,6 +312,31 @@ def main():
                 body.append("".join(acc))
             elif T(e, lang, "p"):
                 body.append(f"<div class=\"box\"><h2>{esc(UI['access2'][lang])}</h2><p>{esc(T(e,lang,'p'))}</p></div>")
+            # LE SÉJOUR CLÉ EN MAIN — le cœur de valeur du site, longtemps absent
+            # des pages indexables : palaces, tables et expériences autour de
+            # l'événement, traduits quand la langue est disponible.
+            sej = e.get("sej") or {}
+            if sej:
+                trs = (e.get("tr") or {}).get(lang, {}) if lang != "fr" else {}
+                def sT(cle, defaut):
+                    return trs.get(cle) or defaut if lang != "fr" else defaut
+                bloc = [f"<div class=\"box\"><h2>{esc(UI['stay'][lang])}</h2>"]
+                pitch = sT("sej_pitch", sej.get("pitch"))
+                if pitch:
+                    bloc.append(f"<p>{esc(pitch)}</p>")
+                for grp, libelle in (("hotels", "stay_hotels"), ("tables", "stay_tables"), ("exp", "stay_exp")):
+                    items = [x for x in (sej.get(grp) or []) if x.get("n")]
+                    if not items:
+                        continue
+                    bloc.append(f"<h3>{esc(UI[libelle][lang])}</h3><ul>")
+                    for i, x in enumerate(items):
+                        d = sT(f"sej_{grp}{i}", x.get("d") or "")
+                        nom = esc(x["n"])
+                        lien = f"<a href=\"{esc(x['u'])}\" target=\"_blank\" rel=\"noopener nofollow\">{nom}</a>" if x.get("u") else nom
+                        bloc.append(f"<li><b>{lien}</b>" + (f" — {esc(d)}" if d else "") + "</li>")
+                    bloc.append("</ul>")
+                bloc.append("</div>")
+                body.append("".join(bloc))
             if e.get("u"):
                 body.append(f"<p><a class=\"cta\" href=\"{esc(e['u'])}\" target=\"_blank\" rel=\"noopener nofollow\">{esc(UI['official'][lang])} →</a></p>")
             nav = []
