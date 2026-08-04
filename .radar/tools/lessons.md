@@ -295,3 +295,20 @@ Deux pièges rencontrés en l'écrivant, à ne pas reperdre :
   - deviner le nom de fichier = 0 page retrouvée, garde-fou muet et inutile ;
   - comparer sans décoder les entités HTML (`&` vs `&amp;`) = fausses alertes.
 Testé dans les deux sens : sabotage du gabarit → BLOCK, gabarit sain → OK.
+
+## 04/08/2026 — perfcheck bloquait la routine chaque fois qu'elle purgeait
+Après une semaine d'absence, la publication a été refusée : « perte de contenu
+537 -> 532 événements ». Or ces cinq disparitions étaient des PURGES normales
+(événements terminés depuis plus de 30 jours), quatre par le plancher pendant
+la semaine, une par moi. La règle « toute baisse = blocage » condamnait donc la
+routine à échouer chaque fois qu'elle faisait correctement son travail — et
+elle exécute perfcheck à chaque passe (doctrine étape 8).
+La vraie perte de contenu était DÉJÀ couverte, et mieux, par validate.py : son
+garde anti-suppression bloque si une fiche NON EXPIRÉE disparaît
+(.last-names.json). La règle de perfcheck était redondante et fausse.
+Corrigé : perfcheck ne bloque plus que sur une chute de plus de 15 %, qu'aucune
+purge normale ne peut expliquer. Testé dans les deux sens — 532 -> 300 (-43 %)
+déclenche bien le blocage, la purge de cinq fiches passe.
+RÈGLE GÉNÉRALE : un garde-fou qui punit le fonctionnement normal finit par être
+contourné ou neutralisé. Avant d'écrire un contrôle, se demander « qu'est-ce que
+la machine fait légitimement tous les jours ? » et ne bloquer que l'anormal.

@@ -95,8 +95,19 @@ def main():
 
     blockers = []
     if prev and not baseline_only:
-        if cur["events"] < prev.get("events", 0):
-            blockers.append(f"perte de contenu : {prev['events']} -> {cur['events']} événements")
+        # La PURGE quotidienne fait naturellement baisser le compte (événements
+        # terminés depuis plus de 30 jours). Bloquer sur toute baisse revenait à
+        # bloquer la routine chaque fois qu'elle faisait son travail — c'est
+        # arrivé le 04/08/2026 (537 -> 532, cinq purges parfaitement légitimes).
+        # La vraie perte de contenu est déjà attrapée par validate.py, qui
+        # BLOQUE si une fiche NON EXPIRÉE disparaît (garde anti-suppression,
+        # .last-names.json). Ici on ne garde qu'un filet catastrophe : une chute
+        # de plus de 15 % ne peut pas s'expliquer par une purge normale.
+        av, ap = prev.get("events", 0), cur["events"]
+        if av and ap < av * 0.85:
+            blockers.append(f"chute anormale du contenu : {av} -> {ap} événements "
+                            f"(-{100 * (av - ap) // av} %) — une purge normale ne retire "
+                            f"jamais autant ; vérifier avant de publier")
         lost = set(prev.get("langs", [])) - set(cur["langs"])
         if lost:
             blockers.append(f"langue(s) disparue(s) : {', '.join(sorted(lost))}")
