@@ -112,16 +112,25 @@ c'est le voile qui fait son travail.
 Le site publie 537 événements. Il n'est PAS complet : la LOI DU SITE n'est
 honorée qu'à moitié. Priorité de chaque passe, dans cet ordre strict :
 
-1. **TRADUIRE les fiches nues** — 65 fiches sont EN LIGNE mais lisibles en
-   français seulement (les 52 du tour du monde + 13 du renfort, publiées le
-   29/07). C'est le plus urgent : un visiteur non francophone tombe sur une
-   fiche illisible. ~10-15 fiches par passe, toutes langues manquantes.
-2. **COMPOSER LES SÉJOURS** — 372 fiches sans `sej`, dont 227 dans la fenêtre
-   live. Prestige d'abord (sv décroissant), ~10-15 par passe, recherche web
-   réelle + vérification adversariale, jamais publier un séjour non vérifié.
-3. **COMBLER LES VOIES D'INVITATION** — 243 fiches sans `iv` (on est à 54 %,
-   la cible est 100 %). C'est la raison d'être du site.
-4. Puis traduire les séjours nouvellement composés.
+PLAN VALIDÉ PAR GÉRALD le 29/07/2026 — ordre STRICT :
+1. **TRADUIRE les fiches nues** — 62 fiches EN LIGNE mais lisibles en français
+   seulement (tour du monde + renfort du 29/07 ; 3 déjà faites). Le plus
+   urgent : un visiteur non francophone tombe sur une fiche illisible.
+   ~10-15 fiches par passe, toutes langues manquantes, une fiche par agent
+   (les lots de 3 fiches échouent : trop lourd, l'agent s'arrête à la 1re).
+2. **COMBLER L'AUTOMNE** — le radar s'effondre après septembre (oct. : 20
+   fiches, nov. : 16). Ajouter 40-60 événements d'exception oct.-nov.-déc. :
+   grands bals, galas de rentrée, ventes aux enchères du soir, saisons d'opéra,
+   Art Basel Paris et son orbite. Nés COMPLETS (invitation + séjour + langues).
+3. **ÉCRIRE 10 NOUVEAUX GUIDES D'ACCÈS** (c=acces) — il n'y en a que 11 alors
+   que c'est le contenu le plus cherché sur Google (« comment être invité
+   à… »). Guides par lieu ou par circuit : Caves du Roy, paddock F1, bals de
+   Vienne, ventes Christie's/Sotheby's, front row Fashion Week, etc.
+   Intemporels, traduits une fois, carburant du référencement.
+4. **PUIS séjours restants** (372, dont 227 fenêtre live, prestige d'abord)
+   **et voies d'invitation** (243 manquantes, cible 100 %).
+À chaque passe : recompter traductions/séjours/invitations manquants et
+donner les 3 chiffres au compte rendu. Jamais « à jour » tant que non nuls.
 
 À chaque passe, RECOMPTER ces quatre chiffres et les donner dans le compte
 rendu : c'est le seul tableau de bord honnête. Ne jamais annoncer le site
