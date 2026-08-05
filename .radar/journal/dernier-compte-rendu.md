@@ -5,10 +5,13 @@
   [aujourd'hui..+90j], traductions 529/529 (100 %).
 - perfcheck.py : OK — 0 régression (+0,00 Mo, +0 événement vs dernier point de
   cette passe). Index allégé 0,55 Mo gzip, 12 langues différées via i18n-data/.
-- KPI ACCÈS mondain (iv) : 226/379 (59 %) — stable.
+- KPI ACCÈS mondain (iv) : 231/379 (60 %) — en hausse (une passe concurrente
+  a backfillé 8 voies d'invitation + 2 séjours pendant cette session, fusionnée
+  proprement — voir Anomalies).
 - Adresse publique https://constanceparis7.com : poussée sur `main`
-  (commit 32c09500), eyebrow « 5 août 2026 ». Push direct accepté, aucun repli
-  sur branche `claude/*` nécessaire.
+  (commit final 6d079ba3, après fusion avec la passe concurrente), eyebrow
+  « 5 août 2026 ». Push direct accepté, aucun repli sur branche `claude/*`
+  nécessaire.
 
 ## Fait pendant la passe
 1. **Purge** : 6 fiches zombies retirées (d2 = 5 juillet, au-delà du seuil de
@@ -120,6 +123,16 @@ Actions qui dispose du réseau.
   pour la même raison réseau.
 
 ## Anomalies
+0. **Passe concurrente pendant cette session** : au moment de pousser le
+   journal final, `git push` a été refusé (« remote contains work you do not
+   have ») — une autre session avait publié entre-temps 8 voies d'invitation
+   et 2 séjours vérifiés (commit 416f1012, KPI 54 % → 60 %). Fusionnée
+   proprement avec `git merge` (aucun marqueur de conflit, `validate.py` et
+   `perfcheck.py` repassés OK sur l'état fusionné : 529 événements, 0
+   disparition, 231/379 iv) puis republiée (commit 6d079ba3). Aucune perte de
+   travail des deux côtés. À surveiller : deux passes le même jour, à
+   signaler pour information — le verrou `precheck.sh` n'a pas pu l'empêcher
+   car les deux sessions cloud ne partagent pas de disque.
 1. Réseau sortant bloqué depuis la session cloud (confirmé à nouveau : curl
    direct → erreur 56/tunnel, `relever_visites.py` → 403, `healthcheck.sh` →
    000000, `WebFetch` sur goatcounter.com → 403 également). Anomalie déjà
