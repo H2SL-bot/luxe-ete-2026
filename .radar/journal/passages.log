@@ -6,3 +6,4 @@
 2026-07-29T04:41:16Z  FIN — 12 séjours + 2 nouvelles fiches (Villa Ephrussi, Lisa Stansfield) + correction Ramatuelle 41e, validate/perfcheck OK, publié sur main
 2026-08-04T10:08:11Z  DEMARRAGE
 2026-08-05T03:55:49Z  DEMARRAGE
+2026-08-05T04:24:04Z  FIN — Purge 6 zombies + dédup 2 doublons + 6 événements automne nés complets (5 nouveaux, 1 déjà présent) + 10 séjours prestige backfillés ; validate/perfcheck OK, 529/529 traductions
