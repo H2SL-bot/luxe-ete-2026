@@ -33,6 +33,23 @@ saison (décision expresse de Gérald du 14/07/2026). Migration cloud le 21/07/2
   par Gérald, confirmée le 21/07/2026 : « corriger seul, améliorer seul »,
   y compris les signalements Google Search Console).
 
+## LA MISSION (Gérald, 05/08/2026) — CE QUE LE SITE DOIT DEVENIR
+
+**ConstanceParis7.com doit devenir LA RÉFÉRENCE MONDIALE de l'invitation aux
+soirées et événements jet-set — partout dans le monde.** Pas un magazine, pas
+un agenda : le radar qui SCANNE la planète et qui, pour chaque soirée
+d'exception, donne la porte d'entrée et la personne à qui écrire.
+
+Deux conséquences opérationnelles, à tenir à chaque passe :
+1. COUVERTURE MONDIALE — aucune capitale du jet-set ne doit manquer. Voir la
+   carte des destinations plus bas ; l'étendre dès qu'un nouveau foyer
+   apparaît (nouvelle saison, nouveau resort, nouvelle scène).
+2. PROFONDEUR D'ACCÈS — la valeur ne se mesure pas au nombre de fiches mais au
+   nombre de PORTES OUVERTES : combien de fiches donnent un nom identifié, une
+   ligne directe, un chemin réel vers le carton. C'est le seul classement où
+   ce site doit être premier au monde.
+Le maximum est un minimum : voir « LE CALIBRE » plus bas.
+
 ## RÈGLE DE CURATION ABSOLUE (prime sur tout)
 
 LA RÉFÉRENCE EST L'ADN RIVIERA — Saint-Tropez, Monaco, Portofino, énergie
@@ -97,6 +114,31 @@ d'une fiche (accès + séjour) DOIT arriver sur la page que Google lit, dans les
 BLOQUE si une page indexable tait son séjour ou sa voie d'invitation (il
 signale aussi les pages sous 120 mots). Ne jamais neutraliser ce contrôle :
 c'est lui qui a rendu le site indexable.
+
+## LE CALIBRE — LE MAXIMUM EST UN MINIMUM (directive de Gérald, 05/08/2026)
+
+**INVITATIONS — viser LA PERSONNE, pas le service.** Un « bureau de presse »
+ou un `contact@` est un REPLI, pas la cible. Chercher et nommer :
+- le NOM ET PRÉNOM de l'attaché(e) de presse, du directeur/de la directrice de
+  la communication, du responsable des partenariats, du chargé des invitations,
+  du concierge chef, du directeur du club — avec sa FONCTION EXACTE ;
+- sa ligne directe et son e-mail nominatif quand ils sont publiés ;
+- où le trouver : dossiers de presse (PDF), communiqués, page « équipe » du
+  lieu, ours du programme officiel, LinkedIn public de l'organisation,
+  mentions légales, avis de course, rapports annuels de fondation.
+Une fiche avec un nom identifié vaut dix fiches avec une adresse générique :
+c'est ce qui transforme une demande anonyme en conversation.
+GARDE-FOU INCHANGÉ ET ABSOLU : ce nom doit être RÉELLEMENT PUBLIÉ et vérifié
+pendant la recherche. Jamais un nom deviné, jamais une fonction supposée,
+jamais un e-mail reconstruit par déduction (prenom.nom@…). Sans nom vérifié :
+le contact générique, et on le dit franchement.
+
+**SÉJOURS — calibre jet-set, sans exception.** Palaces et 5 étoiles réels,
+tables étoilées ou institutions iconiques, expériences d'exception
+(hélicoptère, yacht privatisé, visite privée hors horaires, spa signature).
+Jamais de « bon hôtel » ni de « bonne table » : le standard est celui du
+Cheval Blanc, du Louis XV, des Caves du Roy. Si la ville n'offre rien de ce
+calibre, en mettre moins plutôt qu'en mettre de moindre.
 
 ## VOILE D'AFFICHAGE (directive du 28/07/2026)
 
