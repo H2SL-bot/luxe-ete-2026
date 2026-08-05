@@ -122,10 +122,21 @@ ou un `contact@` est un REPLI, pas la cible. Chercher et nommer :
 - le NOM ET PRÉNOM de l'attaché(e) de presse, du directeur/de la directrice de
   la communication, du responsable des partenariats, du chargé des invitations,
   du concierge chef, du directeur du club — avec sa FONCTION EXACTE ;
-- sa ligne directe et son e-mail nominatif quand ils sont publiés ;
-- où le trouver : dossiers de presse (PDF), communiqués, page « équipe » du
-  lieu, ours du programme officiel, LinkedIn public de l'organisation,
-  mentions légales, avis de course, rapports annuels de fondation.
+- **SON PORTABLE — c'est LA priorité absolue.** Un standard (+33 1…, +41 33…)
+  ne sert à rien : il filtre. Le mobile de l'attaché(e) de presse est la porte
+  qui s'ouvre vraiment. Ces numéros SONT publiés, massivement : les communiqués
+  et dossiers de presse affichent presque toujours « Contact presse : Prénom
+  Nom — 06 XX XX XX XX ». C'est le gisement à exploiter en priorité.
+- son e-mail nominatif (prenom.nom@…) plutôt qu'une boîte générique ;
+- OÙ CHERCHER, par ordre de rendement : (1) les COMMUNIQUÉS DE PRESSE et
+  dossiers de presse en PDF — c'est là que vivent les portables, en bas de
+  page, sous « Contact presse » ; (2) les pages « Espace presse » / « Media »
+  des lieux et organisateurs ; (3) l'ours du programme officiel ; (4) les
+  agences RP mandatées (leurs communiqués nomment l'attaché en charge du
+  dossier, avec son mobile) ; (5) mentions légales, avis de course, rapports
+  annuels de fondation ; (6) page « équipe » du lieu.
+  RÉFLEXE : chercher explicitement « contact presse » + le nom de l'événement,
+  et ouvrir les PDF — les portables y sont, rarement dans le HTML.
 Une fiche avec un nom identifié vaut dix fiches avec une adresse générique :
 c'est ce qui transforme une demande anonyme en conversation.
 GARDE-FOU INCHANGÉ ET ABSOLU : ce nom doit être RÉELLEMENT PUBLIÉ et vérifié
