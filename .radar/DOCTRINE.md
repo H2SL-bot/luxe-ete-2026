@@ -144,6 +144,23 @@ pendant la recherche. Jamais un nom deviné, jamais une fonction supposée,
 jamais un e-mail reconstruit par déduction (prenom.nom@…). Sans nom vérifié :
 le contact générique, et on le dit franchement.
 
+**LA VOIE GRATUITE — la chercher systématiquement et la QUALIFIER.** Le champ
+`iv.g` ne doit jamais être bâclé. Pour chaque événement, chercher explicitement
+laquelle de ces cinq portes existe, et le dire précisément :
+1. ACCRÉDITATION PRESSE — la porte principale et gratuite. Nommer le formulaire,
+   la date limite, les pièces demandées, la personne qui l'instruit. Préciser
+   qu'elle est nominative et non transmissible quand c'est le cas.
+2. PARTENARIAT MÉDIA — le seul cadre légitime pour qu'un site FASSE GAGNER une
+   invitation : l'organisateur accorde un quota et valide l'opération. À
+   signaler quand l'événement en pratique (jeux-concours co-organisés).
+3. INVITATION PAR UN MEMBRE / PARRAINAGE — clubs fermés, cercles.
+4. MÉCÉNAT ET CONTREPARTIES — galas caritatifs : sièges offerts par les mécènes.
+5. TIRAGE AU SORT / BILLETTERIE PUBLIQUE — rare mais réel.
+Si AUCUNE porte gratuite n'existe, l'écrire franchement : « aucune voie gratuite
+publiée ». Ne jamais laisser croire qu'une invitation s'obtient quand elle
+s'achète. Et ne JAMAIS suggérer de revendre ou céder une accréditation
+nominative : c'est ce qui grille une relation presse pour toujours.
+
 **SÉJOURS — calibre jet-set, sans exception.** Palaces et 5 étoiles réels,
 tables étoilées ou institutions iconiques, expériences d'exception
 (hélicoptère, yacht privatisé, visite privée hors horaires, spa signature).
