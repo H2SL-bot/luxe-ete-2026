@@ -161,6 +161,14 @@ publiée ». Ne jamais laisser croire qu'une invitation s'obtient quand elle
 s'achète. Et ne JAMAIS suggérer de revendre ou céder une accréditation
 nominative : c'est ce qui grille une relation presse pour toujours.
 
+**CADENCE DE TRAVAIL — ne jamais affamer les vérificateurs.** La concurrence
+est plafonnée (16 agents) : un gros lot recherche→vérification occupe toutes
+les places avec des chercheurs et AUCUN vérificateur ne démarre — donc rien
+n'est publiable. Travailler par lots de 8-10, ou séparer en deux chantiers
+(un qui cherche, un qui vérifie ce qui est déjà cherché). PUBLIER AU FIL DE
+L'EAU à chaque lot vérifié : une limite de session ne doit jamais faire
+perdre du travail abouti.
+
 **SÉJOURS — calibre jet-set, sans exception.** Palaces et 5 étoiles réels,
 tables étoilées ou institutions iconiques, expériences d'exception
 (hélicoptère, yacht privatisé, visite privée hors horaires, spa signature).

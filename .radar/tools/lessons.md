@@ -312,3 +312,17 @@ déclenche bien le blocage, la purge de cinq fiches passe.
 RÈGLE GÉNÉRALE : un garde-fou qui punit le fonctionnement normal finit par être
 contourné ou neutralisé. Avant d'écrire un contrôle, se demander « qu'est-ce que
 la machine fait légitimement tous les jours ? » et ne bloquer que l'anormal.
+
+## 05/08/2026 — un gros lot affame ses propres vérificateurs
+Vagues de 50 événements en pipeline recherche→vérification : au bout de 28
+minutes, 22 recherches abouties et ZÉRO vérification. Cause : la concurrence
+est plafonnée à 16 agents simultanés, et 50 recherches en attente occupent
+toutes les places. Les vérificateurs ne démarrent jamais — donc rien n'est
+publiable, et une limite de session ferait tout perdre.
+RÈGLE : soit des lots de 8-10 (la recherche libère vite des places), soit —
+mieux — SÉPARER les deux étapes en deux workflows distincts : un qui cherche
+en continu, un qui vérifie ce qui est déjà cherché. Chacun dispose alors de
+toute la concurrence, et on publie au fil de l'eau.
+Corollaire : toujours vérifier « combien de VÉRIFICATEURS ont démarré », pas
+seulement « combien d'agents tournent » — grep 'ADVERSARIALE' sur les
+transcripts le dit en une seconde.
