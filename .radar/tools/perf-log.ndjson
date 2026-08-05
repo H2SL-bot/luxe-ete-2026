@@ -43,3 +43,6 @@
 {"events": 532, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 546080, "data_gzip": 5396092, "fr_only_gzip": 474177, "date": "2026-08-04"}
 {"events": 532, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 546080, "data_gzip": 5502309, "fr_only_gzip": 474177, "date": "2026-08-04"}
 {"events": 532, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 546080, "data_gzip": 5540117, "fr_only_gzip": 474177, "date": "2026-08-04"}
+{"events": 529, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 548037, "data_gzip": 5485563, "fr_only_gzip": 476218, "date": "2026-08-05"}
+{"events": 529, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 548038, "data_gzip": 5526637, "fr_only_gzip": 476218, "date": "2026-08-05"}
+{"events": 529, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 548038, "data_gzip": 5526637, "fr_only_gzip": 476218, "date": "2026-08-05"}
