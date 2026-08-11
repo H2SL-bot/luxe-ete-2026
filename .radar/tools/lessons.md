@@ -408,3 +408,17 @@ Règle : ne JAMAIS retirer un contenu sur un agent privé de recherche. Le doute
 s'inscrit dans `.radar/a-reverifier.md` et se tranche à la passe suivante.
 Symétriquement : ne jamais PUBLIER non plus sur cette base. Un agent sans recherche
 ne peut ni condamner ni absoudre.
+
+## 11/08/2026 — Une limite de session tue les agents en vol : reprendre, pas relancer
+À 16h09, la limite de session a coupé 29 agents sur 42 en plein travail
+(V-SEJ-C : 10 aboutis / 10 tués ; V-INV-C : 3 / 19). Rien n'était perdu côté site,
+car chaque fiche vérifiée était publiée AU FIL DE L'EAU — la règle a payé ce jour-là.
+Deux réflexes à garder :
+1. NE PAS relancer un atelier de zéro : `Workflow({scriptPath, resumeFromRunId})` rejoue
+   les agents aboutis depuis le cache et ne refait travailler que les tués. Relancer à
+   neuf, c'est repayer 10 vérifications déjà faites.
+2. La sonde doit dire MORT, pas « lent ». Sans le marqueur d'âge de fichier ajouté le
+   matin même, j'aurais attendu devant deux ateliers cadavres pendant une heure.
+Corollaire de méthode : publier au fil de l'eau n'est pas une préférence de confort,
+c'est ce qui rend une coupure indolore. Un lot gardé pour « publier à la fin » aurait
+été perdu en entier.
