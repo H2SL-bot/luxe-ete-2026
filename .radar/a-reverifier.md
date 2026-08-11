@@ -59,3 +59,10 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Jacquemus x Monte-Carlo Beach — takeover été 2026 (2e année) — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] L'été au Westminster – palace Barrière du Touquet (table étoilée Le Pavillon) — inscrit le 11/08/2026
