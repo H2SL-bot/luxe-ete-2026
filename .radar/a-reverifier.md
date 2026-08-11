@@ -15,3 +15,11 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 2. Écrire au bureau de presse de Butler Collection (agence Pascale Venot) : confirment-ils l'opération ?
 3. Si aucune confirmation : retrait via `retraits-volontaires.json`, motif « événement non confirmé par l'organisateur ».
 4. Si confirmation : retirer la ligne de ce tableau et fusionner les deux fiches doublons.
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Beefbar x Airelles — pop-up estival à La Bastide de Gordes — inscrit le 11/08/2026
+- [ ] GAIA Bodrum — résidence estivale grecque-méditerranéenne au Mandarin Oriental — inscrit le 11/08/2026
