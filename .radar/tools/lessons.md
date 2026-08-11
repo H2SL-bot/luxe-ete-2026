@@ -449,3 +449,12 @@ fiche existe toujours. Motif vide = pas d'exemption.
 PIÈGE DE TEST à ne pas répéter : validate.py réécrit `.last-names.json` à chaque succès.
 Tester une disparition APRÈS un run réussi donne toujours OK — l'instantané a déjà
 oublié l'ancien nom. Il faut remettre l'ancien nom dans l'instantané avant chaque test.
+
+## 11/08/2026 — Un domaine perdu transforme une fiche en piège
+La fiche Via Notte marquait « confirme » avec vianotte.com comme source ET comme lien
+public. Or ce domaine n'appartient plus au club : il héberge un constructeur de maisons.
+Chaque visiteur qui cliquait tombait sur un site sans rapport — et rien ne confirmait
+la « saison 2026 » annoncée.
+Contrôle à ajouter au filet quotidien : le vérificateur de liens doit alerter non
+seulement sur les liens MORTS, mais sur les liens dont le CONTENU ne correspond plus
+au sujet de la fiche (domaine racheté, parking SEO). Un lien qui répond 200 peut mentir.

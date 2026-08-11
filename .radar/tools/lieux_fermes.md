@@ -27,3 +27,4 @@ Un lieu peut être **fermé** (Burj Al Arab : ouvert autrefois, fermé pour trav
 **jamais ouvert** (Verde Beach : annoncé, toujours « Opening Soon » en pleine saison).
 Dans les deux cas, l'événement ment au visiteur et part. La différence est seulement
 dans le suivi : le premier a une date de réouverture, le second demande une surveillance.
+| Via Notte — Porto-Vecchio (Corse-du-Sud) | Activité 2026 invérifiable : domaine officiel vianotte.com perdu (héberge un constructeur de maisons), indice de fermeture en 2019, travaux évoqués par Corse-Matin | 11/08/2026 | Appeler le 04 95 72 02 12 ou écrire à la page Facebook @vianotteofficial. Si le club rouvre : recréer la fiche avec la VRAIE URL publique et des dates sourcées. |
