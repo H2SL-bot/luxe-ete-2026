@@ -7,14 +7,34 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 
 | Événement | Doute | Constaté le | Pourquoi non tranché |
 |---|---|---|---|
-| DG Resort 2026 à Saint-Tropez — Casa Amor (Pampelonne) | Aucune source officielle trouvée confirmant le takeover Dolce & Gabbana. Le dossier de presse Butler Collection 2026 (propriétaire de Casa Amor) ne contient ni « Dolce », ni « Gabbana », ni « Pampelonne » ; casaamor.com n'en parle pas en accueil. | 11/08/2026 | L'agent n'avait plus de recherche web (budget de session épuisé) : il n'a pas pu croiser la presse mode. Absence de confirmation ≠ preuve d'absence. |
-| Dolce & Gabbana x Casa Amor — takeover « DG Resort » (Carretto Siciliano) | Même doute, même lieu — probable doublon du précédent, à fusionner si les deux se confirment. | 11/08/2026 | Idem. |
+| _(aucun doute ouvert sur les fiches Dolce & Gabbana — voir « doutes tranchés » plus bas)_ | | | |
 
-## Marche à suivre à la prochaine passe
-1. Ouvrir le communiqué de presse PDF « DG Resort Saint-Tropez » sur la salle de presse Dolce & Gabbana.
-2. Écrire au bureau de presse de Butler Collection (agence Pascale Venot) : confirment-ils l'opération ?
-3. Si aucune confirmation : retrait via `retraits-volontaires.json`, motif « événement non confirmé par l'organisateur ».
-4. Si confirmation : retirer la ligne de ce tableau et fusionner les deux fiches doublons.
+## Doutes tranchés
+
+### 11/08/2026 — Dolce & Gabbana x Casa Amor : CONFIRMÉ, doute levé
+Le doute du matin venait d'un agent privé de recherche web, pas de la réalité.
+Un vérificateur disposant de tous ses moyens (16 pages officielles consultées) a
+établi que la page officielle Dolce & Gabbana « DG Resort 2026 » confirme bien le
+takeover de Casa Amor avec le motif Carretto Siciliano. L'événement RESTE en ligne.
+
+Il a en revanche trouvé deux erreurs de fait, corrigées le jour même :
+- **Date de fin** : le site annonçait « jusqu'au 31 octobre 2026 ». Aucune source ne
+  la confirme, et le calendrier publié par Casa Amor s'arrête au 30 août (42 dates,
+  aucune en septembre ni en octobre). Corrigée en 2026-08-30. Une lectrice pouvait
+  réserver un séjour en octobre pour une plage fermée.
+- **Adresse** : « chemin des Moulins » n'existe dans aucune source. Le pied de page de
+  casaamor.com donne « Chem. de Matarane, 83350 Ramatuelle ». Corrigée.
+
+Cette entrée illustre la règle : un doute né d'un agent bridé se lève avec un agent
+complet, il ne se transforme jamais en retrait.
+
+## Doublon à fusionner (travail de la routine)
+
+Deux fiches décrivent la même opération, mêmes dates, même lieu :
+- « DG Resort 2026 à Saint-Tropez — Casa Amor (Pampelonne) » — a un séjour et une invitation
+- « Dolce & Gabbana x Casa Amor — takeover 'DG Resort' (thème Carretto Siciliano) » — invitation seule
+À fusionner par la passe de déduplication, en gardant la fiche la plus complète et en
+reprenant l'adresse exacte (chemin de la Matarane).
 
 ## Vérifiées à moyens réduits — ré-audit obligatoire
 
