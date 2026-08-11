@@ -44,3 +44,11 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Covo di Nord-Est — club iconique de la Riviera — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Les Caves du Roy — nuits de juillet (Hôtel Byblos) — inscrit le 11/08/2026
+- [ ] Principote — Beach club chic de Panormos — inscrit le 11/08/2026
