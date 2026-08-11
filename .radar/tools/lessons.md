@@ -375,3 +375,12 @@ Règle : ne jamais enchaîner une garde derrière un tuyau.
 Les 45 blocages ne venaient pas du contenu mais d'un `index-full.html` vieux de 6 jours,
 sur lequel j'avais injecté. Réflexe obligatoire avant toute injection après une pause :
 `git fetch && git reset --hard origin/main && rebuild_full.py`, PUIS injecter.
+
+## 11/08/2026 — Un atelier d'agents peut mourir sans le dire
+Deux ateliers de recherche (50 fiches chacun) se sont arrêtés à 12h30 sans erreur ni
+notification ; je les ai crus vivants pendant 3 h. Aucun travail perdu (tout était
+déjà publié ou en vérification), mais 3 h de production à zéro.
+Filet permanent : la sonde `~/.radar-session/hb.sh` lit la DATE du dernier fichier écrit
+par chaque atelier et affiche « ⚠️MORT(âge) » au-delà de 5 min sans écriture.
+Règle : ne jamais juger un atelier vivant sur son compteur — un compteur figé
+ressemble exactement à un atelier lent.
