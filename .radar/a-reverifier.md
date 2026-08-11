@@ -167,3 +167,10 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Hamptons Polo Club - finales et grandes journees d'aout (Continental Cup 16-Goal, Monty Waterbury Cup, Hamptons Festival of Polo, finale 4-… — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] JustMe Porto Cervo — Opening & Saison 2026 — inscrit le 11/08/2026
