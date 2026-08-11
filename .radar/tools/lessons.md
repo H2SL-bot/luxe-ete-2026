@@ -470,3 +470,16 @@ bien à l'avancement attendu de ce lot.
 Et tenir à jour le fichier d'étiquettes de la sonde : un libellé périmé m'a fait lire
 « MORT » sur un atelier vivant et « vivant » sur un atelier mort. Un faux positif détruit
 la confiance dans la sonde aussi sûrement qu'une alerte manquée.
+
+## 11/08/2026 — Le dossier de travail temporaire s'efface ; les journaux d'agents, non
+Le scratchpad a été vidé deux fois dans la journée, emportant les scripts d'ateliers.
+Impossible alors de reprendre un atelier interrompu : `resumeFromRunId` exige le script.
+Ce qui a sauvé la mise : les journaux d'agents, eux, persistent. `preparer_verif.py`
+relit la RECHERCHE d'origine et régénère l'atelier de vérification en excluant tout ce
+qui est déjà publié — il a reconstitué le reliquat exact (4 séjours, 13 invitations)
+sans perdre une seule fiche.
+Règles qui en découlent :
+- les scripts d'appoint vivent dans `~/.radar-session/`, PAS dans le scratchpad ;
+- ne jamais dépendre d'un fichier temporaire pour reprendre un travail ;
+- toujours pouvoir régénérer un lot depuis sa source (le journal de recherche) plutôt
+  que depuis un artefact intermédiaire.
