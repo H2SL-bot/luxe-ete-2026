@@ -23,3 +23,10 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Beefbar x Airelles — pop-up estival à La Bastide de Gordes — inscrit le 11/08/2026
 - [ ] GAIA Bodrum — résidence estivale grecque-méditerranéenne au Mandarin Oriental — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Lilly's Club Saint-Tropez (ex-VIP Room) — saison d'août — inscrit le 11/08/2026
