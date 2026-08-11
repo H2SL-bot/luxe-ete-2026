@@ -198,3 +198,10 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Dolce & Gabbana x Casa Amor — takeover 'DG Resort' (thème Carretto Siciliano) — inscrit le 11/08/2026
 - [ ] Meeting de Deauville Barrière 2026 — inscrit le 11/08/2026
 - [ ] Sunset sessions & DJ sets à La Co(o)rniche (Philippe Starck) — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] David Guetta F*** Me I'm Famous! — Ushuaia Ibiza — inscrit le 11/08/2026
