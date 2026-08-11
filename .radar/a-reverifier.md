@@ -252,3 +252,10 @@ impossible la promesse « on dîne trois étoiles à l'étage » en août.
 Rouvrir dior.com/beauty (page Dior Spa Cheval Blanc Paris) depuis un navigateur réel, ou
 téléphoner au spa. Si les fenêtres de septembre et novembre sont confirmées : retirer
 cette ligne. Si une session d'août existait bel et bien : rétablir les dates.
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Cavo Paradiso — Saison DJ 2026 (club iconique en falaise) — inscrit le 11/08/2026
