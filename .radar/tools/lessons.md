@@ -458,3 +458,15 @@ la « saison 2026 » annoncée.
 Contrôle à ajouter au filet quotidien : le vérificateur de liens doit alerter non
 seulement sur les liens MORTS, mais sur les liens dont le CONTENU ne correspond plus
 au sujet de la fiche (domaine racheté, parking SEO). Un lien qui répond 200 peut mentir.
+
+## 11/08/2026 — Reprendre depuis le MAUVAIS identifiant refait tout en silence
+En reprenant après la coupure de 22h, j'ai relancé le script des 18 séjours depuis
+l'identifiant d'un autre atelier (celui de 5 fiches). Le harnais l'accepte sans broncher :
+les clés de cache ne correspondant à rien, les 18 agents repartaient de zéro — dont 10
+déjà faits. Aucune erreur affichée, juste le double du travail et du temps.
+Règle : `resumeFromRunId` doit être l'identifiant de l'atelier qui a exécuté CE script,
+pas un voisin. Vérifier avant reprise que le compteur d'aboutis de l'atelier correspond
+bien à l'avancement attendu de ce lot.
+Et tenir à jour le fichier d'étiquettes de la sonde : un libellé périmé m'a fait lire
+« MORT » sur un atelier vivant et « vivant » sur un atelier mort. Un faux positif détruit
+la confiance dans la sonde aussi sûrement qu'une alerte manquée.
