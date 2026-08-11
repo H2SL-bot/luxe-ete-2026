@@ -266,3 +266,12 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Terrasses et jardins d'été des palaces parisiens (Plaza Athénée, Bristol, Peninsula, Mandarin Oriental, Crillon) — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Black Coffee — Residency 2026 (SantAnna Mykonos) — inscrit le 11/08/2026
+- [ ] Calder. Rêver en équilibre — Fondation Louis Vuitton — inscrit le 11/08/2026
+- [ ] Exposition Générale — inauguration de la nouvelle Fondation Cartier par Jean Nouvel — inscrit le 11/08/2026
