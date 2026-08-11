@@ -237,3 +237,18 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Calvin Harris — Ushuaia Ibiza — inscrit le 11/08/2026
 - [ ] Nikki Beach Miami Beach — Amazing Sundays & Saturdance (beach club ADN Riviera) — inscrit le 11/08/2026
 - [ ] Soirees d'ete des Hotels Barrière (Normandy, Royal, Casino) — inscrit le 11/08/2026
+
+## À confirmer — corrigé sur un seul témoignage, non recoupé par moi
+
+| Fiche | Correction appliquée | Pourquoi non recoupée | Inscrit le |
+|---|---|---|---|
+| Dior Spa Cheval Blanc Paris — expérience bien-être Dioriviera | Dates ramenées d'« août 2026 » aux fenêtres publiées par Dior : 22-25 et 27-29 septembre, puis 18-22 novembre 2026, 10h-19h. | Vérificateur fiable (recherche complète, 16 pages, deux sources concordantes, créneaux horaires précis). Mais dior.com et chevalblanc.com renvoient 403 à toute lecture automatique, et le budget de recherche de la session était épuisé : je n'ai pas pu confirmer moi-même. | 11/08/2026 |
+
+Point d'appui du diagnostic, à revérifier aussi : le restaurant Plénitude serait fermé
+du 2 août au 1er septembre inclus (pause estivale), ce qui rendait de toute façon
+impossible la promesse « on dîne trois étoiles à l'étage » en août.
+
+### Marche à suivre
+Rouvrir dior.com/beauty (page Dior Spa Cheval Blanc Paris) depuis un navigateur réel, ou
+téléphoner au spa. Si les fenêtres de septembre et novembre sont confirmées : retirer
+cette ligne. Si une session d'août existait bel et bien : rétablir les dates.
