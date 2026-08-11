@@ -130,3 +130,10 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Dior Spa Cheval Blanc Paris — expérience bien-être Dioriviera — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Capri en aout : saison de la taverne Anema e Core et programme municipal Emozioni d'Estate — inscrit le 11/08/2026
