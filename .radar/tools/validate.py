@@ -251,11 +251,30 @@ def main():
                     retraits[r["nom"]] = r["motif"]
         except Exception:
             wrn("retraits-volontaires.json illisible — aucun retrait n'est exempté")
+    # Renommages : corriger un titre faux fait « disparaître » l'ancien nom, ce qui est
+    # indiscernable d'une perte de données. On exempte l'ancien nom SEULEMENT si le
+    # nouveau est bien présent aujourd'hui : c'est la preuve que la fiche existe encore.
+    RENOM_FILE = os.path.join(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__))), "renommages.json")
+    renommes = {}
+    if os.path.exists(RENOM_FILE):
+        try:
+            for r in json.load(open(RENOM_FILE, encoding="utf-8")):
+                av, ap = r.get("avant"), r.get("apres")
+                if av and ap and (r.get("motif") or "").strip():
+                    renommes[av] = ap
+        except Exception:
+            wrn("renommages.json illisible — aucun renommage n'est exempté")
     disparues = []
     for nm, d2s in prev_names.items():
         if nm in cur_names:
             continue
         if nm in retraits:
+            continue
+        if nm in renommes:
+            if renommes[nm] in cur_names:
+                continue
+            blk(f"renommage déclaré mais le nouveau nom est absent : {nm[:50]} -> {renommes[nm][:50]}")
             continue
         d2v = parse_d(d2s or "")
         if d2v is None or d2v >= today - timedelta(days=30):

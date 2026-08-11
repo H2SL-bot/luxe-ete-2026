@@ -422,3 +422,30 @@ Deux réflexes à garder :
 Corollaire de méthode : publier au fil de l'eau n'est pas une préférence de confort,
 c'est ce qui rend une coupure indolore. Un lot gardé pour « publier à la fin » aurait
 été perdu en entier.
+
+## 11/08/2026 — Une source secondaire a fabriqué un tournoi entier
+La fiche Deauville annonçait « Nouveauté 2026 : l'Asia Polo Cup (6-9 août) ouvre la
+saison », avec une date de début au 6 août — et OMETTAIT la Coupe d'Or (17-30 août),
+le tournoi le plus prestigieux du mois. Source invoquée : prensapolo.com, un média
+secondaire. La page officielle du club, lue en direct, dit « BARRIÈRE DEAUVILLE POLO
+CUP 2026 — 10 au 30 août » et ne mentionne aucune Asia Polo Cup.
+Règle : quand une fiche cite une source secondaire À CÔTÉ de la source officielle
+(champ `so` à deux URL), c'est le site de l'organisateur qui tranche, toujours.
+Une « nouveauté » annoncée par un seul média et absente du site officiel est une
+invention jusqu'à preuve du contraire.
+Contrôle à ajouter à la routine : pour tout événement dont `so` contient une source
+non officielle, rouvrir la page de l'organisateur et recouper dates ET intitulés.
+
+## 11/08/2026 — Un renommage est indiscernable d'une perte de données
+Corriger un titre faux fait disparaître l'ancien nom : le filet anti-perte a bloqué la
+publication, à juste titre puisqu'il ne pouvait pas faire la différence. Or corriger un
+titre est une opération légitime et fréquente — sans voie déclarée, la routine se
+bloquerait elle-même chaque fois qu'elle rectifie un intitulé.
+Filet : `.radar/renommages.json` ({avant, apres, date, motif}). L'ancien nom n'est
+exempté QUE si le nouveau est présent dans les données du jour — c'est la preuve que la
+fiche existe toujours. Motif vide = pas d'exemption.
+Éprouvé dans les trois sens : sans déclaration → FAIL ; déclaré mais nouveau nom absent
+→ FAIL explicite ; déclaration complète → OK.
+PIÈGE DE TEST à ne pas répéter : validate.py réécrit `.last-names.json` à chaque succès.
+Tester une disparition APRÈS un run réussi donne toujours OK — l'instantané a déjà
+oublié l'ancien nom. Il faut remettre l'ancien nom dans l'instantané avant chaque test.
