@@ -399,3 +399,12 @@ fermé/en travaux/définitivement clos, ce n'est pas le séjour qu'on saute — 
 l'ÉVÉNEMENT qu'on retire, invitation comprise. Voir tools/lieux_fermes.md.
 Réflexe de composition : vérifier l'OUVERTURE du lieu à la date de l'événement fait
 désormais partie du prompt de recherche ET du prompt de vérification.
+
+## 11/08/2026 — Un budget de recherche épuisé fabrique de faux doutes
+En fin de session, les agents n'avaient plus de WebSearch (200/200). Plusieurs ont
+conclu « aucune source officielle trouvée » — ce qui ressemble à s'y méprendre à
+« l'événement n'existe pas », alors que c'est seulement « je n'ai pas pu chercher ».
+Règle : ne JAMAIS retirer un contenu sur un agent privé de recherche. Le doute
+s'inscrit dans `.radar/a-reverifier.md` et se tranche à la passe suivante.
+Symétriquement : ne jamais PUBLIER non plus sur cette base. Un agent sans recherche
+ne peut ni condamner ni absoudre.
