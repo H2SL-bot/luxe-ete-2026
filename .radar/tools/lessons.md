@@ -363,3 +363,15 @@ transcripts le dit en une seconde.
    vraies les coordonnées qui l'accompagnaient dans la première réponse. En
    cas de doute sur une coordonnée précise (numéro, email) même quand le nom
    est confirmé : la retirer et garder uniquement le contact générique publié.
+
+## 11/08/2026 — `validate.py | tail` masque son propre échec
+`python3 validate.py 2>&1 | tail -1 && git commit && git push` publie TOUJOURS :
+dans un tuyau, le code de sortie retenu est celui de `tail`, pas celui de validate.
+J'ai ainsi commité un état à 45 blocages. Filet permanent : `~/.radar-session/publier.sh`
+teste le TEXTE de la dernière ligne (`case "$V" in OK*)`) et sort en erreur sinon.
+Règle : ne jamais enchaîner une garde derrière un tuyau.
+
+## 11/08/2026 — Base locale périmée = faux blocages en cascade
+Les 45 blocages ne venaient pas du contenu mais d'un `index-full.html` vieux de 6 jours,
+sur lequel j'avais injecté. Réflexe obligatoire avant toute injection après une pause :
+`git fetch && git reset --hard origin/main && rebuild_full.py`, PUIS injecter.
