@@ -8,3 +8,4 @@
 2026-08-05T03:55:49Z  DEMARRAGE
 2026-08-05T04:24:04Z  FIN — Purge 6 zombies + dédup 2 doublons + 6 événements automne nés complets (5 nouveaux, 1 déjà présent) + 10 séjours prestige backfillés ; validate/perfcheck OK, 529/529 traductions
 2026-08-11T12:29:25Z  DEMARRAGE
+2026-08-11T12:55:17Z  FIN — Rattrapage 6j : 2 doublons dédupliqués, 7 guides intemporels sauvés d'une purge, 4 séjours + 4 voies d'invitation backfillés (1 contact halluciné intercepté), validate/perfcheck OK, healthcheck faux-négatif réseau connu

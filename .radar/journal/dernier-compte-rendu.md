@@ -1,160 +1,161 @@
-# Compte rendu — passe du 5 août 2026 (cloud, radar-routine-claude)
+# Compte rendu — passe du 11 août 2026 (cloud, radar-routine-claude)
+
+## Anomalie de déclenchement — À SIGNALER EN PREMIER
+`precheck.sh` a détecté une **cadence rompue : 152 h depuis le dernier
+« DEMARRAGE » journalisé** (dernier passage complet le 5 août à 03:56 UTC,
+celui-ci le 11 août à 12:29 UTC — 6 jours d'écart au lieu d'un par jour).
+Cette passe est donc une **passe de RATTRAPAGE**. Rassurant : le site n'a PAS
+été laissé à l'abandon pendant ces 6 jours — la « passe quotidienne
+automatique » (plancher, signature `radar-passe-quotidienne`) a tourné tous
+les jours (5, 6, 7, 8, 9, 10, 11 août), a tenu l'eyebrow à jour et a fait de
+l'entretien/vérification de liens. Ce qui n'a PAS eu lieu pendant ces 6 jours,
+faute du passage de cette routine complète : recherche de nouveaux événements,
+backfill séjour/invitation, dédup, traduction. Origine du décrochage non
+identifiable depuis cette session (pas d'accès aux réglages de déclenchement) —
+signal à vérifier côté ordonnanceur si l'écart se reproduit.
 
 ## État général
-- validate.py : OK — 0 blocker, 0 warning. 529 événements, 136 dans la fenêtre
-  [aujourd'hui..+90j], traductions 529/529 (100 %).
-- perfcheck.py : OK — 0 régression (+0,00 Mo, +0 événement vs dernier point de
-  cette passe). Index allégé 0,55 Mo gzip, 12 langues différées via i18n-data/.
-- KPI ACCÈS mondain (iv) : 231/379 (60 %) — en hausse (une passe concurrente
-  a backfillé 8 voies d'invitation + 2 séjours pendant cette session, fusionnée
-  proprement — voir Anomalies).
-- Adresse publique https://constanceparis7.com : poussée sur `main`
-  (commit final 6d079ba3, après fusion avec la passe concurrente), eyebrow
-  « 5 août 2026 ». Push direct accepté, aucun repli sur branche `claude/*`
+- `validate.py` : **OK — 0 blocker, 0 warning.** 482 événements, 120 dans la
+  fenêtre [aujourd'hui..+90j], traductions 482/482 (100 %).
+- `perfcheck.py` : **OK — 0 régression** (poids inchangé, -47 événements par
+  rapport au dernier point enregistré — purges normales du plancher pendant
+  l'absence, pas une perte de données : `validate.py` ne bloque que sur une
+  fiche non périmée qui disparaîtrait, ce qui n'est pas le cas ici).
+- KPI ACCÈS mondain (`iv`) : 224/336 (66 %) — stable ; les voies d'invitation
+  ajoutées cette passe (US Open, Polo Gassin, Le Marois, Touquet) ne comptent
+  pas dans cet indicateur car leurs catégories ne sont pas classées « mondain »
+  par `validate.py` — utile quand même pour la promesse d'accès du site.
+- Adresse publique https://constanceparis7.com : poussée sur `main` (commit
+  `80cd6d3`), push direct accepté, aucun repli sur branche `claude/*`
   nécessaire.
 
 ## Fait pendant la passe
-1. **Purge** : 6 fiches zombies retirées (d2 = 5 juillet, au-delà du seuil de
-   30 jours) — Royal Monceau (indépendance américaine), PAD Saint-Tropez,
-   Tokyo Jewelry Fes, défilé Boloria, Rencontres Musicales d'Évian, Henley
-   Royal Regatta. 532 → 526 événements.
-2. **Correction de doublons** (détectés par comparaison URL/nom pendant la
-   vérification des 7 prochains jours) : 2 fiches en double supprimées, la
-   version la plus complète et la mieux sourcée conservée dans chaque cas —
-   « Sting Live Concert at Villa d'Este » (gardée, la version « concert privé
-   & dîner de gala » retirée) et « Barrière Deauville Polo Cup 2026 » (la
-   fiche détaillant les 4 sous-tournois gardée). 526 → 524.
-3. **COMBLER L'AUTOMNE** (priorité 2 du plan validé par Gérald le 29/07,
-   maintenant que les traductions — priorité 1 — sont à 100 %) : recherche
-   web réelle, 6 événements ultra-mondains oct.-nov. identifiés et vérifiés
-   (Qatar Prix de l'Arc de Triomphe à Longchamp, Art Basel Paris — déjà
-   présente et complète sur le site, doublon évité —, vente du soir
-   Sotheby's « Modernités », vente Artcurial « La Modernité en partage »,
-   gala d'ouverture de la saison de danse à l'Opéra Garnier, ouverture de la
-   saison lyrique de l'Opéra de Monte-Carlo avec Cecilia Bartoli). **5
-   nouvelles fiches nées complètes** : invitation (`iv`, contacts
-   professionnels publiés vérifiés — aucun n'a été inventé, plusieurs voies
-   d'accès restent volontairement en billetterie individuelle faute de
-   contact presse publié) + séjour (`sej`, hôtels/tables/expériences réels
-   avec URL) + traductions dans les 12 langues dès la naissance. 524 → 529.
-4. **Backfill séjour** (fenêtre live, prestige d'abord) : 10 séjours composés
-   pour des fiches sans `sej` — Sublime Summer Party (Comporta), Taormina
-   Arte Sicilia, Philharmonix (Dubrovnik), Soneva Stars/Sir Mo Farah, US Open
-   Fan Week, clôture Dubrovačke ljetne igre, Four Seasons Maldives Surfing
-   Trophy, Sir Rocco Forte Captain's Trophy (Verdura), Sotheby's Hong Kong
-   ×2 (joaillerie + vente du soir). Recherche web réelle et vérification
-   adversariale pour chacun ; l'agent a honnêtement signalé l'absence de
-   palace collé au site de l'US Open (Flushing Meadows) plutôt que d'en
-   inventer un — Manhattan retenu comme base réaliste avec transport direct.
-5. Eyebrow mis à jour : « données collectées et vérifiées le 5 août 2026 ».
-6. SEO : `gen_seo.py` (ld+json enrichi, sitemap lastmod=2026-08-05),
-   `gen_pages.py` (518 événements × 13 langues + hubs, sitemap 8256 URLs,
-   0 lien mort — 9 pages purgées/dédupliquées supprimées, 5 nouvelles créées
-   dans les 13 langues).
-7. **Filet** : `.last-names.json` mis à jour pour les 2 fiches dédupliquées
-   (suppression volontaire et sourcée, pas une perte de données — sans quoi
-   `validate.py` aurait bloqué à tort, leçon du 29/07 appliquée).
+1. **Dédup de 2 doublons réels**, détectés par comparaison URL+dates lors de
+   l'audit de la fenêtre live : « Arqana - La Vente d'Août » (deux fiches
+   identiques pour la même vente de yearlings 15-17 août, gardé la version
+   avec le contact presse le plus complet) et « Palermo-Montecarlo 2026 »
+   (deux fiches pour la même régate 18-23 août, gardé la version avec `iv`
+   déjà renseigné et le mieux sourcée). 484 → 482. `.last-names.json` mis à
+   jour en conséquence pour ne pas déclencher de faux blocage.
+2. **7 guides d'accès intemporels sauvés d'une purge involontaire** : les
+   fiches « POINT D'ENTRÉE — … » (c=acces) avaient un `d2` daté de juillet
+   2026 alors que la doctrine les veut intemporelles ; elles auraient disparu
+   du site fin août au prochain seuil de purge à 30 jours. `d2` repoussé à
+   fin 2027. Aucun contenu modifié, seulement la date d'expiration technique.
+3. **4 séjours composés** (recherche web réelle, calibre jet-set, aucune
+   fabrication) : Regata Palermo-Montecarlo (côté Monte-Carlo, Hermitage/Hôtel
+   de Paris, Le Louis XV, Yacht Club de Monaco), Dîner de Ferragosto au
+   Quisisana (sur place à Capri, Da Paolino, La Fontelina, Villa San Michele),
+   Chantilly Arts & Élégance (Auberge du Jeu de Paume dans le Domaine même,
+   musée Condé), Coupe d'Or de Polo de Deauville (palaces Barrière, L'Essentiel,
+   casino et thalasso).
+4. **4 voies d'invitation backfillées** : US Open Fan Week (Fan Access Pass
+   gratuit qualifié, aucun contact presse nominatif publié trouvé — dit
+   franchement), Polo Federations Cup Gassin (directeur du club nommé et
+   sourcé via une source indépendante), Prix Jacques Le Marois et Touquet
+   Classic Amateur (voir anomalie ci-dessous).
+5. **Un contact halluciné intercepté avant publication** : le premier passage
+   de recherche avait produit « Audrey Le Véziel — Responsable Communication,
+   Événementiel et Sportif, Le Touquet Golf Resort » avec un email. Un agent
+   vérificateur adversarial dédié a trouvé un profil indépendant pour ce nom
+   exact rattaché à un métier totalement différent (restauration) — signal de
+   fabrication ou d'homonymie. **Écarté avant publication.** Les deux autres
+   noms de la même vague (Héléna Dupuy/France Galop, Charles Debruyne/Touquet)
+   ont été confirmés sur le nom et la fonction par une source professionnelle
+   indépendante, mais PAS sur le téléphone/email associé (jamais vu dans un
+   extrait source brut) — ces coordonnées non confirmées ont été retirées ;
+   seuls le nom, la fonction et les contacts génériques déjà publiés ont été
+   gardés. Leçon consignée dans `lessons.md`.
+6. SEO : `gen_seo.py` (ld+json, sitemap lastmod=11/08), `gen_pages.py` (472
+   événements × 13 langues + hubs, sitemap 7645 URLs, 0 lien mort — la baisse
+   de volume de pages vient des purges normales du plancher pendant l'absence).
+7. Eyebrow déjà à jour (« 11 août 2026 ») — tenue quotidiennement par la
+   passe automatique du plancher, rien à faire cette fois.
 
 ## Le reste-à-faire (recompté cette passe)
-- **Traductions manquantes : 0/529.** Priorité 1 du plan du 29/07 terminée
-  (la dernière passe d'hier, 04/08, avait atteint 100 %). Vérifié à nouveau
-  ce matin après ajout des 5 nouvelles fiches : toujours 0.
-- **Séjours manquants : 332 au total, dont 57 dans la fenêtre live** (68 → 57
-  après le backfill de 10 aujourd'hui, +11 apportés par les 5 nouvelles
-  fiches qui, elles, sont nées avec séjour).
-- **Voies d'invitation manquantes : 233 au total, dont 20 dans la fenêtre
-  live** (21 → 20 ; les 5 nouvelles fiches sont nées avec `iv`).
-- **Guides d'accès (c=acces) : 11**, inchangé — priorité 3 du plan (10
-  nouveaux guides) pas encore engagée cette passe, la priorité 2 (automne)
-  ayant pris le pas comme prévu par l'ordre strict du plan.
-- Octobre-novembre-décembre 2026 comptent désormais 74 événements (contre
-  ~56 avant cette passe, oct. 20 + nov. 16 + déc. 33 début août) — la
-  priorité 2 progresse mais n'est pas achevée ; à poursuivre passe après
-  passe (~40-60 événements visés à terme sur cette fenêtre).
-- 10 fiches restent sans URL source (`u` vide) — gap pré-existant, non
-  aggravé ni corrigé cette passe (hors priorité du jour) : Feu d'artifice de
-  Monaco, Gucci Flora x La Rose des Vents, Dioriviera Cannes, conseil accès
-  août, Besch Cannes Auction, Twiga Porto Cervo, Hotel Pitrizza, Sottovento
-  Club, Ritual Club Baja Sardinia, yachts Ibiza-Formentera.
+- **Traductions manquantes : 0/482.** Toujours à 100 %.
+- **Séjours manquants : 263 au total, dont 42 dans la fenêtre live** (47 → 42
+  après les 4 composés aujourd'hui).
+- **Voies d'invitation manquantes : 167 au total, dont 6 dans la fenêtre
+  live** (11 → 6... écart de 5 pour 4 backfills : la dédup a aussi retiré une
+  fiche qui comptait comme manquante).
+- **Guides d'accès (c=acces) : 10**, inchangé — la priorité 3 du plan du
+  29/07 (écrire 10 nouveaux guides intemporels) n'a pas été engagée cette
+  passe, la priorité donnée au rattrapage (dédup, purge évitée, réseau)
+  après 6 jours d'absence de cette routine.
+- Couverture oct-nov-déc 2026 : 74 événements, inchangée depuis le 5 août
+  (aucun nouvel événement d'automne ajouté cette passe — priorité 2 du plan
+  du 29/07 en attente, faute de temps après le rattrapage).
 
-## Événements des 48 h
-- 5/08 (aujourd'hui) : Délices Sonores (Citadelle), Gilles Peterson à la
-  Fondation Maeght.
-- 6/08 : Concerts au Palais Princier (OPMC, clôture de saison), Ravello
-  Festival (Serate Jazz), Barrière Deauville Polo Cup, Sublime Summer Party
-  (Comporta, séjour composé aujourd'hui).
-- Vérification ciblée des 24 fiches démarrant sous 7 jours : liens et dates
-  cohérents ; c'est cette vérification qui a fait remonter les 2 doublons
-  corrigés ci-dessus.
+## Événements des 48 h / semaine
+33 fiches démarrent dans les 7 prochains jours (11-18 août) : Monte-Carlo
+Summer Festival (Lisa Stansfield le 11, Laura Pausini le 15), Gala Night de
+l'Hôtel Cala di Volpe avec Katy Perry (12 août, Porto Cervo), Coupe d'Or de
+Polo de Deauville (ouverture le 17), Regata Palermo-Montecarlo (départ le 18),
+Fête du 15 août à Saint-Tropez/Grimaud, Prix Jacques Le Marois (16 août,
+Deauville). Vérification de cohérence dates/liens faite sur cette fenêtre à
+l'occasion de l'audit qui a révélé les 2 doublons — pas de lien testé en
+direct cette passe (voir anomalie réseau).
 
 ## 3-5 nouveautés glamour
-- Qatar Prix de l'Arc de Triomphe à Longchamp (4 octobre) — nouvelle fiche,
-  séjour 16e arrondissement + déjeuner étoilé au Pré Catelan.
-- Ouverture de saison lyrique de l'Opéra de Monte-Carlo : Cecilia Bartoli
-  dirige « Carmen » avec Marina Viotti et Benjamin Bernheim (20 novembre).
-- Gala d'ouverture de la saison de danse à l'Opéra Garnier (10 octobre),
-  soirée AROP avec Hugo Marchand et Germain Louvet.
-- Ventes Sotheby's « Modernités » et Artcurial « La Modernité en partage »,
-  calées sur la semaine Art Basel Paris fin octobre.
-- Backfill séjour Sir Rocco Forte Captain's Trophy — tournoi inaugural au
-  Verdura Resort en Sicile, exhibition de Colin Montgomerie.
+- Gala Night 2026 de l'Hôtel Cala di Volpe avec Katy Perry (12 août, Porto
+  Cervo, Costa Smeralda).
+- Regata Palermo-Montecarlo, 21e édition — désormais avec séjour Monte-Carlo
+  clé en main (Le Louis XV, Yacht Club de Monaco).
+- Coupe d'Or de Polo de Deauville, finale le 30 août — séjour Barrière complet.
+- Chantilly Arts & Élégance Richard Mille (13 septembre) — séjour dans le
+  Domaine même, à l'Auberge du Jeu de Paume.
+- Dîner de gala de Ferragosto au Grand Hotel Quisisana (15 août, Capri).
 
 ## Visites (regard journaliste)
-Le compteur GoatCounter reste illisible depuis cette session cloud (403 —
-tunnel bloqué, testé à la fois en direct et via l'outil de récupération web ;
-même anomalie que le 28-29/07). Le dernier relevé exploitable
-(`stats/visites.ndjson`) montre une progression continue sur 5 jours :
-270 → 284 → 299 → 311 → 319 visites du 31/07 au 04/08, soit environ +18 %
-sur la période — tendance saine, sans rupture visible. Aucun chiffre du jour
-disponible ni inventé ; le relevé sera rattrapé par le plancher GitHub
-Actions qui dispose du réseau.
+Le relevé quotidien (`stats/visites.ndjson`, tenu à jour par le plancher
+pendant l'absence de cette routine) montre une **progression continue et
+saine sur les 6 jours manqués** : 327 → 334 → 341 → 353 → 365 → 380 → 390
+visites du 5 au 11 août, soit +19 % sur la semaine, sans rupture ni pic
+suspect malgré l'absence de nouveaux contenus. Le compteur GoatCounter en
+direct reste illisible depuis cette session cloud (réseau sortant bloqué,
+voir anomalie ci-dessous) — même limitation que les 28-29/07 et le 05/08 ;
+aucun chiffre inventé, le relevé quotidien fait foi.
 
 ## Résultats des contrôles
-- `validate.py` : OK, 0 blocker, 0 warning.
-- `perfcheck.py` : OK, 0 régression.
-- `healthcheck.sh` : **ALERTE technique, mais fausse alerte connue** —
-  http=000000 (réseau sortant bloqué depuis cette session cloud, comme les
-  28 et 29/07 ; ce n'est pas une panne du site). Pas de `rollback.sh`
-  déclenché — cela aurait été injustifié (leçon du 28/07, déjà consignée,
-  reconfirmée ici). Le contrôle qui fait foi reste
-  `.github/workflows/surveillance.yml`, qui dispose du réseau.
-- Adresse publique constanceparis7.com : à jour côté dépôt (commit
-  32c09500 poussé sur `main`), non vérifiable en direct depuis cette session
-  pour la même raison réseau.
+- `validate.py` : **OK**, 0 blocker, 0 warning.
+- `perfcheck.py` : **OK**, 0 régression.
+- `healthcheck.sh` : **ALERTE technique, fausse alerte connue** — http=000000
+  après 10 tentatives sur 2,5 minutes. Réseau sortant bloqué depuis cette
+  session cloud (confirmé dès le début de passe : `curl` direct → tunnel 403,
+  `WebFetch` → `EGRESS_BLOCKED` sur constanceparis7.com **et** sur des
+  domaines neutres comme wikipedia.org — seul `WebSearch` fonctionnait).
+  Même anomalie documentée les 28-29/07 et le 05/08. **`rollback.sh` non
+  déclenché**, à dessein (leçon établie : un 000 venu d'une session cloud est
+  la sonde qui n'a pas de réseau, pas le site qui est tombé). Le contrôle qui
+  fait foi reste `.github/workflows/surveillance.yml`, qui dispose du réseau.
+- Étape 10 (republication de l'artifact claude.ai) : **non effectuée**, comme
+  le 05/08 — `index.html` est un fichier de données brut de 2,2 Mo (12
+  langues + chargeur), pas un artifact de présentation ; sans incidence sur
+  le site public qui est la source de vérité.
 
-## Anomalies
-0. **Passe concurrente pendant cette session** : au moment de pousser le
-   journal final, `git push` a été refusé (« remote contains work you do not
-   have ») — une autre session avait publié entre-temps 8 voies d'invitation
-   et 2 séjours vérifiés (commit 416f1012, KPI 54 % → 60 %). Fusionnée
-   proprement avec `git merge` (aucun marqueur de conflit, `validate.py` et
-   `perfcheck.py` repassés OK sur l'état fusionné : 529 événements, 0
-   disparition, 231/379 iv) puis republiée (commit 6d079ba3). Aucune perte de
-   travail des deux côtés. À surveiller : deux passes le même jour, à
-   signaler pour information — le verrou `precheck.sh` n'a pas pu l'empêcher
-   car les deux sessions cloud ne partagent pas de disque.
-1. Réseau sortant bloqué depuis la session cloud (confirmé à nouveau : curl
-   direct → erreur 56/tunnel, `relever_visites.py` → 403, `healthcheck.sh` →
-   000000, `WebFetch` sur goatcounter.com → 403 également). Anomalie déjà
-   documentée les 28 et 29/07 ; aucune action corrective possible côté passe,
-   elle relève de la politique réseau du conteneur.
-2. Republication de l'artifact claude.ai (étape 10 de la doctrine) non
-   effectuée cette passe faute d'accès direct au fichier `index.html` généré
-   dans un contexte où l'outil Artifact serait pertinent pour ce cas d'usage
-   précis (grand fichier de données, pas un artifact de présentation) — sans
-   incidence sur le site public, qui est la source de vérité.
-3. Aucune autre anomalie. Signature des commits posée (`radar-routine-claude`)
-   dès le début de passe.
+## Anomalies (résumé)
+1. **Cadence rompue : 6 jours sans passe complète** (voir en tête de
+   compte rendu) — à surveiller côté ordonnanceur.
+2. **Réseau sortant bloqué** pour `curl`/`WebFetch`/`healthcheck.sh` depuis
+   cette session cloud — `WebSearch` fonctionnait normalement et a permis la
+   recherche de fond ; aucune vérification de lien en direct (`u`) possible.
+3. **1 contact halluciné intercepté et écarté avant publication** (voir
+   ci-dessus) — aucune donnée fausse publiée, leçon consignée.
+4. Aucune autre anomalie. Signature `radar-routine-claude` posée dès le
+   début de passe ; dépôt unique (pas de dépôt privé séparé dans cet
+   environnement — tout `.radar/` vit dans ce dépôt public, journaux et
+   leçons poussés avec le reste).
 
 ## Auto-amélioration de la passe
-- Détection systématique de doublons par similarité de nom sur les fiches
-  partageant la même URL source, appliquée pendant la vérification des 7
-  prochains jours : a mis au jour 2 doublons réels qui seraient restés
-  invisibles autrement (noms légèrement différents, même événement, même
-  date, même URL). À reproduire aux passes suivantes comme filet
-  supplémentaire, en particulier sur les fiches issues de vagues de collecte
-  différentes.
-- Aucune fabrication de donnée : sur les 6 candidats automne identifiés par
-  la recherche, aucun contact presse nominatif n'a été inventé quand la
-  source ne le publiait pas — `iv.g`/`iv.w` documentent alors la voie
-  officielle générale (billetterie individuelle) plutôt qu'un nom fictif.
+- **Filet renforcé contre l'hallucination de contact** : quand `WebFetch` est
+  indisponible et que la recherche ne repose que sur des résumés `WebSearch`,
+  tout nom propre associé à un téléphone/email passe désormais systématiquement
+  par un second agent au seul mandat de réfuter, avant publication. Un contact
+  entièrement fabriqué a été intercepté ainsi cette passe. Leçon détaillée et
+  règle permanente ajoutées à `lessons.md` (11/08/2026).
+- **Bug de purge découvert et corrigé** : les 7 guides d'accès « intemporels »
+  portaient une date d'expiration héritée d'un ancien format mensuel et
+  auraient été supprimés à tort fin août. Corrigé (d2 repoussé), à surveiller
+  pour tout futur guide créé (priorité 3 du plan) — s'assurer qu'un guide
+  voulu intemporel ne porte pas de `d2` proche.
