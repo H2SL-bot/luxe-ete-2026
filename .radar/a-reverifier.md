@@ -144,3 +144,12 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Calvin Harris — Ushuaia Ibiza — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Meeting de Deauville Barrière 2026 — inscrit le 11/08/2026
+- [ ] Nikki Beach Mallorca — Beach club (Calvia) — inscrit le 11/08/2026
+- [ ] Sunset sessions & DJ sets à La Co(o)rniche (Philippe Starck) — inscrit le 11/08/2026
