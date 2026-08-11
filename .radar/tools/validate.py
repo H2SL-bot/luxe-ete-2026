@@ -236,9 +236,26 @@ def main():
             prev_names = json.load(open(NAMES_FILE, encoding="utf-8"))
         except Exception:
             prev_names = {}
+    # Retraits VOLONTAIRES : un événement peut devoir disparaître alors qu'il n'est
+    # pas périmé — typiquement quand la vérification web prouve qu'il ne peut pas
+    # avoir lieu (lieu fermé pour travaux, annulation officielle). Ces retraits sont
+    # légitimes MAIS doivent être déclarés et motivés, sinon on ne distingue plus un
+    # retrait réfléchi d'une perte de données. Voir .radar/tools/lieux_fermes.md.
+    RETRAITS_FILE = os.path.join(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__))), "retraits-volontaires.json")
+    retraits = {}
+    if os.path.exists(RETRAITS_FILE):
+        try:
+            for r in json.load(open(RETRAITS_FILE, encoding="utf-8")):
+                if r.get("nom") and (r.get("motif") or "").strip():
+                    retraits[r["nom"]] = r["motif"]
+        except Exception:
+            wrn("retraits-volontaires.json illisible — aucun retrait n'est exempté")
     disparues = []
     for nm, d2s in prev_names.items():
         if nm in cur_names:
+            continue
+        if nm in retraits:
             continue
         d2v = parse_d(d2s or "")
         if d2v is None or d2v >= today - timedelta(days=30):

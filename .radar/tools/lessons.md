@@ -384,3 +384,18 @@ Filet permanent : la sonde `~/.radar-session/hb.sh` lit la DATE du dernier fichi
 par chaque atelier et affiche « ⚠️MORT(âge) » au-delà de 5 min sans écriture.
 Règle : ne jamais juger un atelier vivant sur son compteur — un compteur figé
 ressemble exactement à un atelier lent.
+
+## 11/08/2026 — Un lieu FERMÉ produit un événement fantôme que rien ne détectait
+Le site annonçait le « Réveillon du Nouvel An — Burj Al Arab, gala Al Muntaha »
+du 31/12/2026, AVEC une voie d'invitation publiée. Or Jumeirah a fermé le Burj Al Arab
+le 15/04/2026 pour 18 mois de restauration (réouverture visée octobre 2027) : toutes
+ses tables sont à l'arrêt, la page d'Al Muntaha renvoie 404. Nous expliquions donc à
+une lectrice comment se faire inviter à une soirée impossible — le pire cas pour la
+crédibilité du site.
+Ni la purge (date future, donc pas un zombie) ni validate.py (cohérence interne) ne
+pouvaient le voir : le mensonge était dans le MONDE, pas dans le fichier.
+Filet permanent : quand un vérificateur rend `fiable=false` au motif que le LIEU est
+fermé/en travaux/définitivement clos, ce n'est pas le séjour qu'on saute — c'est
+l'ÉVÉNEMENT qu'on retire, invitation comprise. Voir tools/lieux_fermes.md.
+Réflexe de composition : vérifier l'OUVERTURE du lieu à la date de l'événement fait
+désormais partie du prompt de recherche ET du prompt de vérification.
