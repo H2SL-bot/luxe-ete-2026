@@ -326,3 +326,40 @@ toute la concurrence, et on publie au fil de l'eau.
 Corollaire : toujours vérifier « combien de VÉRIFICATEURS ont démarré », pas
 seulement « combien d'agents tournent » — grep 'ADVERSARIALE' sur les
 transcripts le dit en une seconde.
+
+## 11/08/2026 — WebFetch bloqué en session cloud + un contact halluciné intercepté de justesse
+
+1. **`WebFetch` renvoie systématiquement `EGRESS_BLOCKED`** dans cette session
+   cloud, sur tous les domaines testés (constanceparis7.com, artbasel.com,
+   wikipedia.org) — `WebSearch` fonctionne, lui, normalement. Contrairement au
+   blocage réseau documenté les 28-29/07 et le 05/08 (qui touchait `curl` et
+   `healthcheck.sh`), celui-ci touche aussi la recherche web profonde par
+   fetch de page. RÈGLE : quand `WebFetch` échoue sur un domaine neutre
+   (wikipedia.org) dès le début de passe, ne pas s'acharner — informer les
+   agents de recherche qu'ils doivent travailler uniquement avec `WebSearch`
+   (extraits + sources), et rester en conséquence plus prudent sur la
+   profondeur de vérification atteignable (voir leçon suivante).
+
+2. **Un agent de recherche a produit un contact totalement plausible mais
+   FAUX** : "Audrey Le Véziel — Responsable Communication, Événementiel et
+   Sportif, Le Touquet Golf Resort" + email `aleveziel@resonance.golf`, sur
+   la seule foi d'un résumé généré par l'outil de recherche (pas d'extrait
+   source brut). Un agent vérificateur adversarial dédié, lancé ensuite pour
+   contre-vérifier CE nom précis, a trouvé un profil LinkedIn indépendant
+   pour ce nom exact rattaché à un métier totalement différent (chef de
+   rang en restauration) — signal fort de fabrication ou de confusion
+   d'homonyme. Le contact a été écarté avant publication ; les deux autres
+   noms de la même vague (Héléna Dupuy/France Galop, Charles Debruyne/Touquet)
+   ont été confirmés par LinkedIn indépendant sur le nom et la fonction, mais
+   PAS sur le téléphone/email associé (visibles seulement dans les résumés de
+   l'outil, jamais dans un extrait source brut) — ces coordonnées non
+   confirmées ont été retirées, seuls le nom et la fonction corroborés ont
+   été publiés, avec les contacts génériques déjà connus en repli.
+   RÈGLE PERMANENTE : quand `WebFetch` est indisponible et que la recherche
+   ne repose que sur des résumés `WebSearch`, TOUJOURS faire vérifier par un
+   second agent, dont le seul mandat est de réfuter, tout nom propre associé
+   à un téléphone ou un email avant de le publier — un nom+fonction corroboré
+   par une source indépendante (ex. LinkedIn) ne rend pas automatiquement
+   vraies les coordonnées qui l'accompagnaient dans la première réponse. En
+   cas de doute sur une coordonnée précise (numéro, email) même quand le nom
+   est confirmé : la retirer et garder uniquement le contact générique publié.
