@@ -419,3 +419,16 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Exposition « Van Cleef & Arpels : l'éclat des années 1980-1990 » — Galerie du Patrimoine — inscrit le 12/08/2026
 - [ ] Helter Skelter: Arthur Jafa and Richard Prince (Fondazione Prada Venise) — inscrit le 12/08/2026
 - [ ] Into the Ocean: Journey Beneath (ArtScience Museum x OceanX) — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Bow Wow Meow Ball 2026 (ARF Hamptons) — inscrit le 12/08/2026
+- [ ] Dioriviera Cannes — installation saisonnière — inscrit le 12/08/2026
+- [ ] Exposition « De la caserne au musée... 10 ans déjà » — Musée de la Gendarmerie et du Cinéma — inscrit le 12/08/2026
+- [ ] Meeting d'été de l'hippodrome de la Canche (Le Touquet) — inscrit le 12/08/2026
+- [ ] Nikki Beach Saint-Tropez — Claptone live DJ set — inscrit le 12/08/2026
+- [ ] Prix Jacques Le Marois (Groupe 1) — inscrit le 12/08/2026
+- [ ] Torneo Internacional de Polo de Sotogrande 2026 — Copa de Oro (Gold Cup) — inscrit le 12/08/2026
