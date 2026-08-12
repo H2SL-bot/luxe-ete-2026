@@ -1,4 +1,4 @@
-# Journal d'apprentissage — French Luxury Events (boucle perpétuelle)
+# Journal d'apprentissage — International Luxury Events (boucle perpétuelle)
 
 Chaque incident ou erreur rencontré devient ici un **correctif permanent** : un
 contrôle automatique dans le filet (`validate.py` / `healthcheck.sh` /

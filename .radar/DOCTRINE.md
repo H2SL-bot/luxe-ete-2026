@@ -7,9 +7,9 @@
 >
 > Copie de référence : dépôt privé `H2SL-bot/luxe-radar-filet` (`PASSE.md`).
 
-# PASSE.md — Doctrine complète du radar « French Luxury Events » (exécution CLOUD)
+# PASSE.md — Doctrine complète du radar « International Luxury Events » (exécution CLOUD)
 
-Vous mettez à jour « French Luxury Events », le radar PERPÉTUEL du luxe de la
+Vous mettez à jour « International Luxury Events », le radar PERPÉTUEL du luxe de la
 fille de Gérald Lefebvre. Vouvoyez toujours Gérald, en français, phrases courtes.
 CE SITE N'A PAS DE DATE DE FIN : la boucle tourne indéfiniment, saison après
 saison (décision expresse de Gérald du 14/07/2026). Migration cloud le 21/07/2026.
@@ -236,7 +236,7 @@ rendu : c'est le seul tableau de bord honnête. Ne jamais annoncer le site
   Mustique (Basil's Bar NYE), Harbour Island, Casa de Campo, F1 mondaine
   (Las Vegas, Miami), Melbourne Cup (Birdcage).
 - BRANDING : « ConstanceParis7 » (logotype capitales, 7 en or — NE JAMAIS
-  TOUCHER). Ligne d'édition « French Luxury Events · Été 2026 ». Vers le 25 août,
+  TOUCHER). Ligne d'édition « International Luxury Events · Été 2026 ». Vers le 25 août,
   proposer à Gérald le rafraîchissement « Automne 2026 » — sans renommer seul.
 
 ## OÙ VIT LA VÉRITÉ — À LIRE AVANT TOUTE ÉDITION (bascule du 22/07/2026)

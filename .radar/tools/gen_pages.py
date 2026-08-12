@@ -249,7 +249,7 @@ def main():
             "<script data-goatcounter=\"https://constanceparis7.goatcounter.com/count\" async src=\"//gc.zgo.at/count.js\"></script>"
             "</head><body><div class=\"wrap\">"
             f"<header class=\"site\"><a href=\"{prefix(lang)}/\" class=\"brand\">ConstanceParis<span class=\"s\">7</span></a>"
-            "<div class=\"edition\">French Luxury Events</div></header>"
+            "<div class=\"edition\">International Luxury Events</div></header>"
             f"{body}"
             f"<footer class=\"site\">{esc(UI['footer'][lang])} "
             f"<a href=\"/\">{esc(UI['see_live'][lang])} →</a></footer></div></body></html>"

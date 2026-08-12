@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""validate.py — filet de sécurité du radar ConstanceParis7 (French Luxury Events).
+"""validate.py — filet de sécurité du radar ConstanceParis7 (International Luxury Events).
 
 À lancer AVANT chaque `git push` (étape 8 de la PROCÉDURE). Le script échoue
 (code de sortie 1) dès qu'un BLOCKER est détecté : dans ce cas, NE PAS pousser.
