@@ -552,3 +552,17 @@ l'excédent total. Reste à faire, à une prochaine passe qui ne touche pas déj
 fiches en concurrence : condenser chaque `iv.o` long à la CONCLUSION + contacts
 vérifiés, en gardant le raisonnement détaillé hors du champ public (journal de
 recherche, pas fiche visiteur).
+
+## 12/08/2026 — un agent mort ne se signale pas : l'atelier reste ouvert pour rien
+Le lot V-SEJ-G6 est resté bloqué à 11/12 pendant plus de deux heures. Le douzième
+vérificateur avait cessé d'écrire à 09:33 UTC ; aucune erreur, aucun quota dépassé,
+aucune notification — juste un agent qui ne rend jamais la main. L'atelier, lui,
+restait « en cours » aux yeux du harnais, donc ni notification de fin ni récolte.
+
+Signature à surveiller : **résultats < agents ET zéro fichier agent modifié depuis
+plusieurs minutes**. C'est exactement ce que remonte la sonde (`actifs 0`) et il faut
+le lire comme une mort, pas comme une pause.
+
+Remède : `TaskStop({taskId})` puis `Workflow({scriptPath, resumeFromRunId})`. Les
+agents terminés rejouent depuis le cache instantanément, seul le mort repart. Ne pas
+attendre : deux heures d'attente n'ont rien débloqué.
