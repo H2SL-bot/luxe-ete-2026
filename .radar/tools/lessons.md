@@ -500,3 +500,20 @@ Une conclusion tirée d'une page de 0 octet n'est pas une conclusion. Corollaire
 un `406` (Songkick bloque les scripts) n'est PAS une réfutation, c'est un échec de
 mesure — le dire au lieu de le compter comme une absence. Voir aussi la règle
 « échec muet interdit ».
+
+## 12/08/2026 — le 403 du Ritz : ouvrir un vrai navigateur au lieu de renoncer
+Le contrôleur du « Ritz Summer Bar » a rendu un verdict honnête et inutilisable :
+NON-VÉRIFIÉ, parce que ritzparis.com renvoie 403 à tout script et que les moteurs
+opposaient un CAPTCHA. Il a eu raison de ne pas conclure — mais la fiche restait en
+ligne, invérifiée, en annonçant une terrasse ouverte jusqu'au 12 septembre.
+
+Repris avec l'outil navigateur (`preview_start` + `get_page_text`), le mur tombe en
+douze secondes : le challenge anti-robot se résout tout seul et la page livre ses
+11 338 caractères. Verdict immédiat et sans appel : « Summer Bar » absent du site,
+et « Ritz Bar — Fermeture estivale du dimanche 9 août au 24 août ».
+
+Règle : **un 403 / 406 / CAPTCHA n'est pas une conclusion, c'est une invitation à
+changer d'outil.** L'ordre à suivre : curl -sL → navigateur → seulement alors,
+déclarer l'échec. Un contrôleur qui rend NON-VÉRIFIÉ sur un 403 n'a pas fini le
+travail ; c'est à la session principale de le reprendre au navigateur avant de
+laisser une fiche invérifiée à la vue des visiteurs.
