@@ -88,6 +88,12 @@ invitations manquants (188 / 92), puis automne, puis guides d'accès — plus,
 si le réseau le permet, terminer la vérification des 18 liens restés
 indéterminés cette fois.
 
+## healthcheck.sh
+`http=000000` — même signature de faux-négatif réseau que le 11/08 (déjà
+consignée : « healthcheck faux-négatif réseau connu »), pas un vrai incident
+site : aucune publication publique n'a eu lieu cette passe, rien à retomber
+(`rollback.sh` non lancé, à raison).
+
 ## Traces
 `git push` direct sur `main` accepté à chaque étape (après rebase sur les
 commits concurrents). Aucun repli sur branche `claude/*` nécessaire.
