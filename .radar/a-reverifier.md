@@ -322,3 +322,34 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Fondation Maeght — « Peter Knapp : Le Temps Courrèges » — inscrit le 12/08/2026
 - [ ] Givenchy — pop-up estival rue Gambetta — inscrit le 12/08/2026
 - [ ] Portofino, saison d'ete des maisons de luxe et calendrier evenementiel 2026 — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] La Mode en majesté. Haute couture et tradition à la cour de Thaïlande — Musée des Arts Décoratifs — inscrit le 12/08/2026
+
+### 12/08/2026 — deux rejets examinés, aucun retrait nécessaire
+- **Loro Piana x La Réserve à la Plage** : le contrôleur refuse le séjour car la
+  reconduction 2026 est invérifiable (« Loro Piana » : 0 occurrence sur les 102 Ko de
+  lareserve-plage.com, contrôlé en direct le 12/08, en pleine saison ; éditions
+  documentées 2023-2024-2025). MAIS la fiche publiée dit déjà elle-même
+  « reconduction 2026 non confirmée », dans son titre et dans son champ « quand ».
+  Le site ne trompe personne : rien à retirer. Le séjour reste non publié.
+- **Yerai Cortés (Fondation Maeght)** : concert du 11/08, passé d'un jour. Le
+  contrôleur relève « couronné d'un Latin Grammy » — mais c'est le pitch du séjour
+  qui l'écrivait, pas la fiche, qui porte correctement « nommé au Latin Grammy du
+  meilleur nouvel artiste (2024) ». Rien à corriger en ligne.
+
+Leçon : un rejet de séjour ne vaut pas condamnation de la fiche. Vérifier ce que la
+fiche AFFICHE avant de toucher au site — deux fois sur trois ce matin, elle était juste.
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] 47e Festival La Versiliana 2026 — inscrit le 12/08/2026
+- [ ] Into the Ocean: Journey Beneath (ArtScience Museum x OceanX) — inscrit le 12/08/2026
+- [ ] Pop-up Vivrelle x Kith Women - Bridgehampton — inscrit le 12/08/2026
