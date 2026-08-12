@@ -410,3 +410,12 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Villa Carmignac — Exposition « Sea, Pop & Sun » et nocturnes d'été — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Exposition « Van Cleef & Arpels : l'éclat des années 1980-1990 » — Galerie du Patrimoine — inscrit le 12/08/2026
+- [ ] Helter Skelter: Arthur Jafa and Richard Prince (Fondazione Prada Venise) — inscrit le 12/08/2026
+- [ ] Into the Ocean: Journey Beneath (ArtScience Museum x OceanX) — inscrit le 12/08/2026
