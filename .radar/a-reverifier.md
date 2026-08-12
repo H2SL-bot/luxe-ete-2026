@@ -432,3 +432,20 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Nikki Beach Saint-Tropez — Claptone live DJ set — inscrit le 12/08/2026
 - [ ] Prix Jacques Le Marois (Groupe 1) — inscrit le 12/08/2026
 - [ ] Torneo Internacional de Polo de Sotogrande 2026 — Copa de Oro (Gold Cup) — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Dîner quatre mains Ayla Privé — Aret Sahakyan × Francesco Sodano (Famiglia Rana, Vérone **) — inscrit le 12/08/2026
+- [ ] Exposition Générale — Fondation Cartier pour l'art contemporain (nouvelle adresse Palais-Royal) — inscrit le 12/08/2026
+- [ ] Festival d'Art Pyrotechnique de Cannes — feux d'août — inscrit le 12/08/2026
+- [ ] Fiera di Sant'Ermete et feux d'artifice de Forte dei Marmi — inscrit le 12/08/2026
+- [ ] L'été au Negresco — live music à N Les Bars et N La Plage — inscrit le 12/08/2026
+- [ ] Les Pianos Folies du Touquet-Paris-Plage (18e edition) — inscrit le 12/08/2026
+- [ ] Marie Antoinette Style (tournee mondiale du V&A - unique etape au Japon) — inscrit le 12/08/2026
+- [ ] Singapore Night Festival 2026 — inscrit le 12/08/2026
+- [ ] SummerFest Gala 2026 - Southampton Arts Center — inscrit le 12/08/2026
+- [ ] Touquet Classic Amateur – Golf du Touquet — inscrit le 12/08/2026
+- [ ] Ventes aux enchères d'été Besch Cannes Auction (Hôtel Martinez) — inscrit le 12/08/2026
