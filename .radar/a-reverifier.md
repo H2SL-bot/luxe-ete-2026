@@ -521,3 +521,35 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Design Miami / Paris 2026 — Preview Day sur invitation — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] CSIO 5* Longines League of Nations — Saint-Tropez-Gassin — inscrit le 12/08/2026
+- [ ] Dior Beauty Lovers Villa Cannes — inscrit le 12/08/2026
+- [ ] Dior au Splendido (Portofino) — Dior Spa permanent et saison Dioriviera 2026 — inscrit le 12/08/2026
+- [ ] Réouverture d'hiver des Airelles Courchevel — inscrit le 12/08/2026
+- [ ] Réouverture d'hiver du Badrutt's Palace — inscrit le 12/08/2026
+- [ ] Résidences balnéaires des maisons de luxe — Capri, Porto Cervo, Portofino (boutiques resort été 2026) — inscrit le 12/08/2026
+- [ ] Surf Lodge Summer Series 2026 — concerts d'août (Montauk) — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Open de Gassin — Polo Club Saint-Tropez (tournoi phare de juillet) — inscrit le 12/08/2026
+- [ ] Réouverture d'hiver de The Alpina Gstaad — inscrit le 12/08/2026
+- [ ] Réveillon du Nouvel An - The Breakers Palm Beach (Gala HMF) — inscrit le 12/08/2026
+- [ ] Saison de polo hivernale - National Polo Center Wellington (Gauntlet of Polo / US Open) — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Accès payant — billetterie de défilés & conciergerie de luxe — inscrit le 12/08/2026
+- [ ] La Galerie Dior — musée de la maison Dior, 30 avenue Montaigne — inscrit le 12/08/2026
+- [ ] Réouverture d'hiver du Kulm Hotel St. Moritz — inscrit le 12/08/2026
