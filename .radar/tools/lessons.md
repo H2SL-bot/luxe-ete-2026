@@ -483,3 +483,20 @@ Règles qui en découlent :
 - ne jamais dépendre d'un fichier temporaire pour reprendre un travail ;
 - toujours pouvoir régénérer un lot depuis sa source (le journal de recherche) plutôt
   que depuis un artefact intermédiaire.
+
+## 12/08/2026 — `curl` sans `-L` fabrique de fausses réfutations
+Pour trancher le conflit Alemagou, premier contrôle : trois URLs, trois réponses
+`308`, `404`, `301`, et zéro mention d'Adriatique → j'ai failli conclure « réfuté ».
+C'était faux : **sans `-L`, curl lit le corps de la redirection**, une page vide de
+quelques octets, pas la page réelle. Le grep ne trouve rien parce qu'il n'y a rien
+à trouver — pas parce que l'information est absente.
+
+Refait avec `-L`, la réponse a changé de nature : `alemagou.gr` renvoie 200 avec
+**138 Ko de contenu réel** et ne mentionne toujours pas Adriatique — là, l'absence
+est une vraie information. Et `nightly.gr/en/venue/alemagou/` renvoie un vrai 404.
+
+Règle : **toujours `curl -sL`, et toujours afficher la taille du corps récupéré.**
+Une conclusion tirée d'une page de 0 octet n'est pas une conclusion. Corollaire :
+un `406` (Songkick bloque les scripts) n'est PAS une réfutation, c'est un échec de
+mesure — le dire au lieu de le compter comme une absence. Voir aussi la règle
+« échec muet interdit ».
