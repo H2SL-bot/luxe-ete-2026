@@ -517,3 +517,38 @@ changer d'outil.** L'ordre à suivre : curl -sL → navigateur → seulement alo
 déclarer l'échec. Un contrôleur qui rend NON-VÉRIFIÉ sur un 403 n'a pas fini le
 travail ; c'est à la session principale de le reprendre au navigateur avant de
 laisser une fiche invérifiée à la vue des visiteurs.
+
+## 12/08/2026 — quand TOUT est bloqué, même google.com : ce n'est plus un lien mort, c'est l'environnement
+Passe du matin (session cloud) : `curl -sL` direct échouait avec un 403 de la
+passerelle d'egress dès le premier lien testé. Bascule vers WebFetch (agents en
+arrière-plan, 3 lots de 9 liens) : le lot 2 est passé intégralement (8 OK, 1
+suspect) ; les lots 1 et 3, RE-tentés une fois, ont échoué en bloc — y compris
+sur des domaines témoins sans rapport (google.com, wikipedia.org) interrogés au
+même instant. Ce n'était donc pas les 18 sites qui bloquaient : c'était la
+politique réseau de CETTE session qui refusait le CONNECT vers ces hôtes-là,
+pendant que d'autres passaient.
+
+Règle : avant de conclure « lien mort » ou même « bloqué (anti-robot) », vérifier
+si des domaines TÉMOINS sans rapport échouent au même moment (ou si un autre lot
+lancé en parallèle passe, lui). Si oui, c'est un incident d'environnement, pas un
+verdict sur les fiches — le dire explicitement au compte rendu, ne rien changer
+aux fiches concernées, et prévoir de refaire la vérification à la prochaine passe.
+Ne jamais insister en boucle (README de l'outil proxy : ne pas contourner un 403
+de politique) — un seul nouvel essai suffit à distinguer panne passagère de
+politique fixe.
+
+## 12/08/2026 — `iv.o` a dérivé en journal d'enquête et a fait gonfler la page de +38 %
+`perfcheck.py` a signalé une régression (poids gzip 0,69 → 0,96 Mo) alors que le
+site avait 16 événements DE MOINS qu'au dernier point. Cause trouvée en local
+(sans réseau) : le champ `iv.o` — un texte VISITEUR censé expliquer l'accès — est
+devenu, sur 116 fiches « contrôlées » récemment, le compte rendu complet de
+l'enquête du contrôleur (adresses vérifiées, hypothèses corrigées, citations de
+sources, jusqu'à 4 891 caractères sur une seule fiche). Rien d'inventé, tout est
+vrai et vérifié — mais ce n'est pas ce qu'un internaute doit lire pour savoir
+comment être invité, et ça alourdit chaque page pour rien.
+Filet ajouté (non bloquant, pour ne pas casser la publication du jour) :
+`validate.py` avertit désormais au-delà de 1 200 caractères par `iv.o`, avec
+l'excédent total. Reste à faire, à une prochaine passe qui ne touche pas déjà ces
+fiches en concurrence : condenser chaque `iv.o` long à la CONCLUSION + contacts
+vérifiés, en gardant le raisonnement détaillé hors du champ public (journal de
+recherche, pas fiche visiteur).
