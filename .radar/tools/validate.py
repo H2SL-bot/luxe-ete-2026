@@ -417,6 +417,20 @@ def main():
         if _maigres:
             wrn(f"{len(_maigres)} page(s) indexable(s) sous 120 mots (Google les explore sans les indexer) : {_maigres[:3]}")
 
+    # Divergence français/traductions sur les mois annoncés. Le 12/08/2026, le champ
+    # français d'une fiche disait la vérité (événement en septembre et novembre) tandis
+    # que ses douze traductions annonçaient un événement « en cours » en août : rien ne
+    # l'avait signalé, parce que corriger le français n'invalide pas les traductions.
+    # BLOQUANT : un visiteur non francophone lisait une date fausse.
+    # NB : ce contrôle doit rester AVANT l'affichage ci-dessous — placé après, ses
+    # blocages étaient comptés mais jamais montrés, ce qui est pire que pas de filet.
+    try:
+        from coherence_i18n import controler as _coherence
+        for _nom, _lg, _ch, _trop in _coherence(data):
+            blk(f"mois {_trop} affirmé en '{_lg}' ({_ch}) sans fondement français — {_nom[:52]}")
+    except Exception as _e:
+        wrn(f"contrôle de cohérence i18n indisponible ({_e}) — divergences NON vérifiées")
+
     for w in warns:
         print("WARN  ", w)
     for b in blockers:

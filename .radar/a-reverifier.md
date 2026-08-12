@@ -310,3 +310,15 @@ Décision : l'événement RESTE (le doute d'un agent bridé ne condamne pas), le
 n'est PAS publié (rejeté automatiquement), et la fiche est à trancher : si nightly.gr
 liste encore la date du 17/08, la résidence est réelle et le séjour corrigé peut entrer ;
 sinon, retrait complet via retraits-volontaires.json.
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Dior Saint-Tropez : boutique rénovée, Café Dior et restaurant Monsieur Dior par Mauro Colagreco — inscrit le 12/08/2026
+- [ ] Ellsworth Kelly – Aux bords de l'eau (exposition d'été Fondation Maeght) — inscrit le 12/08/2026
+- [ ] Festival de Ramatuelle — 41e édition (théâtre, humour, musique) — inscrit le 12/08/2026
+- [ ] Fondation Maeght — « Peter Knapp : Le Temps Courrèges » — inscrit le 12/08/2026
+- [ ] Givenchy — pop-up estival rue Gambetta — inscrit le 12/08/2026
+- [ ] Portofino, saison d'ete des maisons de luxe et calendrier evenementiel 2026 — inscrit le 12/08/2026
