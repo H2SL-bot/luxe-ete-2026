@@ -382,3 +382,10 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] POINT D'ENTRÉE — Ventes aux enchères et expositions publiques des auctioneers (Christie's, Sotheby's, Drouot) — inscrit le 12/08/2026
 - [ ] POINT D'ENTRÉE — Ventes presse et ventes privées des maisons de mode — inscrit le 12/08/2026
 - [ ] Ron Mueck — Mori Art Museum x Fondation Cartier pour l'art contemporain — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Tisser, broder, sublimer. Les savoir-faire de la mode — Palais Galliera — inscrit le 12/08/2026
