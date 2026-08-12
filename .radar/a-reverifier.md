@@ -360,3 +360,11 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Boutique ephemere Chanel a East Hampton — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Exposition « Daniel Brush, l'art de la ligne et de la lumière » — L'École des Arts Joailliers — inscrit le 12/08/2026
+- [ ] Loewe — pop-ups Paula's Ibiza 2026 a Saint-Tropez — inscrit le 12/08/2026
