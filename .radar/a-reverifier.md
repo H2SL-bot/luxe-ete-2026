@@ -469,3 +469,12 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Touquet Music Beach Festival (9e edition) — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Créateurs émergents au calendrier — contacts directs (voie la plus accessible) — inscrit le 12/08/2026
+- [ ] Frieze London & Frieze Masters 2026 — inscrit le 12/08/2026
+- [ ] Premio Faraglioni Capri International 2026 – hommage à Toni Servillo — inscrit le 12/08/2026
