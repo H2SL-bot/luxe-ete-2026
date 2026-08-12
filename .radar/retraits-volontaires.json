@@ -28,5 +28,10 @@
   "nom": "Alemagou — Adriatique tous les lundis (+ nuits headline)",
   "date": "2026-08-12",
   "motif": "Résidence non attestée. Deux contrôleurs se contredisaient : celui de l'invitation (11/08) la disait confirmée par un calendrier nightly.gr listant six lundis jusqu'au 17/08/2026 ; celui du séjour, mieux équipé (12/08), la réfute — alemagou.gr ne publie AUCUNE programmation 2026 (archive vide, pages lineup en 404) et l'agenda de tournée d'Adriatique (Songkick + API Bandsintown) ne montre aucune date à Mykonos, avec des dates incompatibles avec une résidence du lundi (Égypte 24/07, Londres 08/08, Sardaigne 09/08, Montréal 28/08, Ibiza 17/09). Contrôle direct le 12/08/2026 : la page nightly.gr invoquée hier renvoie 404 et la page d'accueil alemagou.gr (138 Ko de contenu réel) ne mentionne nulle part Adriatique. Le lieu existe et reste ouvert ; c'est la programmation annoncée qui est fausse. Retiré au titre de « qualité avant tout »."
+ },
+ {
+  "nom": "Dioriviera 2026 — pop-up plage Dior (Shellona, Pampelonne)",
+  "date": "2026-08-12",
+  "motif": "Pop-up Dior à la plage Shellona non attesté pour 2026. Contrôle direct le 12/08/2026 : shellona.com/en/home-st-tropez/ répond 200 avec 216 Ko de contenu réel et ne contient AUCUNE occurrence de « Dior » — ni Dioriviera, ni pop-up, en pleine saison. La collaboration Dior x Shellona est datée de l'été 2023 (ère Maria Grazia Chiuri). La présence tropézienne de Dior vérifiée pour 2026 est sa propre boutique rue François Sibilli (Café Dior et restaurant Monsieur Dior) — un autre lieu, une autre offre, que cette fiche n'annonçait pas. Le beach club existe et fonctionne ; c'est la collaboration annoncée qui est fausse. Aucune fiche de remplacement n'est créée : la présence boutique n'a pas été vérifiée de première main dans cette session."
  }
 ]
