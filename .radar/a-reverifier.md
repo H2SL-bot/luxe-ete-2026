@@ -562,3 +562,13 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Gucci Saint-Tropez — boutique de la rue François Sibilli (sélection estivale) — inscrit le 12/08/2026
 - [ ] Réouverture de la boutique Chaumet à Ion Orchard — inscrit le 12/08/2026
 - [ ] Réveillon du Nouvel An — One&Only One Za'abeel — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Exposition 'Mains d'avenir' — la Galerie du 19M (Chanel Métiers d'art) — inscrit le 12/08/2026
+- [ ] Sommets Musicaux de Gstaad 2027 — inscrit le 12/08/2026
+- [ ] Sphère — showroom officiel des créateurs émergents (FHCM) — inscrit le 12/08/2026
+- [ ] Venice Hospitality Challenge 2026 (13e édition) — inscrit le 12/08/2026
