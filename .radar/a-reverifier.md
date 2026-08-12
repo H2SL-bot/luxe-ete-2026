@@ -553,3 +553,12 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Accès payant — billetterie de défilés & conciergerie de luxe — inscrit le 12/08/2026
 - [ ] La Galerie Dior — musée de la maison Dior, 30 avenue Montaigne — inscrit le 12/08/2026
 - [ ] Réouverture d'hiver du Kulm Hotel St. Moritz — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Gucci Saint-Tropez — boutique de la rue François Sibilli (sélection estivale) — inscrit le 12/08/2026
+- [ ] Réouverture de la boutique Chaumet à Ion Orchard — inscrit le 12/08/2026
+- [ ] Réveillon du Nouvel An — One&Only One Za'abeel — inscrit le 12/08/2026
