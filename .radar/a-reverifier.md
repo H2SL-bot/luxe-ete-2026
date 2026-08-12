@@ -572,3 +572,21 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Sommets Musicaux de Gstaad 2027 — inscrit le 12/08/2026
 - [ ] Sphère — showroom officiel des créateurs émergents (FHCM) — inscrit le 12/08/2026
 - [ ] Venice Hospitality Challenge 2026 (13e édition) — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Art Central Hong Kong 2027 — inscrit le 12/08/2026
+- [ ] Hublot Loves Summer - collection été 2026 'Art of Pastel' à Saint-Tropez (Big Bang Summer céramique pastel) — inscrit le 12/08/2026
+- [ ] Le Salama — dîners festifs dans l'ancienne Villa Romana — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Dîner 'Festin Royal' de Ducasse au château de Versailles — Le Grand Contrôle (Airelles) — inscrit le 12/08/2026
+- [ ] Mumbai Gallery Weekend 2027 — inscrit le 12/08/2026
+- [ ] Pop-up Swatch Saint-Tropez (ouvert depuis le 10 avril 2026, pour un an) — inscrit le 12/08/2026
