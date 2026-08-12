@@ -292,3 +292,10 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Amiri — boutique saisonniere avenue Marechal Foch — inscrit le 11/08/2026
 - [ ] Barrière Deauville Polo Cup 2026 (Coupe d'Argent, Coupe d'Or, Ladies Polo Cup, Coupe de Bronze) — inscrit le 11/08/2026
 - [ ] Hilma af Klint — Paintings for the Temple (1906-1915) — Grand Palais — inscrit le 11/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Ritual Club Baja Sardinia — Saison 2026 — inscrit le 12/08/2026
