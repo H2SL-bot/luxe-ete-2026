@@ -368,3 +368,17 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Exposition « Daniel Brush, l'art de la ligne et de la lumière » — L'École des Arts Joailliers — inscrit le 12/08/2026
 - [ ] Loewe — pop-ups Paula's Ibiza 2026 a Saint-Tropez — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] BALLET - The Making of an Etoile (Ballet de l'Opera de Paris, premiere curation hors de France) — inscrit le 12/08/2026
+- [ ] Loewe — pop-ups Paula's Ibiza 2026 a Saint-Tropez — inscrit le 12/08/2026
+- [ ] POINT D'ENTRÉE — Billetteries VIP officielles du sport de luxe (polo, automobile, jumping) — inscrit le 12/08/2026
+- [ ] POINT D'ENTRÉE — Les lieux-scènes ouverts à la réservation (Hôtel Costes, Club 55, Caves du Roy, VIP Room) — inscrit le 12/08/2026
+- [ ] POINT D'ENTRÉE — Silencio (club privé, Paris) : adhésion sur candidature — inscrit le 12/08/2026
+- [ ] POINT D'ENTRÉE — Ventes aux enchères et expositions publiques des auctioneers (Christie's, Sotheby's, Drouot) — inscrit le 12/08/2026
+- [ ] POINT D'ENTRÉE — Ventes presse et ventes privées des maisons de mode — inscrit le 12/08/2026
+- [ ] Ron Mueck — Mori Art Museum x Fondation Cartier pour l'art contemporain — inscrit le 12/08/2026
