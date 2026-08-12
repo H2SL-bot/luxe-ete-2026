@@ -11,3 +11,4 @@
 2026-08-11T12:55:17Z  FIN — Rattrapage 6j : 2 doublons dédupliqués, 7 guides intemporels sauvés d'une purge, 4 séjours + 4 voies d'invitation backfillés (1 contact halluciné intercepté), validate/perfcheck OK, healthcheck faux-négatif réseau connu
 2026-08-12T03:23:34Z  FIN — Purge 9 zombies (passe officielle) + 24 fiches contrôlées + retrait Alemagou (résidence Adriatique réfutée, conflit de contrôleurs tranché) + leçon curl -L ; 467 fiches, validate OK ; ARRÊT : crédits d'usage épuisés, 27 contrôleurs interrompus
 2026-08-12T03:55:37Z  FIN — Purge 9 zombies + 43 contrôleurs (4 groupes, 0 erreur après bascule Opus 5) + retrait Alemagou (résidence réfutée) + Clair-obscur corrigé (titre/dates/horaires, 13 langues) + NOUVEAU FILET coherence_i18n.py bloquant les divergences mois FR/traductions ; 467 fiches, séjours 267, invitations 377, validate OK
+2026-08-12T03:56:51Z  DEMARRAGE
