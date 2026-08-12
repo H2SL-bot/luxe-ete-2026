@@ -38,5 +38,15 @@
   "nom": "Ritz Summer Bar — la terrasse d'été du Ritz Paris au Grand Jardin",
   "date": "2026-08-12",
   "motif": "Offre non attestée ET période de fermeture. Le contrôleur automatique n'avait pu conclure (ritzparis.com renvoie 403 à tout script) : un 403 est un échec de mesure, pas une preuve d'absence, donc la fiche n'a PAS été retirée sur ce seul motif. Vérification refaite le 12/08/2026 dans un vrai navigateur sur la page officielle Bars & Restaurants (11 338 caractères de contenu réel) : « Summer Bar » y est TOTALEMENT ABSENT, et la seule mention du Grand Jardin qualifie la salle du restaurant Espadon. Surtout, le site publie noir sur blanc « Ritz Bar — Fermeture estivale du dimanche 9 août au 24 août » et « Restaurant Espadon — Fermeture estivale du 9 au 26 août » : la fiche annonçait une terrasse ouverte du 24 avril au 12 septembre, donc un visiteur venu aujourd'hui aurait trouvé porte close. Le Ritz est bien ouvert et la terrasse du Bar Vendôme fonctionne tous les jours de 12h à 22h, mais c'est un autre lieu, sous un autre nom : aucune fiche de remplacement n'est créée sans vérification dédiée."
+ },
+ {
+  "nom": "Polo — Federations Cup",
+  "date": "2026-08-12",
+  "motif": "Tournoi introuvable au programme officiel. Contrôle direct le 12/08/2026 : polo-st-tropez.com répond 200 avec 1,49 Mo de contenu réel et ne contient AUCUNE occurrence de « Federations Cup », alors que la fiche l'annonçait du 20 au 29 août, soit dans huit jours. Le club est bien ouvert et sa saison court de mai à septembre — c'est le tournoi annoncé qui n'existe pas à son calendrier. Le club indique par ailleurs que son programme 2026 détaillé est encore en cours de publication : si la Federations Cup y apparaît, la fiche pourra être recréée avec la source."
+ },
+ {
+  "nom": "Aloft at Hermes - espace d'art Hermes Singapour (programmation d'aout a confirmer)",
+  "date": "2026-08-12",
+  "motif": "Lieu fermé pour travaux. Contrôle direct le 12/08/2026 sur le localisateur officiel hermes.com/sg/en/find-store/ (742 Ko de contenu réel) : Hermès ne recense aucune adresse à Liat Towers et intitule explicitement l'une de ses boutiques « Hermès Singapore ION Orchard (Temporary Store for Liat Towers' Renovation) ». L'espace d'art Aloft se trouve au-dessus de ce flagship fermé, et aucune exposition couvrant août 2026 n'était annoncée. Un lieu en travaux sans programmation n'a pas sa place dans un radar d'événements."
  }
 ]

@@ -449,3 +449,16 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] SummerFest Gala 2026 - Southampton Arts Center — inscrit le 12/08/2026
 - [ ] Touquet Classic Amateur – Golf du Touquet — inscrit le 12/08/2026
 - [ ] Ventes aux enchères d'été Besch Cannes Auction (Hôtel Martinez) — inscrit le 12/08/2026
+
+### 12/08/2026 — Le Studio, Ginza Maison Hermès : à trancher, non vérifié par moi
+Le contrôleur affirme qu'aucune manifestation n'est programmée à Tokyo en août 2026 et
+que l'agenda de la Fondation d'entreprise Hermès passe d'« Obol » (20/02-31/05/2026) à
+« 5 Chome 4-1 Ginza » d'Ann Veronica Janssens à partir du 11/09/2026 — ce qui rendrait
+fausse la projection de « Carnets de voyage » annoncée du 11 au 30 août.
+
+Je n'ai PAS pu le vérifier moi-même : les chemins /fr/programmation et /en/programme de
+fondationdentreprisehermes.org renvoient 404, et la page d'accueil ne cite ni Ginza ni
+le film. Un 404 sur une URL que j'ai devinée n'est pas une preuve d'absence — c'est un
+échec de mesure. La fiche RESTE en ligne tant que la programmation réelle n'a pas été
+lue à la bonne adresse (essayer le site japonais d'Hermès, maison-ginza, ou la page
+« Le Studio » du site de la Maison Ginza, au navigateur si un script est bloqué).
