@@ -133,6 +133,18 @@ def main():
         m2 = DATA_RE.search(nouveau_html)
         nouveau_html = nouveau_html[:m2.start(2)] + neuf + nouveau_html[m2.end(2):]
 
+    # ---- 3bis. saison du titre (Google) et du bandeau -----------------------
+    # Le titre indexé annoncerait « Summer » en décembre si personne n'y touchait.
+    # saison.py bascule tout seul aux vraies dates d'équinoxe et de solstice.
+    if a.apply:
+        try:
+            sys.path.insert(0, os.path.join(REPO, ".radar", "tools"))
+            import saison as _saison
+            _s, _an, _titre, _, _chg = _saison.appliquer()
+            print(f"saison du titre        : {_titre}" + ("  (basculée)" if _chg else ""))
+        except Exception as _e:
+            print(f"ATTENTION : bascule de saison impossible ({_e}) — titre NON mis à jour")
+
     print("=== passe automatique (sans IA) ===")
     print(f"date du jour          : {date_fr}")
     print(f"événements            : {avant} → {len(gardes)}  (purgés : {len(purges)})")
