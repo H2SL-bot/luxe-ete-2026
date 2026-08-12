@@ -353,3 +353,10 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] 47e Festival La Versiliana 2026 — inscrit le 12/08/2026
 - [ ] Into the Ocean: Journey Beneath (ArtScience Museum x OceanX) — inscrit le 12/08/2026
 - [ ] Pop-up Vivrelle x Kith Women - Bridgehampton — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Boutique ephemere Chanel a East Hampton — inscrit le 12/08/2026
