@@ -299,3 +299,14 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Ritual Club Baja Sardinia — Saison 2026 — inscrit le 12/08/2026
+
+### 12/08/2026 — Alemagou / résidence Adriatique : deux contrôleurs se contredisent
+Le contrôleur du séjour (privé de recherche, 28 pages tout de même) dit : résidence
+« vraisemblablement inventée » — alemagou.gr ne publie aucune programmation 2026 et
+l'agenda de tournée du duo ne montre aucune date à Mykonos.
+Mais le contrôleur de l'invitation (pleins moyens, la veille) l'avait CONFIRMÉE via le
+calendrier publié sur nightly.gr : six lundis datés, dernier le 17/08/2026.
+Décision : l'événement RESTE (le doute d'un agent bridé ne condamne pas), le séjour
+n'est PAS publié (rejeté automatiquement), et la fiche est à trancher : si nightly.gr
+liste encore la date du 17/08, la résidence est réelle et le séjour corrigé peut entrer ;
+sinon, retrait complet via retraits-volontaires.json.
