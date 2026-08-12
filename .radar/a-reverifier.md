@@ -590,3 +590,11 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Dîner 'Festin Royal' de Ducasse au château de Versailles — Le Grand Contrôle (Airelles) — inscrit le 12/08/2026
 - [ ] Mumbai Gallery Weekend 2027 — inscrit le 12/08/2026
 - [ ] Pop-up Swatch Saint-Tropez (ouvert depuis le 10 avril 2026, pour un an) — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Falstaff — 130e anniversaire du Teatro Massimo — inscrit le 12/08/2026
+- [ ] Grands magasins & concept stores — accès libre pendant la Fashion Week — inscrit le 12/08/2026
