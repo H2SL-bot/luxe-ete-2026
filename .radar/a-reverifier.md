@@ -462,3 +462,10 @@ le film. Un 404 sur une URL que j'ai devinée n'est pas une preuve d'absence —
 échec de mesure. La fiche RESTE en ligne tant que la programmation réelle n'a pas été
 lue à la bonne adresse (essayer le site japonais d'Hermès, maison-ginza, ou la page
 « Le Studio » du site de la Maison Ginza, au navigateur si un script est bloqué).
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Touquet Music Beach Festival (9e edition) — inscrit le 12/08/2026
