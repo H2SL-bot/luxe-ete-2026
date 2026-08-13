@@ -13,3 +13,4 @@
 2026-08-12T03:55:37Z  FIN — Purge 9 zombies + 43 contrôleurs (4 groupes, 0 erreur après bascule Opus 5) + retrait Alemagou (résidence réfutée) + Clair-obscur corrigé (titre/dates/horaires, 13 langues) + NOUVEAU FILET coherence_i18n.py bloquant les divergences mois FR/traductions ; 467 fiches, séjours 267, invitations 377, validate OK
 2026-08-12T03:56:51Z  DEMARRAGE
 2026-08-12T04:06:13Z  FIN — Reseau bloque (goatcounter + 18/27 liens indetermines) : pas de nouvelle fiche ; cause de la regression perf trouvee (iv.o derive en journal d'enquete, 115 fiches, +38%) + filet ajoute (WARN validate.py) ; validate OK/1 warning, session concurrente active rebasee sans perte
+2026-08-13T03:56:28Z  DEMARRAGE
