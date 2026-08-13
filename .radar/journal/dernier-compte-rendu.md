@@ -83,3 +83,10 @@ régression tant que le poids n'est pas repassé sous ~0,83 Mo).
 `git push` direct sur `main` accepté aux deux étapes (démarrage + publication
 finale) — aucune session concurrente détectée, aucun repli sur branche
 `claude/*` nécessaire.
+
+## Étape non faite : republication de l'artifact
+L'étape 10 (republier `index.html` sur l'artifact
+`claude.ai/code/artifact/89b85688-ff57-481d-82d7-f7792051b066`) n'a pas pu
+être exécutée cette passe (appel d'outil non abouti côté environnement). Le
+site public (constanceparis7.com) est bien à jour ; seul le miroir artifact
+est resté sur la version du 12/08. À retenter à la prochaine passe.
