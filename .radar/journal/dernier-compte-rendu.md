@@ -1,99 +1,85 @@
-# Compte rendu — passe du 12 août 2026 (cloud, radar-routine-claude)
+# Compte rendu — passe du 13 août 2026 (cloud, radar-routine-claude)
 
-## Anomalie n°1 — accès réseau sortant bloqué pendant une bonne partie de la passe
-`precheck.sh` signalait aussi une cadence rompue (15 h depuis le dernier run
-journalisé) au démarrage — sans gravité : une session concurrente tournait déjà
-et a publié pendant que je démarrais (voir plus bas).
+## Anomalie n°1 — réseau sortant totalement bloqué (confirmé, pas un incident de site)
+Dès le premier test (domaine témoin sans rapport, `wikipedia.org`), la sortie
+réseau a répondu `EGRESS_BLOCKED` — un refus explicite de la politique de
+cette session, pas un timeout ambigu. Conséquence directe et assumée : **aucune
+recherche web, aucune vérification de lien, aucun nouvel événement, aucun
+backfill séjour/invitation n'a pu être fait cette passe** — la règle absolue
+du site (jamais de donnée non vérifiée) l'interdit sans accès aux sources.
+Même diagnostic pour `stats/visites.ndjson` (compteur GoatCounter illisible,
+`403`, rien écrit) et pour `healthcheck.sh` en fin de passe (`http=000000`) :
+signature déjà rencontrée les 11 et 12/08, reconnue comme faux-négatif réseau
+et non comme échec de publication — **`rollback.sh` non lancé, à raison**.
 
-Plus sérieux : pendant l'essentiel de la passe, **tout accès internet sortant
-était refusé par la politique réseau de cette session** — y compris vers des
-domaines témoins sans rapport (google.com, wikipedia.org), interrogés en même
-temps que les liens à vérifier. Sur 27 liens d'événements des 7 prochains
-jours testés (agents en arrière-plan, `WebFetch`) :
-- **1 lot de 9 est passé sans problème** : 8 liens OK, 1 suspect (Grand Hotel
-  Quisisana, Capri — le site existe et organise bien des galas, mais aucune
-  page ne mentionne spécifiquement un dîner « Ferragosto » à vérifier une
-  prochaine fois) ;
-- **2 lots de 9 (18 liens) sont restés bloqués**, y compris après un
-  deuxième essai — incident d'environnement, pas un verdict sur les fiches.
-  À revérifier à la prochaine passe. Aucune fiche n'a été modifiée sur la
-  seule foi de ce blocage.
-- Conséquence directe : **aucune recherche de nouveaux événements ni aucun
-  backfill séjour/invitation n'a pu être fait cette passe** — le travail
-  aurait nécessité de vérifier des sources non accessibles, et la règle
-  absolue du site (jamais de donnée non vérifiée) l'interdit.
-Leçon consignée dans `.radar/tools/lessons.md`.
+## Travail effectué malgré le réseau bloqué (mécanique + rédactionnel, sans web)
+- **Purge de 4 zombies** (d2=2026-07-13, événements ponctuels du 13 juillet
+  largement dépassés) : dîner feu d'artifice Shangri-La, soirée Langosteria
+  au Cheval Blanc, croisières de gala sur la Seine, dîner en Blanc du
+  Centenaire — Hôtel Barrière. 463 → **459 fiches**.
+- Date de l'eyebrow mise à jour (13 août 2026).
+- `python3 tools/gen_seo.py` + `tools/gen_pages.py` régénérés (sitemap 7307
+  URLs, 0 lien mort attendu), `coherence_i18n.py` : OK, 0 divergence.
+- **Amélioration du filet — bug de cadence corrigé.** `precheck.sh` comparait
+  l'écart depuis le dernier run à un seuil de 14 h, hérité de l'époque
+  « 2 passes/jour ». Depuis la suppression de la passe du soir (22/07), la
+  cadence nominale est 1 passe/jour (~24 h d'écart normal) : ce seuil
+  déclenchait donc une fausse alerte « CADENCE ROMPUE » à CHAQUE passe,
+  y compris ce matin (23 h d'écart, aucune passe manquée). Seuil relevé à
+  30 h. Leçon consignée dans `lessons.md`.
+- **Auto-amélioration perf — condensation de 6 fiches `iv.o`/`iv.g`.** Le
+  problème signalé les 11 et 12/08 (le champ visiteur `iv.o` avait dérivé en
+  journal d'enquête complet du contrôleur sur des fiches récemment
+  contrôlées) avait EMPIRÉ entre les deux dernières passes (115→138 fiches en
+  excès, +38 % de poids). Condensé à la conclusion + contacts vérifiés (noms,
+  fonctions, emails, téléphones professionnels publiés — en excluant
+  explicitement tout numéro que la source elle-même marquait « à ne jamais
+  republier ») pour 6 fiches parmi les plus lourdes : Capri (Anema e Core),
+  Dior Spa Cheval Blanc, Villa Louis Vuitton, POINT D'ENTRÉE lieux-scènes,
+  POINT D'ENTRÉE ventes aux enchères, Scene yacht Ibiza-Formentera.
+  Résultat : 138 → **132 fiches** encore en excès, excédent cumulé
+  210 630 → **189 939** caractères, poids gzip 1,11 → **1,09 Mo**. Travail
+  volontairement limité à ce lot pour vérifier chaque contact à la main sans
+  erreur (risque réel : republier par erreur un numéro personnel non
+  autorisé) — le reste (126 fiches) est reporté aux prochaines passes.
 
-## Anomalie n°2 — une session concurrente était déjà active
-Trois vagues de commits sont arrivées sur `main` pendant cette passe (une
-juste avant mon premier push, deux pendant l'investigation), signées par une
-autre session Claude (Opus 4.8) sous le même compte : fiches contrôlées,
-retrait du Ritz Summer Bar (fermeture estivale confirmée par navigateur),
-retrait du pop-up Dior à Shellona (collaboration non attestée), Grand Palais
-d'été (saison de la Nef terminée). Rien d'anormal en soi — juste à signaler,
-car deux passes actives en parallèle est justement le scénario que le verrou
-`precheck.sh` est censé éviter. J'ai rebasé et poussé sans écraser ce travail.
-
-## État général (après la dernière rebase, 465 fiches)
-- `validate.py` : **OK — 0 blocker, 1 warning** (nouveau contrôle non
-  bloquant ajouté cette passe, voir « Amélioration du filet » ci-dessous).
-- `perfcheck.py` : **RÉGRESSION signalée — poids gzip 0,69 → 0,95 Mo (+38 %)
-  alors que le site a 17 événements DE MOINS** que le dernier point enregistré.
-  Cause identifiée sans avoir besoin du réseau (voir ci-dessous) : ce n'est
-  pas moi qui l'ai causée, et je n'ai rien publié qui l'aggrave.
-- Traductions manquantes : **0 / 465** (100 % traduit).
-- Séjours manquants (hors fiches-conseil) : **188**.
-- Invitations manquantes (`iv.o` vide) : **92**.
-- Fiches sans lien officiel `u` : **10** (dont 2 dans les 7 prochains jours,
-  cf. ci-dessous).
-- KPI ACCÈS mondain (`iv`) : **271/323 (83 %)**.
-- Adresse publique https://constanceparis7.com : **inchangée par cette
-  passe** — je n'ai ajouté/modifié aucune fiche, donc rien à publier côté
-  site public (voir raison réseau ci-dessus). Le site reflète les dernières
-  publications de la session concurrente.
-
-## Cause de la régression de performance — trouvée sans réseau
-`iv.o` (le texte d'accès affiché au visiteur) a dérivé, sur des fiches
-récemment « contrôlées », en journal d'enquête complet du contrôleur :
-adresses vérifiées, hypothèses corrigées, citations de sources — jusqu'à
-**4 891 caractères sur une seule fiche** (Capri / Anema e Core). Au total,
-**115 fiches dépassent 1 200 caractères**, pour un excédent cumulé de
-**158 453 caractères** par rapport à un texte visiteur raisonnable. Rien
-d'inventé, tout est vérifié — mais ce n'est pas ce qu'un internaute doit lire,
-et ça alourdit chaque page pour rien.
-
-## Amélioration du filet (mandat d'auto-amélioration)
-Ajouté à `validate.py` un contrôle **non bloquant** (WARN) : toute fiche dont
-`iv.o` dépasse 1 200 caractères est signalée, avec l'excédent total. Non
-bloquant pour ne pas geler la publication du jour — mais désormais visible à
-chaque passe tant que ce n'est pas nettoyé. Prochaine étape suggérée (pas
-faite cette passe pour ne pas entrer en conflit avec les fiches en cours de
-contrôle par la session concurrente) : condenser chaque `iv.o` long à sa
-conclusion + contacts vérifiés, garder le raisonnement hors du champ public.
+## État général et contrôles
+- `validate.py` : **OK — 0 blocker, 1 warning** (132 fiches `iv.o` encore
+  > 1200 caractères, en baisse — voir ci-dessus).
+- `perfcheck.py` : **régression toujours signalée** — poids gzip 1,09 Mo
+  contre seuil 0,83 Mo (base 0,69 Mo). Cause identifiée et pas aggravée par
+  cette passe (voir ci-dessus) ; en résorption progressive, pas résolue en
+  une passe vu le volume (126 fiches restantes) et le besoin de vérifier
+  chaque contact à la main.
+- Traductions manquantes : **0 / 459** (100 % traduit).
+- Séjours manquants (hors fiches-conseil) : **124** (contre 188 le 12/08).
+- Invitations manquantes (`iv` vide) : **63** (contre 92 le 12/08).
+- Fenêtre automne (fiches débutant oct./nov./déc.) : **73** — le trou
+  d'automne signalé fin juillet est désormais comblé par les passes
+  précédentes.
+- KPI ACCÈS mondain (`iv`) : **283/319 (88 %)**.
+- Fiches sans lien officiel `u` : **10** — non retestées ce jour (réseau).
+- Adresse publique https://constanceparis7.com : commit poussé directement
+  sur `main` (`be5bbf2b`), pas de repli sur branche `claude/*` nécessaire.
+  Propagation CDN non vérifiable ce jour (réseau bloqué côté sonde).
 
 ## Analyse des visites
-Compteur GoatCounter illisible aujourd'hui (réseau bloqué, `403` sur
-`goatcounter.com`) — aucun chiffre inventé, relevé non écrit. D'après les 5
-derniers jours déjà enregistrés (7→11 août) : progression régulière et
-continue, 341 → 353 → 365 → 380 → 390 visites/jour (~+3 %/jour). Rien ne
-permet de dire si la tendance s'est poursuivie le 12.
+Compteur GoatCounter illisible aujourd'hui (réseau bloqué) — aucun chiffre
+inventé, relevé du jour non écrit. D'après les 6 derniers jours déjà
+enregistrés (7→12 août) : progression continue et régulière, 341 → 353 → 365
+→ 380 → 390 → 401 visites/jour (~+3 %/jour). Rien ne permet de dire si la
+tendance s'est poursuivie le 13.
 
 ## Ce qui n'a PAS été fait cette passe (report)
-Recherche de nouveaux événements, comblement de l'automne, nouveaux guides
-d'accès, backfill séjours/invitations, traductions par lot : rien de tout
-cela n'a pu être fait faute d'accès réseau vérifiable — et une session
-concurrente y travaillait déjà pendant que je tournais. Priorité inchangée
-pour la prochaine passe (ordre du 29/07 toujours valable) : séjours et
-invitations manquants (188 / 92), puis automne, puis guides d'accès — plus,
-si le réseau le permet, terminer la vérification des 18 liens restés
-indéterminés cette fois.
-
-## healthcheck.sh
-`http=000000` — même signature de faux-négatif réseau que le 11/08 (déjà
-consignée : « healthcheck faux-négatif réseau connu »), pas un vrai incident
-site : aucune publication publique n'a eu lieu cette passe, rien à retomber
-(`rollback.sh` non lancé, à raison).
+Recherche de nouveaux événements, vérification des liens (dont les 10 fiches
+sans lien `u`), backfill des 124 séjours et 63 voies d'invitation restants,
+traductions par lot, condensation des 126 fiches `iv.o` restantes : rien de
+tout cela n'a été possible faute d'accès réseau. Priorité inchangée pour la
+prochaine passe si le réseau répond : séjours et invitations manquants
+(124 / 63), poursuite de la condensation `iv.o`/`iv.g` (perfcheck reste en
+régression tant que le poids n'est pas repassé sous ~0,83 Mo).
 
 ## Traces
-`git push` direct sur `main` accepté à chaque étape (après rebase sur les
-commits concurrents). Aucun repli sur branche `claude/*` nécessaire.
+`git push` direct sur `main` accepté aux deux étapes (démarrage + publication
+finale) — aucune session concurrente détectée, aucun repli sur branche
+`claude/*` nécessaire.

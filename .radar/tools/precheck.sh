@@ -41,11 +41,14 @@ if [ -f "$LOCK" ]; then
 fi
 date +%s > "$LOCK"
 
-# --- Contrôle de CADENCE (leçon du 21/07/2026) ---
+# --- Contrôle de CADENCE (leçon du 21/07/2026, seuil ajusté le 13/08/2026) ---
 # Le cron s'est tu du 18 au 20/07 (4 jours sans passe) et RIEN ne le signalait.
-# La cadence nominale est 2 passes/jour : si le dernier run journalisé
-# (tools/run-log.ndjson, écrit par healthcheck) date de plus de 14 h, on doit
-# le dire haut et fort — et le compte rendu à Gérald doit le mentionner.
+# La cadence nominale est 1 passe/jour depuis le 22/07/2026 (passe du soir
+# supprimée) : un écart normal entre deux passes est donc ~24 h, pas ~12 h.
+# Seuil fixé à 30 h — laisse la marge d'une passe qui démarre en retard, tout
+# en signalant un jour réellement sauté. L'ancien seuil de 14 h (hérité de
+# l'ère « 2 passes/jour ») déclenchait une fausse alerte CHAQUE matin depuis
+# le passage à 1 passe/jour ; repéré et corrigé le 13/08/2026 (voir lessons.md).
 RUNLOG="$DIR/run-log.ndjson"
 if [ -f "$RUNLOG" ]; then
   LAST_TS="$(tail -1 "$RUNLOG" | sed -n 's/.*"ts":"\([^"]*\)".*/\1/p')"
@@ -63,8 +66,8 @@ if [ -f "$RUNLOG" ]; then
     fi
     if [ "$LAST_EPOCH" -gt 0 ]; then
       GAP=$(( $(date +%s) - LAST_EPOCH ))
-      if [ "$GAP" -gt 50400 ]; then
-        echo "precheck: ⏰ CADENCE ROMPUE — dernier run journalisé il y a $(( GAP / 3600 )) h (> 14 h)."
+      if [ "$GAP" -gt 108000 ]; then
+        echo "precheck: ⏰ CADENCE ROMPUE — dernier run journalisé il y a $(( GAP / 3600 )) h (> 30 h)."
         echo "          Des passes ont été manquées : faire une passe de RATTRAPAGE (complète)"
         echo "          et SIGNALER l'anomalie de déclenchement dans le compte rendu."
       fi

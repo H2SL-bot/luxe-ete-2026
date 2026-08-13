@@ -566,3 +566,16 @@ le lire comme une mort, pas comme une pause.
 Remède : `TaskStop({taskId})` puis `Workflow({scriptPath, resumeFromRunId})`. Les
 agents terminés rejouent depuis le cache instantanément, seul le mort repart. Ne pas
 attendre : deux heures d'attente n'ont rien débloqué.
+
+## 13/08/2026 — précheck signalait une « cadence rompue » à CHAQUE passe depuis le 22/07
+`precheck.sh` comparait l'écart depuis le dernier run à un seuil de 14 h, hérité de
+l'époque « 2 passes/jour ». Le 22/07/2026, la passe du soir a été supprimée (décision
+de Gérald) : la cadence nominale est devenue 1 passe/jour, avec un écart normal
+d'environ 24 h entre deux passes. Un seuil de 14 h déclenche donc une fausse alerte
+« CADENCE ROMPUE » à CHAQUE démarrage, y compris quand tout va bien — repéré ce jour
+lors de la passe du 13/08 (écart réel : 23 h, aucune passe manquée).
+
+Règle : un contrôle de seuil doit être révisé quand la cadence nominale qu'il
+surveille change — sinon il devient du bruit permanent, et du bruit permanent fait
+qu'on arrête de lire les vraies alertes. Corrigé : seuil relevé à 30 h (marge sur
+les ~24 h nominaux, sans manquer un jour réellement sauté).
