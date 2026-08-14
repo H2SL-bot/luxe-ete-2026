@@ -69,6 +69,7 @@ def measure(path):
         "page_gzip": page_gzip,
         "data_gzip": data_gzip,
         "fr_only_gzip": fr_gzip,  # payload initial visé si langues différées
+        "sej_count": sum(1 for e in evts if e.get("sej")),
     }
 
 
@@ -112,12 +113,23 @@ def main():
         if lost:
             blockers.append(f"langue(s) disparue(s) : {', '.join(sorted(lost))}")
         pg, pp = cur["page_gzip"], prev.get("page_gzip", 0)
-        if pp and cur["events"] <= prev.get("events", 0) and pg > pp * 1.20:
-            blockers.append(f"bloat : poids gzip {pp/1e6:.2f} -> {pg/1e6:.2f} Mo (>+20%) sans contenu en plus")
+        # Le BACKFILL SÉJOUR (LOI DU SITE) alourdit légitimement chaque fiche
+        # sans changer le nombre d'événements : le 14/08/2026, un poids passé
+        # de 0,69 à 1,08 Mo a d'abord semblé être un bloat, alors qu'il
+        # correspondait à une hausse de 257 -> 335 fiches avec séjour en 3
+        # jours (contenu voulu, pas une fuite). Ne bloquer que si le poids
+        # gonfle SANS que ni le nombre d'événements NI le nombre de séjours
+        # n'ait progressé — sinon la routine ne pourrait plus jamais publier
+        # une vague de séjours sans se faire bloquer par son propre garde-fou.
+        sc, sp = cur.get("sej_count", 0), prev.get("sej_count", 0)
+        if pp and cur["events"] <= prev.get("events", 0) and sc <= sp and pg > pp * 1.20:
+            blockers.append(f"bloat : poids gzip {pp/1e6:.2f} -> {pg/1e6:.2f} Mo (>+20%) "
+                            f"sans contenu ni séjour en plus")
 
     mb = lambda x: f"{x/1e6:.2f} Mo"
     print(f"=== perfcheck.py — {path} ===")
     print(f"événements            : {cur['events']}")
+    print(f"fiches avec séjour    : {cur.get('sej_count', 0)}")
     print(f"langues (tr)          : {len(cur['langs'])} ({','.join(cur['langs'])})")
     print(f"poids page (gzip)     : {mb(cur['page_gzip'])}   <- transfert internaute (approx.)")
     print(f"  dont bloc data      : {mb(cur['data_gzip'])}")
@@ -129,7 +141,8 @@ def main():
     if prev:
         d = cur["page_gzip"] - prev.get("page_gzip", 0)
         print(f"vs dernier point      : {'+' if d>=0 else ''}{d/1e6:.2f} Mo poids, "
-              f"{cur['events']-prev.get('events',0):+d} événements")
+              f"{cur['events']-prev.get('events',0):+d} événements, "
+              f"{cur.get('sej_count',0)-prev.get('sej_count',0):+d} séjours")
 
     for b in blockers:
         print("REGRESSION ", b)

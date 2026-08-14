@@ -579,3 +579,26 @@ Règle : un contrôle de seuil doit être révisé quand la cadence nominale qu'
 surveille change — sinon il devient du bruit permanent, et du bruit permanent fait
 qu'on arrête de lire les vraies alertes. Corrigé : seuil relevé à 30 h (marge sur
 les ~24 h nominaux, sans manquer un jour réellement sauté).
+
+## 14/08/2026 — perfcheck confondait bloat et backfill séjour légitime
+`perfcheck.py` comparait le poids gzip de la page au dernier point journalisé
+(11/08 : 482 événements, 0,69 Mo) et bloquait tout poids >+20 % dès que le nombre
+d'événements n'avait pas augmenté. Ce jour-là : 451 événements (purge normale) mais
+1,08 Mo — +57 %, FAIL. Cause réelle : entre le 11/08 et le 14/08, le nombre de
+fiches avec un séjour complet (`e.sej`, cœur de la LOI DU SITE) est passé de 257 à
+325+ — le backfill séjour des passes précédentes avait fait grossir chaque fiche,
+sans rien avoir à voir avec un bug. Le garde-fou ne distinguait pas « contenu voulu
+qui pèse plus lourd » de « fuite ». Vérifié en comparant le index.html du commit du
+11-12/08 (257 séjours, 0,92 Mo) au jour courant avant de conclure.
+Corrigé : `perfcheck.py` journalise désormais `sej_count` et ne bloque le bloat que
+si NI les événements NI les séjours n'ont progressé. Un vrai gonflement sans raison
+reste attrapé ; une vague de séjours légitime ne bloque plus la publication.
+
+Au passage, `validate.py` avait raison depuis le 11/08 (WARN : journal d'enquête
+dans `iv.o` au lieu d'un texte visiteur, 132 fiches, 189 939 car. en trop) mais
+personne n'avait encore condensé ces fiches — la WARN n'est pas bloquante et
+personne ne l'avait traitée. 10 des pires fiches (>4 000 car. chacune) condensées
+ce jour à la conclusion + contacts vérifiés (moins de 700 car. chacune), sans rien
+inventer : tout vient du texte déjà vérifié. Reste 122 fiches à condenser — à
+poursuivre par lots de 8-10 aux prochaines passes plutôt que de laisser le WARN
+s'accumuler indéfiniment sans jamais être traité.
