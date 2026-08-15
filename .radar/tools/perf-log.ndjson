@@ -58,3 +58,4 @@
 {"events": 482, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 694877, "data_gzip": 5235858, "fr_only_gzip": 622753, "date": "2026-08-11"}
 {"events": 451, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 1075975, "data_gzip": 5517926, "fr_only_gzip": 1000717, "sej_count": 325, "date": "2026-08-14"}
 {"events": 451, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 1075975, "data_gzip": 5517926, "fr_only_gzip": 1000717, "sej_count": 325, "date": "2026-08-14"}
+{"events": 449, "langs": ["ar", "de", "en", "es", "hi", "it", "ja", "ko", "pt", "ru", "tr", "zh"], "page_gzip": 1054328, "data_gzip": 5485674, "fr_only_gzip": 979011, "sej_count": 325, "date": "2026-08-15"}
