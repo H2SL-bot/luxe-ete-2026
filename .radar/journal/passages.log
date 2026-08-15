@@ -16,3 +16,4 @@
 2026-08-13T03:56:28Z  DEMARRAGE
 2026-08-13T04:08:23Z  FIN — Reseau bloque (EGRESS_BLOCKED confirme) : purge 4 zombies (459 fiches), condensation iv.o/iv.g de 6 fiches (138->132 en exces, perfcheck encore en regression 1.09 Mo), bug cadence precheck corrige (seuil 14h->30h), validate OK/1 warning, healthcheck faux-negatif reseau connu (rollback non lance)
 2026-08-14T03:55:59Z  DEMARRAGE
+2026-08-15T03:56:10Z  DEMARRAGE
