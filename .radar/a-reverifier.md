@@ -658,3 +658,13 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] POINT D'ENTRÉE — Silencio (club privé, Paris) : adhésion sur candidature — inscrit le 18/08/2026
 - [ ] Prix Morny (Groupe 1) — inscrit le 18/08/2026
 - [ ] Soldes d'été 2026 à Paris (prolongés jusqu'au 28 juillet) — inscrit le 18/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Conseil - Galas caritatifs de l'ete : viser juillet a Monaco/Saint-Tropez, verifier les editions d'aout — inscrit le 18/08/2026
+- [ ] Exposition Générale — inauguration de la nouvelle Fondation Cartier par Jean Nouvel — inscrit le 18/08/2026
+- [ ] Fondation Maeght — « Peter Knapp : Le Temps Courrèges » — inscrit le 18/08/2026
+- [ ] Yves Saint Laurent and Photography — International Center of Photography (pendant la fermeture du musée YSL Paris) — inscrit le 18/08/2026
