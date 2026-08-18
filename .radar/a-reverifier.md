@@ -598,3 +598,12 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Falstaff — 130e anniversaire du Teatro Massimo — inscrit le 12/08/2026
 - [ ] Grands magasins & concept stores — accès libre pendant la Fashion Week — inscrit le 12/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Matisse. 1941–1954 — Grand Palais — inscrit le 18/08/2026
+- [ ] Pirelli HangarBicocca — dernières semaines des expositions Benni Bosetto et Rirkrit Tiravanija — inscrit le 18/08/2026
+- [ ] Ron Mueck — Mori Art Museum x Fondation Cartier pour l'art contemporain — inscrit le 18/08/2026
