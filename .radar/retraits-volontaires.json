@@ -53,5 +53,10 @@
   "nom": "Jacquemus a Saint-Tropez — takeover Indie Beach, boutique et cafe La Renaissance",
   "date": "2026-08-18",
   "motif": "Collaboration fausse, prouvée POSITIVEMENT et non par une absence. Le site officiel du lieu, indie-beach.fr, lu en entier le 18/08/2026 (HTTP 200, corps réel contrôlé, blocs script compris), écrit mot pour mot : « cette été la boutique pop-up de Indie Beach accueille la marque de prêt-à-porter & lifestyle James Perse ». La boutique éphémère annoncée comme un takeover Jacquemus est donc occupée par James Perse, ce que corrobore The Impression (« James Perse Lands at Indie Beach »). Le beach club existe et fonctionne (12h-19h) — c'est la marque annoncée qui est fausse, même schéma que le pop-up Dior de Shellona. Aucune fiche de remplacement n'est créée sans vérification dédiée de l'offre James Perse."
+ },
+ {
+  "nom": "Le Studio - Ginza Maison Hermes: projection \"Carnets de voyage / The Motorcycle Diaries\"",
+  "date": "2026-08-18",
+  "motif": "Programmation non confirmée par le lieu, contredite par sa rubrique officielle. Le cas était consigné au registre depuis le 12/08 (contrôleur réfutant, mes URL en 404 : échec de mesure, pas de preuve). Tranché le 18/08/2026 dans un vrai navigateur : le microsite officiel lanterne.hermes.com (vivant, ©Hermès 2026) pointe sa rubrique LE STUDIO vers la page hermes.com/jp du programme en cours, qui affiche « Our Wildest Days » (2025, Vassilis Kekatos) — zéro occurrence de « Carnets de voyage » / « Motorcycle Diaries » — et la page d'août (slug 260801) n'existe pas. La fiche annonçait pourtant des séances datées du 11 au 30 août. Un programme de projection que le lieu ne publie nulle part ne reste pas affiché avec des dates précises. Le mini-cinéma existe et le lieu est ouvert : c'est la programmation annoncée qui n'est pas la sienne."
  }
 ]
