@@ -624,3 +624,15 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Exposition d'été du Grimaldi Forum: Monaco & l'Automobile, de 1893 à nos jours — inscrit le 18/08/2026
 - [ ] Exposition « Van Cleef & Arpels : l'éclat des années 1980-1990 » — Galerie du Patrimoine — inscrit le 18/08/2026
 - [ ] Fondazione Prada — programme d'été (Cao Fei « DASH », Mona Hatoum, Hito Steyerl à l'Osservatorio) — inscrit le 18/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Chanel — boutique estivale à la villa La Mistralée — inscrit le 18/08/2026
+- [ ] Dioriviera 2026 à Capri — pop-up et takeover du beach club Il Riccio — inscrit le 18/08/2026
+- [ ] Dioriviera 2026 à Mykonos — pop-up(s) Dior — inscrit le 18/08/2026
+- [ ] Exposition 'On aura tout vu : Icônes' au Sofitel Paris Le Faubourg (robe de Lady Gaga) — inscrit le 18/08/2026
+- [ ] Exposition Pomellato 'Le Joaillier révolutionnaire' au Palais de Tokyo — inscrit le 18/08/2026
+- [ ] POINT D'ENTRÉE — Concierges de palaces (Clefs d'Or) : la clé des places impossibles — inscrit le 18/08/2026
