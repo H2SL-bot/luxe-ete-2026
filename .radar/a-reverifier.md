@@ -636,3 +636,16 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Exposition 'On aura tout vu : Icônes' au Sofitel Paris Le Faubourg (robe de Lady Gaga) — inscrit le 18/08/2026
 - [ ] Exposition Pomellato 'Le Joaillier révolutionnaire' au Palais de Tokyo — inscrit le 18/08/2026
 - [ ] POINT D'ENTRÉE — Concierges de palaces (Clefs d'Or) : la clé des places impossibles — inscrit le 18/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Festival d'Aix-en-Provence 2026 — inscrit le 18/08/2026
+- [ ] Hilma af Klint — Paintings for the Temple (1906-1915) — Grand Palais — inscrit le 18/08/2026
+- [ ] POINT D'ENTRÉE — Les lieux-scènes ouverts à la réservation (Hôtel Costes, Club 55, Caves du Roy, VIP Room) — inscrit le 18/08/2026
+- [ ] Saison de polo au Polo Club Saint-Tropez — tournois de juillet (dont Polo Masters Open de Gassin) — inscrit le 18/08/2026
+- [ ] Soirées d'été du Casino Barrière Le Touquet — inscrit le 18/08/2026
+- [ ] Tisser, broder, sublimer. Les savoir-faire de la mode — Palais Galliera — inscrit le 18/08/2026
+- [ ] White Party avec Laurent Wolf — Casino Barrière — inscrit le 18/08/2026
