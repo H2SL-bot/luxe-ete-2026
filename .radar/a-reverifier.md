@@ -649,3 +649,12 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Soirées d'été du Casino Barrière Le Touquet — inscrit le 18/08/2026
 - [ ] Tisser, broder, sublimer. Les savoir-faire de la mode — Palais Galliera — inscrit le 18/08/2026
 - [ ] White Party avec Laurent Wolf — Casino Barrière — inscrit le 18/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] POINT D'ENTRÉE — Silencio (club privé, Paris) : adhésion sur candidature — inscrit le 18/08/2026
+- [ ] Prix Morny (Groupe 1) — inscrit le 18/08/2026
+- [ ] Soldes d'été 2026 à Paris (prolongés jusqu'au 28 juillet) — inscrit le 18/08/2026
