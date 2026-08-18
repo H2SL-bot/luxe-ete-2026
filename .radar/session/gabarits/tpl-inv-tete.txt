@@ -1,0 +1,3 @@
+export const meta = { name: 'R-INV', description: 'Composer des voies d invitation', phases: [{ title: 'Composer' }] }
+const C={type:'object',properties:{t:{type:'string'},v:{type:'string'}},required:['t','v']};
+const IV={type:'object',properties:{o:{type:'string'},g:{type:'string'},w:{type:'string'},c:{type:'array',items:C},trouve:{type:'boolean'}},required:['o','g','w','c','trouve']};

@@ -1,0 +1,3 @@
+export const meta = { name: 'R-SEJ', description: 'Composer des sejours cle en main', phases: [{ title: 'Composer' }] }
+const ITEM={type:'object',properties:{n:{type:'string'},d:{type:'string'},u:{type:'string'}},required:['n','d','u']};
+const SJ={type:'object',properties:{pitch:{type:'string'},hotels:{type:'array',items:ITEM},tables:{type:'array',items:ITEM},exp:{type:'array',items:ITEM}},required:['pitch','hotels','tables','exp']};

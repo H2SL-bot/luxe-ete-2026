@@ -1,0 +1,25 @@
+const out=await parallel(A.map(a=>()=>agent(
+`Vous composez la VOIE D INVITATION d un evenement du site ConstanceParis7.
+Le site veut devenir LA reference mondiale des invitations jet-set : apporter l acces EST sa raison d etre.
+
+EVENEMENT : ${a.nom}
+Ville : ${a.ville} — Lieu : ${a.lieu} — Dates : ${a.d1} → ${a.d2 || a.d1}
+
+CHERCHEZ SUR LE WEB (obligatoire) et rendez :
+- o : LA PORTE. Commencez par verifier que le lieu est OUVERT et que l evenement peut avoir lieu a cette date ;
+  dites-le en tete. Puis nommez la personne ou le service par qui l acces passe reellement, avec sa fonction,
+  et dites d ou vient l information (page officielle, communique PDF, espace presse) et de quand.
+- g : la VOIE GRATUITE si elle existe (accreditation presse, entree libre, invitation sur demande) : decrivez la
+  demarche REELLE telle que l organisateur la publie, pas une extrapolation. Si elle n existe pas, dites-le net.
+- w : la VOIE PAYANTE : tarifs publies, billetterie, adhesion, privatisation, minimum de depense. Chiffres
+  uniquement s ils sont publies ; sinon dites qu ils ne le sont pas.
+- c : les coordonnees, chacune sous la forme {t, v} ou t vaut nom, email, tel ou url.
+- trouve : true si une porte nominative a ete trouvee, false sinon.
+
+REGLES ABSOLUES : aucun email devine (jamais de prenom.nom@ reconstitue), aucun mobile personnel non publie par
+une source officielle, aucune URL non testee. Un 403 ou un CAPTCHA n est PAS une preuve d absence : dites que la
+page n a pas pu etre lue. Tout ce qui n est pas prouve aujourd hui est retire ou date comme piste historique.
+ECRIVEZ EN FRANCAIS.`,
+{label:`i:${a.nom.slice(0,26)}`,phase:'Composer',schema:IV,effort:'low'}
+).then(r=>({cle:a.cle,nom:a.nom,r})).catch(()=>null)));
+return { invitations: out.filter(Boolean) }

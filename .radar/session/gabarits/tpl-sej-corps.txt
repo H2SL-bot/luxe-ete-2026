@@ -1,0 +1,21 @@
+const out=await parallel(A.map(a=>()=>agent(
+`Vous composez le SEJOUR CLE EN MAIN d un evenement du site de luxe ConstanceParis7 (public jet-set, francais elegant).
+La raison d etre du site : permettre d etre INVITE et de VIVRE l evenement en grand. Le maximum est un minimum.
+
+EVENEMENT : ${a.nom}
+Ville : ${a.ville} — Lieu : ${a.lieu} — Dates : ${a.d1} → ${a.d2 || a.d1}
+
+CHERCHEZ SUR LE WEB (obligatoire) et composez :
+- pitch : 2 a 4 phrases elegantes et concretes, ancrees dans CET evenement et cette ville.
+- hotels : 2 palaces ou 5 etoiles REELS, les plus proches ou les mieux adaptes. d = situation par rapport au lieu, atouts reels ; u = URL OFFICIELLE.
+- tables : 2 restaurants REELS (etoiles ou institutions iconiques) proches. d = chef reel, etoiles reelles, situation ; u = URL officielle.
+- exp : 2 experiences REELLES dans l esprit du lieu (helicoptere, visite privee, yacht, spa). u = URL officielle du prestataire.
+
+VERIFIEZ AUSSI L OUVERTURE du lieu de l evenement ET de chaque etablissement a la date de l evenement : fermeture saisonniere, travaux, fermeture definitive.
+ECRIVEZ TOUT EN FRANCAIS : le site s adresse a un public francophone. Aucun fragment en anglais, hors noms propres d etablissements.
+ANTI-FABRICATION ABSOLUE : uniquement des etablissements VERIFIES sur le web pendant cette recherche.
+Jamais d URL devinee, jamais d etoile Michelin non confirmee, jamais de distance inventee.
+Moins vaut mieux qu un element douteux.`,
+{label:`c:${a.nom.slice(0,26)}`,phase:'Composer',schema:SJ,effort:'low'}
+).then(r=>({cle:a.cle,nom:a.nom,r})).catch(()=>null)));
+return { sejours: out.filter(Boolean) }
