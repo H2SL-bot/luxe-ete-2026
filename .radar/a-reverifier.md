@@ -614,3 +614,13 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] BALLET - The Making of an Etoile (Ballet de l'Opera de Paris, premiere curation hors de France) — inscrit le 18/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Ellsworth Kelly – Aux bords de l'eau (exposition d'été Fondation Maeght) — inscrit le 18/08/2026
+- [ ] Exposition d'été du Grimaldi Forum: Monaco & l'Automobile, de 1893 à nos jours — inscrit le 18/08/2026
+- [ ] Exposition « Van Cleef & Arpels : l'éclat des années 1980-1990 » — Galerie du Patrimoine — inscrit le 18/08/2026
+- [ ] Fondazione Prada — programme d'été (Cao Fei « DASH », Mona Hatoum, Hito Steyerl à l'Osservatorio) — inscrit le 18/08/2026
