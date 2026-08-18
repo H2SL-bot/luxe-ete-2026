@@ -694,3 +694,12 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] Dubai Racing Carnival — nuits mondaines à Meydan (ouverture de saison) — inscrit le 18/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] La Lanterne d'Hermes a Ginza - programme d'ete 2026 (theme "L'appel du large", Flaneur Tour, vitrines) — inscrit le 18/08/2026
+- [ ] Le Studio - Ginza Maison Hermes: projection "Carnets de voyage / The Motorcycle Diaries" — inscrit le 18/08/2026
+- [ ] Stuart Weitzman "Exotic Escape" — pop-up au Maidstone — inscrit le 18/08/2026
