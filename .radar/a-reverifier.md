@@ -677,3 +677,13 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Dîner quatre mains Ayla Privé — Aret Sahakyan × Jonny Lake (Trivet, Londres **) — inscrit le 18/08/2026
 - [ ] Jesus Christ Superstar au Sands Theatre (Marina Bay Sands) — inscrit le 18/08/2026
 - [ ] Terrasses et jardins d'été des palaces parisiens (Plaza Athénée, Bristol, Peninsula, Mandarin Oriental, Crillon) — inscrit le 18/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Festival de Nîmes 2026 — Pack VIP / hospitalité premium aux Arènes romaines (têtes d'affiche de juillet) — inscrit le 18/08/2026
+- [ ] Open de France de Polo — Polo Club du Domaine de Chantilly (30 ans du club) — inscrit le 18/08/2026
+- [ ] Réouverture d'hiver de Cheval Blanc Courchevel (LVMH) — inscrit le 18/08/2026
+- [ ] Scorpios Mykonos — programme des sunsets de juillet 2026 — inscrit le 18/08/2026
