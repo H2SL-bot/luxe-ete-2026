@@ -602,3 +602,29 @@ ce jour à la conclusion + contacts vérifiés (moins de 700 car. chacune), sans
 inventer : tout vient du texte déjà vérifié. Reste 122 fiches à condenser — à
 poursuivre par lots de 8-10 aux prochaines passes plutôt que de laisser le WARN
 s'accumuler indéfiniment sans jamais être traité.
+
+## 18/08/2026 — UN 200 PEUT ÊTRE UN 404, ET DÉPOUILLER LES <script> PEUT SUPPRIMER LA PREUVE
+J'ai retiré du site le « ROCKWOOL France Sail Grand Prix | Saint-Tropez » en affirmant
+qu'il n'existait pas. Il existe, il est officiel, et ses dates — 12 et 13 septembre 2026
+— étaient exactes dans la fiche. Gérald a dû me contredire pour que je le voie.
+
+DEUX ERREURS CUMULÉES, chacune suffisante :
+
+1. La page interrogée (sailgp.com/racing/schedule/) renvoie **HTTP 200 avec le corps
+   d'un 404** (« This page could not be found »). Le code de retour ne prouve donc PAS
+   qu'on lit la bonne page. Contrôle à faire systématiquement : chercher « not found »,
+   « 404 », « page introuvable » DANS le corps, quel que soit le code.
+
+2. Mon extracteur supprimait les blocs <script> avant de compter les occurrences. Or
+   sur un site rendu côté client, TOUT le contenu vit dans ces blocs. J'ai donc compté
+   zéro occurrence de « Tropez » sur une page qui en contenait une, au bon endroit :
+   « September 12-13 - ROCKWOOL France Sail Grand Prix | Saint-Tropez ».
+
+RÈGLE : une absence mesurée n'est une preuve d'absence QUE si la mesure est valide.
+Avant de conclure « cet événement n'existe pas », il faut prouver deux choses — que la
+page lue est la bonne (pas un 404 déguisé), et que la méthode de lecture voit le
+contenu réel (rendu JS compris). Sinon on ne conclut pas : on dit qu'on n'a pas pu
+vérifier. Le retrait d'un événement réel coûte plus cher que le maintien d'un doute.
+
+Corollaire : un contrôleur qui affirme « CET ÉVÉNEMENT N'EXISTE PAS » doit être soumis
+au même examen que la fiche qu'il accuse. Ici son verdict était faux et je l'ai suivi.
