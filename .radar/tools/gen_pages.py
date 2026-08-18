@@ -127,7 +127,13 @@ def verifie_depot():
                                 capture_output=True, text=True).stdout.strip()
     except Exception:
         origin = ""
-    if origin and "luxe-ete-2026" not in origin:
+    # Le dépôt a été transféré et RENOMMÉ le 18/08/2026 :
+    # H2SL-bot/luxe-ete-2026 → constanceparis7/radar-luxe. Le garde-fou ne
+    # connaissait que l'ancien nom : il refusait donc le dépôt légitime et
+    # arrêtait la passe quotidienne dès sa première étape. On accepte les deux
+    # noms connus ; un dépôt inconnu reste refusé, la protection est intacte.
+    DEPOTS_ATTENDUS = ("luxe-ete-2026", "radar-luxe")
+    if origin and not any(d in origin for d in DEPOTS_ATTENDUS):
         raise SystemExit(f"gen_pages: dépôt inattendu ({origin}) — refus d'agir")
 
 
@@ -219,6 +225,15 @@ def main():
 
     def u_hub(lang):
         return f"{prefix(lang)}/evenements.html"
+
+    def u_home(lang):
+        """adresse canonique de la porte d'entrée d'une langue (/en/, /ja/…)."""
+        return f"{prefix(lang)}/"
+
+    def p_home(lang):
+        """fichier correspondant. Jamais appelé pour 'fr' : la racine, c'est
+        index.html, le site visible, que ce script ne modifie jamais."""
+        return f"{prefix(lang)}/index.html"
 
     def hreflang_for(path_fn, obj):
         """balises alternate pour une entité, à travers les 11 langues + x-default."""
@@ -410,12 +425,79 @@ def main():
         write(u_hub(lang), page(lang, htitle, UI["hub_intro"][lang], u_hub(lang), "".join(hub), hreflang_for(None, None)))
         sitemap_urls.append(f"{BASE}{u_hub(lang)}")
 
+        # --- porte d'entrée de la langue -------------------------------------
+        # Le français vit à la racine : index.html EST le site visible, jamais
+        # touché. Les autres langues n'avaient AUCUNE page d'accueil — /en/,
+        # /ja/, /ar/… répondaient 404. Or chaque page générée y renvoie deux
+        # fois (le logo et le fil d'Ariane) et les hreflang la déclarent à
+        # Google : des milliers de liens internes morts, et un lecteur étranger
+        # qui bute sur un mur dès son premier clic. On la construit avec le
+        # vocabulaire DÉJÀ traduit du site — aucune traduction inventée.
+        if lang != "fr":
+            L18 = i18n.get(lang, i18n["fr"])
+
+            def tk(key, defaut=""):
+                return L18.get(key) or i18n["fr"].get(key) or defaut
+
+            home = [f"<h1>ConstanceParis7 — {esc(UI['luxury_events'][lang])}</h1>",
+                    f"<p class=\"meta\">{esc(tk('brandsub', UI['tagline'][lang]))}</p>",
+                    f"<p><a class=\"cta\" href=\"/\">{esc(UI['see_live'][lang])} →</a></p>"]
+
+            rubriques = [tk(k) for k in ("nav_today", "nav_prestige", "nav_calendar",
+                                         "nav_agenda", "nav_continu", "nav_intl",
+                                         "nav_invite", "nav_archives") if tk(k)]
+            if rubriques:
+                home.append(f"<div class=\"box\"><h2>{esc(UI['radar'][lang])}</h2><ul>")
+                home += [f"<li>{esc(r)}</li>" for r in rubriques]
+                home.append("</ul></div>")
+
+            # À l'affiche : de vrais liens internes vers les fiches traduites.
+            datees = sorted((e for e in pages if e.get("d1")), key=lambda e: e["d1"])
+            aff = [e for e in datees if e["d1"] >= TODAY][:12] or datees[-12:]
+            if aff:
+                home.append(f"<h2 class=\"sub\">{esc(UI['affiche'][lang])}</h2><ul class=\"cards\">")
+                for e in aff:
+                    home.append(f"<li><div class=\"d\">{esc(e.get('d1',''))} · {esc(e.get('v',''))}</div>"
+                                f"<div class=\"t\"><a href=\"{u_event(e, lang)}\">{esc(T(e, lang, 'n'))}</a></div></li>")
+                home.append("</ul>")
+
+            home.append(f"<h2 class=\"sub\">{esc(UI['by_cat'][lang])}</h2><div class=\"chips\">")
+            for c, v in sorted(cats.items(), key=lambda kv: -len(kv[1]["events"])):
+                home.append(f"<a href=\"{u_cat(v, lang)}\">{esc(cat_label(c, lang))} ({len(v['events'])})</a>")
+            home.append(f"</div><h2 class=\"sub\">{esc(UI['by_place'][lang])}</h2><div class=\"chips\">")
+            for k, v in sorted(places.items(), key=lambda kv: -len(kv[1]["events"]))[:40]:
+                home.append(f"<a href=\"{u_place(v, lang)}\">{esc(k)} ({len(v['events'])})</a>")
+            home.append(f"</div><p><a href=\"{u_hub(lang)}\">{esc(UI['places_cats'][lang])} →</a></p>")
+
+            # Le radar ne lit sa langue que dans localStorage — il n'existe
+            # aucun paramètre d'URL. Sans cette ligne, un lecteur arrivé sur
+            # /ja/ repartait en français dès qu'il cliquait vers le radar.
+            home.append(f"<script>try{{localStorage.setItem('luxe_lang','{lang}')}}catch(e){{}}</script>")
+
+            hl_home = "".join(f'<link rel="alternate" hreflang="{L}" href="{BASE}{u_home(L)}">'
+                              for L in LANGS) + f'<link rel="alternate" hreflang="x-default" href="{BASE}/">'
+            write(p_home(lang), page(lang, f"ConstanceParis7 — {UI['luxury_events'][lang]}",
+                                     tk('brandsub', UI['tagline'][lang])[:155],
+                                     u_home(lang), "".join(home), hl_home))
+            sitemap_urls.append(f"{BASE}{u_home(lang)}")
+
     # --- sitemap ---
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in sitemap_urls:
-        pr = "1.0" if u == f"{BASE}/" else ("0.8" if ("/evenements" in u or "/lieu/" in u or "/type/" in u) else "0.6")
-        cf = "daily" if u == f"{BASE}/" else "weekly"
+        # Seules la racine et les portes d'entrée de langue se terminent par
+        # « / » ; tout le reste est un .html. Une porte d'entrée de langue pèse
+        # plus qu'une page de lieu : c'est par elle qu'un lecteur étranger entre.
+        accueil_langue = u.endswith("/") and u != f"{BASE}/"
+        if u == f"{BASE}/":
+            pr = "1.0"
+        elif accueil_langue:
+            pr = "0.9"
+        elif "/evenements" in u or "/lieu/" in u or "/type/" in u:
+            pr = "0.8"
+        else:
+            pr = "0.6"
+        cf = "daily" if (u == f"{BASE}/" or accueil_langue) else "weekly"
         sm.append(f"  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod><changefreq>{cf}</changefreq><priority>{pr}</priority></url>")
     sm.append("</urlset>")
     open(f"{REPO}/sitemap.xml", "w", encoding="utf-8").write("\n".join(sm) + "\n")
