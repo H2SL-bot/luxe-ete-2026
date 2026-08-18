@@ -668,3 +668,12 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 - [ ] Exposition Générale — inauguration de la nouvelle Fondation Cartier par Jean Nouvel — inscrit le 18/08/2026
 - [ ] Fondation Maeght — « Peter Knapp : Le Temps Courrèges » — inscrit le 18/08/2026
 - [ ] Yves Saint Laurent and Photography — International Center of Photography (pendant la fermeture du musée YSL Paris) — inscrit le 18/08/2026
+
+## Vérifiées à moyens réduits — ré-audit obligatoire
+
+Vérificateur privé de recherche web (budget de session épuisé) : il a pu
+contrôler les pages officielles mais pas découvrir une source contredisante.
+
+- [ ] Dîner quatre mains Ayla Privé — Aret Sahakyan × Jonny Lake (Trivet, Londres **) — inscrit le 18/08/2026
+- [ ] Jesus Christ Superstar au Sands Theatre (Marina Bay Sands) — inscrit le 18/08/2026
+- [ ] Terrasses et jardins d'été des palaces parisiens (Plaza Athénée, Bristol, Peninsula, Mandarin Oriental, Crillon) — inscrit le 18/08/2026
