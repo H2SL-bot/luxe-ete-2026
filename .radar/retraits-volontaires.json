@@ -48,5 +48,10 @@
   "nom": "Aloft at Hermes - espace d'art Hermes Singapour (programmation d'aout a confirmer)",
   "date": "2026-08-12",
   "motif": "Lieu fermé pour travaux. Contrôle direct le 12/08/2026 sur le localisateur officiel hermes.com/sg/en/find-store/ (742 Ko de contenu réel) : Hermès ne recense aucune adresse à Liat Towers et intitule explicitement l'une de ses boutiques « Hermès Singapore ION Orchard (Temporary Store for Liat Towers' Renovation) ». L'espace d'art Aloft se trouve au-dessus de ce flagship fermé, et aucune exposition couvrant août 2026 n'était annoncée. Un lieu en travaux sans programmation n'a pas sa place dans un radar d'événements."
+ },
+ {
+  "nom": "Jacquemus a Saint-Tropez — takeover Indie Beach, boutique et cafe La Renaissance",
+  "date": "2026-08-18",
+  "motif": "Collaboration fausse, prouvée POSITIVEMENT et non par une absence. Le site officiel du lieu, indie-beach.fr, lu en entier le 18/08/2026 (HTTP 200, corps réel contrôlé, blocs script compris), écrit mot pour mot : « cette été la boutique pop-up de Indie Beach accueille la marque de prêt-à-porter & lifestyle James Perse ». La boutique éphémère annoncée comme un takeover Jacquemus est donc occupée par James Perse, ce que corrobore The Impression (« James Perse Lands at Indie Beach »). Le beach club existe et fonctionne (12h-19h) — c'est la marque annoncée qui est fausse, même schéma que le pop-up Dior de Shellona. Aucune fiche de remplacement n'est créée sans vérification dédiée de l'offre James Perse."
  }
 ]
