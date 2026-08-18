@@ -133,7 +133,11 @@ def appliquer(jour=None, ecrire=True):
         if lg not in i18n:
             continue
         mot = mots[saison]
-        i18n[lg]["brandline_season"] = (f"{annee}{mot}" if lg in ("zh", "ja")
+        # zh/ja veulent la particule d'année (2026年夏, pas 2026夏) et le coréen se dit
+        # année d'abord avec 년 (2026년 여름). Une première version l'omettait : au
+        # premier passage automatique, elle aurait dégradé trois langues en silence.
+        i18n[lg]["brandline_season"] = (f"{annee}年{mot}" if lg in ("zh", "ja")
+                                        else f"{annee}년 {mot}" if lg == "ko"
                                         else f"{annee} {mot}ı" if lg == "tr" and saison == "summer"
                                         else f"{annee} {mot}" if lg == "tr"
                                         else f"{mot} {annee}")
