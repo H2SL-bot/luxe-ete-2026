@@ -1,5 +1,7 @@
 import json,re,os
-os.chdir("/Users/geraldlefebvre/luxe-ete-2026")
+# Passation du 18/08/2026 : chemin du Mac d'origine remplacé par une déduction.
+os.chdir(os.environ.get("RADAR_REPO") or os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 doc=open("index-full.html",encoding="utf-8").read()
 m=re.search(r'id="data">(.*?)</script>',doc,re.S)
 d=json.loads(m.group(1).replace("<\\/","</"))

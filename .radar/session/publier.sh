@@ -1,10 +1,28 @@
 #!/bin/zsh
 # Publieur au fil de l'eau. NE PUBLIE JAMAIS si validate.py échoue.
 set -e
-cd /Users/geraldlefebvre/luxe-ete-2026
+
+# Passation du 18/08/2026 : ce script portait le chemin du Mac de Gérald en dur,
+# plus un renvoi vers ~/.radar-session/ qui n'existe que chez lui. Sur toute
+# autre machine il s'arrêtait à la deuxième ligne — la « porte de sortie
+# unique » était donc condamnée. On déduit désormais le dépôt de l'emplacement
+# du script lui-même : il fonctionne partout, sans réglage.
+REPO="${RADAR_REPO:-${0:A:h:h:h}}"
+cd "$REPO"
 export RADAR_REPO="$PWD"
+[ -f "$PWD/index.html" ] || { echo "⛔ $PWD ne contient pas index.html — refus d'agir"; exit 1; }
 MSG="${1:-Publication au fil de l'eau}"
-python3 $HOME/.radar-session/inject.py
+
+# index-full.html (15 Mo) n'est pas versionné : il alourdissait chaque clonage.
+# Tous les outils ci-dessous le lisent. La passe automatique le reconstruit déjà
+# quand il manque ; le publieur ne le faisait pas et échouait donc sur une
+# machine fraîchement clonée. Même réflexe ici.
+[ -f index-full.html ] || python3 .radar/tools/rebuild_full.py >/dev/null
+
+# inject.py est rapatrié DANS le dépôt (.radar/session/) et ne vit plus dans
+# ~/.radar-session/. Il récolte les ateliers d'agents : s'il n'y en a aucun sur
+# cette machine, il n'a rien à faire et ne doit pas bloquer la publication.
+python3 .radar/session/inject.py || echo "· inject : rien à récolter, on continue"
 python3 .radar/tools/split_i18n.py --apply >/dev/null
 python3 .radar/tools/gen_pages.py >/dev/null
 V=$(python3 .radar/tools/validate.py 2>&1 | tail -1)

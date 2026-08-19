@@ -1,6 +1,16 @@
 import json,os,re
-BASE="/Users/geraldlefebvre/.claude/projects/-Users-geraldlefebvre/2de0cd85-85f8-41f3-aca5-7906e9758743/subagents/workflows"
-os.chdir("/Users/geraldlefebvre/luxe-ete-2026")
+# Passation du 18/08/2026 : ce fichier portait le chemin du Mac de Gérald et
+# l'identifiant d'UNE session Claude Code précise ; sur une autre machine il
+# s'arrêtait à la deuxième ligne. Les deux sont maintenant déduits :
+#   - le dépôt, depuis RADAR_REPO ou l'emplacement de ce fichier ;
+#   - les ateliers, par un motif à joker qui balaye TOUTES les sessions Claude
+#     Code de la machine courante, et non plus une seule codée en dur.
+# Ne rien trouver est un cas normal, pas une erreur : on récolte zéro.
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+os.chdir(REPO)
+_racine = os.path.expanduser(os.environ.get("CLAUDE_CONFIG_DIR", "~/.claude"))
+BASE = os.path.join(_racine, "projects", "*", "*", "subagents", "workflows")
 
 # Le registre des ateliers de vérification était tenu À LA MAIN. Le 12/08/2026, y avoir
 # inscrit les identifiants des ateliers de RECHERCHE au lieu de ceux de VÉRIFICATION a
@@ -15,7 +25,9 @@ os.chdir("/Users/geraldlefebvre/luxe-ete-2026")
 WF=[]
 import glob as _glob
 for _jp in sorted(_glob.glob(f"{BASE}/wf_*/journal.jsonl")):
-    _wf=os.path.basename(os.path.dirname(_jp))
+    # On retient le dossier COMPLET de l'atelier, plus seulement son nom :
+    # BASE porte désormais des jokers et ne permet plus de le reconstruire.
+    _wf=os.path.dirname(_jp)
     _champs=set()
     try:
         for _l in open(_jp,encoding="utf-8"):
@@ -35,14 +47,14 @@ for e in data:
     idx.setdefault(e.get("n",""),e)
 ns=ni=0; fermes=[]; brides=[]
 for wf,champ in WF:
-    jp=f"{BASE}/{wf}/journal.jsonl"
+    jp=os.path.join(wf,"journal.jsonl")
     if not os.path.exists(jp): continue
     for l in open(jp,encoding="utf-8"):
         try: j=json.loads(l)
         except Exception: continue
         r=j.get("result")
         if j.get("type")!="result" or not isinstance(r,dict) or champ not in r: continue
-        f=f"{BASE}/{wf}/agent-{j['agentId']}.jsonl"
+        f=os.path.join(wf,f"agent-{j['agentId']}.jsonl")
         if not os.path.exists(f): continue
         head=open(f,encoding="utf-8").read(3000)
         mn=re.search(r'EVENEMENT\s*:\s*(.+?)\\n',head)
@@ -86,7 +98,7 @@ if ns or ni:
     open("index-full.html","w",encoding="utf-8").write(doc[:m.start(2)]+body+doc[m.end(2):])
 print(f"SEJ={ns} INV={ni}")
 if brides:
-    RA="/Users/geraldlefebvre/luxe-ete-2026/.radar/a-reverifier.md"
+    RA=os.path.join(REPO,".radar","a-reverifier.md")
     import datetime
     jour=datetime.date.today().strftime("%d/%m/%Y")
     with open(RA,"a",encoding="utf-8") as fh:
@@ -100,6 +112,7 @@ if fermes:
     # ne re-signaler que les rejets pas encore traités (un rejet examiné une fois
     # est noté dans ~/.radar-session/rejets-traites, sinon il crie à chaque tour)
     T=os.path.expanduser("~/.radar-session/rejets-traites")
+    os.makedirs(os.path.dirname(T),exist_ok=True)  # ce dossier n'existait que chez Gérald
     vus=set(open(T,encoding="utf-8").read().splitlines()) if os.path.exists(T) else set()
     neufs=[n for n in fermes if n not in vus]
     if neufs:
