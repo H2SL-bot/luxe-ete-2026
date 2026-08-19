@@ -23,7 +23,7 @@ import os
 import re
 import sys
 
-REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LIGHT = os.path.join(REPO, "index.html")
 I18N_DIR = os.path.join(REPO, "i18n-data")
 DATA_RE = re.compile(r'(<script type="application/json" id="data">)(.*?)(</script>)', re.S)

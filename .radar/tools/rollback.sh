@@ -12,8 +12,8 @@
 set -uo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO="${RADAR_REPO:-/Users/geraldlefebvre/luxe-ete-2026}"
-GH="$(command -v gh || echo /Users/geraldlefebvre/bin/gh)"
+REPO="${RADAR_REPO:-$(cd "$(dirname "$0")/../.." && pwd)}"
+GH="$(command -v gh || echo "$HOME/.local/bin/gh")"
 REASON="${1:-régression détectée par le filet}"
 
 cd "$REPO" || { echo "rollback: dépôt introuvable ($REPO)"; exit 2; }

@@ -66,7 +66,7 @@ def org_name_from_iv(e):
     seg = re.split(r"[,—(;]| - ", iv["o"].strip())[0].strip()
     return seg if 2 < len(seg) <= 80 else None
 
-REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 IDX = f"{REPO}/index.html"
 BASE = "https://constanceparis7.com"
 OG = f"{BASE}/og-image.png"

@@ -25,7 +25,7 @@ Usage :
 """
 import argparse, json, os, re, shutil, sys, gzip
 
-REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # SOURCE DE VÉRITÉ. Une fois la bascule faite, index.html ne contient plus que
 # le français : la version complète (12 langues) vit dans index-full.html.

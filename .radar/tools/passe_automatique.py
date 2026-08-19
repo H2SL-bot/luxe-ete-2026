@@ -36,7 +36,7 @@ import subprocess
 import sys
 import urllib.request
 
-REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FULL = os.path.join(REPO, "index-full.html")
 DATA_RE = re.compile(r'(<script type="application/json" id="data">)(.*?)(</script>)', re.S)
 EYEBROW_RE = re.compile(r"(données collectées et vérifiées le\s*)([^<]{0,40})")

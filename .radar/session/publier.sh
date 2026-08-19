@@ -33,6 +33,12 @@ MSG="$1"
 # cette machine, il n'a rien à faire et ne doit pas bloquer la publication.
 python3 .radar/session/inject.py || echo "· inject : rien à récolter, on continue"
 python3 .radar/tools/split_i18n.py --apply >/dev/null
+# gen_seo.py — étape 7bis de la doctrine, absente du publieur depuis toujours :
+# elle ne tournait que dans la passe du matin. Depuis l'arrêt de cette passe
+# le 18/08/2026, le socle SEO (statut de l'événement, organisateur, accès
+# gratuit ou payant, tarifs réels dans le ld+json) n'était plus rafraîchi.
+# Ordre imposé par la doctrine : split_i18n → gen_seo → gen_pages.
+python3 .radar/tools/gen_seo.py >/dev/null
 python3 .radar/tools/gen_pages.py >/dev/null
 V=$(python3 .radar/tools/validate.py 2>&1 | tail -1)
 echo "$V"

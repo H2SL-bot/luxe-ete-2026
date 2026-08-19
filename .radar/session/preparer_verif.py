@@ -1,10 +1,24 @@
 """Récupère une recherche terminée et écrit l'atelier de vérification correspondant.
    usage : preparer_verif.py <wf_recherche> <sej|inv> <nom_atelier>"""
-import json,os,re,sys
-BASE="/Users/geraldlefebvre/.claude/projects/-Users-geraldlefebvre/2de0cd85-85f8-41f3-aca5-7906e9758743/subagents/workflows"
-S="/private/tmp/claude-501/-Users-geraldlefebvre/2de0cd85-85f8-41f3-aca5-7906e9758743/scratchpad"
-os.makedirs(S,exist_ok=True); os.chdir("/Users/geraldlefebvre/luxe-ete-2026")
+import json,os,re,sys,glob
+# Passation du 18/08/2026 : ce fichier portait le chemin du Mac de Gérald, celui
+# du bac à sable d'UNE session Claude Code, et l'identifiant de cette session.
+# Tout est déduit désormais. Un atelier n'est plus cherché à un endroit fixe :
+# on le retrouve par son nom, dans n'importe quelle session de la machine.
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_racine = os.path.expanduser(os.environ.get("CLAUDE_CONFIG_DIR","~/.claude"))
+_MOTIF = os.path.join(_racine,"projects","*","*","subagents","workflows")
+
+def dossier_atelier(w):
+    """Dossier réel d'un atelier, quelle que soit la session qui l'a lancé."""
+    t = sorted(glob.glob(os.path.join(_MOTIF, w)))
+    return t[0] if t else os.path.join(_racine, "projects", w)
+
+S = os.environ.get("RADAR_SCRATCH") or os.path.expanduser("~/.radar-session/ateliers")
+os.makedirs(S,exist_ok=True); os.chdir(REPO)
 wf,kind,nom=sys.argv[1],sys.argv[2],sys.argv[3]
+WFDIR = dossier_atelier(wf)
 champ="sej" if kind=="sej" else "iv"
 def denorm(n):
     """Le nom lu dans le JSONL est encore échappé : \\" et \\\\ doivent être rendus,
@@ -26,15 +40,15 @@ if os.path.exists(CONF):
         _p=_l.split()
         if len(_p)<2 or _p[0]==wf: continue
         if _p[1]!=("sejour_corrige" if kind=="sej" else "iv_corrige"): continue   # autre champ
-        for _f in _g.glob(f"{BASE}/{_p[0]}/agent-*.jsonl"):
+        for _f in _g.glob(os.path.join(dossier_atelier(_p[0]),"agent-*.jsonl")):
             if _t.time()-os.path.getmtime(_f) > 1800: continue                     # terminé
             _m=re.search(r'EVENEMENT\s*:\s*(.+?)\\n',open(_f,encoding="utf-8").read(3000))
             if _m: vus.add(denorm(_m.group(1).strip()))
-for l in open(f"{BASE}/{wf}/journal.jsonl",encoding="utf-8"):
+for l in open(os.path.join(WFDIR,"journal.jsonl"),encoding="utf-8"):
     try: j=json.loads(l)
     except Exception: continue
     if j.get("type")!="result" or not isinstance(j.get("result"),dict): continue
-    f=f"{BASE}/{wf}/agent-{j['agentId']}.jsonl"
+    f=os.path.join(WFDIR,f"agent-{j['agentId']}.jsonl")
     if not os.path.exists(f): continue
     head=open(f,encoding="utf-8").read(3000)
     mn=re.search(r'EVENEMENT\s*:\s*(.+?)\\n',head)
@@ -50,7 +64,7 @@ for l in open(f"{BASE}/{wf}/journal.jsonl",encoding="utf-8"):
 # cours. Le 12/08/2026, préparé trente secondes trop tôt, il manquait le dernier
 # chercheur : une fiche composée n'a jamais été vérifiée ni publiée, sans un mot.
 import time as _tt
-_actifs=[_f for _f in _g.glob(f"{BASE}/{wf}/agent-*.jsonl") if _tt.time()-os.path.getmtime(_f) < 90]
+_actifs=[_f for _f in _g.glob(os.path.join(WFDIR,"agent-*.jsonl")) if _tt.time()-os.path.getmtime(_f) < 90]
 if _actifs:
     print(f"ATTENTION : {len(_actifs)} chercheur(s) de {wf} ont ecrit il y a moins de 90 s —")
     print("            l atelier de recherche n est probablement PAS termine.")

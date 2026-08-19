@@ -26,7 +26,7 @@ import re, sys, json
 from datetime import date
 
 import os
-REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 IDX = f"{REPO}/index.html"
 SITEMAP = f"{REPO}/sitemap.xml"
 HOME = "https://constanceparis7.com/"

@@ -16,9 +16,17 @@ import os
 import re
 import sys
 
-REPO = "/Users/geraldlefebvre/luxe-ete-2026"
-S = "/private/tmp/claude-501/-Users-geraldlefebvre/2de0cd85-85f8-41f3-aca5-7906e9758743/scratchpad"
+# Passation du 18/08/2026 : chemins du Mac d'origine remplacés par des déductions.
+#   REPO — depuis RADAR_REPO, sinon l'emplacement de ce fichier.
+#   S    — dossier où sont déposés les ateliers ; réglable par RADAR_SCRATCH,
+#          sinon un dossier stable du répertoire personnel (l'ancien pointait
+#          vers le bac à sable d'UNE session Claude Code, qui n'existe plus).
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+S = os.environ.get("RADAR_SCRATCH") or os.path.expanduser("~/.radar-session/ateliers")
+os.makedirs(S, exist_ok=True)
 ENCOURS = os.path.expanduser("~/.radar-session/ateliers-encours")
+os.makedirs(os.path.dirname(ENCOURS), exist_ok=True)
 
 kind = sys.argv[1]
 nom = sys.argv[2]
@@ -64,9 +72,13 @@ cibles = [{"cle": f"{e.get('d1','')}|{e.get('n','')}", "nom": e.get("n", ""),
           for _, _, e in lot]
 
 # Les gabarits vivaient dans le scratchpad, effacé à chaque redémarrage : le
-# 18/08/2026 la chaîne entière est tombée pour cette seule raison. Ils vivent
-# désormais dans ~/.radar-session/gabarits/, qui survit.
-G = os.path.expanduser("~/.radar-session/gabarits")
+# 18/08/2026 la chaîne entière est tombée pour cette seule raison. Ils ont été
+# rapatriés DANS LE DÉPÔT le soir même (.radar/session/gabarits/) : ils suivent
+# donc le clonage, sur n'importe quelle machine. On garde ~/.radar-session/
+# comme repli, pour ne pas casser une installation qui les aurait encore là.
+G = os.path.join(REPO, ".radar", "session", "gabarits")
+if not os.path.isdir(G):
+    G = os.path.expanduser("~/.radar-session/gabarits")
 tete = open(f"{G}/tpl-{kind}-tete.txt", encoding="utf-8").read()
 corps = open(f"{G}/tpl-{kind}-corps.txt", encoding="utf-8").read()
 tete = re.sub(r"name: '[^']*'", f"name: '{nom}'", tete, count=1)

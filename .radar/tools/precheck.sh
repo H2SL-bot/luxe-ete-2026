@@ -12,7 +12,7 @@
 set -uo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO="${1:-${RADAR_REPO:-/Users/geraldlefebvre/luxe-ete-2026}}"
+REPO="${1:-${RADAR_REPO:-$(cd "$(dirname "$0")/../.." && pwd)}}"
 
 if [ ! -d "$REPO/.git" ]; then
   echo "precheck: dépôt git introuvable ($REPO)"

@@ -21,7 +21,7 @@ import re
 import sys
 import urllib.request
 
-REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FICHIER = os.path.join(REPO, "stats", "visites.ndjson")
 COMPTEUR = "https://constanceparis7.goatcounter.com/counter/TOTAL.json"
 

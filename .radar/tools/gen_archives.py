@@ -30,7 +30,7 @@ import re
 import subprocess
 import sys
 
-REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CHAMPS = ("n", "d1", "d2", "v", "l", "c", "z", "g", "u", "sw", "sv")
 
 

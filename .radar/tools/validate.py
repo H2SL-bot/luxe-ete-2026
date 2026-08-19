@@ -33,7 +33,7 @@ import tempfile
 import subprocess
 from datetime import date, timedelta, datetime
 
-DEFAULT_PATH = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026") + "/index.html"
+DEFAULT_PATH = (os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))) + "/index.html"
 
 DC_ENUM = {
     "Tenue de soirée / robe longue",

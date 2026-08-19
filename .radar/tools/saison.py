@@ -26,7 +26,7 @@ import os
 import re
 import sys
 
-REPO = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026")
+REPO = os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Saison → libellé anglais du titre, puis libellé par langue pour le bandeau.
 SAISONS = ("spring", "summer", "autumn", "winter")

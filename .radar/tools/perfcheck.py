@@ -22,7 +22,7 @@ Usage : python3 perfcheck.py [chemin/index.html]   (défaut : ~/luxe-ete-2026)
 import re, os, sys, json, gzip, io
 from datetime import date
 
-DEFAULT = os.environ.get("RADAR_REPO", "/Users/geraldlefebvre/luxe-ete-2026") + "/index.html"
+DEFAULT = (os.environ.get("RADAR_REPO") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))) + "/index.html"
 LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "perf-log.ndjson")
 LANGS = ["en", "es", "it", "pt", "de", "ru", "ar", "zh", "ja", "ko"]
 
