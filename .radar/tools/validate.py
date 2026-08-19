@@ -19,7 +19,9 @@ Contrôles BLOCKER (font échouer le build) :
 Contrôles WARN (signalés, non bloquants) :
   - chute du compte > 10 % vs le dernier build (purge légitime possible) ;
   - fiches de la fenêtre live sans traduction `tr` ;
-  - `iv.o` transformé en journal d'enquête (> 1200 car., cf. leçon du 12/08/2026).
+  - `iv.o`/`iv.g`/`iv.w` transformés en journal d'enquête (> 1200 car., cf. leçon
+    du 12/08/2026 et son extension du 19/08/2026 : le même travers a été trouvé
+    sur `g` et `w`, jusque-là hors du contrôle qui ne portait que sur `o`).
 
 Le script imprime aussi des KPIs, dont la COUVERTURE ACCÈS (iv) sur les fiches
 mondaines — le cœur de valeur du site, à faire monter passe après passe.
@@ -308,24 +310,29 @@ def main():
     if tr_hh:
         wrn(f"{tr_hh} champ(s) traduits gardent un horaire à la française (20h / 20h30) au lieu de 20:00")
 
-    # --- 4ter. `iv.o` ne doit pas devenir un journal d'enquête (leçon du 12/08/2026) ---
-    # `iv.o` est un champ VISITEUR (texte affiché sur la fiche), pas le journal
-    # de vérification du contrôleur. Trouvé le 12/08 : plusieurs fiches
-    # « contrôlées » portaient un iv.o de 3 000 à 4 900 caractères (raisonnement
+    # --- 4ter. `iv.o`/`iv.g`/`iv.w` ne doivent pas devenir un journal d'enquête ---
+    # (leçon du 12/08/2026, étendue le 19/08/2026)
+    # Ces trois champs sont VISITEURS (texte affiché sur la fiche), pas le journal
+    # de vérification du contrôleur. Trouvé le 12/08 sur `iv.o` : plusieurs fiches
+    # « contrôlées » portaient un texte de 3 000 à 4 900 caractères (raisonnement
     # complet, adresses, changements de conclusion) — cela a fait gonfler le
     # poids gzip transféré de +38 % en une passe sans aucun événement de plus.
-    # Non bloquant : on ne casse pas la publication du jour pour ça, mais on le
-    # signale pour qu'une prochaine passe condense (garder la conclusion et les
-    # contacts vérifiés, retirer le récit de l'enquête).
-    IV_O_BUDGET = 1200
-    trop_longs = [(e.get("n"), len(e.get("iv", {}).get("o") or ""))
-                  for e in data if len(e.get("iv", {}).get("o") or "") > IV_O_BUDGET]
-    if trop_longs:
-        trop_longs.sort(key=lambda t: -t[1])
-        total_excedent = sum(l - IV_O_BUDGET for _, l in trop_longs)
-        wrn(f"{len(trop_longs)} fiche(s) ont un iv.o de plus de {IV_O_BUDGET} caractères "
-            f"(journal d'enquête au lieu d'un texte visiteur) — excédent total {total_excedent} car., "
-            f"la plus longue : {trop_longs[0][1]} car. sur « {(trop_longs[0][0] or '')[:50]} »")
+    # Le contrôle posé alors ne portait que sur `o` : trouvé le 19/08/2026 que le
+    # même travers existe sur `g` (voie gratuite, 121 fiches, jusqu'à 3 924 car.)
+    # et `w` (tarifs, 137 fiches, jusqu'à 6 001 car.), tous deux hors radar depuis
+    # sept jours. Non bloquant : on ne casse pas la publication du jour pour ça,
+    # mais on le signale pour condensation (garder la conclusion et les contacts
+    # vérifiés, retirer le récit de l'enquête).
+    IV_BUDGET = 1200
+    for champ, label in (("o", "o"), ("g", "g"), ("w", "w")):
+        trop_longs = [(e.get("n"), len(e.get("iv", {}).get(champ) or ""))
+                      for e in data if len(e.get("iv", {}).get(champ) or "") > IV_BUDGET]
+        if trop_longs:
+            trop_longs.sort(key=lambda t: -t[1])
+            total_excedent = sum(l - IV_BUDGET for _, l in trop_longs)
+            wrn(f"{len(trop_longs)} fiche(s) ont un iv.{label} de plus de {IV_BUDGET} caractères "
+                f"(journal d'enquête au lieu d'un texte visiteur) — excédent total {total_excedent} car., "
+                f"la plus longue : {trop_longs[0][1]} car. sur « {(trop_longs[0][0] or '')[:50]} »")
 
     # --- 5. KPIs ---
     def d1_of(e):

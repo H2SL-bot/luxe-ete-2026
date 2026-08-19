@@ -159,7 +159,6 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
-- [ ] Saison été 2026 du Via Notte — le plus grand club open-air d'Europe — inscrit le 11/08/2026
 
 ## Vérifiées à moyens réduits — ré-audit obligatoire
 
@@ -233,7 +232,6 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
-- [ ] Alemagou — Adriatique tous les lundis (+ nuits headline) — inscrit le 11/08/2026
 - [ ] Calvin Harris — Ushuaia Ibiza — inscrit le 11/08/2026
 - [ ] Nikki Beach Miami Beach — Amazing Sundays & Saturdance (beach club ADN Riviera) — inscrit le 11/08/2026
 - [ ] Soirees d'ete des Hotels Barrière (Normandy, Royal, Casino) — inscrit le 11/08/2026
@@ -568,7 +566,6 @@ contrôler les pages officielles mais pas découvrir une source contredisante.
 Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
-- [ ] Exposition 'Mains d'avenir' — la Galerie du 19M (Chanel Métiers d'art) — inscrit le 12/08/2026
 - [ ] Sommets Musicaux de Gstaad 2027 — inscrit le 12/08/2026
 - [ ] Sphère — showroom officiel des créateurs émergents (FHCM) — inscrit le 12/08/2026
 - [ ] Venice Hospitality Challenge 2026 (13e édition) — inscrit le 12/08/2026
@@ -701,7 +698,6 @@ Vérificateur privé de recherche web (budget de session épuisé) : il a pu
 contrôler les pages officielles mais pas découvrir une source contredisante.
 
 - [ ] La Lanterne d'Hermes a Ginza - programme d'ete 2026 (theme "L'appel du large", Flaneur Tour, vitrines) — inscrit le 18/08/2026
-- [ ] Le Studio - Ginza Maison Hermes: projection "Carnets de voyage / The Motorcycle Diaries" — inscrit le 18/08/2026
 - [ ] Stuart Weitzman "Exotic Escape" — pop-up au Maidstone — inscrit le 18/08/2026
 
 ### 18/08/2026 — Ginza Le Studio : TRANCHÉ, fiche retirée

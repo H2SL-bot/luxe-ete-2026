@@ -628,3 +628,41 @@ vérifier. Le retrait d'un événement réel coûte plus cher que le maintien d'
 
 Corollaire : un contrôleur qui affirme « CET ÉVÉNEMENT N'EXISTE PAS » doit être soumis
 au même examen que la fiche qu'il accuse. Ici son verdict était faux et je l'ai suivi.
+
+## 19/08/2026 — la dérive « journal d'enquête » avait migré vers iv.g et iv.w, hors radar
+Le filet posé le 12/08/2026 ne surveillait que `iv.o` (> 1200 caractères = WARN). Contrôle
+manuel ce jour sur la fiche Jesus Christ Superstar (Singapour) : `iv.o` faisait 1003
+caractères (sous le seuil, RAS), mais `iv.g` (voie gratuite) faisait 2521 caractères et
+`iv.w` (tarifs) 3292 — tous deux du même travers (raisonnement complet du contrôleur au
+lieu d'un texte visiteur), invisibles pour `validate.py` qui ne regardait que `o`.
+Étendu au chiffrage global : 121 fiches ont un `iv.g` > 1200 car. (excédent 89 585 car.,
+jusqu'à 3 924 sur une seule fiche) et 137 ont un `iv.w` > 1200 (excédent 134 565 car.,
+jusqu'à 6 001 sur une seule fiche) — un gisement de poids resté invisible sept jours.
+CORRECTIF : `validate.py` étend désormais le même contrôle WARN (non bloquant) aux trois
+champs `iv.o`/`iv.g`/`iv.w`. RÈGLE GÉNÉRALE : quand un filet est posé sur UN champ après
+un incident, vérifier si le même incident peut se reproduire sur les champs FRÈRES du
+même objet — ici les trois champs visiteurs de `iv` partagent le même risque de rédaction.
+Condensation reportée (comme pour `iv.o` avant elle) : à traiter par lots aux prochaines
+passes, un traitement d'urgence à la main sur un tel volume risquerait d'introduire des
+erreurs de contact.
+
+## 19/08/2026 — réseau : WebFetch et curl bloqués en bloc, WebSearch opérationnel
+Testé en tout début de passe sur des domaines témoins neutres (wikipedia.org, google.com,
+goatcounter) : `curl` direct renvoie `000` (timeout de la passerelle), `WebFetch` renvoie
+`EGRESS_BLOCKED` sur TOUS les domaines testés — même schéma que le 11/08 et le 12-13/08,
+confirmé cette fois par `$HTTPS_PROXY/__agentproxy/status` (`connect_rejected`, « gateway
+answered 403 to CONNECT »). `WebSearch`, lui, a fonctionné normalement toute la passe.
+RÈGLE (déjà connue, reconfirmée) : tester un domaine neutre en tout début de passe avant
+de conclure à un lien mort ; si le neutre échoue aussi, informer les agents de recherche
+qu'ils doivent travailler exclusivement avec `WebSearch` (résumés + sources), jamais
+`WebFetch`/`curl` — ne pas s'acharner à réessayer (le README du proxy déconseille de
+contourner un 403 de politique).
+
+## 19/08/2026 — l'état réel de la LOI DU SITE dépend de la FENÊTRE, pas du total
+`reste.py` annonçait 66 séjours et 18 invitations manquants sur 433 fiches — lu tel quel,
+ça ressemble à un chantier ouvert. Vérification par script (fenêtre auj.→+90j) : les 66 et
+les 18 sont TOUS des événements déjà PASSÉS (gardés 30 jours avant purge), et 0 (zéro)
+manque dans la fenêtre live. La LOI DU SITE (iv+sej dès la naissance) était donc déjà
+honorée à 100 % sur ce qui est réellement montré à un visiteur. RÈGLE : avant de lancer un
+atelier de backfill sur la foi d'un compteur global, croiser avec `d2 >= aujourd'hui` — un
+backfill sur des fiches déjà passées ne sert personne et gaspille la recherche du jour.
