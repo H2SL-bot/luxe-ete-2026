@@ -267,7 +267,12 @@ def main():
             "<div class=\"edition\">International Luxury Events</div></header>"
             f"{body}"
             f"<footer class=\"site\">{esc(UI['footer'][lang])} "
-            f"<a href=\"/\">{esc(UI['see_live'][lang])} →</a></footer></div></body></html>"
+            f"<a href=\"/\">{esc(UI['see_live'][lang])} →</a>"
+            # Obligation légale (LCEN art. 6) : la page doit être atteignable
+            # depuis n'importe quelle page du site. Libellé bilingue : la page
+            # elle-même est en français, c'est un texte de droit français.
+            " · <a href=\"/mentions-legales.html\">Mentions légales · Legal notice</a>"
+            "</footer></div></body></html>"
         )
 
     # purge + recrée les sorties (jamais index.html)
@@ -480,6 +485,99 @@ def main():
                                      tk('brandsub', UI['tagline'][lang])[:155],
                                      u_home(lang), "".join(home), hl_home))
             sitemap_urls.append(f"{BASE}{u_home(lang)}")
+
+    # --- mentions légales (obligation de l'article 6 de la LCEN) -----------
+    # Page générée comme les autres pour hériter du même habillage et entrer
+    # au plan du site. Rédigée en français : c'est un texte de droit français.
+    ML = """<div class="bc"><a href="/">Radar</a> · Mentions légales</div>
+<h1>Mentions légales</h1>
+<p class="meta">Dernière mise à jour : <b>20 août 2026</b></p>
+
+<h2 class="sub">Éditrice du site</h2>
+<p><b>Constance Lefebvre</b>, personne physique éditant ce site à titre non professionnel.<br>
+Contact : <a href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a></p>
+<p>Conformément à l'article 6, III, 2° de la loi n° 2004-575 du 21 juin 2004 pour la
+confiance dans l'économie numérique, l'éditrice, qui publie à titre non professionnel,
+ne rend pas publique son adresse postale. Les éléments d'identification prévus par la
+loi sont détenus par l'hébergeur, qui les tient à la disposition de l'autorité judiciaire.</p>
+
+<h2 class="sub">Directrice de la publication</h2>
+<p>Constance Lefebvre.</p>
+
+<h2 class="sub">Hébergeur</h2>
+<p>GitHub, Inc. — service GitHub Pages<br>
+88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
+<a href="https://github.com" target="_blank" rel="noopener nofollow">github.com</a></p>
+
+<h2 class="sub">Nom de domaine</h2>
+<p>constanceparis7.com, enregistré le 11 juillet 2026 auprès de <b>Gandi SAS</b>
+(<a href="https://www.gandi.net" target="_blank" rel="noopener nofollow">gandi.net</a>).</p>
+
+<div class="box">
+<h2>Ce que ce site est — et ce qu'il n'est pas</h2>
+<p>ConstanceParis7 recense des événements organisés par des tiers : maisons, hôtels,
+festivals, musées, clubs. Le site <b>n'organise aucun événement, ne vend aucun billet,
+ne perçoit aucune commission</b> et n'entretient aucun lien contractuel avec les
+organisateurs cités.</p>
+<p>Chaque information est vérifiée à sa source officielle, puis datée. Les dates, les
+tarifs et les conditions d'accès peuvent changer sans préavis :
+<b>confirmez toujours auprès de l'organisateur avant de vous déplacer ou de réserver.</b></p>
+<p>Une erreur vous a échappé ? Écrivez à
+<a href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a> :
+correction ou retrait sous 48 heures, et la correction est mentionnée.</p>
+</div>
+
+<h2 class="sub">Propriété intellectuelle</h2>
+<p>Les textes, la sélection des événements et l'organisation des informations publiées
+sur ce site sont l'œuvre de l'éditrice et sont protégés par le droit d'auteur. Toute
+reproduction, même partielle, est soumise à autorisation écrite préalable.</p>
+<p>Les marques, logos, noms d'établissements et noms d'événements cités appartiennent à
+leurs titulaires respectifs. Ils sont mentionnés à seule fin d'information du lecteur.</p>
+
+<h2 class="sub">Données personnelles</h2>
+<div class="box">
+<h2>En résumé</h2>
+<ul>
+<li>Aucun compte, aucun formulaire, aucune inscription.</li>
+<li><b>Aucun cookie</b> n'est déposé sur votre appareil.</li>
+<li>Aucune donnée n'est vendue, louée, ni transmise à un tiers.</li>
+</ul>
+</div>
+<p><b>Mesure d'audience.</b> Le site utilise GoatCounter
+(constanceparis7.goatcounter.com), un service de statistiques sans cookie, qui
+n'enregistre aucun identifiant individuel et ne permet pas de reconnaître un visiteur
+d'une visite à l'autre. Seules des données agrégées sont produites : nombre de pages
+vues, page consultée, pays, site de provenance.</p>
+<p><b>Mémoire de la langue.</b> La langue que vous choisissez est enregistrée dans votre
+navigateur sous la clé <b>luxe_lang</b>, afin de ne pas vous la redemander. Cette
+information reste sur votre appareil et n'est jamais transmise. Vider les données du
+site l'efface.</p>
+<p><b>Courriels.</b> Si vous écrivez à l'adresse de contact, votre message et votre
+adresse sont conservés le temps nécessaire au traitement de votre demande, puis
+supprimés.</p>
+<p><b>Vos droits.</b> Conformément au Règlement général sur la protection des données
+et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de
+rectification, d'effacement et d'opposition. Pour l'exercer, écrivez à
+<a href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a>. Vous pouvez
+également introduire une réclamation auprès de la CNIL
+(<a href="https://www.cnil.fr" target="_blank" rel="noopener nofollow">cnil.fr</a>).</p>
+
+<h2 class="sub">Liens sortants</h2>
+<p>Ce site renvoie vers les sites officiels des organisateurs et des lieux cités.
+L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant
+à leur contenu, leurs pratiques et leur disponibilité.</p>
+
+<h2 class="sub">Droit applicable</h2>
+<p>Le présent site et les présentes mentions légales sont soumis au droit français.</p>
+
+<div class="chips"><a href="/">← Retour au radar</a></div>"""
+    write("/mentions-legales.html",
+          page("fr", "Mentions légales — ConstanceParis7",
+               "Éditrice, directrice de la publication, hébergeur, propriété "
+               "intellectuelle et données personnelles du radar ConstanceParis7.",
+               "/mentions-legales.html", ML,
+               '<link rel="alternate" hreflang="fr" href="%s/mentions-legales.html">' % BASE))
+    sitemap_urls.append(f"{BASE}/mentions-legales.html")
 
     # --- sitemap ---
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
