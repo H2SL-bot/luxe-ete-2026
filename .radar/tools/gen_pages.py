@@ -494,8 +494,8 @@ def main():
 <h1>À propos</h1>
 <p class="meta">Le radar — et la personne derrière.</p>
 
-<p>Je m'appelle <b>Constance Lefebvre</b>. J'ai 17 ans, je suis lycéenne,
-et je tiens ce radar seule.</p>
+<p>Je m'appelle <b>Constance Lefebvre</b>. Je suis lycéenne, et je tiens
+ce radar seule.</p>
 
 <h2 class="sub">Ce qui me passionne</h2>
 <p>Les palaces, la haute couture, la haute joaillerie — <b>l'élégance à la
@@ -552,9 +552,9 @@ valeur : la confiance de celles et ceux qui le lisent.</p>
 <div class="chips"><a href="/">← Retour au radar</a><a href="/mentions-legales.html">Mentions légales</a></div>"""
     write("/a-propos.html",
           page("fr", "À propos — ConstanceParis7",
-               "Constance Lefebvre, 17 ans, tient seule le radar des événements du "
-               "luxe : sa méthode de vérification, sa règle éditoriale, et comment "
-               "la joindre pour une collaboration.",
+               "Constance Lefebvre tient seule le radar des événements du luxe : sa "
+               "méthode de vérification, sa règle éditoriale, et comment la joindre "
+               "pour une collaboration.",
                "/a-propos.html", AP,
                '<link rel="alternate" hreflang="fr" href="%s/a-propos.html">' % BASE))
     sitemap_urls.append(f"{BASE}/a-propos.html")
