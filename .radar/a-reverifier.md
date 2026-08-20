@@ -7,6 +7,12 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 
 | Événement | Doute | Constaté le | Pourquoi non tranché |
 |---|---|---|---|
+| Beefbar x Airelles — pop-up estival à La Bastide de Gordes | date de fin de saison non publiée | 20/08/2026 | airelles.com — la page du Beefbar de Gordes donne les horaires (18h-1h30) mais aucune date de clôture 2026. La fin au 28/08 portée par la fiche reste invérifiée. |
+| Fiera di Sant'Ermete et feux d'artifice de Forte dei Marmi | la source citée date de 2024, pas de 2026 | 20/08/2026 | luccatimes.it — l'article cité par la fiche est daté d'août 2024 et donne le programme 2024 (26, 27, 28 août). Les dates 2026 de la fiche sont identiques : plausible pour une fête patronale à date fixe, mais AUCUNE source 2026 ne les confirme. À reprendre sur une source de l'année. |
+| Lilly's Club Saint-Tropez (ex-VIP Room) | aucune date 2026 publiée par le club | 20/08/2026 | lillysclub.com/future-events — la page annonce « Saint-Tropez Summer 2026. Stay Tuned » sans une seule date. La saison 01/08 → 29/08 portée par la fiche est invérifiable en l'état. |
+| Les Caves du Roy — nuits de juillet (Hôtel Byblos) | dates de saison non publiées | 20/08/2026 | byblos.com — le site ne publie ni date d'ouverture ni date de fermeture 2026 pour l'hôtel ou les Caves du Roy. La fin au 29/08 reste invérifiée. |
+| Touquet Classic Amateur – Golf du Touquet | début concordant, date de fin non confirmée | 20/08/2026 | letouquetgolfresort.com — journée de reconnaissance le 24/08, dîner le 26/08, compétition sur 4 tours, tarifs 2026 publiés (429 € adulte). Le début du 24/08 concorde ; la fin au 28/08 n'est pas confirmée par la source. |
+| Dîner quatre mains Ayla Privé | aucune trace du dîner sur les deux sources officielles | 20/08/2026 | aylamacakizi.com (délai dépassé) puis editionhotels.com/bodrum — la page du restaurant ne mentionne ni dîner quatre mains, ni Aret Sahakyan, ni Francesco Sodano. Deux tentatives, aucune confirmation. |
 | 47e Festival La Versiliana 2026 | la fiche s'arrête au 23/08, le programme officiel va au 30/08 | 20/08/2026 | versilianafestival.it — 47e édition confirmée, mais le programme d'été liste des dates jusqu'au 30/08/2026 (et la page d'accueil annonce la Festa del Fatto Quotidiano du 9 au 13/09). Reste à trancher : ces dates appartiennent-elles au Festival lui-même ou à la programmation du parc ? On n'allonge pas une date sans preuve. |
 | Calvin Harris — Ushuaia Ibiza | date de fin de résidence non publiée | 20/08/2026 | theushuaiaexperience.com — résidence confirmée les VENDREDIS et MARDIS, mais le site ne publie aucune date de clôture 2026. La fin au 25/08 portée par la fiche reste invérifiée. |
 | Dîner quatre mains Ayla Privé — Aret Sahakyan × Francesco Sodano (Fami) | source officielle injoignable | 20/08/2026 | aylamacakizi.com n'a pas répondu (délai dépassé) le 20/08/2026. À retenter. |
@@ -48,7 +54,7 @@ contredisante. À ré-auditer avec des moyens complets. Liste consolidée le
 indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 
 - [ ] Amiri — boutique saisonniere avenue Marechal Foch — signalé le 11/08/2026
-- [ ] Barrière Deauville Polo Cup 2026 (Coupe d'Argent, Coupe d'Or, Ladies Polo Cup, Coupe de Bronze) — signalé le 11/08/2026
+- [x] Barrière Deauville Polo Cup 2026 (Coupe d'Argent, Coupe d'Or, Ladies Polo Cup, Coupe de Bronze) — TRANCHÉ le 20/08/2026 : deauvillepoloclub.com — « BARRIÈRE DEAUVILLE POLO CUP 2026 — 10 au 30 août », Coupe d'Argent du 10 au 16/08, Coupe d'Or du 17 au 30/08 : dates confirmées au jour près
 - [ ] Beefbar x Airelles — pop-up estival à La Bastide de Gordes — signalé le 11/08/2026
 - [ ] Black Coffee — Residency 2026 (SantAnna Mykonos) — signalé le 11/08/2026
 - [ ] Calder. Rêver en équilibre — Fondation Louis Vuitton — signalé le 11/08/2026
@@ -107,7 +113,7 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] Dîner quatre mains Ayla Privé — Aret Sahakyan × Francesco Sodano (Famiglia Rana, Vérone **) — signalé le 12/08/2026
 - [ ] Ellsworth Kelly – Aux bords de l'eau (exposition d'été Fondation Maeght) — signalé le 12/08/2026
 - [ ] Exposition 'On aura tout vu : Icônes' au Sofitel Paris Le Faubourg (robe de Lady Gaga) — signalé le 12/08/2026
-- [ ] Exposition Générale — Fondation Cartier pour l'art contemporain (nouvelle adresse Palais-Royal) — signalé le 12/08/2026
+- [x] Exposition Générale — Fondation Cartier pour l'art contemporain (nouvelle adresse Palais-Royal) — TRANCHÉ le 20/08/2026 : RETIRÉ le 20/08/2026 — doublon portant de fausses dates (23→25/08 alors que l'exposition ferme le 23/08 selon fondationcartier.com). Voir .radar/retraits-volontaires.json
 - [ ] Exposition « Daniel Brush, l'art de la ligne et de la lumière » — L'École des Arts Joailliers — signalé le 12/08/2026
 - [ ] Exposition « De la caserne au musée... 10 ans déjà » — Musée de la Gendarmerie et du Cinéma — signalé le 12/08/2026
 - [ ] Exposition « Van Cleef & Arpels : l'éclat des années 1980-1990 » — Galerie du Patrimoine — signalé le 12/08/2026
@@ -162,9 +168,9 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] Surf Lodge Summer Series 2026 — concerts d'août (Montauk) — signalé le 12/08/2026
 - [ ] Targa Florio Classica 2026 — signalé le 12/08/2026
 - [ ] Tisser, broder, sublimer. Les savoir-faire de la mode — Palais Galliera — signalé le 12/08/2026
-- [ ] Torneo Internacional de Polo de Sotogrande 2026 — Copa de Oro (Gold Cup) — signalé le 12/08/2026
+- [x] Torneo Internacional de Polo de Sotogrande 2026 — Copa de Oro (Gold Cup) — TRANCHÉ le 20/08/2026 : 55e Torneo Internacional de Sotogrande — Copa de Oro du 17 au 29/08/2026 au Santa María Polo Club, entrée libre toute la saison : dates confirmées
 - [ ] Touquet Classic Amateur – Golf du Touquet — signalé le 12/08/2026
-- [ ] Touquet Music Beach Festival (9e edition) — signalé le 12/08/2026
+- [x] Touquet Music Beach Festival (9e edition) — TRANCHÉ le 20/08/2026 : touquetmusicbeach.com — « 28 & 29 août 2026 », 9e édition, à l'Orangerie de la Baie : dates et édition confirmées
 - [ ] Venice Hospitality Challenge 2026 (13e édition) — signalé le 12/08/2026
 - [ ] Vente Sotheby's « Château Haut-Brion, Domaine Clarence Dillon » (90 ans de la propriété) — signalé le 12/08/2026
 - [ ] Ventes aux enchères d'été Besch Cannes Auction (Hôtel Martinez) — signalé le 12/08/2026

@@ -58,5 +58,10 @@
   "nom": "Le Studio - Ginza Maison Hermes: projection \"Carnets de voyage / The Motorcycle Diaries\"",
   "date": "2026-08-18",
   "motif": "Programmation non confirmée par le lieu, contredite par sa rubrique officielle. Le cas était consigné au registre depuis le 12/08 (contrôleur réfutant, mes URL en 404 : échec de mesure, pas de preuve). Tranché le 18/08/2026 dans un vrai navigateur : le microsite officiel lanterne.hermes.com (vivant, ©Hermès 2026) pointe sa rubrique LE STUDIO vers la page hermes.com/jp du programme en cours, qui affiche « Our Wildest Days » (2025, Vassilis Kekatos) — zéro occurrence de « Carnets de voyage » / « Motorcycle Diaries » — et la page d'août (slug 260801) n'existe pas. La fiche annonçait pourtant des séances datées du 11 au 30 août. Un programme de projection que le lieu ne publie nulle part ne reste pas affiché avec des dates précises. Le mini-cinéma existe et le lieu est ouvert : c'est la programmation annoncée qui n'est pas la sienne."
+ },
+ {
+  "nom": "Exposition Générale — Fondation Cartier pour l'art contemporain (nouvelle adresse Palais-Royal)",
+  "date": "2026-08-20",
+  "motif": "DOUBLON avec fausses dates. Le site portait DEUX fiches pour la même exposition : même institution, même adresse (2 place du Palais-Royal), même description (~600 œuvres, plus de 100 artistes, nouveau bâtiment Jean Nouvel). Celle-ci annonçait 23/08 → 25/08/2026. Or la source officielle fondationcartier.com donne « 25 oct. 2025 → 23 août 2026 », confirmé par la page de l'exposition et par la presse (« jusqu'au 23 août »). La fiche faisait donc apparaître l'exposition comme ouverte les 24 et 25 août alors qu'elle est fermée : une lectrice pouvait se déplacer pour rien. CONSERVÉE : « Exposition Générale — inauguration de la nouvelle Fondation Cartier par Jean Nouvel » (01/07 → 23/08/2026), dont les dates concordent avec la source officielle. Doctrine étape 3 : fusionner, sans doublon nom+ville."
  }
 ]
