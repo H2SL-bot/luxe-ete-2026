@@ -23,6 +23,37 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 
 ## Doutes tranchés
 
+### 20/08/2026 — Bouchon du 31 août : ce qui NE PEUT PAS être tranché sur le web
+
+Neuf lieux ont été cherchés à leur source officielle sans succès. Le motif est
+toujours le même : **l'établissement ne publie pas sa date de fermeture.** Aucune
+recherche web, si bonne soit-elle, ne trouvera une information qui n'est écrite
+nulle part. Ces fiches ne sont pas fausses — elles sont incomplètes, et seul un
+contact humain les complétera.
+
+| Lieu | Ce qui est établi | Ce qui manque |
+|---|---|---|
+| Lío Ibiza | saison mai → octobre, programme 2026 (KŌDŌ) | date de clôture |
+| Nammos Mykonos | ouvert le 1er mai, actif juin → septembre | date de clôture (« fin sept. à mi-oct. ») |
+| Principote (Panormos) | saison mai → octobre | date de clôture |
+| Scorpios (nuits signature) | saison mai → oct., closing le 04/10 | si la SÉRIE suit la saison |
+| Sottovento Porto Cervo | ouvert tous les jours depuis le 11/07 | calendrier « en cours de mise à jour » |
+| Bagni Fiore / Langosteria Paraggi | « du printemps aux derniers couchers de soleil » | aucune date |
+| Chanel East Hampton | boutique éphémère ouverte le 22/05 | date de fermeture |
+| Dioriviera Cannes | pop-up saisonnier confirmé | aucune date publiée |
+| La Co(o)rniche (Pyla) | terrasse et DJ « en saison », annoncés au fil de l'été | pas de programme daté |
+| Nikki Beach Miami Beach | Amazing Sundays TOUS les dimanches, à l'année | ce n'est pas un lieu saisonnier |
+
+**VOIE DE SORTIE — ce sont des fiches à compléter par courriel, pas par recherche.**
+Écrire à ces établissements pour demander leurs dates de saison est légitime,
+utile, et constitue un premier contact naturel avec exactement le type de lieu
+dont ConstanceParis7 veut devenir le partenaire.
+
+Cas particulier : **Nikki Beach Miami Beach** n'est pas saisonnier (ouvert à
+l'année, brunch tous les dimanches). Sa fin au 31/08 n'est pas un bouchon de
+saison mais une erreur de nature : la fiche relève du même traitement que les
+autres fiches permanentes du site (fin au 31/12).
+
 ### 20/08/2026 — Le bouchon du « 31 août » : 7 fins de saison établies à leur source
 
 46 fiches de la fenêtre live portaient exactement le 31/08/2026 en date de fin —
