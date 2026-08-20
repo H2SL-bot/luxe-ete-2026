@@ -81,6 +81,48 @@ tous RÉELS avec URL). GARDE-FOU ABSOLU : uniquement accès publié (galas à
 billets/don, clubs/plages à réservation, concerts en villa vendus au public).
 JAMAIS de fête privée sans billetterie, JAMAIS de contact inventé.
 
+## PROTECTION DES PERSONNES — AUCUNE COORDONNÉE NOMINATIVE EN PUBLIC (directive de Constance, 20/08/2026)
+
+Le site publiait l'adresse e-mail et la ligne directe de 610 personnes physiques
+— pour l'essentiel des attachés de presse. Devant 1 800 visiteurs par jour, cela
+transformait le radar en annuaire de démarchage, aux dépens exacts des gens dont
+il faut devenir le partenaire. Retiré le 20/08/2026 : 626 coordonnées sur
+124 fiches.
+
+**CE QUI EST INTERDIT EN PUBLIC**
+- l'adresse e-mail nominative d'une personne (`prenom.nom@`, `p.nom@`, `prenom@`) ;
+- son portable, et toute ligne présentée comme « directe » ou « mobile ».
+
+**CE QUI RESTE, ET QUI DOIT RESTER**
+- le **nom et la fonction** : information éditoriale légitime, publiée par les
+  sources officielles, et utile au lecteur pour comprendre la voie ;
+- **toutes les voies de service** : `press@`, `info@`, `rsvp@`, `reservations@`,
+  `billetterie@`… y compris chez un petit organisateur qui utilise Gmail —
+  `presse.festivalramatuelle@gmail.com` est une boîte de service, pas une personne ;
+- les **standards**, **billetteries**, **formulaires** et **URL officielles**.
+
+**GARDE-FOU — LA LOI DU SITE PRIME**
+Une fiche ne perd JAMAIS sa dernière porte d'entrée. Si le retrait devait la
+laisser sans aucune voie, la fiche est laissée intacte et signalée. Le nettoyage
+cède devant la promesse d'accès, jamais l'inverse.
+
+**OÙ VONT LES COORDONNÉES RETIRÉES**
+Dans le coffre Obsidian : `Référence/Carnet de contacts presse.md`. Elles ne
+sont pas détruites — elles valent bien plus en privé qu'en public. C'est le
+carnet d'adresses à utiliser pour les partenariats, une personne à la fois.
+
+**OUTILS**
+`.radar/tools/contacts_classer.py` — décide si une adresse est une voie de
+service ou la coordonnée d'une personne, par croisement avec les noms que le
+site a lui-même enregistrés (jamais par devinette).
+`.radar/tools/contacts_nettoyer.py --blanc` — essai, n'écrit rien.
+`.radar/tools/contacts_nettoyer.py --appliquer` — applique, français ET les
+12 traductions (le verdict rendu sur le français s'impose aux 12 langues).
+
+**À CHAQUE PASSE** : toute fiche créée ou enrichie passe par cette règle avant
+publication. Une coordonnée nominative qui réapparaît est un défaut, pas un
+enrichissement.
+
 ## LA LOI DU SITE — UN ÉVÉNEMENT = UNE INVITATION + UN SÉJOUR (directive fondatrice, 28/07/2026)
 
 La raison d'être de ConstanceParis7 : que Constance soit INVITÉE aux événements
