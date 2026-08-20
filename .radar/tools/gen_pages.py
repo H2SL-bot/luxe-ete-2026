@@ -271,7 +271,8 @@ def main():
             # Obligation légale (LCEN art. 6) : la page doit être atteignable
             # depuis n'importe quelle page du site. Libellé bilingue : la page
             # elle-même est en français, c'est un texte de droit français.
-            " · <a href=\"/mentions-legales.html\">Mentions légales · Legal notice</a>"
+            " · <a href=\"/a-propos.html\">À propos · Contact</a>"
+            " · <a href=\"/mentions-legales.html\">Mentions légales</a>"
             "</footer></div></body></html>"
         )
 
@@ -485,6 +486,78 @@ def main():
                                      tk('brandsub', UI['tagline'][lang])[:155],
                                      u_home(lang), "".join(home), hl_home))
             sitemap_urls.append(f"{BASE}{u_home(lang)}")
+
+    # --- à propos / contact ------------------------------------------------
+    # La page qui transforme un lecteur en partenaire : elle dit QUI tient le
+    # radar et POURQUOI on peut le croire. Générée comme les autres.
+    AP = """<div class="bc"><a href="/">Radar</a> · À propos</div>
+<h1>À propos</h1>
+<p class="meta">Le radar — et la personne derrière.</p>
+
+<p>Je m'appelle <b>Constance Lefebvre</b>. J'ai 17 ans, je suis lycéenne,
+et je tiens ce radar seule.</p>
+
+<h2 class="sub">Ce qui me passionne</h2>
+<p>Les palaces, la haute couture, la haute joaillerie — <b>l'élégance à la
+française</b>. C'est mon sujet depuis toujours, et c'est le monde dans lequel je
+veux travailler. Je n'ai pas envie de le regarder depuis un écran : j'ai envie
+d'y être, d'y rencontrer des gens, de comprendre comment il fonctionne de
+l'intérieur. Ce radar a commencé exactement comme ça — en cartographiant, une
+par une, les portes d'entrée.</p>
+
+<h2 class="sub">Ce qu'est ConstanceParis7</h2>
+<p>Un radar, pas un blog. <b>309 événements à venir</b>, dans <b>129 villes</b>,
+publiés en <b>13 langues</b>, et remis à jour <b>chaque jour</b>.</p>
+<p>Avec une règle qui ne bouge pas : un événement n'entre dans le radar que s'il
+vient avec <b>une voie d'entrée et un séjour</b>. Savoir qu'une soirée existe ne
+sert à rien si personne ne dit comment y aller.</p>
+
+<div class="box">
+<h2>Comment je travaille</h2>
+<ul>
+<li>Chaque information est prise <b>à sa source officielle</b>, puis <b>datée</b>.</li>
+<li>Un doute n'est jamais transformé en affirmation : il est inscrit, et tranché
+à la vérification suivante.</li>
+<li>Un lieu fermé, un événement annulé : archivé avec sa preuve, jamais effacé
+en silence.</li>
+<li>Une erreur signalée est corrigée <b>sous 48 heures</b>, et la correction est
+mentionnée.</li>
+</ul>
+<p>C'est exigeant, et c'est tout l'intérêt du site : dans ce domaine,
+l'information périmée est partout.</p>
+</div>
+
+<h2 class="sub">D'où ça vient</h2>
+<p>Le radar est né d'un projet mené avec mon père, qui connaissait ma passion et
+m'a aidée à le mettre sur pied. <b>J'en ai repris seule la conduite en août
+2026</b> : la ligne éditoriale, les vérifications, les publications.</p>
+
+<h2 class="sub">Travailler ensemble</h2>
+<p>Maisons, palaces, hôtels, clubs, restaurants, joailliers, organisateurs :
+<b>écrivez-moi</b>. Je suis ouverte aux collaborations sérieuses, et c'est
+précisément le milieu dans lequel je veux évoluer.</p>
+<div class="box">
+<h2>Une chose ne se négocie pas</h2>
+<p><b>Une place dans le radar ne s'achète pas.</b> Un événement y figure parce
+qu'il est vérifié, jamais parce qu'il est payé. Si un partenariat existe un
+jour, il sera signalé comme tel, sur la fiche concernée.</p>
+<p>C'est la condition pour que ce site garde la seule chose qui fasse sa
+valeur : la confiance de celles et ceux qui le lisent.</p>
+</div>
+
+<h2 class="sub">Me joindre</h2>
+<p><a class="cta" href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a></p>
+<p>Une proposition, une correction, une invitation : je lis tout.</p>
+
+<div class="chips"><a href="/">← Retour au radar</a><a href="/mentions-legales.html">Mentions légales</a></div>"""
+    write("/a-propos.html",
+          page("fr", "À propos — ConstanceParis7",
+               "Constance Lefebvre, 17 ans, tient seule le radar des événements du "
+               "luxe : sa méthode de vérification, sa règle éditoriale, et comment "
+               "la joindre pour une collaboration.",
+               "/a-propos.html", AP,
+               '<link rel="alternate" hreflang="fr" href="%s/a-propos.html">' % BASE))
+    sitemap_urls.append(f"{BASE}/a-propos.html")
 
     # --- mentions légales (obligation de l'article 6 de la LCEN) -----------
     # Page générée comme les autres pour hériter du même habillage et entrer
