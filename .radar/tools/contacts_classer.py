@@ -79,13 +79,26 @@ def vocabulaire_lieux(ev):
     v = set()
     for e in ev:
         for champ in ("v", "l", "n"):
-            for mot in re.split(r"[^A-Za-zÀ-ÿ]+", str(e.get(champ) or "")):
+            mots = [m for m in re.split(r"[^A-Za-zÀ-ÿ]+", str(e.get(champ) or "")) if m]
+            for mot in mots:
                 if len(mot) >= 3:
                     v.add(sa(mot))
                     v.add(sa(mot).replace("saint", "st"))
+            # Les boîtes de service accolent ce que le titre sépare :
+            # « La Bastide » donne beefbar.labastide@, « Cap Ferrat » donne
+            # …capferrat@. Sans ces formes, ces boîtes passaient pour des
+            # patronymes et étaient retirées à tort.
+            for i in range(len(mots) - 1):
+                colle = sa(mots[i]) + sa(mots[i + 1])
+                if 5 <= len(colle) <= 20:
+                    v.add(colle)
     return v
 
 def classer(adr, pers_fiche, prenoms, patronymes, lieux=frozenset()):
+    # Note 20/08/2026 : le garde-fou « lieux » est construit sur TOUS les mots des
+    # titres de fiche. Des PRÉNOMS y entrent donc (Villa Marie, Sainte-Marie…), et
+    # il épargnait à tort de vraies adresses nominatives — marie.cazaudumec@ en a
+    # été l'exemple. Un jeton qui est aussi un prénom attesté ne protège plus rien.
     """Retourne None si l'adresse est conservee, sinon le motif du retrait."""
     dom = sa(adr.split("@", 1)[1]) if "@" in adr else ""
     loc = sa(adr.split("@")[0])
@@ -105,7 +118,13 @@ def classer(adr, pers_fiche, prenoms, patronymes, lieux=frozenset()):
     # par le site (Lacase.stbarth, beachclub.montauk…), qui sont des boites
     # de service et non des personnes.
     if len(parts) == 2 and all(t.isalpha() for t in parts):
-        if any(t in lieux for t in parts):
+        # Un lieu protège l'adresse, mais seulement en SECONDE position :
+        # une boîte de service s'écrit « service.lieu@ » (lejardin.paris@,
+        # beachclub.montauk@, res.megeve@), jamais « lieu.service@ ». Une
+        # personne s'écrit « prenom.nom@ » — et beaucoup de prénoms figurent
+        # dans des noms de lieux (Villa Marie, Sainte-Marguerite), ce qui
+        # protégeait à tort de vraies adresses personnelles.
+        if parts[-1] in lieux and parts[-1] not in prenoms:
             return None
         if 3 <= len(parts[0]) <= 14 and 3 <= len(parts[1]) <= 16:
             return "B"
