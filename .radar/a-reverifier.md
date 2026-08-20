@@ -7,7 +7,10 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 
 | Événement | Doute | Constaté le | Pourquoi non tranché |
 |---|---|---|---|
-| _(aucun doute ouvert sur les fiches Dolce & Gabbana — voir « doutes tranchés » plus bas)_ | | | |
+| 47e Festival La Versiliana 2026 | la fiche s'arrête au 23/08, le programme officiel va au 30/08 | 20/08/2026 | versilianafestival.it — 47e édition confirmée, mais le programme d'été liste des dates jusqu'au 30/08/2026 (et la page d'accueil annonce la Festa del Fatto Quotidiano du 9 au 13/09). Reste à trancher : ces dates appartiennent-elles au Festival lui-même ou à la programmation du parc ? On n'allonge pas une date sans preuve. |
+| Calvin Harris — Ushuaia Ibiza | date de fin de résidence non publiée | 20/08/2026 | theushuaiaexperience.com — résidence confirmée les VENDREDIS et MARDIS, mais le site ne publie aucune date de clôture 2026. La fin au 25/08 portée par la fiche reste invérifiée. |
+| Dîner quatre mains Ayla Privé — Aret Sahakyan × Francesco Sodano (Fami) | source officielle injoignable | 20/08/2026 | aylamacakizi.com n'a pas répondu (délai dépassé) le 20/08/2026. À retenter. |
+| White Party avec Laurent Wolf — Casino Barrière | le concert est confirmé, l'habillage « White Party » ne l'est pas | 20/08/2026 | agenda du Théâtre Casino Barrière — Laurent Wolf le jeudi 20 août 2026 : DATE CONFIRMÉE. Aucune source officielle ne reprend en revanche l'appellation « White Party ». À vérifier auprès du casino. |
 
 ## Doutes tranchés
 
@@ -59,7 +62,7 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] Dolce & Gabbana Beach Club a Gurney's Montauk — signalé le 11/08/2026
 - [ ] Dolce & Gabbana x Casa Amor — takeover 'DG Resort' (thème Carretto Siciliano) — signalé le 11/08/2026
 - [ ] Ete a l'Hotel du Palais Biarritz (palace imperial) — signalé le 11/08/2026
-- [ ] Exposition Générale — inauguration de la nouvelle Fondation Cartier par Jean Nouvel — signalé le 11/08/2026
+- [x] Exposition Générale — inauguration de la nouvelle Fondation Cartier (place du Palais-Royal) — TRANCHÉ le 20/08/2026 : fondationcartier.com — « 25 oct. 2025 → 23 août 2026 », 2 place du Palais-Royal : date de fin confirmée au jour près
 - [ ] GAIA Bodrum — résidence estivale grecque-méditerranéenne au Mandarin Oriental — signalé le 11/08/2026
 - [ ] Grand Hôtel de Cala Rossa — saison 2026 et table étoilée La Pinède — signalé le 11/08/2026
 - [ ] Hamptons Polo Club - finales et grandes journees d'aout (Continental Cup 16-Goal, Monty Waterbury Cup, Hamptons Festival of Polo, finale 4-… — signalé le 11/08/2026
@@ -109,7 +112,7 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] Exposition « De la caserne au musée... 10 ans déjà » — Musée de la Gendarmerie et du Cinéma — signalé le 12/08/2026
 - [ ] Exposition « Van Cleef & Arpels : l'éclat des années 1980-1990 » — Galerie du Patrimoine — signalé le 12/08/2026
 - [ ] Falstaff — 130e anniversaire du Teatro Massimo — signalé le 12/08/2026
-- [ ] Festival d'Art Pyrotechnique de Cannes — feux d'août — signalé le 12/08/2026
+- [x] Festival d'Art Pyrotechnique de Cannes — feux d'août — TRANCHÉ le 20/08/2026 : programme officiel — six soirées les 4, 14 et 22 juillet puis 4, 15 et 24 août 2026, tirs à 22h, accès gratuit : la fenêtre d'août (04 → 24/08) concorde
 - [ ] Festival de Ramatuelle — 41e édition (théâtre, humour, musique) — signalé le 12/08/2026
 - [ ] Fiera di Sant'Ermete et feux d'artifice de Forte dei Marmi — signalé le 12/08/2026
 - [ ] Fondation Maeght — « Peter Knapp : Le Temps Courrèges » — signalé le 12/08/2026
@@ -123,10 +126,10 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] La Galerie Dior — musée de la maison Dior, 30 avenue Montaigne — signalé le 12/08/2026
 - [ ] La Mode en majesté. Haute couture et tradition à la cour de Thaïlande — Musée des Arts Décoratifs — signalé le 12/08/2026
 - [ ] Le Salama — dîners festifs dans l'ancienne Villa Romana — signalé le 12/08/2026
-- [ ] Les Pianos Folies du Touquet-Paris-Plage (18e edition) — signalé le 12/08/2026
+- [x] Les Pianos Folies du Touquet-Paris-Plage (18e edition) — TRANCHÉ le 20/08/2026 : site officiel lespianosfolies.com — « du vendredi 14 au samedi 22 août 2026 », 18e édition : dates et édition confirmées
 - [ ] Loewe — pop-ups Paula's Ibiza 2026 a Saint-Tropez — signalé le 12/08/2026
 - [ ] Marie Antoinette Style (tournee mondiale du V&A - unique etape au Japon) — signalé le 12/08/2026
-- [ ] Meeting d'été de l'hippodrome de la Canche (Le Touquet) — signalé le 12/08/2026
+- [x] Meeting d'été de l'hippodrome de la Canche (Le Touquet) — TRANCHÉ le 20/08/2026 : hippodrome-letouquet.com — dernière réunion de l'été le samedi 22 août 2026 (trot) : date de fin confirmée
 - [ ] Mumbai Gallery Weekend 2027 — signalé le 12/08/2026
 - [ ] Nikki Beach Saint-Tropez — Claptone live DJ set — signalé le 12/08/2026
 - [ ] Open de Gassin — Polo Club Saint-Tropez (tournoi phare de juillet) — signalé le 12/08/2026
@@ -155,7 +158,7 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] Singapore Night Festival 2026 — signalé le 12/08/2026
 - [ ] Sommets Musicaux de Gstaad 2027 — signalé le 12/08/2026
 - [ ] Sphère — showroom officiel des créateurs émergents (FHCM) — signalé le 12/08/2026
-- [ ] SummerFest Gala 2026 - Southampton Arts Center — signalé le 12/08/2026
+- [x] SummerFest Gala 2026 - Southampton Arts Center — TRANCHÉ le 20/08/2026 : Southampton Arts Center — gala du samedi 22 août 2026, 25 Jobs Lane : date confirmée
 - [ ] Surf Lodge Summer Series 2026 — concerts d'août (Montauk) — signalé le 12/08/2026
 - [ ] Targa Florio Classica 2026 — signalé le 12/08/2026
 - [ ] Tisser, broder, sublimer. Les savoir-faire de la mode — Palais Galliera — signalé le 12/08/2026
@@ -182,7 +185,7 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] Open de France de Polo — Polo Club du Domaine de Chantilly (30 ans du club) — signalé le 18/08/2026
 - [ ] POINT D'ENTRÉE — Concierges de palaces (Clefs d'Or) : la clé des places impossibles — signalé le 18/08/2026
 - [ ] Pirelli HangarBicocca — dernières semaines des expositions Benni Bosetto et Rirkrit Tiravanija — signalé le 18/08/2026
-- [ ] Prix Morny (Groupe 1) — signalé le 18/08/2026
+- [x] Prix Morny (Groupe 1) — TRANCHÉ le 20/08/2026 : billetterie officielle France Galop — meeting du 2 au 30/08/2026, journée du 23/08 confirmée, ouverture 12h-19h, Groupe 1 / 1200 m / 350 000 € / créé en 1865 : tout concorde
 - [ ] Réouverture d'hiver de Cheval Blanc Courchevel (LVMH) — signalé le 18/08/2026
 - [ ] Saison de polo au Polo Club Saint-Tropez — tournois de juillet (dont Polo Masters Open de Gassin) — signalé le 18/08/2026
 - [ ] Scorpios Mykonos — programme des sunsets de juillet 2026 — signalé le 18/08/2026
