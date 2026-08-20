@@ -7,6 +7,8 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 
 | Événement | Doute | Constaté le | Pourquoi non tranché |
 |---|---|---|---|
+| Lio Ibiza — Cabaret dinner-show | saison mai-octobre, aucune date de clôture publiée | 20/08/2026 | liogroup.com/ibiza — la maison décrit une saison de mai à octobre et le programme 2026 (KŌDŌ), sans publier de date de fermeture. La fin au 31/08 de la fiche est un bouchon, mais aucune date sûre ne permet de la remplacer. |
+| Nammos Mykonos — Legendary Beach Party | clôture annoncée « fin septembre à mi-octobre », sans date | 20/08/2026 | nammos.com et guides de Mykonos — ouverture le 1er mai, activité de juin à septembre, fermeture située entre fin septembre et mi-octobre selon les sources, jamais datée. Insuffisant pour corriger : la fin au 31/08 reste un bouchon assumé. |
 | Scorpios — Nuits signature | la saison va jusqu'au 4 octobre, la fiche s'arrête au 31 août | 20/08/2026 | programmation Scorpios 2026 — saison de mai à octobre, soirée de clôture le 4 octobre 2026. La fiche porte sur les « nuits signature » (Innervisions, Keinemusik) : impossible de savoir sans la source du club si CETTE série s'arrête fin août ou suit la saison. Non corrigé. |
 | Dolce & Gabbana x Casa Amor — takeover 'DG Resort' | le takeover 2026 est confirmé, ses dates ne le sont pas | 20/08/2026 | world.dolcegabbana.com — DG Resort 2026 confirme Casa Amor (plage de Pampelonne) parmi ses adresses, motif Carretto Siciliano et pop-up store. AUCUNE date de début ni de fin n'est publiée par la maison. La fenêtre 01/07→30/08 de la fiche reste invérifiée. |
 | JustMe Porto Cervo — Opening & Saison 2026 | ouverture annoncée au 4 juillet, la fiche dit le 10 | 20/08/2026 | sources locales sardes — ouverture de la saison 2026 annoncée au 4 juillet 2026 ; la fiche démarre au 10/07. Écart d'une semaine, sur une source qui n'est pas le club lui-même : non corrigé faute de source de première main. Aucune date de fin publiée. |
@@ -20,6 +22,43 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 | White Party avec Laurent Wolf — Casino Barrière | le concert est confirmé, l'habillage « White Party » ne l'est pas | 20/08/2026 | agenda du Théâtre Casino Barrière — Laurent Wolf le jeudi 20 août 2026 : DATE CONFIRMÉE. Aucune source officielle ne reprend en revanche l'appellation « White Party ». À vérifier auprès du casino. |
 
 ## Doutes tranchés
+
+### 20/08/2026 — Le bouchon du « 31 août » : 7 fins de saison établies à leur source
+
+46 fiches de la fenêtre live portaient exactement le 31/08/2026 en date de fin —
+une valeur par défaut, pas une information. Sept ont été établies à leur source
+officielle. **Aucune n'était juste.**
+
+| Fiche | Portait | Réel | Source |
+|---|---|---|---|
+| Nikki Beach Ibiza (Santa Eulalia) | 31/08 | **11/10** | nikkibeach.com — saison 23/04 → mi-octobre |
+| Blue Marlin Ibiza (Cala Jondal) | 31/08 | **04/10** | bluemarlinibiza.com + agendas d'Ibiza |
+| Grand Hôtel de Cala Rossa | 31/08 | **25/10** | Relais & Châteaux + OT Porto-Vecchio, ouvert 07/05 → 25/10 |
+| Verde Beach Saint-Tropez | 31/08 | **30/09** | OT Ramatuelle / Var Tourisme, ouvert 30/04 → 30/09 |
+| Nikki Beach Saint-Tropez | 31/08 | **13/09** | nikkibeach.com — 24/04 → 13/09, 12h-20h |
+| Phi Beach (Baja Sardinia) | 31/08 | **12/09** | programmation officielle — 45 nuits, 17/07 → 12/09 |
+| Twiga Porto Cervo | 31/08 | **29/08** | twigaworld.com — closing party le 29/08 |
+
+Six étaient **tronquées** (l'événement dure plus longtemps que le site ne le
+disait). Une était **trop longue** : Twiga ferme le 29 août, le site le montrait
+ouvert les 30 et 31.
+
+**INCIDENT DE MÉTHODE, à ne pas reproduire.** La première tentative appariait les
+fiches par sous-chaîne de nom. « Twiga Porto Cervo » a donc aussi attrapé
+« Twiga Porto Cervo — Ozuna » et « — Carl Cox », deux SOIRÉES DATÉES, dont la
+date a été écrasée par la fin de saison du lieu ; idem pour deux soirées Nikki
+Beach et sa closing party. Cinq fiches faussées, rétablies avant toute
+publication. **Ne jamais apparier une fiche par sous-chaîne : une fiche de
+saison et une soirée du même lieu portent des noms qui se contiennent.**
+Contrôle obligatoire : après correction, comparer le diff avec `git show
+HEAD:index.html` et vérifier que seules les fiches visées ont bougé.
+
+Restent **36 fiches au bouchon du 31 août**, dont 13 sont des guides d'août
+(« Conseil — … », « Milan en mode Ferragosto », « Terrasses des palaces
+parisiens »…) où cette date est LÉGITIME. 23 lieux saisonniers restent donc à
+établir avant le 1er septembre.
+
+
 
 ### 11/08/2026 — Dolce & Gabbana x Casa Amor : CONFIRMÉ, doute levé
 Le doute du matin venait d'un agent privé de recherche web, pas de la réalité.
