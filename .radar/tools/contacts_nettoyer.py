@@ -189,7 +189,13 @@ def a_une_porte(iv, sej):
 # ══════════════════════════════════════════════════════════════════════════
 def main():
     mode = "--appliquer" if "--appliquer" in sys.argv else "--blanc"
-    html = open("index.html", encoding="utf-8").read()
+    # DOCTRINE « OÙ VIT LA VÉRITÉ » : index.html et i18n-data/ sont GÉNÉRÉS.
+    # La source de travail est index-full.html, qui porte aussi les traductions
+    # dans e.tr.<langue>. Éditer index.html directement ne sert à rien : le
+    # premier split_i18n.py écrase la modification (constaté le 20/08/2026).
+    if not os.path.exists("index-full.html"):
+        os.system("python3 .radar/tools/rebuild_full.py >/dev/null")
+    html = open("index-full.html", encoding="utf-8").read()
     m = re.search(r'(<script type="application/json" id="data">)(.*?)(</script>)', html, re.S)
     ev = json.loads(m.group(2))
     voc = vocabulaire(ev)
@@ -216,23 +222,10 @@ def main():
             n = 0
         total += n
 
-    # ── traductions ────────────────────────────────────────────────────────
-    # Le verdict rendu sur le francais s'applique tel quel aux 12 langues :
-    # meme adresse, meme decision, aucune divergence possible entre versions.
-    print(f"  (verdict transmis aux traductions : {len(NOMINATIVES)} adresses nominatives)")
+    # Les traductions vivent dans e.tr.<langue> et ont donc deja ete nettoyees
+    # par la boucle ci-dessus, avec les MEMES personnes que la version francaise.
+    print(f"  (adresses jugees nominatives : {len(NOMINATIVES)})")
     trad = {}
-    for f in sorted(glob.glob("i18n-data/*.json")):
-        d = json.load(open(f, encoding="utf-8"))
-        n = 0
-        for cle, val in d.items():
-            if not isinstance(val, dict):
-                continue
-            for champ, s in list(val.items()):
-                if isinstance(s, str) and "@" in s:
-                    ns, k = nettoie_texte(s, [], voc)
-                    val[champ] = ns; n += k
-        trad[f] = (d, n)
-        total += n
 
     # ── rapport ────────────────────────────────────────────────────────────
     par_type = collections.Counter(j["type"] for j in journal)
@@ -241,9 +234,6 @@ def main():
     print(f"  Coordonnées retirées au total ………………… {total}")
     for t, n in par_type.most_common():
         print(f"    · {t:<32} {n}")
-    for f, (d, n) in trad.items():
-        if n:
-            print(f"    · {os.path.basename(f):<32} {n} (traduction)")
     print()
     print(f"  Fiches touchées …………………………………………… {len({j['fiche'] for j in journal})}")
     print(f"  Fiches épargnées par le garde-fou ……………… {len(sauves)}")
@@ -254,13 +244,11 @@ def main():
         print("\n  (essai — aucun fichier modifié)")
         return
     # ── ecriture ───────────────────────────────────────────────────────────
-    neuf = json.dumps(ev, ensure_ascii=False, separators=(",", ":"))
-    open("index.html", "w", encoding="utf-8").write(
+    neuf = json.dumps(ev, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    open("index-full.html", "w", encoding="utf-8").write(
         html[:m.start(2)] + neuf + html[m.end(2):])
-    for f, (d, n) in trad.items():
-        if n:
-            json.dump(d, open(f, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(retires, open("/tmp/retires.json", "w"), ensure_ascii=False, indent=1)
-    print("\n  ✓ index.html et traductions réécrits")
+    print("\n  ✓ index-full.html réécrit (source de vérité)")
+    print("  → lancer ensuite : python3 .radar/tools/split_i18n.py --apply")
 
 main()
