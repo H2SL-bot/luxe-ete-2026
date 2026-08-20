@@ -666,3 +666,18 @@ manque dans la fenêtre live. La LOI DU SITE (iv+sej dès la naissance) était d
 honorée à 100 % sur ce qui est réellement montré à un visiteur. RÈGLE : avant de lancer un
 atelier de backfill sur la foi d'un compteur global, croiser avec `d2 >= aujourd'hui` — un
 backfill sur des fiches déjà passées ne sert personne et gaspille la recherche du jour.
+
+## 20/08/2026 — condensation `iv` : le seuil de sélection n'est pas le seuil de la cible
+Première vague de sélection des fiches à condenser : critère « un champ iv.o/iv.g/iv.w
+≥ 400 caractères » (le seuil-CIBLE de la consigne de condensation). Après un premier lot
+condensé et republié, une deuxième sélection avec le MÊME critère a ressorti presque les
+mêmes fiches : une fiche condensée qui garde plusieurs contacts nominatifs distincts reste
+légitimement au-dessus de 400 caractères (« garder le fait, jamais l'inverse »), donc le
+seuil-cible n'identifie pas un reliquat non traité, il redétecte du travail déjà fait.
+RÈGLE : pour repérer les fiches qui ont VRAIMENT encore une dérive « journal d'enquête »
+(par opposition à un champ légitimement dense en faits), utiliser le seuil de `validate.py`
+(≥ 1200 caractères, le seuil WARN) pour la SÉLECTION du prochain lot, et réserver 400
+caractères comme objectif de RÉDACTION à l'intérieur de chaque condensation. Confirmé en
+pratique : la deuxième vague sélectionnée à ≥1200 car. n'a recoupé aucune fiche de la
+première vague et a fait baisser les compteurs WARN de `validate.py` (iv.g 120→98,
+iv.w 137→118 sur la journée, deux lots de 20 fiches de la fenêtre live).

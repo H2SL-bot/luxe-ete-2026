@@ -1,118 +1,100 @@
-# Compte rendu — passe du 19 août 2026 (cloud, radar-routine-claude)
+# Compte rendu — passe du 20 août 2026 (cloud, radar-routine-claude)
 
-## Rattrapage de cadence
-`precheck.sh` a signalé une CADENCE ROMPUE : dernier run journalisé il y a 161 h
-(> 30 h). Aucune passe complète tracée entre le 13/08 et le 18/08 (le 18/08 a
-vu la passation Gérald → Constance et un travail d'outillage, pas une passe
-quotidienne au sens de la doctrine — pas de ligne FIN dans `passages.log`, pas
-de compte rendu). Cette passe du 19/08 est donc une passe de RATTRAPAGE
-complète, exécutée selon la procédure de `DOCTRINE.md`.
+## Cadence
+Passe normale (dernière passe complète tracée : 19/08, ~24 h d'écart, sous le seuil de
+30 h). `precheck.sh` n'a signalé aucune anomalie de démarrage.
 
-## Réseau : WebFetch et curl bloqués en bloc, WebSearch opérationnel
-Testé en tout début de passe sur des domaines témoins neutres (wikipedia.org,
-google.com, le compteur GoatCounter) : `curl` direct → `000` (passerelle),
-`WebFetch` → `EGRESS_BLOCKED` sur tous les domaines, confirmé par
-`$HTTPS_PROXY/__agentproxy/status` (403 de politique). `WebSearch`, lui, a
-fonctionné normalement toute la passe et a permis tout le travail ci-dessous.
-Conséquence assumée : aucun test de lien par requête directe (retest hebdo du
-lundi non applicable aujourd'hui — mercredi), aucune lecture de page brute ;
-tout s'est appuyé sur `WebSearch` avec recoupement de sources.
+## Réseau : WebFetch et curl toujours bloqués, WebSearch non sollicité
+Testé en tout début de passe sur wikipedia.org et google.com : `curl -sL` → `000`
+(timeout de la passerelle), `WebFetch` → `EGRESS_BLOCKED`. Même schéma que les 11-13/08
+et le 19/08. Aucune recherche web n'a été nécessaire cette passe (priorité condensation,
+voir plus bas), donc aucun impact réel — mais cela a aussi empêché le relevé quotidien
+GoatCounter (`relever_visites.py` : « compteur illisible aujourd'hui », aucune ligne
+écrite pour le 20/08 dans `stats/visites.ndjson`).
 
-## État de la LOI DU SITE : bonne nouvelle chiffrée
-`reste.py` affiche encore 66 séjours et 18 invitations manquants sur 434
-fiches. Vérification par script (croisement avec `d2 >= aujourd'hui`) : les
-66 et les 18 sont **tous des événements déjà passés** (gardés 30 jours avant
-purge, hors fenêtre visible par le voile d'affichage). **La fenêtre live
-(aujourd'hui → +90 jours, 96 événements) est à 100 % séjours et 100 %
-invitations** — la LOI DU SITE est honorée sur tout ce qu'un visiteur voit
-réellement. Aucun backfill n'a donc été lancé sur des fiches déjà passées :
-ça n'aurait servi personne. Zéro zombie à purger (`d2 < aujourd'hui-30j`).
+## PRIORITÉ DU JOUR — condensation des voies d'invitation (`iv.o`/`iv.g`/`iv.w`)
+Conformément à la consigne prioritaire : la dérive « journal d'enquête » touchait 255
+fiches au 19/08 (159 dans la fenêtre live). Deux vagues de 20 fiches condensées et
+publiées aujourd'hui, en commençant par les plus imminentes de la fenêtre live :
 
-## Nouvelle destination : Melbourne (carte des destinations à conquérir)
-Composé, vérifié par un agent adverse dédié, puis traduit en 12 langues :
-**« Lexus Melbourne Cup Day 2026 — le Birdcage, Flemington »** (mardi 3
-novembre 2026, Flemington Racecourse). Née COMPLÈTE dès la publication :
-- **Invitation (`iv`)** : voie gratuite réelle mais restrictive (accréditation
-  presse nominative, Media Accreditation Unit du Victoria Racing Club,
-  candidatures ouvertes début septembre) honnêtement qualifiée comme telle ;
-  voie payante (Birdcage Reserved, tables, marquees de sponsors dès 1895 AUD/
-  pers., seul tarif confirmé par recoupement — les deux autres montants trouvés
-  en première recherche n'ont pas pu être corroborés indépendamment, donc
-  retirés du texte final plutôt que publiés sur une seule source) ; contacts
-  strictement génériques (ligne VRC, boîte presse), aucun nom de personne
-  fabriqué, conformément au garde-fou absolu.
-- **Séjour (`sej`)** : Crown Towers Melbourne et Park Hyatt Melbourne
-  (palaces réels), Vue de Monde et Attica (trois toques Good Food Guide —
-  le texte précise explicitement que le Michelin ne note pas l'Australie,
-  pour ne jamais laisser croire à une étoile inventée), Fashions on the
-  Field comme expérience.
-- Vérification adverse dédiée (agent séparé, mandat de réfutation) : verdict
-  FIABLE, une réserve mineure (deux tarifs non confirmables) traitée par
-  retrait du texte plutôt que par maintien d'un doute.
-- Ville « Melbourne » ajoutée au registre `villes-i18n.json` (12 langues).
-- 434 fiches désormais (433 → 434).
+- **Vague 1** (critère de sélection : un champ ≥ 400 car., cible de rédaction) : 20
+  fiches, dont White Party Casino Barrière, Dîner Ayla Privé, Meeting hippodrome de la
+  Canche (Le Touquet), Prix Morny, Clair-obscur (Bourse de Commerce), Les Nocturnes de
+  la Villa Ephrussi, Calvin Harris (Ushuaia Ibiza)…
+- **Vague 2** (critère de sélection corrigé : un champ ≥ 1200 car., seuil WARN réel de
+  `validate.py` — voir leçon ci-dessous) : 20 fiches supplémentaires, dont Les Caves du
+  Roy, Twiga Porto Cervo, Torneo de Polo de Sotogrande, Meeting de Deauville Barrière
+  (fiche + billetterie), Nikki Beach Saint-Tropez, Hôtel du Cap-Eden-Roc, Grand Hôtel de
+  Cala Rossa, et les deux fiches DG Resort/Casa Amor (doublon connu, voir plus bas).
 
-## Filet — amélioration trouvée et corrigée
-Contrôle manuel du 12/08 (`iv.o` > 1200 car. = journal d'enquête) : re-testé
-sur la nouvelle fiche, `iv.o` était propre (1003 car.) mais `iv.g` faisait
-2521 car. et `iv.w` 3292 — la même dérive avait migré vers des champs non
-surveillés. Chiffrage global : **121 fiches avec `iv.g` > 1200 car.**
-(excédent 89 585 car., jusqu'à 3 924 sur une seule fiche) et **137 fiches
-avec `iv.w` > 1200 car.** (excédent 134 565 car., jusqu'à 6 001 sur une
-fiche) — invisibles du filet depuis le 12/08. `validate.py` étend désormais
-le même contrôle WARN (non bloquant) aux trois champs `o`/`g`/`w`. Condensation
-reportée par lots aux prochaines passes (comme pour `iv.o` avant elle) : un
-traitement de masse à la main risquerait une erreur de contact.
+**40 fiches condensées au total** (double de la cible quotidienne de 15-20, budget de
+session le permettait). Méthode : chaque champ relu et réécrit par un agent dédié,
+tout fait vérifié conservé intégralement (noms, fonctions, e-mails, téléphones,
+adresses, URLs, tarifs, horaires, dates limites), seules les tournures d'enquêteur et
+les redites entre champs supprimées. Aucun fait n'a été inventé ni retiré. Chaque lot
+réinjecté avec vérification du NOM (pas seulement de l'indice) avant écriture, puis
+`split_i18n.py --apply` → `gen_seo.py` → `gen_pages.py` → `validate.py` → publication.
 
-## Registre de ré-audit nettoyé
-`.radar/a-reverifier.md` portait 176 cases à cocher, dont 4 concernaient des
-fiches déjà tranchées ailleurs (Via Notte et Alemagou retirés le 11-12/08,
-Ginza Le Studio retiré le 18/08, une exposition Chanel 19M sortie de la
-fenêtre par purge normale) — supprimées comme doublons résolus. **172
-cases restent ouvertes**, dont 116 concernent des événements encore dans la
-fenêtre live : c'est le plus gros chantier en attente du site. Spot-check de
-4 fiches parmi les plus imminentes (Jesus Christ Superstar Singapour,
-Laurent Wolf/Deauville, Singapore Night Festival, dîner Ayla Privé Bodrum) :
-les 4 confirmées exactes par recherche indépendante, aucune erreur trouvée —
-signal positif sur la qualité globale, mais un ré-audit complet des 116
-fiches n'a pas pu être fait cette passe (à poursuivre par lots de 8-10).
+**Résultat mesuré** (`validate.py`, seuil WARN 1200 car.) : `iv.g` 120 → 98 fiches en
+excédent (excédent total 89 585 → 71 057 car.), `iv.w` 137 → 118 fiches (134 565 →
+114 170 car.). `iv.o` reste propre (0 WARN).
 
-## Contrôles
-- `validate.py` : **OK — 0 blocker, 2 warnings** (iv.g/iv.w, voir ci-dessus).
-- `coherence_i18n.py` : OK, 0 divergence sur 434 fiches.
-- `gen_seo.py` + `gen_pages.py` régénérés, eyebrow déjà à jour (19 août 2026).
-- Traductions manquantes : **0/434** (100 %).
-- Séjours manquants (fenêtre live) : **0/96**. Invitations manquantes
-  (fenêtre live) : **0/96**.
-- KPI ACCÈS mondain (`iv`) : 294/299 (98 %).
-- Fiches sans lien officiel `u` (fenêtre live) : 6 — toutes des fiches
-  saisonnières/conseil à sources multiples (`so`), pas d'URL canonique
-  unique par nature ; non anormal.
-- `healthcheck.sh` : lancé, mais le blocage réseau documenté depuis le 11/08
-  (curl direct → 000) rend la sonde aveugle depuis une session cloud — pas de
-  rollback déclenché sur cette base, conformément à la leçon du 28/07.
-- Publication : `bash .radar/session/publier.sh` → **POUSSÉ** directement sur
-  `main` (commit `446ae13`), aucun repli sur branche `claude/*` nécessaire.
+**Reliquat** : 254 fiches ont encore un champ ≥ 400 car. (179 dans la fenêtre live) ;
+129 fiches ont encore un champ ≥ 1200 car., le signal fiable de dérive réelle (101 dans
+la fenêtre live). À poursuivre par lots de 15-20 aux prochaines passes.
+
+## Leçon ajoutée au filet
+Le critère de sélection ≥ 400 caractères (qui est la CIBLE de rédaction, pas un seuil de
+dérive) a fait resélectionner en vague 2 presque les mêmes fiches que la vague 1 : une
+fiche condensée qui garde plusieurs contacts nominatifs distincts reste légitimement
+au-dessus de 400 caractères. Corrigé en cours de passe : sélection par le seuil WARN de
+`validate.py` (≥ 1200 car.), qui identifie la vraie dérive « journal d'enquête » sans
+resélectionner du travail déjà fait. Détail dans `.radar/tools/lessons.md` (20/08/2026).
+
+## Purge
+1 zombie purgé : « Exposition Pomellato 'Le Joaillier révolutionnaire' au Palais de
+Tokyo » (d2 = 2026-07-20, > 30 j). 434 → 433 fiches.
+
+## État de la LOI DU SITE (traductions / séjours / invitations)
+`reste.py` : traductions 433/433 (100 %) ; séjours 368/433 (65 manquants) ; invitations
+415/433 (18 manquants). Vérification par script (croisement `d2 ≥ aujourd'hui`) : **les
+65 séjours et les 18 invitations manquants sont tous des fiches déjà passées** (gardées
+30 jours avant purge, hors fenêtre visible par le voile d'affichage). **La fenêtre live
+(94 événements) reste à 100 % séjours et 100 % invitations.** Aucun backfill lancé — la
+priorité du jour (condensation) restait la bonne cible, conformément à la consigne.
+
+## Doublon connu, non traité cette passe
+`.radar/a-reverifier.md` signale toujours le doublon « DG Resort 2026 à Saint-Tropez —
+Casa Amor » (idx 74) / « Dolce & Gabbana x Casa Amor — takeover 'DG Resort' » (idx 75) :
+même opération, mêmes dates (01/07-30/08), même lieu. Les deux ont été condensées
+aujourd'hui (elles avaient chacune une dérive), mais la fusion elle-même n'a pas été
+faite par prudence budgétaire — un merge de fiche à 12 langues demande une relecture
+complète des deux jeux de traductions pour ne perdre aucun fait. À faire à une passe
+dédiée : garder la fiche la plus complète (idx 75, qui a déjà l'adresse corrigée
+« chemin de la Matarane » et un numéro de téléphone que idx 74 n'a pas), reprendre tout
+fait exclusif de l'autre, supprimer le doublon, mettre à jour `.last-names.json`.
+
+## Recherche de nouveaux événements
+Aucune cette passe, conformément à la priorité explicite du jour (condensation avant
+recherche de neuf).
 
 ## Analyse des visites
-GoatCounter (compteur JSON, tableau complet) inaccessible ce jour — même
-blocage réseau que le reste de la session (`EGRESS_BLOCKED`). Aucun chiffre
-inventé ; relevé du jour non écrit dans `stats/visites.ndjson`. D'après le
-dernier repère connu (7→13 août : 341 → 401 visites/jour, ~+3 %/jour), rien
-ne permet de dire si la tendance s'est maintenue pendant l'absence de passes
-(14-18 août).
+Le relevé du jour n'a pas pu être fait (réseau bloqué). Sur les 5 derniers jours
+disponibles (14→19/08) : 426 → 458 → 478 → 631 → 1 046 → 1 711 visites/jour — une
+progression continue qui a plus que quadruplé en cinq jours. Aucun détail par page ou
+par pays disponible aujourd'hui (tableau GoatCounter injoignable) ; à recroiser à la
+prochaine passe avec réseau disponible.
 
-## Point d'attention pour Constance (pas d'action requise)
-La ligne d'édition affiche toujours « Juillet et août 2026 ». La doctrine
-prévoit de proposer un rafraîchissement « Automne 2026 » vers le 25 août,
-sans renommer seul : à remettre à l'ordre du jour dans quelques jours.
+## Contrôles
+`validate.py` : OK — 0 blocker(s), 2 warning(s) (iv.g/iv.w, en baisse, voir plus haut).
+`perfcheck.py` : OK — 0 régression (poids page 1,08 Mo gzip, en légère baisse grâce à la
+condensation malgré 40 fiches retouchées).
+Publication : 5 commits poussés directement sur `main` (démarrage, purge zombie, journal
+perfcheck, condensation vague 1, condensation vague 2) — aucun repli sur branche
+`claude/*` nécessaire aujourd'hui, le push direct sur `main` a fonctionné à chaque fois.
+Adresse publique : https://constanceparis7.com — inchangée.
 
-## Ce qui reste pour la prochaine passe
-- Poursuivre le ré-audit des 116 fiches live de `a-reverifier.md` (lots de
-  8-10, via WebSearch tant que WebFetch reste bloqué).
-- Condenser les fiches `iv.g`/`iv.w` les plus longues (121 + 137 fiches).
-- Poursuivre l'ajout de destinations de la carte encore absentes (Lac de
-  Côme, Comporta/Melides, Riviera d'Athènes/Spetses, Dubrovnik, Mustique,
-  Harbour Island, Casa de Campo, Riyad/AlUla).
-- Retester les liens (prochain lundi, si le réseau répond) et réessayer
-  GoatCounter.
+## Anomalies
+- Réseau : `curl`/`WebFetch` bloqués toute la passe (voir plus haut) — sans impact sur
+  le travail du jour, mais empêche tout test de lien direct et le relevé de visites.
+- Rien d'autre à signaler.
