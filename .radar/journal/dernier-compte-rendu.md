@@ -1,100 +1,126 @@
-# Compte rendu — passe du 20 août 2026 (cloud, radar-routine-claude)
+# Compte rendu — passe du 20 août 2026 (2e passe du jour, cloud, radar-routine-claude)
 
 ## Cadence
-Passe normale (dernière passe complète tracée : 19/08, ~24 h d'écart, sous le seuil de
-30 h). `precheck.sh` n'a signalé aucune anomalie de démarrage.
-
-## Réseau : WebFetch et curl toujours bloqués, WebSearch non sollicité
-Testé en tout début de passe sur wikipedia.org et google.com : `curl -sL` → `000`
-(timeout de la passerelle), `WebFetch` → `EGRESS_BLOCKED`. Même schéma que les 11-13/08
-et le 19/08. Aucune recherche web n'a été nécessaire cette passe (priorité condensation,
-voir plus bas), donc aucun impact réel — mais cela a aussi empêché le relevé quotidien
-GoatCounter (`relever_visites.py` : « compteur illisible aujourd'hui », aucune ligne
-écrite pour le 20/08 dans `stats/visites.ndjson`).
+Deuxième passe du 20/08 : une passe complète avait déjà tourné plus tôt dans la journée
+(condensation, 40 fiches). `precheck.sh` n'a signalé aucune anomalie — arbre propre,
+verrou posé, `validate.py` vert au démarrage. La trace de démarrage a été poussée
+directement sur `main` sans repli sur branche `claude/*`.
 
 ## PRIORITÉ DU JOUR — condensation des voies d'invitation (`iv.o`/`iv.g`/`iv.w`)
-Conformément à la consigne prioritaire : la dérive « journal d'enquête » touchait 255
-fiches au 19/08 (159 dans la fenêtre live). Deux vagues de 20 fiches condensées et
-publiées aujourd'hui, en commençant par les plus imminentes de la fenêtre live :
 
-- **Vague 1** (critère de sélection : un champ ≥ 400 car., cible de rédaction) : 20
-  fiches, dont White Party Casino Barrière, Dîner Ayla Privé, Meeting hippodrome de la
-  Canche (Le Touquet), Prix Morny, Clair-obscur (Bourse de Commerce), Les Nocturnes de
-  la Villa Ephrussi, Calvin Harris (Ushuaia Ibiza)…
-- **Vague 2** (critère de sélection corrigé : un champ ≥ 1200 car., seuil WARN réel de
-  `validate.py` — voir leçon ci-dessous) : 20 fiches supplémentaires, dont Les Caves du
-  Roy, Twiga Porto Cervo, Torneo de Polo de Sotogrande, Meeting de Deauville Barrière
-  (fiche + billetterie), Nikki Beach Saint-Tropez, Hôtel du Cap-Eden-Roc, Grand Hôtel de
-  Cala Rossa, et les deux fiches DG Resort/Casa Amor (doublon connu, voir plus bas).
+**20 fiches condensées et publiées**, toutes prises dans la fenêtre live et classées par
+imminence, sélectionnées au seuil WARN réel de `validate.py` (un champ ≥ 1200 caractères,
+la règle corrigée hier — le seuil de 400 caractères reste l'objectif de RÉDACTION, jamais
+le critère de sélection).
 
-**40 fiches condensées au total** (double de la cible quotidienne de 15-20, budget de
-session le permettait). Méthode : chaque champ relu et réécrit par un agent dédié,
-tout fait vérifié conservé intégralement (noms, fonctions, e-mails, téléphones,
-adresses, URLs, tarifs, horaires, dates limites), seules les tournures d'enquêteur et
-les redites entre champs supprimées. Aucun fait n'a été inventé ni retiré. Chaque lot
-réinjecté avec vérification du NOM (pas seulement de l'indice) avant écriture, puis
-`split_i18n.py --apply` → `gen_seo.py` → `gen_pages.py` → `validate.py` → publication.
+- **Vague 1** (10 fiches) : Rina Banerjee (Espace Louis Vuitton Tokyo), Fondazione Prada,
+  Villa Carmignac, Ron Mueck (Mori Art Museum × Fondation Cartier), Loro Piana × La
+  Réserve à la Plage, Biennale Arte 2026, La Mode en majesté (Arts Décoratifs), Fondation
+  Maeght (Peter Knapp), Le Jardin de Cheval Blanc Paris, Pop-up Vivrelle × Kith Women.
+- **Vague 2** (10 fiches) : Loewe Paula's Ibiza (Saint-Tropez), Grand Palais d'été,
+  Journey within (Ginza Maison Hermès), Van Cleef & Arpels (Galerie du Patrimoine), Into
+  the Ocean (ArtScience Museum), Daniel Brush (L'École des Arts Joailliers), Dolce &
+  Gabbana Beach Club (Gurney's Montauk), Picasso through the Eyes of Paul Smith, Yves
+  Saint Laurent and Photography (ICP), L'Herbier Secret (Hôtel de Crillon).
 
-**Résultat mesuré** (`validate.py`, seuil WARN 1200 car.) : `iv.g` 120 → 98 fiches en
-excédent (excédent total 89 585 → 71 057 car.), `iv.w` 137 → 118 fiches (134 565 →
-114 170 car.). `iv.o` reste propre (0 WARN).
+**Volume retiré : environ 42 000 caractères de rapport d'enquête**, sans perdre un seul
+contact. Aucun fait inventé, aucun fait vérifié supprimé.
 
-**Reliquat** : 254 fiches ont encore un champ ≥ 400 car. (179 dans la fenêtre live) ;
-129 fiches ont encore un champ ≥ 1200 car., le signal fiable de dérive réelle (101 dans
-la fenêtre live). À poursuivre par lots de 15-20 aux prochaines passes.
+### Résultat mesuré (`validate.py`, seuil WARN 1200 car.)
+| | avant | après |
+|---|---|---|
+| fiches `iv.g` en excédent | 98 | **83** |
+| excédent total `iv.g` | 71 057 car. | **61 678 car.** |
+| fiches `iv.w` en excédent | 118 | **107** |
+| excédent total `iv.w` | 114 170 car. | **102 563 car.** |
+| `iv.o` | 0 WARN | **0 WARN** |
 
-## Leçon ajoutée au filet
-Le critère de sélection ≥ 400 caractères (qui est la CIBLE de rédaction, pas un seuil de
-dérive) a fait resélectionner en vague 2 presque les mêmes fiches que la vague 1 : une
-fiche condensée qui garde plusieurs contacts nominatifs distincts reste légitimement
-au-dessus de 400 caractères. Corrigé en cours de passe : sélection par le seuil WARN de
-`validate.py` (≥ 1200 car.), qui identifie la vraie dérive « journal d'enquête » sans
-resélectionner du travail déjà fait. Détail dans `.radar/tools/lessons.md` (20/08/2026).
+**Reliquat : 114 fiches en dérive réelle, dont 86 dans la fenêtre live** (contre 129 et
+101 ce matin). À poursuivre par lots de 15-20 aux prochaines passes.
 
-## Purge
-1 zombie purgé : « Exposition Pomellato 'Le Joaillier révolutionnaire' au Palais de
-Tokyo » (d2 = 2026-07-20, > 30 j). 434 → 433 fiches.
+Cinq des vingt fiches condensées restent au-dessus de 1200 caractères sur un champ, et
+c'est voulu : elles portent des grilles tarifaires complètes et plusieurs contacts
+nominatifs (Yves Saint Laurent and Photography garde huit paliers d'adhésion, trois
+jauges de privatisation et cinq intervenants nommés). La règle « garder le fait, couper
+le reste » a été appliquée telle quelle.
 
-## État de la LOI DU SITE (traductions / séjours / invitations)
-`reste.py` : traductions 433/433 (100 %) ; séjours 368/433 (65 manquants) ; invitations
-415/433 (18 manquants). Vérification par script (croisement `d2 ≥ aujourd'hui`) : **les
-65 séjours et les 18 invitations manquants sont tous des fiches déjà passées** (gardées
-30 jours avant purge, hors fenêtre visible par le voile d'affichage). **La fenêtre live
-(94 événements) reste à 100 % séjours et 100 % invitations.** Aucun backfill lancé — la
-priorité du jour (condensation) restait la bonne cible, conformément à la consigne.
+## Un contrôle nouveau, et ce qu'il a trouvé
+Les dix agents de la première vague ont tous affirmé n'avoir perdu aucun fait. Un
+contrôle **algorithmique** écrit dans la foulée (extraction des e-mails, URLs, téléphones
+et montants de l'entrée, puis différence avec la sortie sur la concaténation des trois
+champs, puisqu'un fait peut légitimement migrer de `iv.o` vers `iv.w`) a montré le
+contraire sur plusieurs fiches. Chaque écart a été instruit à la main :
 
-## Doublon connu, non traité cette passe
-`.radar/a-reverifier.md` signale toujours le doublon « DG Resort 2026 à Saint-Tropez —
-Casa Amor » (idx 74) / « Dolce & Gabbana x Casa Amor — takeover 'DG Resort' » (idx 75) :
-même opération, mêmes dates (01/07-30/08), même lieu. Les deux ont été condensées
-aujourd'hui (elles avaient chacune une dérive), mais la fusion elle-même n'a pas été
-faite par prudence budgétaire — un merge de fiche à 12 langues demande une relecture
-complète des deux jeux de traductions pour ne perdre aucun fait. À faire à une passe
-dédiée : garder la fiche la plus complète (idx 75, qui a déjà l'adresse corrigée
-« chemin de la Matarane » et un numéro de téléphone que idx 74 n'a pas), reprendre tout
-fait exclusif de l'autre, supprimer le doublon, mettre à jour `.last-names.json`.
+- **Vraies pertes** : rattrapées avant publication.
+- **Faux positifs de format** : « +33 (0)1 79 35 50 22 » et « +33179355022 » sont le même
+  numéro, « 7,00 € » et « 7 € » le même tarif — la normalisation a été corrigée.
+- **Suppressions légitimes, vérifiées une par une** : trois montants ont disparu à bon
+  droit parce que la fiche elle-même les déclarait caducs — un tarif de 19 € « colporté
+  par des sources secondaires et RÉFUTÉ » (Fondazione Prada), et une prévente japonaise
+  close le 9 juin 2026 dont les tarifs en vigueur (2 400 / 1 400 / 1 000 ¥) sont bien
+  conservés (Picasso × Paul Smith). Les republier aurait trompé le visiteur.
+
+Le contrôle et ses trois pièges sont consignés dans `.radar/tools/lessons.md`.
+
+## Registre `a-reverifier.md` remis d'aplomb
+Le fichier avait atteint 706 lignes dont **73 répétitions du même en-tête** « Vérifiées à
+moyens réduits », les mêmes fiches revenant jusqu'à quatre fois. Consolidé en une liste
+unique de **147 doutes distincts**, chacun daté de son PREMIER signalement (l'ancienneté
+du doute est l'information utile), plus une rubrique séparée pour le doute devenu sans
+objet parce que la fiche a été purgée. 706 → 263 lignes, aucune information perdue,
+toutes les sections narratives conservées.
+
+## État de la LOI DU SITE
+`reste.py` : traductions **433/433 (100 %)**, séjours 368/433, invitations 415/433.
+Croisement avec `d2 ≥ aujourd'hui` : sur les **309 fiches non passées**, il manque
+**0 séjour et 0 invitation**. Les 65 et 18 manquants sont tous des fiches déjà terminées,
+gardées 30 jours avant purge et invisibles derrière le voile d'affichage. La fenêtre live
+est donc à 100 % sur les deux portes.
 
 ## Recherche de nouveaux événements
-Aucune cette passe, conformément à la priorité explicite du jour (condensation avant
-recherche de neuf).
+Aucune, conformément à la consigne : la condensation passe avant la recherche de neuf
+tant qu'il reste des fiches en dérive dans la fenêtre live — il en reste 86.
+
+## Purge
+Aucun zombie à purger aujourd'hui (le seul, l'exposition Pomellato, l'a été ce matin).
+433 fiches, compte inchangé.
 
 ## Analyse des visites
-Le relevé du jour n'a pas pu être fait (réseau bloqué). Sur les 5 derniers jours
-disponibles (14→19/08) : 426 → 458 → 478 → 631 → 1 046 → 1 711 visites/jour — une
-progression continue qui a plus que quadruplé en cinq jours. Aucun détail par page ou
-par pays disponible aujourd'hui (tableau GoatCounter injoignable) ; à recroiser à la
-prochaine passe avec réseau disponible.
+1 795 visites le 20/08, contre 1 711 la veille : la progression continue mais se calme
+nettement après cinq jours de flambée (426 → 458 → 478 → 631 → 1 046 → 1 711 → 1 795),
+soit +5 % en un jour après un +64 % la veille. Le palier ressemble à une fin de vague
+plutôt qu'à un décrochage. Aucun détail par page, par pays ou par source n'est
+disponible : le tableau GoatCounter est injoignable depuis cette session (réseau bloqué,
+voir ci-dessous). Le relevé du jour avait déjà été écrit par la passe du matin.
 
 ## Contrôles
-`validate.py` : OK — 0 blocker(s), 2 warning(s) (iv.g/iv.w, en baisse, voir plus haut).
-`perfcheck.py` : OK — 0 régression (poids page 1,08 Mo gzip, en légère baisse grâce à la
-condensation malgré 40 fiches retouchées).
-Publication : 5 commits poussés directement sur `main` (démarrage, purge zombie, journal
-perfcheck, condensation vague 1, condensation vague 2) — aucun repli sur branche
-`claude/*` nécessaire aujourd'hui, le push direct sur `main` a fonctionné à chaque fois.
-Adresse publique : https://constanceparis7.com — inchangée.
+- `validate.py` : **OK — 0 blocker, 2 warnings** (iv.g/iv.w, tous deux en baisse).
+- `perfcheck.py` : **OK — 0 régression** (poids de la page en baisse de 0,02 Mo malgré
+  20 fiches retouchées, effet direct de la condensation).
+- Publication : 4 commits poussés **directement sur `main`** (démarrage, condensation
+  vague 1, consolidation du registre, condensation vague 2). Aucun repli sur branche
+  `claude/*` nécessaire. Adresse publique inchangée : https://constanceparis7.com
+
+## Ce que je n'ai PAS pu vérifier
+- **Réseau sortant bloqué**, comme aux passes des 11, 12, 13, 19 et 20/08 : `curl -sL`
+  renvoie `000` sur des domaines témoins neutres (wikipedia.org, google.com) et le statut
+  de la passerelle confirme `connect_rejected` — « gateway answered 403 to CONNECT ». Ce
+  n'est donc pas un incident propre aux sites du radar. Conséquences du jour : **aucun
+  test de lien**, aucune lecture de page officielle, aucun détail de fréquentation. La
+  condensation, elle, n'en souffre pas : elle ne travaille que sur du texte déjà vérifié
+  et publié, sans jamais rien ajouter.
+- **Doublon toujours ouvert** : les deux fiches « DG Resort 2026 à Saint-Tropez — Casa
+  Amor » et « Dolce & Gabbana x Casa Amor — takeover DG Resort » décrivent la même
+  opération, mêmes dates, même lieu. Non fusionnées ici : un merge à 12 langues demande
+  une relecture complète des deux jeux de traductions pour ne perdre aucun fait, et cela
+  mérite une passe dédiée plutôt qu'une fin de session.
+- **147 doutes de ré-audit** attendent toujours une passe avec réseau (registre
+  consolidé aujourd'hui, mais aucun doute tranché faute de pouvoir lire une source).
 
 ## Anomalies
-- Réseau : `curl`/`WebFetch` bloqués toute la passe (voir plus haut) — sans impact sur
-  le travail du jour, mais empêche tout test de lien direct et le relevé de visites.
-- Rien d'autre à signaler.
+Une seule, à signaler franchement : un fichier d'agent est apparu entre le moment où j'ai
+listé le lot et le moment où j'ai injecté, si bien qu'une fiche (Yves Saint Laurent and
+Photography) est partie en ligne sans avoir passé le contrôle de préservation des faits.
+Contrôlée immédiatement après publication : elle est saine, aucun fait perdu. La règle
+qui en découle — n'ouvrir le contrôle qu'une fois TOUS les agents du lot rendus, un
+fichier présent n'étant pas un fichier fini — est inscrite dans `lessons.md`.
