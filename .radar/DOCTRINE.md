@@ -239,6 +239,45 @@ Jamais de « bon hôtel » ni de « bonne table » : le standard est celui du
 Cheval Blanc, du Louis XV, des Caves du Roy. Si la ville n'offre rien de ce
 calibre, en mettre moins plutôt qu'en mettre de moindre.
 
+## LA JOAILLERIE EST LE TROU DU RADAR (constat du 20/08/2026)
+
+Le site annonce à Google, dans sa propre description : « défilés, **haute
+joaillerie**, polo, galas, ventes aux enchères ». Il tient **2 fiches** de
+joaillerie en fenêtre live, contre 92 festivals. C'est le seul endroit du site
+qui promet ce qu'il ne livre pas.
+
+Les deux fiches existantes sont des expositions de musée à Paris (Van Cleef &
+Arpels, Daniel Brush). **Aucun lancement de collection, aucune vente, aucun
+salon.** Une troisième fiche gonflait le compteur par erreur : The I.C.E. St.
+Moritz, qui est un concours d'élégance automobile — reclassée en `artdevivre`
+le 20/08/2026, comme Chantilly et Pebble Beach.
+
+**POURQUOI C'EST LA PRIORITÉ.** Ce sont les maisons joaillières qui ont un
+service de presse, un budget et des soirées sur invitation. Un festival n'a
+rien de tout cela. La catégorie la plus faible du radar est exactement celle où
+se trouvent les partenaires visés.
+
+**LE CALENDRIER TOMBE DANS LES MOIS VIDES** — un seul effort comble deux trous
+(voir aussi le reste-à-faire : automne et printemps 2027) :
+
+| Événement | Dates vérifiées le 20/08/2026 | Mois aujourd'hui |
+|---|---|---|
+| Sotheby's Fine Jewelry, Genève | 30/10 → 13/11/2026 (expo 6-10/11) | nov. : 18 |
+| **Watches and Wonders**, Genève | **5 → 11 avril 2027** (public 9-11) | **avril : 0** |
+| GemGenève, Palexpo | 11 → 14 mai 2027 | mai : 4 |
+
+**À CHAQUE PASSE, tant que la joaillerie est sous 10 fiches en fenêtre live :
+créer une fiche joaillière née COMPLÈTE** (voie d'entrée + séjour + 13 langues),
+avant tout autre ajout. Pistes : Watches and Wonders, GemGenève, Vicenzaoro,
+ventes Christie's et Sotheby's de Genève, Biennale Paris, PAD, TEFAF, Doha
+Jewellery & Watches, et les lancements de haute joaillerie de juillet à Paris
+pendant la semaine de la couture.
+
+**Ne pas gonfler le compteur.** Une exposition qui cite une maison n'est pas une
+fiche de joaillerie ; un concours automobile sponsorisé par un horloger non
+plus. La catégorie `joaillerie` est réservée aux événements dont la joaillerie
+ou la haute horlogerie est le SUJET.
+
 ## LE PIÈGE DU « 31 AOÛT » (constat du 20/08/2026)
 
 **46 fiches de la fenêtre live se terminent exactement le 31/08/2026** — 14 % du
