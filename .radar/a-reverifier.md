@@ -7,6 +7,8 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 
 | Événement | Doute | Constaté le | Pourquoi non tranché |
 |---|---|---|---|
+| Dolce & Gabbana x Casa Amor — takeover 'DG Resort' | le takeover 2026 est confirmé, ses dates ne le sont pas | 20/08/2026 | world.dolcegabbana.com — DG Resort 2026 confirme Casa Amor (plage de Pampelonne) parmi ses adresses, motif Carretto Siciliano et pop-up store. AUCUNE date de début ni de fin n'est publiée par la maison. La fenêtre 01/07→30/08 de la fiche reste invérifiée. |
+| JustMe Porto Cervo — Opening & Saison 2026 | ouverture annoncée au 4 juillet, la fiche dit le 10 | 20/08/2026 | sources locales sardes — ouverture de la saison 2026 annoncée au 4 juillet 2026 ; la fiche démarre au 10/07. Écart d'une semaine, sur une source qui n'est pas le club lui-même : non corrigé faute de source de première main. Aucune date de fin publiée. |
 | Beefbar x Airelles — pop-up estival à La Bastide de Gordes | date de fin de saison non publiée | 20/08/2026 | airelles.com — la page du Beefbar de Gordes donne les horaires (18h-1h30) mais aucune date de clôture 2026. La fin au 28/08 portée par la fiche reste invérifiée. |
 | Fiera di Sant'Ermete et feux d'artifice de Forte dei Marmi | la source citée date de 2024, pas de 2026 | 20/08/2026 | luccatimes.it — l'article cité par la fiche est daté d'août 2024 et donne le programme 2024 (26, 27, 28 août). Les dates 2026 de la fiche sont identiques : plausible pour une fête patronale à date fixe, mais AUCUNE source 2026 ne les confirme. À reprendre sur une source de l'année. |
 | Lilly's Club Saint-Tropez (ex-VIP Room) | aucune date 2026 publiée par le club | 20/08/2026 | lillysclub.com/future-events — la page annonce « Saint-Tropez Summer 2026. Stay Tuned » sans une seule date. La saison 01/08 → 29/08 portée par la fiche est invérifiable en l'état. |
@@ -57,21 +59,21 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] Black Coffee — Residency 2026 (SantAnna Mykonos) — signalé le 11/08/2026
 - [ ] Calder. Rêver en équilibre — Fondation Louis Vuitton — signalé le 11/08/2026
 - [ ] Calvin Harris — Ushuaia Ibiza — signalé le 11/08/2026
-- [ ] Capri en aout : saison de la taverne Anema e Core et programme municipal Emozioni d'Estate — signalé le 11/08/2026
+- [x] Capri en aout : saison de la taverne Anema e Core et programme municipal Emozioni d'Estate — TRANCHÉ le 20/08/2026 : presse caprese (Isola di Capri Portal, Il Mattino) — saison 2026 ouverte depuis Pâques et courant jusqu'en septembre, 23h-4h, Via Sella Orta 1. La fenêtre d'août de la fiche est entièrement couverte par la saison.
 - [ ] Cavo Paradiso — Saison DJ 2026 (club iconique en falaise) — signalé le 11/08/2026
 - [ ] Circuit vacances des mannequins - Mediterranee (Saint-Tropez, Ibiza, Mykonos, Sardaigne) — signalé le 11/08/2026
-- [ ] Covo di Nord-Est — club iconique de la Riviera — signalé le 11/08/2026
-- [ ] David Guetta F*** Me I'm Famous! — Ushuaia Ibiza — signalé le 11/08/2026
+- [x] Covo di Nord-Est — club iconique de la Riviera — TRANCHÉ le 20/08/2026 : covodinordest.it + presse — saison 2026 ouverte depuis le 25 avril, soirées d'été en cours, lungomare Rossetti 1. La fenêtre 01/07→31/08 de la fiche est entièrement dans la saison.
+- [x] David Guetta F*** Me I'm Famous! — Ushuaia Ibiza — TRANCHÉ le 20/08/2026 : theushuaiaexperience.com — résidence TOUS LES LUNDIS du 1er juin au 5 OCTOBRE 2026, 17h-23h, pages d'événement officielles jusqu'au 07/09 au moins. La fiche s'arrêtait au 31/08 : date de fin CORRIGÉE au 05/10/2026.
 - [ ] Dior Spa Cheval Blanc Paris — expérience bien-être Dioriviera — signalé le 11/08/2026
 - [ ] Dolce & Gabbana Beach Club a Gurney's Montauk — signalé le 11/08/2026
 - [ ] Dolce & Gabbana x Casa Amor — takeover 'DG Resort' (thème Carretto Siciliano) — signalé le 11/08/2026
 - [ ] Ete a l'Hotel du Palais Biarritz (palace imperial) — signalé le 11/08/2026
 - [x] Exposition Générale — inauguration de la nouvelle Fondation Cartier (place du Palais-Royal) — TRANCHÉ le 20/08/2026 : fondationcartier.com — « 25 oct. 2025 → 23 août 2026 », 2 place du Palais-Royal : date de fin confirmée au jour près
 - [ ] GAIA Bodrum — résidence estivale grecque-méditerranéenne au Mandarin Oriental — signalé le 11/08/2026
-- [ ] Grand Hôtel de Cala Rossa — saison 2026 et table étoilée La Pinède — signalé le 11/08/2026
-- [ ] Hamptons Polo Club - finales et grandes journees d'aout (Continental Cup 16-Goal, Monty Waterbury Cup, Hamptons Festival of Polo, finale 4-… — signalé le 11/08/2026
+- [x] Grand Hôtel de Cala Rossa — saison 2026 et table étoilée La Pinède — TRANCHÉ le 20/08/2026 : Relais & Châteaux + office de tourisme de Porto-Vecchio — hôtel ouvert du 7 mai au 25 octobre 2026, 39 chambres, spa Nucca. La fenêtre 01/07→31/08 de la fiche est donc SÛRE (et prudente). Les URL citées par la fiche sont exactes.
+- [x] Hamptons Polo Club - finales et grandes journees d'aout (Continental Cup 16-Goal, Monty Waterbury Cup, Hamptons Festival of Polo, finale 4-… — TRANCHÉ le 20/08/2026 : hamptonspoloclub.com/schedule — calendrier officiel d'août 2026 : Atlantic Liberty Cup le 8, Hamptons Festival of Polo et finale Nova Cup le 22, finale August 4 Goal le 29, Labor Day Cup 8 Goal le 30. La fenêtre 01→30/08 de la fiche couvre exactement ces journées.
 - [ ] Helter Skelter: Arthur Jafa and Richard Prince (Fondazione Prada Venise) — signalé le 11/08/2026
-- [ ] Hilma af Klint — Paintings for the Temple (1906-1915) — Grand Palais — signalé le 11/08/2026
+- [x] Hilma af Klint — Paintings for the Temple (1906-1915) — Grand Palais — TRANCHÉ le 20/08/2026 : Grand Palais — exposition du 6 mai au 30 août 2026, 193 œuvres de la série des Peintures pour le Temple (1906-1915), commissariat Pascal Rousseau, coproduction Centre Pompidou. Dates confirmées au jour près.
 - [ ] Jacquemus x Monte-Carlo Beach — takeover été 2026 (2e année) — signalé le 11/08/2026
 - [ ] JustMe Porto Cervo — Opening & Saison 2026 — signalé le 11/08/2026
 - [ ] L'été au Westminster – palace Barrière du Touquet (table étoilée Le Pavillon) — signalé le 11/08/2026
@@ -81,7 +83,7 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] Le Jardin de Cheval Blanc Paris — rooftop d'été (7e étage) — signalé le 11/08/2026
 - [ ] Les Caves du Roy — nuits de juillet (Hôtel Byblos) — signalé le 11/08/2026
 - [ ] Lilly's Club Saint-Tropez (ex-VIP Room) — saison d'août — signalé le 11/08/2026
-- [ ] Meeting de Deauville Barrière 2026 — signalé le 11/08/2026
+- [x] Meeting de Deauville Barrière 2026 — TRANCHÉ le 20/08/2026 : billetterie.france-galop.com — « Du 2 au 30 août 2026 », courses les mardis, jeudis (semi-nocturnes), samedis (sauf le 29/08) et dimanches. Dates confirmées au jour près.
 - [ ] Nikki Beach Mallorca — Beach club (Calvia) — signalé le 11/08/2026
 - [ ] Nikki Beach Miami Beach — Amazing Sundays & Saturdance (beach club ADN Riviera) — signalé le 11/08/2026
 - [ ] Principote — Beach club chic de Panormos — signalé le 11/08/2026
@@ -142,11 +144,11 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [ ] POINT D'ENTRÉE — Silencio (club privé, Paris) : adhésion sur candidature — signalé le 12/08/2026
 - [ ] POINT D'ENTRÉE — Ventes aux enchères et expositions publiques des auctioneers (Christie's, Sotheby's, Drouot) — signalé le 12/08/2026
 - [ ] POINT D'ENTRÉE — Ventes presse et ventes privées des maisons de mode — signalé le 12/08/2026
-- [ ] Passione Engadina 2026 — « The Italian Job » (15e édition) — signalé le 12/08/2026
+- [x] Passione Engadina 2026 — « The Italian Job » (15e édition) — TRANCHÉ le 20/08/2026 : passione-engadina.ch + offices de tourisme d'Engadine — 27 au 30 août 2026, 15e anniversaire, thème « The Italian Job » ; Ladies' Cup et Next Gen Cup le 27, Julius Baer Challenge les 28-29, clôture à St-Moritz le 30. Dates ET thème concordent.
 - [ ] Pop-up Swatch Saint-Tropez (ouvert depuis le 10 avril 2026, pour un an) — signalé le 12/08/2026
 - [ ] Pop-up Vivrelle x Kith Women - Bridgehampton — signalé le 12/08/2026
 - [ ] Portofino, saison d'ete des maisons de luxe et calendrier evenementiel 2026 — signalé le 12/08/2026
-- [ ] Premio Faraglioni Capri International 2026 – hommage à Toni Servillo — signalé le 12/08/2026
+- [x] Premio Faraglioni Capri International 2026 – hommage à Toni Servillo — TRANCHÉ le 20/08/2026 : presse italienne (ANSA, Capri Press) — 31e édition le DIMANCHE 30 AOÛT 2026, soirée de gala au Chiostro Grande de la Certosa di San Giacomo, prix remis à Toni Servillo. Date confirmée.
 - [ ] Prix Jacques Le Marois (Groupe 1) — signalé le 12/08/2026
 - [ ] Ron Mueck — Mori Art Museum x Fondation Cartier pour l'art contemporain — signalé le 12/08/2026
 - [ ] Réouverture d'hiver de The Alpina Gstaad — signalé le 12/08/2026
