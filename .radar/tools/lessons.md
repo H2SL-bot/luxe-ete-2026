@@ -681,3 +681,47 @@ caractères comme objectif de RÉDACTION à l'intérieur de chaque condensation.
 pratique : la deuxième vague sélectionnée à ≥1200 car. n'a recoupé aucune fiche de la
 première vague et a fait baisser les compteurs WARN de `validate.py` (iv.g 120→98,
 iv.w 137→118 sur la journée, deux lots de 20 fiches de la fenêtre live).
+
+## 20/08/2026 (2e passe) — un agent qui condense CROIT n'avoir rien perdu, et se trompe
+La consigne de condensation dit « on ne supprime aucun fait ». Les dix agents de la
+première vague l'ont tous affirmé dans leur compte rendu (« tous les faits conservés »,
+« aucun e-mail, numéro, URL ou tarif perdu »). Un contrôle ALGORITHMIQUE écrit ensuite
+(`verif_faits.py` : extraction par expressions régulières des e-mails, URLs, téléphones
+et montants de l'entrée, puis différence avec la sortie, sur la CONCATÉNATION des trois
+champs — un fait peut légitimement migrer de `iv.o` vers `iv.w`) a trouvé de vraies
+pertes que la relecture humaine du résumé n'aurait jamais vues.
+RÈGLE : ne jamais accepter « rien n'a été perdu » sur la parole de l'agent qui a fait le
+travail. Un contrôle mécanique sur les faits DURS (ce qui a une forme reconnaissable :
+e-mail, URL, numéro, tarif) coûte dix minutes à écrire et se rejoue à chaque lot.
+
+Trois pièges rencontrés en l'écrivant, chacun capable de rendre le contrôle inutile :
+1. **Contrôler pendant que les agents écrivent encore.** Le premier passage a accusé 4
+   fiches, dont 2 à tort : leurs fichiers de sortie étaient encore en cours d'écriture.
+   Un fichier présent n'est pas un fichier fini — n'ouvrir le contrôle qu'une fois TOUS
+   les agents du lot rendus (la notification de fin, pas l'existence du fichier).
+2. **Les faux positifs de FORMAT.** « +33 (0)1 79 35 50 22 » et « +33179355022 » sont le
+   même numéro ; « 7,00 € » et « 7 € » le même tarif ; un e-mail suivi d'un point de
+   ponctuation n'est pas un autre e-mail. Sans normalisation, le contrôle crie au loup et
+   on cesse de le lire — exactement la faute du seuil de cadence du 13/08.
+3. **La suppression LÉGITIME.** Un chiffre que la fiche elle-même déclare réfuté (« le
+   tarif de 19 € colporté par des sources secondaires est RÉFUTÉ ») DOIT disparaître avec
+   le raisonnement qui le porte : le garder republierait la donnée fausse. Le contrôle le
+   signale, c'est à la session de trancher au cas par cas — et la consigne des agents a
+   été amendée en cours de passe pour rendre cette exception explicite.
+Corollaire : un contrôle mécanique ne remplace pas le jugement, il DÉSIGNE les endroits
+où le jugement doit se poser.
+
+## 20/08/2026 (2e passe) — un registre qui se répète 73 fois ne se lit plus
+`.radar/a-reverifier.md` avait atteint 706 lignes, dont 73 répétitions du MÊME en-tête
+« Vérifiées à moyens réduits — ré-audit obligatoire » suivi du même paragraphe
+d'explication, chacune n'apportant qu'une ou deux fiches. Les mêmes fiches revenaient
+jusqu'à quatre fois à des dates différentes. Personne ne pouvait plus y lire l'essentiel :
+combien de doutes sont ouverts, et depuis quand.
+Cause : chaque passe AJOUTAIT sa section en fin de fichier au lieu d'alimenter une liste.
+Un registre alimenté par append sans dédoublonnage devient illisible en deux semaines.
+Consolidé : une seule section, 147 fiches distinctes, chacune datée de son PREMIER
+signalement (l'ancienneté du doute est l'information utile, pas la dernière redite), et
+une rubrique séparée pour les doutes devenus sans objet parce que la fiche a été purgée.
+706 → 263 lignes, aucune information perdue, toutes les sections narratives conservées.
+RÈGLE : un fichier de registre s'écrit en LISTE dédupliquée, pas en journal d'ajouts.
+Avant d'ajouter une entrée, vérifier si la clé existe déjà et n'en garder qu'une.
