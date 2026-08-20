@@ -50,11 +50,25 @@ règleront que par courriel. 6 lettres partent le 21 et le 24 août.
 
 ## ⬜ À FAIRE
 
-**06 · La page d'accueil est illisible sans JavaScript**
-3,30 Mo, et **913 signes de texte lisible** seulement. Un moteur de recherche
-qui n'exécute pas le JavaScript ne voit presque rien. Les 6 978 pages générées
-compensent, mais l'accueil — la page la plus liée du site — pèse le plus lourd
-et dit le moins.
+**06 · ~~La page d'accueil est illisible sans JavaScript~~ → RÉGLÉ le 20/08/2026,
+mais pas pour la raison annoncée.**
+
+Le constat initial était EXAGÉRÉ, et il faut le dire : mesures relevées le
+20/08 — chargement complet en **0,52 s**, 1,05 Mo transférés, **3 ressources
+externes** seulement. Un robot sans JavaScript reçoit déjà **60 événements
+structurés** en ld+json, plus la description et les balises og complètes. La
+peur « Google ne voit rien » était infondée.
+
+**Mais le diagnostic a trouvé un vrai défaut, invisible jusque-là :** la racine
+était **la seule page du site sans aucune balise hreflang**, quand les 12
+accueils de langue et les 6 971 pages générées en déclarent 14. Or Google
+n'honore une déclaration hreflang que si elle est RÉCIPROQUE : le groupe des 13
+langues risquait d'être ignoré en entier. Corrigé — 14 balises posées, diff
+vérifié (14 lignes ajoutées, 0 retirée), réciprocité établie en ligne.
+
+**Non fait, délibérément :** découper le bloc de données (90 % du poids).
+Opérer le cœur de l'application pour gagner sur une page qui charge en une
+demi-seconde n'est pas justifié tant que les chantiers 12 et 07 sont ouverts.
 
 **07 · La joaillerie est absente**
 Fenêtre live : **92 festivals, 3 fiches de joaillerie.** Sur un radar du luxe
