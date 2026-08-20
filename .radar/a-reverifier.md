@@ -7,6 +7,7 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 
 | Événement | Doute | Constaté le | Pourquoi non tranché |
 |---|---|---|---|
+| Scorpios — Nuits signature | la saison va jusqu'au 4 octobre, la fiche s'arrête au 31 août | 20/08/2026 | programmation Scorpios 2026 — saison de mai à octobre, soirée de clôture le 4 octobre 2026. La fiche porte sur les « nuits signature » (Innervisions, Keinemusik) : impossible de savoir sans la source du club si CETTE série s'arrête fin août ou suit la saison. Non corrigé. |
 | Dolce & Gabbana x Casa Amor — takeover 'DG Resort' | le takeover 2026 est confirmé, ses dates ne le sont pas | 20/08/2026 | world.dolcegabbana.com — DG Resort 2026 confirme Casa Amor (plage de Pampelonne) parmi ses adresses, motif Carretto Siciliano et pop-up store. AUCUNE date de début ni de fin n'est publiée par la maison. La fenêtre 01/07→30/08 de la fiche reste invérifiée. |
 | JustMe Porto Cervo — Opening & Saison 2026 | ouverture annoncée au 4 juillet, la fiche dit le 10 | 20/08/2026 | sources locales sardes — ouverture de la saison 2026 annoncée au 4 juillet 2026 ; la fiche démarre au 10/07. Écart d'une semaine, sur une source qui n'est pas le club lui-même : non corrigé faute de source de première main. Aucune date de fin publiée. |
 | Beefbar x Airelles — pop-up estival à La Bastide de Gordes | date de fin de saison non publiée | 20/08/2026 | airelles.com — la page du Beefbar de Gordes donne les horaires (18h-1h30) mais aucune date de clôture 2026. La fin au 28/08 portée par la fiche reste invérifiée. |
@@ -76,19 +77,19 @@ indiquée est celle du PREMIER signalement, donc l'ancienneté du doute).
 - [x] Hilma af Klint — Paintings for the Temple (1906-1915) — Grand Palais — TRANCHÉ le 20/08/2026 : Grand Palais — exposition du 6 mai au 30 août 2026, 193 œuvres de la série des Peintures pour le Temple (1906-1915), commissariat Pascal Rousseau, coproduction Centre Pompidou. Dates confirmées au jour près.
 - [ ] Jacquemus x Monte-Carlo Beach — takeover été 2026 (2e année) — signalé le 11/08/2026
 - [ ] JustMe Porto Cervo — Opening & Saison 2026 — signalé le 11/08/2026
-- [ ] L'été au Westminster – palace Barrière du Touquet (table étoilée Le Pavillon) — signalé le 11/08/2026
-- [ ] LIV at Fontainebleau — nightclub iconique (soirees d'ete) — signalé le 11/08/2026
+- [x] L'été au Westminster – palace Barrière du Touquet (table étoilée Le Pavillon) — TRANCHÉ le 20/08/2026 : hotelsbarriere.com — Le Westminster est un 5-étoiles ouvert à l'année (dernières informations publiées le 30/07/2026), pas un établissement saisonnier. La fenêtre d'été de la fiche est sûre.
+- [x] LIV at Fontainebleau — nightclub iconique (soirees d'ete) — TRANCHÉ le 20/08/2026 : livnightclub.com/miami/events — calendrier officiel publié du jeudi au dimanche jusqu'au 27 septembre 2026 inclus (French Montana 28/08, Steve Aoki 25/09, Crankdat 26/09), portes à 23h30. Date de fin CORRIGÉE : 31/08 → 27/09/2026 (borne prouvée, la saison peut aller au-delà).
 - [ ] LUMA Arles — Semaine d'ouverture et expositions de l'été 2026 (Fondation Maja Hoffmann) — signalé le 11/08/2026
-- [ ] La Gritta American Bar — Portofino — signalé le 11/08/2026
+- [x] La Gritta American Bar — Portofino — TRANCHÉ le 20/08/2026 : lagrittaportofino.it — « Siamo aperti 7 giorni su 7 », 9h-2h. Le bar est ouvert en continu : la fenêtre d'été de la fiche est entièrement couverte.
 - [ ] Le Jardin de Cheval Blanc Paris — rooftop d'été (7e étage) — signalé le 11/08/2026
 - [ ] Les Caves du Roy — nuits de juillet (Hôtel Byblos) — signalé le 11/08/2026
 - [ ] Lilly's Club Saint-Tropez (ex-VIP Room) — saison d'août — signalé le 11/08/2026
 - [x] Meeting de Deauville Barrière 2026 — TRANCHÉ le 20/08/2026 : billetterie.france-galop.com — « Du 2 au 30 août 2026 », courses les mardis, jeudis (semi-nocturnes), samedis (sauf le 29/08) et dimanches. Dates confirmées au jour près.
-- [ ] Nikki Beach Mallorca — Beach club (Calvia) — signalé le 11/08/2026
+- [x] Nikki Beach Mallorca — Beach club (Calvia) — TRANCHÉ le 20/08/2026 : nikkibeach.com / mallorca.com — saison 2026 close le 11 OCTOBRE (restaurant 12h-18h, plage jusqu'à 19h le week-end), Avenida Notario Alemany 1, Magaluf. Date de fin CORRIGÉE : 31/08 → 11/10/2026.
 - [ ] Nikki Beach Miami Beach — Amazing Sundays & Saturdance (beach club ADN Riviera) — signalé le 11/08/2026
 - [ ] Principote — Beach club chic de Panormos — signalé le 11/08/2026
-- [ ] Ritual Club Baja Sardinia — Saison 2026 — signalé le 11/08/2026
-- [ ] Saison d'été à l'Hôtel du Cap-Eden-Roc (Oetker Collection) — signalé le 11/08/2026
+- [x] Ritual Club Baja Sardinia — Saison 2026 — TRANCHÉ le 20/08/2026 : presse sarde et communication du club — saison 2026 du 28-29 mai au 12-13 septembre, tous les soirs sauf lundi du 27/06 au 30/08, puis vendredis et samedis jusqu'au 13/09. Date de fin CORRIGÉE : 31/08 → 13/09/2026.
+- [x] Saison d'été à l'Hôtel du Cap-Eden-Roc (Oetker Collection) — TRANCHÉ le 20/08/2026 : Oetker Collection / office de tourisme d'Antibes — saison d'avril à octobre, fermeture hivernale d'octobre à avril. La fenêtre d'août de la fiche est entièrement dans la saison.
 - [ ] SantAnna Mykonos — Nuits headline (Martinez Brothers, Marco Carola, Vintage Culture, Artbat...) — signalé le 11/08/2026
 - [ ] Scorpios — Nuits signature (Innervisions, Keinemusik, Peggy Gou) — signalé le 11/08/2026
 - [ ] Soirees d'ete des Hotels Barrière (Normandy, Royal, Casino) — signalé le 11/08/2026

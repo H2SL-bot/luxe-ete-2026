@@ -239,6 +239,29 @@ Jamais de « bon hôtel » ni de « bonne table » : le standard est celui du
 Cheval Blanc, du Louis XV, des Caves du Roy. Si la ville n'offre rien de ce
 calibre, en mettre moins plutôt qu'en mettre de moindre.
 
+## LE PIÈGE DU « 31 AOÛT » (constat du 20/08/2026)
+
+**46 fiches de la fenêtre live se terminent exactement le 31/08/2026** — 14 % du
+site. Ce n'est pas une date : c'est un bouchon posé quand la vraie fin de saison
+n'était pas connue. Le voile d'affichage les ferait toutes disparaître le
+1er septembre, la plupart à tort.
+
+Quatre ont été vérifiées le 20/08/2026 à leur source officielle. **Les quatre
+étaient fausses**, toutes dans le même sens — l'événement dure plus longtemps :
+
+| Fiche | Portée | Réel |
+|---|---|---|
+| David Guetta / Ushuaïa | 31/08 | 05/10 (résidence du lundi) |
+| Nikki Beach Mallorca | 31/08 | 11/10 |
+| LIV at Fontainebleau | 31/08 | 27/09 au moins |
+| Ritual Club Baja Sardinia | 31/08 | 13/09 |
+
+**RÈGLE.** Une date de fin au 31/08 (ou au 31/12, 18 fiches) doit être traitée
+comme NON RENSEIGNÉE tant qu'une source officielle ne la confirme pas. Priorité
+haute avant le 1er septembre : les 42 restantes sont à reprendre une par une.
+Ne jamais poser une fin de saison « par défaut » : mieux vaut inscrire le doute
+au registre que tronquer un événement réel.
+
 ## VOILE D'AFFICHAGE (directive du 28/07/2026)
 
 L'internaute ne voit JAMAIS un événement terminé : un voile côté écran retire
