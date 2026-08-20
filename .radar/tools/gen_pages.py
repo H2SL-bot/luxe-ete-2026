@@ -559,6 +559,20 @@ valeur : la confiance de celles et ceux qui le lisent.</p>
                '<link rel="alternate" hreflang="fr" href="%s/a-propos.html">' % BASE))
     sitemap_urls.append(f"{BASE}/a-propos.html")
 
+    # --- direction de la publication : bascule datée, automatique ----------
+    # Constance est née le 21/09/2008. Tant qu'elle est mineure, la loi du
+    # 29 juillet 1881 impose que le directeur de la publication soit son
+    # représentant légal. Le jour de ses 18 ans, elle le devient elle-même.
+    # Cette page étant regénérée à chaque passe quotidienne, la bascule se
+    # fait TOUTE SEULE le matin du 21/09/2026 : rien à penser, rien à cliquer.
+    MAJORITE = date(2026, 9, 21)
+    if date.today() >= MAJORITE:
+        DIRPUB = "Constance Lefebvre, éditrice du site."
+    else:
+        DIRPUB = ("Gerald Lefebvre, représentant légal de l'éditrice.<br>"
+                  "<span style=\"color:#9fb0bd\">Constance Lefebvre reprendra la "
+                  "direction de la publication à sa majorité.</span>")
+
     # --- mentions légales (obligation de l'article 6 de la LCEN) -----------
     # Page générée comme les autres pour hériter du même habillage et entrer
     # au plan du site. Rédigée en français : c'est un texte de droit français.
@@ -574,8 +588,8 @@ confiance dans l'économie numérique, l'éditrice, qui publie à titre non prof
 ne rend pas publique son adresse postale. Les éléments d'identification prévus par la
 loi sont détenus par l'hébergeur, qui les tient à la disposition de l'autorité judiciaire.</p>
 
-<h2 class="sub">Directrice de la publication</h2>
-<p>Constance Lefebvre.</p>
+<h2 class="sub">Directeur de la publication</h2>
+<p>__DIRPUB__</p>
 
 <h2 class="sub">Hébergeur</h2>
 <p>GitHub, Inc. — service GitHub Pages<br>
@@ -648,7 +662,7 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
           page("fr", "Mentions légales — ConstanceParis7",
                "Éditrice, directrice de la publication, hébergeur, propriété "
                "intellectuelle et données personnelles du radar ConstanceParis7.",
-               "/mentions-legales.html", ML,
+               "/mentions-legales.html", ML.replace("__DIRPUB__", DIRPUB),
                '<link rel="alternate" hreflang="fr" href="%s/mentions-legales.html">' % BASE))
     sitemap_urls.append(f"{BASE}/mentions-legales.html")
 

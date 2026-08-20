@@ -81,6 +81,27 @@ tous RÉELS avec URL). GARDE-FOU ABSOLU : uniquement accès publié (galas à
 billets/don, clubs/plages à réservation, concerts en villa vendus au public).
 JAMAIS de fête privée sans billetterie, JAMAIS de contact inventé.
 
+## BASCULE DATÉE — DIRECTION DE LA PUBLICATION AU 21/09/2026
+
+Constance est mineure jusqu'au **21 septembre 2026**. La loi du 29 juillet 1881
+impose alors que le directeur de la publication soit son représentant légal :
+c'est Gerald Lefebvre qui est nommé sur `/mentions-legales.html`.
+
+**La bascule est automatique et ne demande aucune intervention.** La règle est
+écrite dans `gen_pages.py` (constante `MAJORITE`) : à la première exécution du
+générateur à partir du 21/09/2026, la page est réécrite au nom de Constance
+Lefebvre. Comme `gen_pages.py` est l'étape 7bis de CHAQUE passe, cela se produit
+le matin même, sans que personne ait à y penser.
+
+Si la passe du 21/09 échouait, la bascule se ferait à la première publication
+suivante — jamais plus tard. Ne pas coder de date en dur ailleurs, ne pas
+éditer `mentions-legales.html` à la main : le fichier est GÉNÉRÉ.
+
+Le même jour, deux choses deviennent possibles et devront être proposées :
+créer la micro-entreprise (donc publier une adresse professionnelle de
+domiciliation), et mentionner son âge sur `/a-propos.html` si elle le souhaite
+— retiré volontairement le 20/08/2026 tant qu'il révélait sa minorité.
+
 ## PROTECTION DES PERSONNES — AUCUNE COORDONNÉE NOMINATIVE EN PUBLIC (directive de Constance, 20/08/2026)
 
 Le site publiait l'adresse e-mail et la ligne directe de 610 personnes physiques
