@@ -94,10 +94,15 @@ même exposition, l'une annonçant des dates fausses. Huit autres paires portent
 un nom et une ville proches. À trancher une par une — certaines sont peut-être
 deux éditions légitimes.
 
-**11 · Le nom de domaine n'est pas verrouillé**
-`constanceparis7.com` chez Gandi. Le verrou de transfert empêche qu'on le
-déplace sans autorisation. C'est le seul actif du projet qu'on ne peut pas
-reconstruire : s'il est perdu, tout est perdu.
+**11 · ~~Le nom de domaine n'est pas verrouillé~~ → DÉJÀ FAIT, constaté le 21/08/2026**
+
+Vérifié au registre : `constanceparis7.com` porte le statut
+**`clientTransferProhibited`**. Le verrou de transfert est ACTIF — personne ne
+peut déplacer le domaine sans autorisation explicite. Gandi l'applique par
+défaut.
+
+Ce chantier n'aurait pas dû figurer au plan : je l'y avais inscrit sans le
+vérifier. Rien à faire.
 
 **12 · Il n'existe aucune lettre d'information**
 Vérifié : **zéro formulaire, zéro champ e-mail** sur tout le site. Les 1 795
