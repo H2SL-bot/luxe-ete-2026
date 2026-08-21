@@ -97,10 +97,32 @@ Si la passe du 21/09 échouait, la bascule se ferait à la première publication
 suivante — jamais plus tard. Ne pas coder de date en dur ailleurs, ne pas
 éditer `mentions-legales.html` à la main : le fichier est GÉNÉRÉ.
 
-Le même jour, deux choses deviennent possibles et devront être proposées :
-créer la micro-entreprise (donc publier une adresse professionnelle de
-domiciliation), et mentionner son âge sur `/a-propos.html` si elle le souhaite
-— retiré volontairement le 20/08/2026 tant qu'il révélait sa minorité.
+Le même jour, TROIS choses deviennent possibles et devront être proposées :
+
+1. **Créer la micro-entreprise** — donc publier une adresse professionnelle de
+   domiciliation dans les mentions légales, la loi l'exigeant dès le premier
+   euro encaissé. C'est ce qui débloque l'offre payante (« Le dossier », 500 €,
+   annoncée pour septembre).
+2. **Remettre son âge sur `/a-propos.html`** si elle le souhaite — retiré
+   volontairement le 20/08/2026 tant qu'il révélait sa minorité.
+3. **Ouvrir la lettre d'information** (chantier 12), décidée le 21/08/2026 et
+   volontairement reportée à la majorité : collecter des adresses fait de
+   Constance une responsable de traitement au sens du RGPD, ce qui relève de
+   son représentant légal tant qu'elle est mineure. Tout se prépare avant, les
+   inscriptions n'ouvrent qu'à cette date.
+   **Forme retenue : hebdomadaire, le vendredi matin, centrée sur LES DÉLAIS**
+   — « il vous reste 6 jours pour demander votre accréditation à X », les
+   portes qui s'ouvrent et celles qui se ferment. Pas un digest d'événements :
+   le site le fait déjà, et personne ne s'abonne à ce qu'il peut consulter.
+   L'actif réel, ce sont les échéances des 306 voies d'entrée, que personne
+   d'autre ne suit.
+   Conditions RGPD : case à cocher vide, double confirmation, finalité
+   annoncée, désabonnement en un clic, page de confidentialité. Outil
+   pressenti : Brevo (société française, serveurs UE, gratuit à ce volume).
+   **AVERTISSEMENT** : l'ajout d'un formulaire cassera probablement la pureté
+   actuelle du site (0 cookie, 3 requêtes) et rendra FAUSSE la phrase « Aucun
+   cookie n'est déposé » des mentions légales. Les mettre à jour le même jour,
+   sans quoi le site mentira là où il promet la rigueur.
 
 ## PROTECTION DES PERSONNES — AUCUNE COORDONNÉE NOMINATIVE EN PUBLIC (directive de Constance, 20/08/2026)
 

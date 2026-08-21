@@ -104,7 +104,7 @@ défaut.
 Ce chantier n'aurait pas dû figurer au plan : je l'y avais inscrit sans le
 vérifier. Rien à faire.
 
-**12 · Il n'existe aucune lettre d'information**
+**12 · Il n'existe aucune lettre d'information** — *décidé le 21/08/2026 : ouverture le 21 septembre, à la majorité. Forme retenue : hebdomadaire du vendredi, centrée sur les délais des voies d'entrée. Détail complet dans la doctrine, section « BASCULE DATÉE ».*
 Vérifié : **zéro formulaire, zéro champ e-mail** sur tout le site. Les 1 795
 visiteurs quotidiens repartent sans laisser de trace, et rien ne permet de les
 retrouver. C'est le seul actif qui appartiendrait vraiment à Constance : le
