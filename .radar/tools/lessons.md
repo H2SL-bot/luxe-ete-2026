@@ -725,3 +725,17 @@ une rubrique séparée pour les doutes devenus sans objet parce que la fiche a �
 706 → 263 lignes, aucune information perdue, toutes les sections narratives conservées.
 RÈGLE : un fichier de registre s'écrit en LISTE dédupliquée, pas en journal d'ajouts.
 Avant d'ajouter une entrée, vérifier si la clé existe déjà et n'en garder qu'une.
+
+## 21/08/2026 — `verif_faits.py` n'était jamais sauvegardé : réécrit à chaque passe
+Le contrôle mécanique de non-perte de faits (leçon du 20/08 : « ne jamais accepter
+'rien n'a été perdu' sur la parole de l'agent ») avait été écrit ce jour-là mais
+seulement dans un scratchpad de session — introuvable en tools/ au début de cette
+passe. Réécrit une seconde fois, testé sur 20 fiches condensées (7/20 alertes, 3
+pertes réelles confirmées et corrigées avant publication, 4 fausses alertes de
+format). Cette fois PERSISTÉ dans `.radar/tools/verif_faits.py`, générique
+(dossier entrée / dossier sortie de fichiers `{"n","o","g","w"}` appariés par nom),
+avec normalisation téléphone (terminaison à 9 chiffres, absorbe +33 vs 0 en tête)
+et montant (ignore les zéros de centimes) pour réduire le bruit de format.
+RÈGLE : un outil de contrôle écrit pendant une passe DOIT être commité dans
+`.radar/tools/`, jamais laissé dans un scratchpad — sinon la leçon qui l'a fait
+naître se reperd et se repaye à chaque passe.
