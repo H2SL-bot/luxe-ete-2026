@@ -288,6 +288,20 @@ se trouvent les partenaires visés.
 | **Watches and Wonders**, Genève | **5 → 11 avril 2027** (public 9-11) | **avril : 0** |
 | GemGenève, Palexpo | 11 → 14 mai 2027 | mai : 4 |
 
+**ORDRE DE PRIORITÉ, fixé le 21/08/2026 au soir.** Le réseau sortant a été
+ouvert (« Accès réseau : Complet ») : la passe du 22/08 est la première à
+pouvoir vérifier dehors. Deux chantiers l'attendent, et ils ne sont pas
+également pressés :
+
+1. **D'ABORD le piège du « 31 août »** — 22 fiches d'établissements réels
+   portent une fin de saison qui est un bouchon. Elles DISPARAÎTRONT de l'écran
+   le 1er septembre, la plupart à tort. Échéance ferme, contenu vrai à sauver.
+   Établir ces dates à leur source officielle passe avant tout le reste.
+2. **ENSUITE la joaillerie** — 8 fiches à créer. Aucune échéance.
+
+Perdre du contenu exact coûte plus cher que de ne pas encore en avoir ajouté.
+Une fois les 22 dates établies, revenir à la règle ci-dessous.
+
 **À CHAQUE PASSE, tant que la joaillerie est sous 10 fiches en fenêtre live :
 créer une fiche joaillière née COMPLÈTE** (voie d'entrée + séjour + 13 langues),
 avant tout autre ajout. Pistes : Watches and Wonders, GemGenève, Vicenzaoro,
