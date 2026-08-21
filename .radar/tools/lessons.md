@@ -739,3 +739,63 @@ et montant (ignore les zéros de centimes) pour réduire le bruit de format.
 RÈGLE : un outil de contrôle écrit pendant une passe DOIT être commité dans
 `.radar/tools/`, jamais laissé dans un scratchpad — sinon la leçon qui l'a fait
 naître se reperd et se repaye à chaque passe.
+
+## 21/08/2026 (2e passe) — un condensateur abrège les URL et déforme les adresses de service
+Deuxième vague de condensation `iv` (36 fiches en deux lots). `verif_faits.py` a levé
+12 alertes ; **4 étaient de vraies pertes, toutes du même genre** : l'agent réécrit un
+fait au lieu de le recopier. Une adresse de service transformée (`press@` au lieu de
+`presse@butler-collection.fr` — une lettre, et le lecteur écrit dans le vide), une URL
+SevenRooms abrégée en « .../paraggifiore » pour gagner de la place, deux URL Hermès et
+une page tarifaire Sottovento simplement tombées. Aucune n'aurait été vue à la
+relecture : les trois agents concernés ont tous affirmé n'avoir rien perdu.
+CORRECTIF de consigne, appliqué dès le lot 2 : la règle de condensation dit désormais
+« CHAQUE URL À L'IDENTIQUE — ne jamais abréger une URL en `.../suite` : recopie-la en
+entier ». Le lot 2 n'a produit aucune perte d'URL de ce type.
+RÈGLE GÉNÉRALE : un fait DUR (e-mail, URL, numéro, tarif) se COPIE, il ne se résume
+jamais. Une consigne de concision doit exclure explicitement ces objets, sinon
+l'agent les traite comme du texte à raccourcir.
+
+## 21/08/2026 (2e passe) — les 8 autres alertes : distinguer le format, le calcul et le périmé
+Les 8 alertes restantes n'étaient PAS des pertes, et chacune illustre un piège distinct
+qu'il faut savoir trancher sans réflexe :
+1. **Un horodatage machine lu comme un téléphone.** `data-date="1786406340"` (un
+   compte à rebours) a la forme d'un numéro à 10 chiffres. Le contrôle a raison de le
+   signaler, la session a raison de le rejeter.
+2. **Une URL « perdue » par changement de sous-domaine.** `cannesyachtingfestival.com/presse`
+   contre `billetterie.cannesyachtingfestival.com/presse/` : la normalisation ne retire
+   que `www.`, tout autre sous-domaine casse l'appariement. L'URL était bien présente.
+3. **Un montant qui est un CALCUL, pas un tarif.** « 65 € les deux jours, soit 15 €
+   d'économie sur deux journées à 40 € » : le 15 € n'existe nulle part au tarif. Le
+   supprimer ne perd rien tant que le 40 € et le 65 € restent.
+4. **Une donnée que la fiche déclare elle-même PÉRIMÉE.** Nikki Beach Miami :
+   `reservations.miami@nikkibeach.com` et le (305) 538-1111 étaient explicitement
+   signalés « périmés, répandus sur les sites tiers » ; les « 85 $ » de brunch et
+   « 200 $ » de daybed venaient de plateformes tierces, pas du club. Les republier
+   aurait été une faute — leur retrait est la bonne lecture de la consigne.
+RÈGLE : devant une alerte de `verif_faits.py`, ouvrir le texte SOURCE et classer avant
+de corriger. Réinjecter mécaniquement tout ce que le contrôle signale republierait les
+données fausses que la fiche avait précisément pris soin de réfuter.
+
+## 21/08/2026 (2e passe) — le seuil de sélection redétecte le travail bien fait, suite
+Confirmation pratique de la leçon du 20/08. Le lot 2, sélectionné au seuil WARN de
+1 200 caractères, a ressorti en tête Twiga, Hamptons Polo et Sottovento — trois fiches
+condensées deux heures plus tôt dans le lot 1. Vérification faite, elles étaient passées
+de 2 000-3 600 à 1 190-1 340 caractères : elles restent au-dessus du seuil parce
+qu'elles portent légitimement beaucoup de contacts et de tarifs réels, pas parce que le
+travail n'a pas été fait.
+RÈGLE : au sein d'une MÊME passe, tenir la liste des fiches déjà traitées et l'exclure
+de la sélection suivante — le seuil ne suffit pas à distinguer « pas encore condensée »
+de « condensée et légitimement dense ». Sans cette exclusion, on repaye 3 agents sur 18.
+
+## 21/08/2026 (2e passe) — l'artifact Claude de la doctrine n'est plus atteignable
+L'étape 10 de la doctrine impose de republier l'artifact
+`89b85688-ff57-481d-82d7-f7792051b066` à chaque passe. L'outil répond
+`artifact not found — it may have been deleted, or it has not been shared with you`,
+y compris avec `force`. Ce n'est pas un incident réseau : la page n'existe plus pour
+cette session.
+Sans conséquence pour le public — constanceparis7.com est la seule adresse qui compte
+et elle est à jour — mais l'étape 10 est en échec permanent tant que l'artifact n'est
+pas recréé ou repartagé. À trancher : soit recréer un artifact et inscrire la nouvelle
+URL dans la doctrine, soit retirer l'étape 10, qui fait aujourd'hui échouer une étape
+obligatoire de chaque passe. Ne pas la laisser échouer en silence : une étape qui
+échoue toujours finit par ne plus être lue, comme le seuil de cadence du 13/08.

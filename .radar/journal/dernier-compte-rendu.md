@@ -1,98 +1,111 @@
-# Compte rendu — passe du 21 août 2026 (cloud, radar-routine-claude)
+# Compte rendu — passe du 21/08/2026 (session cloud)
 
-## Cadence
-`precheck.sh` a signalé une **cadence rompue** : dernier run journalisé il y a 30 h
-(seuil 30 h). Passe de RATTRAPAGE effectuée. Arbre propre au démarrage (aucun run
-interrompu détecté). Trace de démarrage poussée directement sur `main`.
+## Ce qui a été fait
 
-## Purge (zombies non purgés, bloquants)
-2 fiches avec `d2` largement dépassé (2026-07-21, hors fenêtre de 30 j) empêchaient
-la publication : **Festival d'Aix-en-Provence 2026** et **Belgium Day : La Maison
-Rose — Nikki Beach**. Purgées. 432 → 430 événements.
+**Chantier prioritaire : condensation des voies d'invitation — 36 fiches traitées**,
+en deux lots de 18, toutes prises dans la FENÊTRE LIVE et par ordre d'imminence
+(les fins de saison du 29-31/08 d'abord, puis jusqu'au 20/09).
 
-## PRIORITÉ DU JOUR — condensation des voies d'invitation (`iv.o`/`iv.g`/`iv.w`)
+Deux publications au fil de l'eau, chacune passée par `publier.sh` :
+- lot 1 — Twiga Porto Cervo, Dolce&Gabbana × Casa Amor, Hamptons Polo, Meeting de
+  Deauville, Lanterne d'Hermès (Ginza), Hôtel du Cap-Eden-Roc, Anema e Core (Capri),
+  La Co(o)rniche, Casino Barrière Le Touquet, Hôtel du Palais, clubs privés de
+  Mayfair, Bagni Fiore Paraggi, DaV Mare (Splendido), Covo di Nord-Est, La Gritta,
+  Sottovento, JustMe Porto Cervo, Lío Ibiza ;
+- lot 2 — scène yacht Ibiza-Formentera, Nammos Mykonos, Principote, Nikki Beach Miami,
+  soldes de Milan, Grand Palais d'été, Grimaldi Forum, Jesus Christ Superstar
+  (Marina Bay Sands), Hôtel du Palais Biarritz, Thierry Hermès (Le Forum), Phi Beach,
+  Maxi Yacht Rolex Cup, Nikki Beach Saint-Tropez, Cannes Yachting Festival,
+  L'Heure Dorée (Peninsula), Luisa Spagnoli × Da Luigi, dîner Ayla Privé,
+  WE ARE [still] HERE (Petit Palais).
 
-**20 fiches condensées et publiées**, sélectionnées au seuil WARN de `validate.py`
-(un champ ≥ 1200 caractères), prises dans la fenêtre live et classées par imminence
-(date de début la plus proche en tête) :
+**Effet mesuré sur le filet** (compteurs `validate.py`, avant → après) :
+- `iv.g` au-dessus de 1 200 car. : 90 → 68 fiches ; excédent 65 785 → 50 778 car.
+- `iv.w` au-dessus de 1 200 car. : 110 → 87 fiches ; excédent 104 952 → 81 244 car.
+- soit ~38 700 caractères de journal d'enquête retirés des pages visiteur.
 
-Villa Carmignac (Sea, Pop & Sun), Biennale Arte 2026 (In Minor Keys), Fondation
-Maeght (Peter Knapp — Le Temps Courrèges), Loewe pop-up Paula's Ibiza (Saint-Tropez),
-Grand Palais d'été 2026, Journey Within (Maison Hermès Ginza), Van Cleef & Arpels
-(Galerie du Patrimoine), Into the Ocean (ArtScience Museum × OceanX), Daniel Brush
-(L'École des Arts Joailliers), Dolce & Gabbana Beach Club (Gurney's Montauk),
-Picasso through the Eyes of Paul Smith, Yves Saint Laurent and Photography (ICP),
-L'Herbier Secret (Hôtel de Crillon), Beach takeover Luisa Spagnoli (Capri), Givenchy
-pop-up rue Gambetta, WE ARE [still] HERE (Petit Palais), Ellsworth Kelly (Fondation
-Maeght), et 3 fiches-guide POINT D'ENTRÉE (Clienteling/VIC, Concierges Clefs d'Or,
-Silencio).
+**Reste à condenser : 97 fiches, dont 70 dans la fenêtre live.**
 
-**Méthode** : un agent par fiche (les lots échouent au-delà), consigne stricte
-« aucun fait supprimé, seulement la forme », puis **contrôle mécanique** (regex
-e-mails/URLs/téléphones/montants, entrée vs sortie) sur les 20 sorties avant toute
-application aux données — pas de confiance sur la parole de l'agent (leçon du
-20/08). Le contrôle a flagué 7/20 fiches ; examen au cas par cas :
-- 4 fausses alertes pures (variations de format : `https://www.` tronqué, numéro
-  de téléphone écrit avec/sans indicatif, montant `115,00 €` vs `115 €`, chemin
-  d'URL raccourci sans perte de destination) ;
-- 3 pertes réelles, corrigées avant publication : un e-mail « demandes non
-  éditoriales » (Marina Bay Sands), un numéro de téléphone fusionné à tort avec un
-  autre (Fondation Maeght), un e-mail de contact institutionnel (Les Clefs d'Or).
+## Contrôle de non-perte de faits (obligatoire, jamais sur parole d'agent)
 
-### Résultat mesuré (`validate.py`, seuil WARN 1200 car.)
-| | avant (avec zombies) | après purge | après condensation |
-|---|---|---|---|
-| `iv.g` > 1200 car. | 91 fiches | 90 | **74** |
-| `iv.w` > 1200 car. | 111 fiches | 110 | **97** |
+`verif_faits.py` a été passé sur les deux lots. 12 alertes au total :
+- **4 pertes réelles, corrigées à la main avant publication** — une adresse de service
+  déformée (`press@` au lieu de `presse@butler-collection.fr`), une URL SevenRooms
+  abrégée en « .../paraggifiore », la page tarifaire `sottoventoclub.com/prenota-pista-2/`
+  et deux URL Hermès informatives, toutes réinjectées.
+- **8 fausses alertes de format ou suppressions légitimes**, vérifiées une par une :
+  un horodatage machine `data-date="1786406340"` lu comme un téléphone ; une URL
+  comptée perdue parce que le sous-domaine `billetterie.` avait changé la
+  normalisation ; un « 15 € d'économie » qui est un calcul, pas un tarif publié ;
+  et surtout des données que la fiche elle-même déclarait **périmées ou non
+  officielles** — `reservations.miami@nikkibeach.com` et le (305) 538-1111 signalés
+  périmés par la source, les « 85 $ » de brunch et « 200 $ » de daybed venant de
+  plateformes tierces et non de Nikki Beach. Les republier aurait été une faute :
+  leur retrait est conforme.
 
-Reste environ 74 fiches (`iv.g`) et 97 fiches (`iv.w`) à condenser — à poursuivre
-par lots de 15-20 aux prochaines passes.
+**Protection des personnes** : trois fiches portaient encore des coordonnées
+nominatives, retirées à cette occasion — un e-mail nominatif chez Butler Collection,
+un mobile non confirmé attribué à une personne chez Principote, et les mobiles
+personnels des trois attachées de presse de Zmirov Communication sur le Cannes
+Yachting Festival. Dans les trois cas le NOM et la FONCTION sont conservés, ainsi
+que la boîte de service (`yachtingcannes@zmirov.com`) : aucune fiche n'a perdu sa
+porte d'entrée.
 
-## LOI DU SITE — état sur la fenêtre live (306 fiches, aujourd'hui → +90j)
-- Voie d'invitation manquante : **0**
-- Séjour clé en main manquant (hors fiches-guide) : **0**
-- Traductions 13 langues : **430/430 (100 %)**
+## État du site
 
-Les compteurs globaux de `reste.py` (séjours 367/430, invitations 413/430)
-concernent exclusivement des événements déjà passés, conservés 30 jours avant
-purge — aucun manque réel côté visiteur.
+- 430 événements ; fenêtre live 306 fiches ; 93 dans les 90 jours.
+- **LOI DU SITE honorée à 100 % sur la fenêtre live** : 0 fiche sans séjour
+  (hors dossiers d'accès), 0 fiche sans voie d'invitation. Les 63 séjours et
+  17 invitations que `reste.py` annonce manquants portent tous sur des
+  événements DÉJÀ PASSÉS, conservés 30 jours avant purge.
+- Traductions : 430/430 (100 %).
+- KPI accès mondain : 291/296 (98 %).
+- `validate.py` : 0 blocage, 2 avertissements (les deux compteurs de condensation
+  ci-dessus, en baisse). `perfcheck.py` : 0 régression. `healthcheck.sh` : http 200,
+  date fraîche, 430 servis = 430 attendus.
 
-## Contrôles
-- `validate.py` : **OK — 0 blocker(s), 2 warning(s)** (le reliquat `iv.g`/`iv.w` ci-dessus).
-- `perfcheck.py` : **OK — 0 régression**. Poids 1,04 Mo gzip (-0,02 Mo vs dernier
-  point, -3 événements par la purge, -1 séjour).
-- Publication : `bash .radar/session/publier.sh` — poussé directement sur `main`,
-  aucun repli sur branche `claude/*` nécessaire.
-- `healthcheck.sh` a expiré (timeout) — comportement déjà documenté (11/08, 12/08,
-  19/08) : l'egress réseau est bloqué depuis cette session cloud. Confirmé ce jour
-  sur des domaines témoins neutres (wikipedia.org, google.com : `curl -sL` → `000` ;
-  `relever_visites.py` → `403 Forbidden` sur le tunnel). Ce n'est pas un signal sur
-  l'état du site — le contrôle qui fait foi est `.github/workflows/surveillance.yml`.
+## Rien de neuf n'a été ajouté au radar
 
-## Recherche de nouveaux événements
-**Non effectuée ce jour**, pour deux raisons cumulées : (1) la doctrine donne
-priorité absolue à la condensation tant que la dérive « journal d'enquête »
-n'est pas résorbée ; (2) le réseau sortant était bloqué en bloc pour cette
-session (voir ci-dessus), ce qui aurait empêché toute vérification fiable de
-nouveaux contacts ou dates.
+Aucun événement nouveau ce jour : la consigne place la condensation avant la
+recherche de nouveautés, et les deux lots ont occupé la passe. C'est un choix
+assumé, pas un échec de recherche.
 
-## Analyse des visites
-Impossible de relever le chiffre du jour (compteur GoatCounter injoignable,
-réseau bloqué). Dernières données connues (`stats/visites.ndjson`) : 1 046 (18/08)
-→ 1 711 (19/08) → 1 795 (20/08) — progression nette sur trois jours, sans donnée
-fraîche pour confirmer la tendance du 21/08.
+## Ce que je n'ai PAS pu faire ou vérifier
 
-## Note d'architecture
-`DOCTRINE.md` décrit encore un montage cloud à deux dépôts (`luxe-ete-2026` +
-`luxe-radar-filet`) et une republication d'artifact Claude. Le dépôt réel de
-cette passe est unique (`constanceparis7/radar-luxe`), conforme à `PASSATION.md`
-(18/08/2026, transmission à Constance) — l'étape « republier l'artifact » de
-la doctrine ne s'applique donc plus et a été omise sciemment. À signaler pour
-mise à jour de `DOCTRINE.md` si elle doit rester la référence.
+1. **L'artifact Claude n'a pas pu être republié.** L'outil répond que la page est
+   introuvable ou n'est plus partagée avec cette session
+   (`artifact not found`, sur l'URL 89b85688-…). La doctrine (étape 10) demande cette
+   republication à chaque passe : elle est en échec et le restera tant que
+   l'artifact n'aura pas été repartagé ou recréé. **Sans conséquence pour le public** :
+   la seule adresse vivante qui compte, constanceparis7.com, est à jour et saine.
+2. **Aucune vérification en ligne des liens ni des sources** n'a été tentée cette
+   passe : le travail était purement rédactionnel, sur des faits déjà vérifiés et
+   déjà présents dans les fiches. Aucun fait nouveau n'a donc été introduit, et
+   aucun n'avait besoin d'être confirmé au réseau.
+3. **La joaillerie reste le trou du radar** : 2 fiches seulement en fenêtre live
+   (les deux expositions parisiennes, Van Cleef & Arpels et Daniel Brush), contre
+   les 10 que demande la doctrine. Aucun lancement de collection, aucune vente,
+   aucun salon. C'est le chantier à ouvrir à la prochaine passe, avant tout autre
+   ajout — pistes déjà datées dans la doctrine : Sotheby's Genève (30/10-13/11/2026),
+   Watches and Wonders (5-11/04/2027), GemGenève (11-14/05/2027).
+4. **Le piège du « 31 août »** n'a pas été traité : des fiches portent encore une
+   fin de saison au 31/08 qui est un bouchon, pas une date vérifiée. Elles vont
+   disparaître de l'écran le 1er septembre, la plupart à tort. **C'est urgent :
+   il reste dix jours.**
 
-## À faire aux prochaines passes
-- Poursuivre la condensation `iv` par lots de 15-20 (74 `iv.g` + 97 `iv.w` restants,
-  probablement ~130-140 fiches distinctes en comptant le recoupement).
-- Reprendre la recherche de nouveaux événements dès que le réseau sortant est
-  disponible et que la condensation aura suffisamment reculé.
-- Vérifier si `DOCTRINE.md` doit être réalignée sur l'architecture mono-dépôt.
+## Anomalie de déclenchement
+
+`precheck.sh` a signalé une **CADENCE ROMPUE : 39 h depuis le dernier run
+journalisé** (seuil 30 h). Une passe a donc été manquée. Celle-ci a été menée en
+rattrapage complet. Le push direct sur `main` a fonctionné — aucun repli sur une
+branche `claude/*` n'a été nécessaire.
+
+## Visites
+
+1 817 visites aujourd'hui, contre 1 795 hier et 1 711 avant-hier : la progression
+se poursuit, plus lentement, après le bond du 19 août (1 046 → 1 711 en une nuit,
+soit +64 %). Le palier des 1 800 est franchi pour la première fois. Le détail par
+pays, par page et par source n'est pas lisible depuis cette session (le tableau
+GoatCounter demande le réseau) : je ne peux donc pas dire cette fois quelles fiches
+attirent ni d'où viennent les visiteurs, et je préfère le dire plutôt que de
+l'inventer.
