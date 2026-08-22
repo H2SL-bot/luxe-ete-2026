@@ -132,15 +132,15 @@ def appliquer(jour=None, ecrire=True):
     for lg, mots in LIBELLES.items():
         if lg not in i18n:
             continue
-        mot = mots[saison]
-        # zh/ja veulent la particule d'année (2026年夏, pas 2026夏) et le coréen se dit
-        # année d'abord avec 년 (2026년 여름). Une première version l'omettait : au
-        # premier passage automatique, elle aurait dégradé trois langues en silence.
-        i18n[lg]["brandline_season"] = (f"{annee}年{mot}" if lg in ("zh", "ja")
-                                        else f"{annee}년 {mot}" if lg == "ko"
-                                        else f"{annee} {mot}ı" if lg == "tr" and saison == "summer"
-                                        else f"{annee} {mot}" if lg == "tr"
-                                        else f"{mot} {annee}")
+        # Demande de Constance, 21/08/2026 : la saison s'affiche EN ANGLAIS dans
+        # toutes les langues — « Summer 2026 », jamais « Été 2026 » ni « 2026年夏 ».
+        # C'est le choix cohérent : l'autre moitié du bandeau, « International
+        # Luxury Events », n'est déjà traduite dans aucune langue. Le bandeau est
+        # une signature de marque, pas une phrase à traduire.
+        # LIBELLES et la particule d'année (zh/ja 年, ko 년, tr -ı) ne servent plus,
+        # mais restent dans le fichier : le jour où l'on voudra retraduire, tout
+        # est là, éprouvé.
+        i18n[lg]["brandline_season"] = attendu
     s2 = s2[:m.start(2)] + json.dumps(i18n, ensure_ascii=False, separators=(",", ":")) + s2[m.end(2):]
 
     change = s2 != s
