@@ -77,7 +77,11 @@ la catégorie qui a des budgets et des attachés de presse.
 Rappel des catégories : festival 92 · art de vivre 49 · sport 47 · mode 45 ·
 art 40 · autre 22 · accès 10 · **joaillerie 3**.
 
-**08 · Le radar s'éteint au printemps 2027**
+**08 · Le radar s'éteint au printemps 2027** — *consigne écrite le 22/08 avec
+HUIT dates vérifiées (TEFAF, Art Basel Hong Kong, Watches and Wonders, Salone
+del Mobile, Cannes, GemGenève, Grand Prix de Monaco, Royal Ascot). La routine
+les crée une par passe. Détail : doctrine, section « LE PRINTEMPS 2027 EST
+VIDE ».*
 janv. 15 · févr. 8 · mars 4 · **avril 0** · mai 4 · juin 1.
 Un visiteur qui prépare un voyage en mars 2027 ne trouve rien. Ce sont les
 mois où les grandes maisons publient déjà leurs dates.

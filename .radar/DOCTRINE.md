@@ -261,6 +261,47 @@ Jamais de « bon hôtel » ni de « bonne table » : le standard est celui du
 Cheval Blanc, du Louis XV, des Caves du Roy. Si la ville n'offre rien de ce
 calibre, en mettre moins plutôt qu'en mettre de moindre.
 
+## LE PRINTEMPS 2027 EST VIDE (constat du 22/08/2026)
+
+Comptage du 22/08 sur les fiches à venir : **mars 4 · AVRIL 0 · mai 4 · juin 1**.
+Un visiteur qui prépare un voyage au printemps prochain ne trouve rien. Et c'est
+MAINTENANT que les grandes maisons publient leurs dates : attendre janvier, c'est
+arriver après tout le monde, quand les accréditations sont closes et les hôtels
+pleins.
+
+**HUIT ANCRES VÉRIFIÉES LE 22/08/2026**, à créer en priorité — nées COMPLÈTES
+(voie d'entrée + séjour + 13 langues) :
+
+| Événement | Dates | Lieu |
+|---|---|---|
+| TEFAF Maastricht | **13-18 mars 2027** | MECC Maastricht |
+| Art Basel Hong Kong | **25-27 mars 2027** | HKCEC |
+| Watches and Wonders | **5-11 avril 2027** | Palexpo, Genève |
+| Salone del Mobile (65e) | **13-18 avril 2027** | Rho Fiera, Milan |
+| Festival de Cannes (80e) | **11-22 mai 2027** | Palais des Festivals |
+| GemGenève | **11-14 mai 2027** | Palexpo, Genève |
+| Grand Prix de Monaco | **3-6 juin 2027** | Circuit de Monaco |
+| Royal Ascot | **15-19 juin 2027** | Ascot, Berkshire |
+
+**À RECONFIRMER À LA SOURCE avant publication** : le Grand Prix de Monaco est
+donné « sous réserve d'approbation par le Conseil Mondial du Sport Automobile de
+la FIA ». Ne pas le publier sans l'avoir revérifié sur acm.mc. Les sept autres
+proviennent des organisateurs eux-mêmes ou de leur presse spécialisée.
+
+**LE FUORISALONE** (Milano Design Week, 12-18 avril 2027) accompagne le Salone :
+c'est une seconde fiche légitime, pas un doublon — l'un est un salon payant à
+Rho, l'autre un parcours gratuit dans la ville.
+
+**DEUX CHANTIERS, UN SEUL EFFORT.** Watches and Wonders et GemGenève comblent à
+la fois ce trou et celui de la joaillerie. Les créer une fois sert les deux
+consignes ; ne pas les compter deux fois.
+
+**ENSUITE, ÉLARGIR.** Ces huit ancres ne sont qu'un socle. Le printemps porte
+aussi : Paris et Milan Fashion Week (automne-hiver 27-28), le Bal de la Rose à
+Monaco, les ventes de printemps de Christie's et Sotheby's, Chelsea Flower Show,
+les 24 Heures du Mans, la saison d'opéra de Vienne et de Milan, Art Basel Bâle
+en juin. Une par passe, comme le reste.
+
 ## LES GUIDES D'ACCÈS — LE CONTENU QUI TRAVAILLE TOUT SEUL (21/08/2026)
 
 Le radar tient **10 fiches `c=acces`** pour 295 fiches d'événements. Or une fiche
