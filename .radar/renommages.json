@@ -16,5 +16,1505 @@
   "apres": "Surf Lodge Summer Series 2026 — concerts d'août (Montauk)",
   "date": "2026-08-12",
   "motif": "Le titre nommait deux artistes qui ne jouent pas. Contrôle direct le 12/08/2026 : thesurflodge.com/line-up/ répond 200 avec 122 Ko de contenu réel et affiche zéro occurrence de « Delta Spirit » comme de « tUnE-yArDs », tandis que Nancy Atlas y apparaît huit fois. L'affiche réelle d'août est Nancy Atlas les 12, 19 et 26, Hayden James et Mojave Grey le 14, OMRI. le 15. La série et le lieu existent bel et bien — c'est la programmation annoncée qui était fausse, jusque dans le titre de la fiche."
+ },
+ {
+  "avant": "Pirelli HangarBicocca — dernières semaines des expositions Benni Bosetto et Rirkrit Tiravanija",
+  "apres": "Pirelli HangarBicocca, dernières semaines des expositions Benni Bosetto et Rirkrit Tiravanija",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Rina Banerjee \"You made me leave home...\" — Espace Louis Vuitton Tokyo",
+  "apres": "Rina Banerjee \"You made me leave home...\", Espace Louis Vuitton Tokyo",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Matisse. 1941–1954 — Grand Palais",
+  "apres": "Matisse. 1941–1954, Grand Palais",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Fondazione Prada — programme d'été (Cao Fei « DASH », Mona Hatoum, Hito Steyerl à l'Osservatorio)",
+  "apres": "Fondazione Prada, programme d'été (Cao Fei « DASH », Mona Hatoum, Hito Steyerl à l'Osservatorio)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "The Shop on the Corner — pop-up multi-maisons (Globe-Trotter, Connolly, Smythson, Fornasetti, Alessi)",
+  "apres": "The Shop on the Corner, pop-up multi-maisons (Globe-Trotter, Connolly, Smythson, Fornasetti, Alessi)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Calder. Rêver en équilibre — rétrospective Alexander Calder",
+  "apres": "Calder. Rêver en équilibre, rétrospective Alexander Calder",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Calder. Rêver en équilibre — Fondation Louis Vuitton",
+  "apres": "Calder. Rêver en équilibre, Fondation Louis Vuitton",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "PatBO x Loulou Ramatuelle — pop-up beachwear de l'été 2026",
+  "apres": "PatBO x Loulou Ramatuelle, pop-up beachwear de l'été 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Villa Carmignac — Exposition « Sea, Pop & Sun » et nocturnes d'été",
+  "apres": "Villa Carmignac, Exposition « Sea, Pop & Sun » et nocturnes d'été",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ron Mueck — Mori Art Museum x Fondation Cartier pour l'art contemporain",
+  "apres": "Ron Mueck, Mori Art Museum x Fondation Cartier pour l'art contemporain",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Loro Piana x La Reserve a la Plage (Pampelonne) — reconduction 2026 non confirmee",
+  "apres": "Loro Piana x La Reserve a la Plage (Pampelonne), reconduction 2026 non confirmee",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Amiri — boutique saisonniere avenue Marechal Foch",
+  "apres": "Amiri, boutique saisonniere avenue Marechal Foch",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Hilma af Klint — Paintings for the Temple (1906-1915) — Grand Palais",
+  "apres": "Hilma af Klint, Paintings for the Temple (1906-1915), Grand Palais",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Biennale Arte 2026 — In Minor Keys (61e Exposition internationale d'art)",
+  "apres": "Biennale Arte 2026, In Minor Keys (61e Exposition internationale d'art)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "La Mode en majesté. Haute couture et tradition à la cour de Thaïlande — Musée des Arts Décoratifs",
+  "apres": "La Mode en majesté. Haute couture et tradition à la cour de Thaïlande, Musée des Arts Décoratifs",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Fondation Maeght — « Peter Knapp : Le Temps Courrèges »",
+  "apres": "Fondation Maeght, « Peter Knapp : Le Temps Courrèges »",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Le Jardin de Cheval Blanc Paris — rooftop d'été (7e étage)",
+  "apres": "Le Jardin de Cheval Blanc Paris, rooftop d'été (7e étage)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Loewe — pop-ups Paula's Ibiza 2026 a Saint-Tropez",
+  "apres": "Loewe, pop-ups Paula's Ibiza 2026 a Saint-Tropez",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Grand Palais d'été — édition 2026 (saison festive dans la Nef)",
+  "apres": "Grand Palais d'été, édition 2026 (saison festive dans la Nef)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Grand Palais d'été — édition 2026 (expositions d'août)",
+  "apres": "Grand Palais d'été, édition 2026 (expositions d'août)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Journey within: A look at the creative journey of Thierry Hermès — Le Forum",
+  "apres": "Journey within: A look at the creative journey of Thierry Hermès, Le Forum",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Exposition « Van Cleef & Arpels : l'éclat des années 1980-1990 » — Galerie du Patrimoine",
+  "apres": "Exposition « Van Cleef & Arpels : l'éclat des années 1980-1990 », Galerie du Patrimoine",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Exposition « Daniel Brush, l'art de la ligne et de la lumière » — L'École des Arts Joailliers",
+  "apres": "Exposition « Daniel Brush, l'art de la ligne et de la lumière », L'École des Arts Joailliers",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Yves Saint Laurent and Photography — International Center of Photography (pendant la fermeture du musée YSL Paris)",
+  "apres": "Yves Saint Laurent and Photography, International Center of Photography (pendant la fermeture du musée YSL Paris)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "L'Herbier Secret — La Table du Chef au jardin aromatique de l'Hôtel de Crillon",
+  "apres": "L'Herbier Secret, La Table du Chef au jardin aromatique de l'Hôtel de Crillon",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Givenchy — pop-up estival rue Gambetta",
+  "apres": "Givenchy, pop-up estival rue Gambetta",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "WE ARE [still] HERE — Petit Palais",
+  "apres": "WE ARE [still] HERE, Petit Palais",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "LINDER: Goddess of the Mind — Chanel Nexus Hall",
+  "apres": "LINDER: Goddess of the Mind, Chanel Nexus Hall",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Design Parade 2026 — expositions à la villa Noailles (Hyères) et à Toulon (édition anniversaire 20+10)",
+  "apres": "Design Parade 2026, expositions à la villa Noailles (Hyères) et à Toulon (édition anniversaire 20+10)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Les Caves du Roy (Hôtel Byblos) — saison estivale, ouvert tous les soirs en juillet",
+  "apres": "Les Caves du Roy (Hôtel Byblos), saison estivale, ouvert tous les soirs en juillet",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ellsworth Kelly – Aux bords de l'eau (exposition d'été Fondation Maeght)",
+  "apres": "Ellsworth Kelly, Aux bords de l'eau (exposition d'été Fondation Maeght)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Open de Gassin — Polo Club Saint-Tropez (tournoi phare de juillet)",
+  "apres": "Open de Gassin, Polo Club Saint-Tropez (tournoi phare de juillet)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dior au Splendido (Portofino) — Dior Spa permanent et saison Dioriviera 2026",
+  "apres": "Dior au Splendido (Portofino), Dior Spa permanent et saison Dioriviera 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Résidences balnéaires des maisons de luxe — Capri, Porto Cervo, Portofino (boutiques resort été 2026)",
+  "apres": "Résidences balnéaires des maisons de luxe, Capri, Porto Cervo, Portofino (boutiques resort été 2026)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "La Galerie Dior — musée de la maison Dior, 30 avenue Montaigne",
+  "apres": "La Galerie Dior, musée de la maison Dior, 30 avenue Montaigne",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "POINT D'ENTRÉE — Clienteling / programme VIC des maisons (Chanel, Dior, D&G, etc.)",
+  "apres": "POINT D'ENTRÉE, Clienteling / programme VIC des maisons (Chanel, Dior, D&G, etc.)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "POINT D'ENTRÉE — Concierges de palaces (Clefs d'Or) : la clé des places impossibles",
+  "apres": "POINT D'ENTRÉE, Concierges de palaces (Clefs d'Or) : la clé des places impossibles",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "POINT D'ENTRÉE — Silencio (club privé, Paris) : adhésion sur candidature",
+  "apres": "POINT D'ENTRÉE, Silencio (club privé, Paris) : adhésion sur candidature",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "POINT D'ENTRÉE — Les lieux-scènes ouverts à la réservation (Hôtel Costes, Club 55, Caves du Roy, VIP Room)",
+  "apres": "POINT D'ENTRÉE, Les lieux-scènes ouverts à la réservation (Hôtel Costes, Club 55, Caves du Roy, VIP Room)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "POINT D'ENTRÉE — Billetteries VIP officielles du sport de luxe (polo, automobile, jumping)",
+  "apres": "POINT D'ENTRÉE, Billetteries VIP officielles du sport de luxe (polo, automobile, jumping)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "POINT D'ENTRÉE — Ventes aux enchères et expositions publiques des auctioneers (Christie's, Sotheby's, Drouot)",
+  "apres": "POINT D'ENTRÉE, Ventes aux enchères et expositions publiques des auctioneers (Christie's, Sotheby's, Drouot)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "POINT D'ENTRÉE — Ventes presse et ventes privées des maisons de mode",
+  "apres": "POINT D'ENTRÉE, Ventes presse et ventes privées des maisons de mode",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Gucci Saint-Tropez — boutique de la rue François Sibilli (sélection estivale)",
+  "apres": "Gucci Saint-Tropez, boutique de la rue François Sibilli (sélection estivale)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Le Salama — dîners festifs dans l'ancienne Villa Romana",
+  "apres": "Le Salama, dîners festifs dans l'ancienne Villa Romana",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dîner 'Festin Royal' de Ducasse au château de Versailles — Le Grand Contrôle (Airelles)",
+  "apres": "Dîner 'Festin Royal' de Ducasse au château de Versailles, Le Grand Contrôle (Airelles)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dioriviera 2026 à Capri — pop-up et takeover du beach club Il Riccio",
+  "apres": "Dioriviera 2026 à Capri, pop-up et takeover du beach club Il Riccio",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dioriviera 2026 à Mykonos — pop-up(s) Dior",
+  "apres": "Dioriviera 2026 à Mykonos, pop-up(s) Dior",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Scorpios Mykonos — programme des sunsets de juillet 2026",
+  "apres": "Scorpios Mykonos, programme des sunsets de juillet 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Exposition Générale — inauguration de la nouvelle Fondation Cartier par Jean Nouvel",
+  "apres": "Exposition Générale, inauguration de la nouvelle Fondation Cartier par Jean Nouvel",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Les Caves du Roy — nuits de juillet (Hôtel Byblos)",
+  "apres": "Les Caves du Roy, nuits de juillet (Hôtel Byblos)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "L'Heure Dorée — rooftop du Peninsula Paris pour le feu d'artifice",
+  "apres": "L'Heure Dorée, rooftop du Peninsula Paris pour le feu d'artifice",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Jacquemus x Monte-Carlo Beach — takeover été 2026 (2e année)",
+  "apres": "Jacquemus x Monte-Carlo Beach, takeover été 2026 (2e année)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Chanel — boutique estivale à la villa La Mistralée",
+  "apres": "Chanel, boutique estivale à la villa La Mistralée",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Tisser, broder, sublimer. Les savoir-faire de la mode — Palais Galliera",
+  "apres": "Tisser, broder, sublimer. Les savoir-faire de la mode, Palais Galliera",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "DG Resort 2026 à Saint-Tropez — Casa Amor (Pampelonne)",
+  "apres": "DG Resort 2026 à Saint-Tropez, Casa Amor (Pampelonne)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dolce & Gabbana x Casa Amor — takeover 'DG Resort' (thème Carretto Siciliano)",
+  "apres": "Dolce & Gabbana x Casa Amor, takeover 'DG Resort' (thème Carretto Siciliano)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Armani/Silos — exposition « Giorgio Armani Privé 2005-2025, vingt ans de haute couture »",
+  "apres": "Armani/Silos, exposition « Giorgio Armani Privé 2005-2025, vingt ans de haute couture »",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Stuart Weitzman \"Exotic Escape\" — pop-up au Maidstone",
+  "apres": "Stuart Weitzman \"Exotic Escape\", pop-up au Maidstone",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Saison de polo au Polo Club Saint-Tropez — tournois de juillet (dont Polo Masters Open de Gassin)",
+  "apres": "Saison de polo au Polo Club Saint-Tropez, tournois de juillet (dont Polo Masters Open de Gassin)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Forte dei Marmi — saison luxe juillet 2026 (pop-ups, hôtel Principessa, dîners Four Seasons « Onde » x Alpemare)",
+  "apres": "Forte dei Marmi, saison luxe juillet 2026 (pop-ups, hôtel Principessa, dîners Four Seasons « Onde » x Alpemare)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Grandes Eaux Nocturnes de Versailles — éditions de juillet (dont soirée spéciale Fête nationale le 14 juillet)",
+  "apres": "Grandes Eaux Nocturnes de Versailles, éditions de juillet (dont soirée spéciale Fête nationale le 14 juillet)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nikki Beach Saint-Tropez — programme des soirées de juillet",
+  "apres": "Nikki Beach Saint-Tropez, programme des soirées de juillet",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Soldes d'été à Milan (saldi estivi) — Quadrilatère de la mode",
+  "apres": "Soldes d'été à Milan (saldi estivi), Quadrilatère de la mode",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "LUMA Arles — Semaine d'ouverture et expositions de l'été 2026 (Fondation Maja Hoffmann)",
+  "apres": "LUMA Arles, Semaine d'ouverture et expositions de l'été 2026 (Fondation Maja Hoffmann)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Clair-obscur — Bourse de Commerce, Pinault Collection",
+  "apres": "Clair-obscur, Bourse de Commerce, Pinault Collection",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "La Réserve à la Plage — soirées brasero du mercredi (bonfire & live music)",
+  "apres": "La Réserve à la Plage, soirées brasero du mercredi (bonfire & live music)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Festival de Saint-Paul-de-Vence 2026 — 15e édition (classique & jazz)",
+  "apres": "Festival de Saint-Paul-de-Vence 2026, 15e édition (classique & jazz)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Exposition « De la caserne au musée... 10 ans déjà » — Musée de la Gendarmerie et du Cinéma",
+  "apres": "Exposition « De la caserne au musée... 10 ans déjà », Musée de la Gendarmerie et du Cinéma",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Les Grimaldines — festival de Grimaud (soirées de juillet)",
+  "apres": "Les Grimaldines, festival de Grimaud (soirées de juillet)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Expositions du Lavoir Vasserot — dont « L'Intemporelle » de ALIN",
+  "apres": "Expositions du Lavoir Vasserot, dont « L'Intemporelle » de ALIN",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "The Watermill Center Summer Benefit 2026 — « Limitless Time »",
+  "apres": "The Watermill Center Summer Benefit 2026, « Limitless Time »",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Les Toiles de Ramatuelle — cinéma en plein air",
+  "apres": "Les Toiles de Ramatuelle, cinéma en plein air",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Polo Exhibition Week & Practices — Haras de Gassin",
+  "apres": "Polo Exhibition Week & Practices, Haras de Gassin",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Polo Parade — défilé des équipes de l'International Polo Cup sur le vieux port",
+  "apres": "Polo Parade, défilé des équipes de l'International Polo Cup sur le vieux port",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Feu d'artifice pyromélodique de Monaco — soirée du 1er août",
+  "apres": "Feu d'artifice pyromélodique de Monaco, soirée du 1er août",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nocturne gratuite de la Bourse de Commerce — samedi 1er août 2026",
+  "apres": "Nocturne gratuite de la Bourse de Commerce, samedi 1er août 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Festival de Ramatuelle — 41e édition (théâtre, humour, musique)",
+  "apres": "Festival de Ramatuelle, 41e édition (théâtre, humour, musique)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Lilly's Club Saint-Tropez (ex-VIP Room) — saison d'août",
+  "apres": "Lilly's Club Saint-Tropez (ex-VIP Room), saison d'août",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Beach clubs de Pampelonne — Loulou, Casa Amor, Bagatelle, Gigi : soirées d'août",
+  "apres": "Beach clubs de Pampelonne, Loulou, Casa Amor, Bagatelle, Gigi : soirées d'août",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Palaces de la presqu'île — expériences d'août (Byblos, Cheval Blanc, Airelles Château de la Messardière, La Réserve Ramatuelle)",
+  "apres": "Palaces de la presqu'île, expériences d'août (Byblos, Cheval Blanc, Airelles Château de la Messardière, La Réserve Ramatuelle)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Gucci Flora x La Rose des Vents — beach club takeover",
+  "apres": "Gucci Flora x La Rose des Vents, beach club takeover",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dioriviera Cannes — installation saisonnière",
+  "apres": "Dioriviera Cannes, installation saisonnière",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Soirées d'été du Grand-Hôtel du Cap-Ferrat (Four Seasons) — live music et sunsets au Club Dauphin",
+  "apres": "Soirées d'été du Grand-Hôtel du Cap-Ferrat (Four Seasons), live music et sunsets au Club Dauphin",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "L'été au Negresco — live music à N Les Bars et N La Plage",
+  "apres": "L'été au Negresco, live music à N Les Bars et N La Plage",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dior Spa Cheval Blanc Paris — expérience bien-être Dioriviera",
+  "apres": "Dior Spa Cheval Blanc Paris, expérience bien-être Dioriviera",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Surf Lodge Summer Series 2026 — concerts d'août (Montauk)",
+  "apres": "Surf Lodge Summer Series 2026, concerts d'août (Montauk)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Concerts au Palais Princier 2026 — Martin Rajna & Zoltán Fejérvári (OPMC)",
+  "apres": "Concerts au Palais Princier 2026, Martin Rajna & Zoltán Fejérvári (OPMC)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Monte-Carlo Summer Festival — SOUL! An Exclusive Show",
+  "apres": "Monte-Carlo Summer Festival, SOUL! An Exclusive Show",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Les Grimaldines — festival des musiques du monde (soirées d'août)",
+  "apres": "Les Grimaldines, festival des musiques du monde (soirées d'août)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Festival d'Art Pyrotechnique de Cannes — feux d'août",
+  "apres": "Festival d'Art Pyrotechnique de Cannes, feux d'août",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Délices Sonores — 12e édition (électro à la Citadelle)",
+  "apres": "Délices Sonores, 12e édition (électro à la Citadelle)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Gilles Peterson présente : Impressions — 2 nocturnes jazz dans le Labyrinthe Miró",
+  "apres": "Gilles Peterson présente : Impressions, 2 nocturnes jazz dans le Labyrinthe Miró",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Concerts au Palais Princier 2026 — Kazuki Yamada & Alexandre Kantorow (OPMC, clôture de saison)",
+  "apres": "Concerts au Palais Princier 2026, Kazuki Yamada & Alexandre Kantorow (OPMC, clôture de saison)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Polo — Côte d'Azur Cup (8-10 et 4-6 goals)",
+  "apres": "Polo, Côte d'Azur Cup (8-10 et 4-6 goals)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Monte-Carlo Summer Festival — concert de clôture Laura Pausini",
+  "apres": "Monte-Carlo Summer Festival, concert de clôture Laura Pausini",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Coupe d'Or de Polo de Deauville — 77e édition, finale et remise des prix",
+  "apres": "Coupe d'Or de Polo de Deauville, 77e édition, finale et remise des prix",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "White Party avec Laurent Wolf — Casino Barrière",
+  "apres": "White Party avec Laurent Wolf, Casino Barrière",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Tennis Star Event — Martina Hingis (LUX Tennis) à l'Evian Resort",
+  "apres": "Tennis Star Event, Martina Hingis (LUX Tennis) à l'Evian Resort",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Grand Hôtel de Cala Rossa — saison 2026 et table étoilée La Pinède",
+  "apres": "Grand Hôtel de Cala Rossa, saison 2026 et table étoilée La Pinède",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Hôtel & Spa des Pêcheurs — saison 2026 sur l'île de Cavallo (« l'île des milliardaires »)",
+  "apres": "Hôtel & Spa des Pêcheurs, saison 2026 sur l'île de Cavallo (« l'île des milliardaires »)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Beefbar x Airelles — pop-up estival à La Bastide de Gordes",
+  "apres": "Beefbar x Airelles, pop-up estival à La Bastide de Gordes",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Émeraude Classic Cup – Saint-Malo (2e édition)",
+  "apres": "Émeraude Classic Cup, Saint-Malo (2e édition)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Touquet Classic Amateur – Golf du Touquet",
+  "apres": "Touquet Classic Amateur, Golf du Touquet",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "L'été au Westminster – palace Barrière du Touquet (table étoilée Le Pavillon)",
+  "apres": "L'été au Westminster, palace Barrière du Touquet (table étoilée Le Pavillon)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Soirée Blanche du 15 août — Four Seasons Megève",
+  "apres": "Soirée Blanche du 15 août, Four Seasons Megève",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Festival de Nîmes 2026 — Pack VIP / hospitalité premium aux Arènes romaines (têtes d'affiche de juillet)",
+  "apres": "Festival de Nîmes 2026, Pack VIP / hospitalité premium aux Arènes romaines (têtes d'affiche de juillet)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "DaV Mare — Splendido Mare, A Belmond Hotel (famille Cerea / Da Vittorio)",
+  "apres": "DaV Mare, Splendido Mare, A Belmond Hotel (famille Cerea / Da Vittorio)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Covo di Nord-Est — club iconique de la Riviera",
+  "apres": "Covo di Nord-Est, club iconique de la Riviera",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "La Gritta American Bar — Portofino",
+  "apres": "La Gritta American Bar, Portofino",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Twiga Porto Cervo — Saison Club 2026 (ex-Billionaire, LMDV / Del Vecchio)",
+  "apres": "Twiga Porto Cervo, Saison Club 2026 (ex-Billionaire, LMDV / Del Vecchio)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Twiga Porto Cervo — Ozuna (live urbano)",
+  "apres": "Twiga Porto Cervo, Ozuna (live urbano)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Twiga Porto Cervo — Carl Cox + Andrea Oliva",
+  "apres": "Twiga Porto Cervo, Carl Cox + Andrea Oliva",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Phi Beach (Forte Cappellini) — Saison 2026 sunset & club",
+  "apres": "Phi Beach (Forte Cappellini), Saison 2026 sunset & club",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Hotel Pitrizza — Dîner de gala gastronomique & feux d'artifice",
+  "apres": "Hotel Pitrizza, Dîner de gala gastronomique & feux d'artifice",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sottovento Club Porto Cervo — Saison 2026",
+  "apres": "Sottovento Club Porto Cervo, Saison 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ritual Club Baja Sardinia — Saison 2026",
+  "apres": "Ritual Club Baja Sardinia, Saison 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "JustMe Porto Cervo — Opening & Saison 2026",
+  "apres": "JustMe Porto Cervo, Opening & Saison 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Calvin Harris — Ushuaia Ibiza",
+  "apres": "Calvin Harris, Ushuaia Ibiza",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "David Guetta F*** Me I'm Famous! — Ushuaia Ibiza",
+  "apres": "David Guetta F*** Me I'm Famous!, Ushuaia Ibiza",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Lio Ibiza — Cabaret dinner-show 'Halftime Show' & club",
+  "apres": "Lio Ibiza, Cabaret dinner-show 'Halftime Show' & club",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Blue Marlin Ibiza — Beach club VIP (Cala Jondal)",
+  "apres": "Blue Marlin Ibiza, Beach club VIP (Cala Jondal)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nikki Beach Ibiza — Beach club (Santa Eulalia)",
+  "apres": "Nikki Beach Ibiza, Beach club (Santa Eulalia)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nikki Beach Mallorca — Beach club (Calvia)",
+  "apres": "Nikki Beach Mallorca, Beach club (Calvia)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nammos Mykonos — Legendary Beach Party (quotidien)",
+  "apres": "Nammos Mykonos, Legendary Beach Party (quotidien)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Antonis Remos — 'The Return' feat. Kenan Doğulu (Nammos)",
+  "apres": "Antonis Remos, 'The Return' feat. Kenan Doğulu (Nammos)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "MADE IN MYKONOS — DJ Vassili Tsilichristos (Nammos)",
+  "apres": "MADE IN MYKONOS, DJ Vassili Tsilichristos (Nammos)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Black Coffee — Residency 2026 (SantAnna Mykonos)",
+  "apres": "Black Coffee, Residency 2026 (SantAnna Mykonos)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "SantAnna Mykonos — Nuits headline (Martinez Brothers, Marco Carola, Vintage Culture, Artbat...)",
+  "apres": "SantAnna Mykonos, Nuits headline (Martinez Brothers, Marco Carola, Vintage Culture, Artbat...)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Cavo Paradiso — Saison DJ 2026 (club iconique en falaise)",
+  "apres": "Cavo Paradiso, Saison DJ 2026 (club iconique en falaise)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Scorpios — Nuits signature (Innervisions, Keinemusik, Peggy Gou)",
+  "apres": "Scorpios, Nuits signature (Innervisions, Keinemusik, Peggy Gou)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Principote — Beach club chic de Panormos",
+  "apres": "Principote, Beach club chic de Panormos",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "LIV at Fontainebleau — nightclub iconique (soirees d'ete)",
+  "apres": "LIV at Fontainebleau, nightclub iconique (soirees d'ete)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nikki Beach Miami Beach — Amazing Sundays & Saturdance (beach club ADN Riviera)",
+  "apres": "Nikki Beach Miami Beach, Amazing Sundays & Saturdance (beach club ADN Riviera)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Torneo Internacional de Polo de Sotogrande 2026 — Copa de Oro (Gold Cup)",
+  "apres": "Torneo Internacional de Polo de Sotogrande 2026, Copa de Oro (Gold Cup)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Régates Royales – Trophée Panerai, Cannes 2026",
+  "apres": "Régates Royales, Trophée Panerai, Cannes 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Mostra de Venise 2026 — 83e Festival international du film",
+  "apres": "Mostra de Venise 2026, 83e Festival international du film",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "New York Fashion Week — Printemps-Été 2027",
+  "apres": "New York Fashion Week, Printemps-Été 2027",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Kering Foundation — Dîner Caring for Women (5e édition)",
+  "apres": "Kering Foundation, Dîner Caring for Women (5e édition)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Milano Fashion Week — Printemps-Été 2027",
+  "apres": "Milano Fashion Week, Printemps-Été 2027",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "London Fashion Week — Printemps-Été 2027",
+  "apres": "London Fashion Week, Printemps-Été 2027",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Paris Fashion Week — Prêt-à-porter Printemps-Été 2027",
+  "apres": "Paris Fashion Week, Prêt-à-porter Printemps-Été 2027",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Metropolitan Opera — Gala d'ouverture de saison (Macbeth de Verdi)",
+  "apres": "Metropolitan Opera, Gala d'ouverture de saison (Macbeth de Verdi)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "New York Philharmonic — Gala inaugural de Gustavo Dudamel",
+  "apres": "New York Philharmonic, Gala inaugural de Gustavo Dudamel",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "New York City Ballet — Fall Fashion Gala 2026",
+  "apres": "New York City Ballet, Fall Fashion Gala 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "AROP — Gala d'ouverture de la saison de danse 26/27",
+  "apres": "AROP, Gala d'ouverture de la saison de danse 26/27",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "PAD London 2026 — Collectors Preview",
+  "apres": "PAD London 2026, Collectors Preview",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Fashion Week Paris — invitations des maisons : bureaux de presse & VIC",
+  "apres": "Fashion Week Paris, invitations des maisons : bureaux de presse & VIC",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sphère — showroom officiel des créateurs émergents (FHCM)",
+  "apres": "Sphère, showroom officiel des créateurs émergents (FHCM)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Salons professionnels — Tranoï, Première Classe, JILL, WOMAN Paris",
+  "apres": "Salons professionnels, Tranoï, Première Classe, JILL, WOMAN Paris",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Grands magasins & concept stores — accès libre pendant la Fashion Week",
+  "apres": "Grands magasins & concept stores, accès libre pendant la Fashion Week",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Accès payant — billetterie de défilés & conciergerie de luxe",
+  "apres": "Accès payant, billetterie de défilés & conciergerie de luxe",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Créateurs émergents au calendrier — contacts directs (voie la plus accessible)",
+  "apres": "Créateurs émergents au calendrier, contacts directs (voie la plus accessible)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "amfAR Gala Venezia 2026 — 6e édition",
+  "apres": "amfAR Gala Venezia 2026, 6e édition",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Rolex Swan Cup 2026 — 60 ans de Nautor Swan",
+  "apres": "Rolex Swan Cup 2026, 60 ans de Nautor Swan",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Global Gift Gala Marbella 2026 — XVe édition (Eva Longoria)",
+  "apres": "Global Gift Gala Marbella 2026, XVe édition (Eva Longoria)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Art Basel Paris 2026 — Grand Palais",
+  "apres": "Art Basel Paris 2026, Grand Palais",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Jacquemus Beach Experience — takeover de Blue Beach au Mandarin Oriental, Bodrum",
+  "apres": "Jacquemus Beach Experience, takeover de Blue Beach au Mandarin Oriental, Bodrum",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dîner quatre mains Ayla Privé — Aret Sahakyan × Massimiliano Delle Vedove (Smoked Room, Madrid **)",
+  "apres": "Dîner quatre mains Ayla Privé, Aret Sahakyan × Massimiliano Delle Vedove (Smoked Room, Madrid **)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dîner quatre mains Ayla Privé — Aret Sahakyan × Francesco Sodano (Famiglia Rana, Vérone **)",
+  "apres": "Dîner quatre mains Ayla Privé, Aret Sahakyan × Francesco Sodano (Famiglia Rana, Vérone **)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dîner quatre mains Ayla Privé — Aret Sahakyan × Jonny Lake (Trivet, Londres **)",
+  "apres": "Dîner quatre mains Ayla Privé, Aret Sahakyan × Jonny Lake (Trivet, Londres **)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Bagatelle Bodrum — Iconic Shows et guest DJs internationaux du jeudi",
+  "apres": "Bagatelle Bodrum, Iconic Shows et guest DJs internationaux du jeudi",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "GAIA Bodrum — résidence estivale grecque-méditerranéenne au Mandarin Oriental",
+  "apres": "GAIA Bodrum, résidence estivale grecque-méditerranéenne au Mandarin Oriental",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Festival International du Film de Marrakech — 23e édition",
+  "apres": "Festival International du Film de Marrakech, 23e édition",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ravello Festival – « Götterdämmerung » dirigée par Kent Nagano",
+  "apres": "Ravello Festival, « Götterdämmerung » dirigée par Kent Nagano",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ravello Festival – Concerto all'alba",
+  "apres": "Ravello Festival, Concerto all'alba",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ravello Festival – Soirée de clôture avec Sir Simon Rattle",
+  "apres": "Ravello Festival, Soirée de clôture avec Sir Simon Rattle",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Premio Faraglioni Capri International 2026 – hommage à Toni Servillo",
+  "apres": "Premio Faraglioni Capri International 2026, hommage à Toni Servillo",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Cene a quattro mani à L'Olivo** – Jumeirah Capri Palace (série été 2026)",
+  "apres": "Cene a quattro mani à L'Olivo**, Jumeirah Capri Palace (série été 2026)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "The I.C.E. — International Concours of Elegance St. Moritz",
+  "apres": "The I.C.E., International Concours of Elegance St. Moritz",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "120e White Turf St. Moritz — courses sur le lac gelé",
+  "apres": "120e White Turf St. Moritz, courses sur le lac gelé",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "St Barth Gourmet Festival — 13e édition",
+  "apres": "St Barth Gourmet Festival, 13e édition",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Réveillon Nikki Beach St Barth — « Paradisco »",
+  "apres": "Réveillon Nikki Beach St Barth, « Paradisco »",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Réveillon d'Eden Rock — St Barths (dîner de gala et soirée dansante)",
+  "apres": "Réveillon d'Eden Rock, St Barths (dîner de gala et soirée dansante)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "St Barth Music Festival — 43e édition",
+  "apres": "St Barth Music Festival, 43e édition",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Frieze Abu Dhabi 2026 — édition inaugurale (VIP Preview)",
+  "apres": "Frieze Abu Dhabi 2026, édition inaugurale (VIP Preview)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dubai Racing Carnival — nuits mondaines à Meydan (ouverture de saison)",
+  "apres": "Dubai Racing Carnival, nuits mondaines à Meydan (ouverture de saison)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Amber Lounge Abu Dhabi 2026 — after-party VIP de la finale F1",
+  "apres": "Amber Lounge Abu Dhabi 2026, after-party VIP de la finale F1",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Réveillon du Nouvel An — Atlantis The Royal (Gala Dinner)",
+  "apres": "Réveillon du Nouvel An, Atlantis The Royal (Gala Dinner)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Réveillon du Nouvel An — One&Only One Za'abeel",
+  "apres": "Réveillon du Nouvel An, One&Only One Za'abeel",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Réveillon du Nouvel An — Bulgari Resort Dubai (Yacht Club Gala & Festa di Capodanno)",
+  "apres": "Réveillon du Nouvel An, Bulgari Resort Dubai (Yacht Club Gala & Festa di Capodanno)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Hublot Polo Gold Cup Gstaad — 44e édition",
+  "apres": "Hublot Polo Gold Cup Gstaad, 44e édition",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Copa del Rey MAPFRE 2026 — 44e édition (voile)",
+  "apres": "Copa del Rey MAPFRE 2026, 44e édition (voile)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Salon Privé Blenheim Palace 2026 — Concours & Boodles Ladies' Day",
+  "apres": "Salon Privé Blenheim Palace 2026, Concours & Boodles Ladies' Day",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "La Guérite – dîners au coucher du soleil, Île Sainte-Marguerite",
+  "apres": "La Guérite, dîners au coucher du soleil, Île Sainte-Marguerite",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "BIG ART Festival — Robbie Williams live",
+  "apres": "BIG ART Festival, Robbie Williams live",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Twiga Beach Club Forte dei Marmi — cena spettacolo",
+  "apres": "Twiga Beach Club Forte dei Marmi, cena spettacolo",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "La Capannina di Franceschi — serate con ospiti",
+  "apres": "La Capannina di Franceschi, serate con ospiti",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Music on the Rocks — nights (saison 2026)",
+  "apres": "Music on the Rocks, nights (saison 2026)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "ADOR's Gala Dinner 2026 — Dîner de gala de l'Opéra Royal",
+  "apres": "ADOR's Gala Dinner 2026, Dîner de gala de l'Opéra Royal",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Les Jardins de Bagatelle — Garden Club (saison estivale 2026)",
+  "apres": "Les Jardins de Bagatelle, Garden Club (saison estivale 2026)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nikki Beach Saint-Tropez — « La Fête Foraine » by Perrier-Jouët",
+  "apres": "Nikki Beach Saint-Tropez, « La Fête Foraine » by Perrier-Jouët",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nikki Beach Saint-Tropez — Claptone live DJ set",
+  "apres": "Nikki Beach Saint-Tropez, Claptone live DJ set",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "CSIO 5* Longines League of Nations — Saint-Tropez-Gassin",
+  "apres": "CSIO 5* Longines League of Nations, Saint-Tropez-Gassin",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Summer Hamptons Evening 2026 — Northwell Health (7e édition)",
+  "apres": "Summer Hamptons Evening 2026, Northwell Health (7e édition)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Torneo Internacional de Polo de Sotogrande 2026 — Copa de Plata (Silver Cup)",
+  "apres": "Torneo Internacional de Polo de Sotogrande 2026, Copa de Plata (Silver Cup)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Passione Engadina 2026 — « The Italian Job » (15e édition)",
+  "apres": "Passione Engadina 2026, « The Italian Job » (15e édition)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Pebble Beach Concours d'Elegance — 75e édition",
+  "apres": "Pebble Beach Concours d'Elegance, 75e édition",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Design Miami / Paris 2026 — Preview Day sur invitation",
+  "apres": "Design Miami / Paris 2026, Preview Day sur invitation",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Open de France de Polo — Polo Club du Domaine de Chantilly (30 ans du club)",
+  "apres": "Open de France de Polo, Polo Club du Domaine de Chantilly (30 ans du club)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Arqana — October Yearling Sale 2026",
+  "apres": "Arqana, October Yearling Sale 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "An Evening with John Legend — Monte-Carlo Summer Festival",
+  "apres": "An Evening with John Legend, Monte-Carlo Summer Festival",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "MY Yacht Monaco — soirée privée à bord pendant le Monaco Yacht Show",
+  "apres": "MY Yacht Monaco, soirée privée à bord pendant le Monaco Yacht Show",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Closing Party — Nikki Beach Saint-Tropez",
+  "apres": "Closing Party, Nikki Beach Saint-Tropez",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Les Caves du Roy — clôture de la saison 2026 (Hôtel Byblos)",
+  "apres": "Les Caves du Roy, clôture de la saison 2026 (Hôtel Byblos)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sanctum Saint-Tropez — saison club 2026",
+  "apres": "Sanctum Saint-Tropez, saison club 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Verde Beach Saint-Tropez — nuits DJ d'exception 2026",
+  "apres": "Verde Beach Saint-Tropez, nuits DJ d'exception 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Shellona St-Tropez — saison musicale 2026 (beach club de Pampelonne)",
+  "apres": "Shellona St-Tropez, saison musicale 2026 (beach club de Pampelonne)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "L'Opéra Saint-Tropez — dîner-spectacle 2026 « Luxury Futuristic World »",
+  "apres": "L'Opéra Saint-Tropez, dîner-spectacle 2026 « Luxury Futuristic World »",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "SAINT Ramatuelle — nouveau beach club d'exception (Bagatelle Group)",
+  "apres": "SAINT Ramatuelle, nouveau beach club d'exception (Bagatelle Group)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Gaïo Saint-Tropez — dîner-cabaret & club 2026",
+  "apres": "Gaïo Saint-Tropez, dîner-cabaret & club 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Le Bâoli Cannes — saison estivale 2026 (club & dîner festif)",
+  "apres": "Le Bâoli Cannes, saison estivale 2026 (club & dîner festif)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Black Coffee — résidence estivale à Shellona (2 nuits têtes d'affiche)",
+  "apres": "Black Coffee, résidence estivale à Shellona (2 nuits têtes d'affiche)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sass Café Monte-Carlo — dîner-club des célébrités (soirées d'été)",
+  "apres": "Sass Café Monte-Carlo, dîner-club des célébrités (soirées d'été)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Monte-Carlo Gala for Planetary Health — dîner de gala de la Fondation Prince Albert II",
+  "apres": "Monte-Carlo Gala for Planetary Health, dîner de gala de la Fondation Prince Albert II",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nammos Baja Sardinia — saison beach club 2026 (nouvelle ouverture)",
+  "apres": "Nammos Baja Sardinia, saison beach club 2026 (nouvelle ouverture)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Nikki Beach Costa Smeralda — saison 2026 & soirées signature (Cala Petra Ruja)",
+  "apres": "Nikki Beach Costa Smeralda, saison 2026 & soirées signature (Cala Petra Ruja)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Notti Toscane 2026 — gala Andrea Bocelli (Alpemare & Villa Alpebella)",
+  "apres": "Notti Toscane 2026, gala Andrea Bocelli (Alpemare & Villa Alpebella)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ravello Festival 2026 — Serate Jazz sul Belvedere di Villa Rufolo",
+  "apres": "Ravello Festival 2026, Serate Jazz sul Belvedere di Villa Rufolo",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Il Ballo del Doge 2027 — bal masqué de gala du Carnaval de Venise",
+  "apres": "Il Ballo del Doge 2027, bal masqué de gala du Carnaval de Venise",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dîner « Sous les Étoiles » — Villa Ephrussi de Rothschild",
+  "apres": "Dîner « Sous les Étoiles », Villa Ephrussi de Rothschild",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Monte-Carlo Summer Festival — dîner-spectacle Lisa Stansfield",
+  "apres": "Monte-Carlo Summer Festival, dîner-spectacle Lisa Stansfield",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Disco del Sol — 23rd Anniversary, Nikki Beach Marbella",
+  "apres": "Disco del Sol, 23rd Anniversary, Nikki Beach Marbella",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Second Story Live at Qurio – Nikki Beach Porto Heli",
+  "apres": "Second Story Live at Qurio, Nikki Beach Porto Heli",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "KITZ-RACE-Club — 87es Hahnenkamm-Rennen",
+  "apres": "KITZ-RACE-Club, 87es Hahnenkamm-Rennen",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sublime Summer Party 2026 — Twelve Memories to Tell",
+  "apres": "Sublime Summer Party 2026, Twelve Memories to Tell",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Regata Palermo-Montecarlo — 21e édition",
+  "apres": "Regata Palermo-Montecarlo, 21e édition",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sir Rocco Forte Captain's Trophy — édition inaugurale",
+  "apres": "Sir Rocco Forte Captain's Trophy, édition inaugurale",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Premio Internazionale Fondazione Taormina Arte Sicilia per il Teatro — 50 ans de la prose au Teatro Antico",
+  "apres": "Premio Internazionale Fondazione Taormina Arte Sicilia per il Teatro, 50 ans de la prose au Teatro Antico",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Falstaff — 130e anniversaire du Teatro Massimo",
+  "apres": "Falstaff, 130e anniversaire du Teatro Massimo",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Taobuk — Taormina International Book Festival, XVIIe édition",
+  "apres": "Taobuk, Taormina International Book Festival, XVIIe édition",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Dubrovačke ljetne igre — Concert de clôture de la 77e édition (Orchestre symphonique de la HRT, Pretty Yende)",
+  "apres": "Dubrovačke ljetne igre, Concert de clôture de la 77e édition (Orchestre symphonique de la HRT, Pretty Yende)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Philharmonix – The Vienna Berlin Music Club (77e Dubrovačke ljetne igre)",
+  "apres": "Philharmonix, The Vienna Berlin Music Club (77e Dubrovačke ljetne igre)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "104. Jägerball – Ball vom Grünen Kreuz",
+  "apres": "104. Jägerball, Ball vom Grünen Kreuz",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Camarote Nº1 — Carnaval de Rio 2027",
+  "apres": "Camarote Nº1, Carnaval de Rio 2027",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Gala Aniversario Malba — 25 años",
+  "apres": "Gala Aniversario Malba, 25 años",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ondalinda x Careyes — Cosmic Code",
+  "apres": "Ondalinda x Careyes, Cosmic Code",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sotheby's Hong Kong — Modern & Contemporary Evening Auction",
+  "apres": "Sotheby's Hong Kong, Modern & Contemporary Evening Auction",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sotheby's Hong Kong — High Jewelry & Important Watches",
+  "apres": "Sotheby's Hong Kong, High Jewelry & Important Watches",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Damian Lazarus — Savaya Bali",
+  "apres": "Damian Lazarus, Savaya Bali",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Soneva Stars — Sir Mo Farah Run Club",
+  "apres": "Soneva Stars, Sir Mo Farah Run Club",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Chef Olivier Limousin — Gastronomy Month 2026",
+  "apres": "Chef Olivier Limousin, Gastronomy Month 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Health & Happiness Week 2027 – Mustique",
+  "apres": "Health & Happiness Week 2027, Mustique",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Formula 1 Paddock Club™ — Formula 1 Heineken Las Vegas Grand Prix 2026",
+  "apres": "Formula 1 Paddock Club™, Formula 1 Heineken Las Vegas Grand Prix 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Qatar Prix de l'Arc de Triomphe — Longchamp",
+  "apres": "Qatar Prix de l'Arc de Triomphe, Longchamp",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Sotheby's Paris — vente du soir « Modernités » (orbite Art Basel Paris)",
+  "apres": "Sotheby's Paris, vente du soir « Modernités » (orbite Art Basel Paris)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Artcurial — vente « La Modernité en partage » (Collection Louis Grandchamp des Raux, orbite Art Basel Paris)",
+  "apres": "Artcurial, vente « La Modernité en partage » (Collection Louis Grandchamp des Raux, orbite Art Basel Paris)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Gala d'ouverture de la saison de danse — Opéra national de Paris (Palais Garnier)",
+  "apres": "Gala d'ouverture de la saison de danse, Opéra national de Paris (Palais Garnier)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Ouverture de la saison lyrique — Opéra de Monte-Carlo, « Carmen » (Grimaldi Forum)",
+  "apres": "Ouverture de la saison lyrique, Opéra de Monte-Carlo, « Carmen » (Grimaldi Forum)",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Rockwool France Sail Grand Prix — SailGP Saint-Tropez 2026",
+  "apres": "Rockwool France Sail Grand Prix, SailGP Saint-Tropez 2026",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
+ },
+ {
+  "avant": "Lexus Melbourne Cup Day 2026 — le Birdcage, Flemington",
+  "apres": "Lexus Melbourne Cup Day 2026, le Birdcage, Flemington",
+  "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
+  "date": "2026-08-21"
  }
 ]
