@@ -1516,5 +1516,17 @@
   "apres": "Lexus Melbourne Cup Day 2026, le Birdcage, Flemington",
   "motif": "Retrait des tirets longs employés comme ponctuation (— et –), à la demande de Constance le 21/08/2026 : leur densité signe une écriture automatique. Seul le séparateur du titre change (— devient une virgule) ; le contenu, les dates et l'adresse de la page sont identiques — vérifié : la fonction slugify écrase déjà toute ponctuation, aucune URL ne bouge.",
   "date": "2026-08-21"
+ },
+ {
+  "avant": "Grand Palais d'été, édition 2026 (expositions d'août)",
+  "apres": "Grand Palais d'été, édition 2026",
+  "date": "2026-08-22",
+  "motif": "Fusion de doublon du 22/08/2026. La parenthèse « (expositions d'août) » décrivait une photographie de la saison prise en août ; la fiche fusionnée couvre désormais toute la saison, du 2 juin au 6 septembre 2026. Le libellé officiel est « Grand Palais d'été, édition 2026 ». L'ancienne adresse de page disparaît : coût assumé, la fiche restait sinon étiquetée d'un mois qui ne la décrit plus."
+ },
+ {
+  "avant": "Les Grimaldines, festival de Grimaud (soirées de juillet)",
+  "apres": "Les Grimaldines, 23e édition",
+  "date": "2026-08-22",
+  "motif": "Fusion de doublon du 22/08/2026. La mention « (soirées de juillet) » était fausse : la fiche portait déjà d1=2026-07-21 et d2=2026-08-11, donc les quatre mardis du festival, dont deux en août. Un titre sans mention de mois évite de rejouer la scission qu'on vient de défaire. L'ancienne adresse de page disparaît : coût assumé sur une fiche dont le festival s'est achevé le 11 août."
  }
 ]
