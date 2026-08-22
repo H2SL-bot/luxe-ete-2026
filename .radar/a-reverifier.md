@@ -7,11 +7,17 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 
 | Événement | Doute | Constaté le | Pourquoi non tranché |
 |---|---|---|---|
-| Lio Ibiza — Cabaret dinner-show | saison mai-octobre, aucune date de clôture publiée | 20/08/2026 | liogroup.com/ibiza — la maison décrit une saison de mai à octobre et le programme 2026 (KŌDŌ), sans publier de date de fermeture. La fin au 31/08 de la fiche est un bouchon, mais aucune date sûre ne permet de la remplacer. |
-| Nammos Mykonos — Legendary Beach Party | clôture annoncée « fin septembre à mi-octobre », sans date | 20/08/2026 | nammos.com et guides de Mykonos — ouverture le 1er mai, activité de juin à septembre, fermeture située entre fin septembre et mi-octobre selon les sources, jamais datée. Insuffisant pour corriger : la fin au 31/08 reste un bouchon assumé. |
-| Scorpios — Nuits signature | la saison va jusqu'au 4 octobre, la fiche s'arrête au 31 août | 20/08/2026 | programmation Scorpios 2026 — saison de mai à octobre, soirée de clôture le 4 octobre 2026. La fiche porte sur les « nuits signature » (Innervisions, Keinemusik) : impossible de savoir sans la source du club si CETTE série s'arrête fin août ou suit la saison. Non corrigé. |
 | Dolce & Gabbana x Casa Amor — takeover 'DG Resort' | le takeover 2026 est confirmé, ses dates ne le sont pas | 20/08/2026 | world.dolcegabbana.com — DG Resort 2026 confirme Casa Amor (plage de Pampelonne) parmi ses adresses, motif Carretto Siciliano et pop-up store. AUCUNE date de début ni de fin n'est publiée par la maison. La fenêtre 01/07→30/08 de la fiche reste invérifiée. |
-| JustMe Porto Cervo — Opening & Saison 2026 | ouverture annoncée au 4 juillet, la fiche dit le 10 | 20/08/2026 | sources locales sardes — ouverture de la saison 2026 annoncée au 4 juillet 2026 ; la fiche démarre au 10/07. Écart d'une semaine, sur une source qui n'est pas le club lui-même : non corrigé faute de source de première main. Aucune date de fin publiée. |
+| JustMe Porto Cervo — Opening & Saison 2026 | ouverture annoncée au 4 juillet, la fiche dit le 10 ; aucune date de clôture 2026 trouvée non plus (22/08) | 20/08/2026 | sources locales sardes — ouverture de la saison 2026 annoncée au 4 juillet 2026 ; la fiche démarre au 10/07. Écart d'une semaine, sur une source qui n'est pas le club lui-même : non corrigé faute de source de première main. Aucune date de fin publiée malgré nouvelle recherche le 22/08 (xceed.me ne liste rien après le 23/08, calendrier probablement juste incomplet). |
+| Principote (Panormos, Mykonos) | saison mai-octobre, aucune date de clôture publiée | 20/08/2026, reconfirmé 22/08 | principote.com (consulté en rendu JS le 22/08) — aucune date de saison 2026 sur le site officiel, ni sur Instagram/presse locale. La fin au 31/08 de la fiche reste un bouchon assumé, faute de mieux. |
+| La Gritta American Bar — Portofino | ouvert 7j/7, aucune date de fermeture saisonnière trouvée | 22/08/2026 | lagrittaportofino.com consulté directement — aucune mention de fermeture. Établissement sur ponton flottant, une fermeture hivernale est plausible mais rien ne permet de dater une éventuelle fin de saison estivale. Instagram/Facebook/TripAdvisor inaccessibles (429/403). |
+| Dioriviera Cannes — installation saisonnière | date de fin 2026 non publiée | 20/08/2026, reconfirmé 22/08 | cannes.dior.com et pages Dior officielles renvoient un 403 systématique ; seule une date 2024 (18 mai → 15 sept.) a été trouvée, non transposable à 2026. Existence du point de vente 2026 confirmée par la presse mode, sans date de fermeture. |
+| La Co(o)rniche (Pyla-sur-Mer) — Sunset sessions & DJ sets | aucune date de fin trouvée pour cette programmation précise | 20/08/2026, reconfirmé 22/08 | lacoorniche.com consulté directement le 22/08 — l'établissement lui-même semble ouvert presque à l'année, mais la série « Sunset sessions & DJ sets » n'a de date de fin nulle part (site, presse). Instagram/Facebook non accessibles depuis l'outil. |
+| Bagni Fiore Paraggi & Langosteria Paraggi (terrasse Dior) | formule « du printemps aux derniers couchers de soleil », ambiguë | 20/08/2026, reconfirmé 22/08 | langosteria.com consulté le 22/08 — seul événement daté trouvé : White Party le 14/08/2026. La page dédiée « terrazza-sul-mare-2026 » renvoie une 404. Phrase marketing non datable avec certitude (fin météo ou équinoxe ?). |
+| Chanel East Hampton — boutique éphémère | encore ouverte le 05/08/2026, date de fermeture non confirmée | 20/08/2026, reconfirmé 22/08 | sparkhamptons.com (article du 05/08/2026) confirme l'ouverture en cours. Chanel.com (source la plus autorisée) bloque en 403 à chaque tentative. Des mentions contradictoires (07/09, 18/10) circulent sans citation vérifiable sur une page officielle — écartées plutôt que tranchées au hasard. |
+| L'été au Westminster – palace Barrière du Touquet (Le Pavillon) | aucune date de fermeture saisonnière trouvée | 22/08/2026 | hotelsbarriere.com/en/le-touquet-paris-plage/le-westminster consulté directement — aucune mention de fermeture. Page presse groupebarriere.com en 404. Des mentions non sourcées évoquent une fermeture de novembre à mars, non confirmées par une source primaire. |
+| Été impérial à l'Hôtel du Palais (Biarritz) — gala, brunchs, expositions joaillerie | aucune date de fin du programme « été » trouvée | 22/08/2026 | hyatt.com (page officielle) accessible mais sans date précise ; hotel-du-palais.com injoignable (DNS), page Hyatt en 429 répété. Le Gala du 15/08 est confirmé mais antérieur au bouchon ; le palace lui-même est ouvert à l'année. |
+| Terrasses et jardins d'été des palaces parisiens (Plaza Athénée, Bristol, Peninsula, Mandarin Oriental, Crillon) | fiche-compilation, aucune date de fermeture unique | 22/08/2026 | freshmagparis.com (source de la fiche) ne donne aucune date de fin. Les terrasses de palaces parisiens ferment traditionnellement en septembre/octobre selon la météo, mais aucune des 5 adresses ne publie de date précise. |
 | Beefbar x Airelles — pop-up estival à La Bastide de Gordes | date de fin de saison non publiée | 20/08/2026 | airelles.com — la page du Beefbar de Gordes donne les horaires (18h-1h30) mais aucune date de clôture 2026. La fin au 28/08 portée par la fiche reste invérifiée. |
 | Fiera di Sant'Ermete et feux d'artifice de Forte dei Marmi | la source citée date de 2024, pas de 2026 | 20/08/2026 | luccatimes.it — l'article cité par la fiche est daté d'août 2024 et donne le programme 2024 (26, 27, 28 août). Les dates 2026 de la fiche sont identiques : plausible pour une fête patronale à date fixe, mais AUCUNE source 2026 ne les confirme. À reprendre sur une source de l'année. |
 | Lilly's Club Saint-Tropez (ex-VIP Room) | aucune date 2026 publiée par le club | 20/08/2026 | lillysclub.com/future-events — la page annonce « Saint-Tropez Summer 2026. Stay Tuned » sans une seule date. La saison 01/08 → 29/08 portée par la fiche est invérifiable en l'état. |
@@ -22,6 +28,62 @@ avec sa preuve ; un lieu fermé part dans `tools/lieux_fermes.md`.
 | White Party avec Laurent Wolf — Casino Barrière | le concert est confirmé, l'habillage « White Party » ne l'est pas | 20/08/2026 | agenda du Théâtre Casino Barrière — Laurent Wolf le jeudi 20 août 2026 : DATE CONFIRMÉE. Aucune source officielle ne reprend en revanche l'appellation « White Party ». À vérifier auprès du casino. |
 
 ## Doutes tranchés
+
+### 22/08/2026 — réseau ouvert : 21 des 33 dernières fiches « 31 août » corrigées avec une date sourcée
+
+Priorité fixée le 21/08 au soir : traiter le bouchon du 31/08 avant tout le reste,
+avant que les fiches disparaissent le 1er septembre. Session avec accès réseau
+complet (curl 200 confirmé en tout début de passe) : 4 lots de recherche
+(WebSearch + WebFetch) sur les 33 fiches d'établissements réels encore au 31/08.
+
+**12 dates fermes trouvées à la source officielle** (offices de tourisme,
+sites officiels, pages billetterie) : Palaces presqu'île St-Tropez → 11/10
+(4 adresses, dates identiques sur sainttropeztourisme.com), Club Dauphin
+Cap-Ferrat → 15/11, N La Plage Negresco → 06/10, Hôtel du Cap-Eden-Roc → 18/10,
+Casino Barrière Le Touquet → 24/10 (spectacles déjà billetés), Surf Lodge
+Montauk → 07/09 (line-up officiel), Beach clubs Pampelonne → 03/10 (le plus
+tardif des 3 confirmés), Anema e Core Capri → 30/09 (saison propre publiée),
+DaV Mare/Splendido Mare → 05/01/2027, Nikki Beach Miami → 06/08/2027 (fermeture
+définitive actée par accord avec la ville, PAS une fin de saison), Lío Ibiza →
+04/10 et Nammos Mykonos → 25/09 (deux cas où le doute du 20/08 est levé par une
+preuve d'activité confirmée à cette date, même si ce n'est pas une « date de
+clôture » officielle annoncée comme telle).
+
+**7 dates étendues par prudence, à confiance modérée** (evidence indirecte ou
+régionale, pas de date propre à l'établissement) : Gucci Flora x La Rose des
+Vents → 30/09, Scorpios → 04/10 (deux sources tierces convergentes, doute du
+20/08 partiellement levé), Circuit vacances des mannequins et Scène yacht
+Ibiza-Formentera (compilations sans lieu unique) → alignées sur 04/10, Portofino
+(compilation) → 04/09 (source d'origine de la fiche périmée, contenu 2023 —
+piège HTTP 200/contenu obsolète déjà connu, à signaler séparément), Covo di
+Nord-Est → 30/09 (soirée du 31/12 confirmée mais volet plage/été distinct, non
+daté), Sottovento Porto Cervo → 13/09 (calendrier propre introuvable, alignement
+régional Costa Smeralda).
+
+**2 cas structurels — le concept de « fin de saison » ne s'applique pas** :
+La Lanterne d'Hermès Ginza (microsite à thème mensuel évolutif, pas de
+fermeture — étendu à 30/09 en anticipant la rotation vers un thème automnal) et
+les clubs privés de Mayfair (ouverts à l'année — horizon artificiel posé à
+15/02/2027 faute d'un mécanisme de fiche « permanente » dans le modèle de
+données ; à recatégoriser en dossier d'accès à une prochaine passe plutôt que
+de leur inventer une saison).
+
+**Milan en mode Ferragosto** n'a PAS été modifiée : son sujet même (ce qui reste
+ouvert pendant le Ferragosto milanais) est intrinsèquement borné à la mi-août,
+le bouchon du 31/08 y est donc approprié, pas un défaut.
+**Soirées d'été des Hôtels Barrière Deauville** n'a pas été modifiée non plus :
+le Meeting de Deauville (l'événement phare associé) se termine le 30/08, avant
+le bouchon — cohérent, pas de troncature.
+
+**10 fiches restent invérifiables** malgré la recherche réseau complète du jour
+(voir le tableau ci-dessus, mis à jour le 22/08) : Principote, La Gritta,
+Dioriviera Cannes, La Co(o)rniche, Bagni Fiore/Langosteria Paraggi, Chanel East
+Hampton, JustMe Porto Cervo (toujours sans date de clôture), Westminster
+Touquet, Hôtel du Palais Biarritz, Terrasses des palaces parisiens. Elles
+disparaîtront de l'écran le 1er septembre si aucune source n'est trouvée avant
+— à traiter en priorité à la prochaine passe, éventuellement par contact direct
+(réflexe déjà recommandé le 20/08 : ce sont des fiches à compléter par
+courriel, pas par recherche pure).
 
 ### 20/08/2026 — Bouchon du 31 août : ce qui NE PEUT PAS être tranché sur le web
 
