@@ -261,6 +261,50 @@ Jamais de « bon hôtel » ni de « bonne table » : le standard est celui du
 Cheval Blanc, du Louis XV, des Caves du Roy. Si la ville n'offre rien de ce
 calibre, en mettre moins plutôt qu'en mettre de moindre.
 
+## LES GUIDES D'ACCÈS — LE CONTENU QUI TRAVAILLE TOUT SEUL (21/08/2026)
+
+Le radar tient **10 fiches `c=acces`** pour 295 fiches d'événements. Or une fiche
+d'événement meurt le lendemain de l'événement, tandis qu'un guide reste vrai des
+années, se traduit une fois, et répond à ce que les gens tapent réellement dans
+Google : « comment se faire inviter à… », « accréditation presse … ». Gérald
+l'avait déjà inscrit au RESTE-À-FAIRE le 29/07 ; c'est toujours le levier de
+visibilité le plus rentable et le moins entamé.
+
+**UN GUIDE N'EST PAS UNE FICHE PAR ÉVÉNEMENT.** Il décrit UNE PORTE, et sert
+d'un coup toutes les fiches qui l'empruntent. Il en faut une trentaine au total,
+pas trois cents.
+
+**LES SIX À ÉCRIRE, dans cet ordre.** Comptage fait le 22/08/2026 sur les 295
+fiches de la fenêtre live — le chiffre est le nombre de fiches que chaque guide
+desservirait :
+
+| Guide | Fiches desservies |
+|---|---|
+| 1. Obtenir une accréditation presse | **145** |
+| 2. Passer par une agence de relations presse | 67 |
+| 3. Se faire inscrire sur une liste d'invités (RSVP) | 51 |
+| 4. Réserver une table là où c'est réputé impossible | 33 |
+| 5. Entrer à un vernissage ou une preview privée | 28 |
+| 6. Comprendre les tirages au sort et les ballots | 7 |
+
+**ÉCARTÉ SCIEMMENT : « acheter un billet en ligne »**, malgré 158 fiches. Il n'y
+a aucune méthode à révéler, donc aucune recherche à capter. Le volume ne fait
+pas la valeur.
+
+**À CHAQUE PASSE**, tant que ces six guides n'existent pas : en écrire un, né
+COMPLET (voie d'entrée + séjour + 13 langues), dans l'ordre ci-dessus.
+
+**Matière déjà disponible pour le guide n° 1**, sans rien inventer : les 145
+fiches concernées décrivent chacune une procédure d'accréditation réelle et
+vérifiée. Le guide se construit en dégageant ce qu'elles ont en commun —
+l'anticipation de trois semaines, l'organe de rattachement demandé, les portails
+d'inscription, le fait qu'une boîte « info@ » soit souvent un répondeur qui
+renvoie au téléphone (constaté le 21/08 chez La Rose des Vents). Citer des
+exemples nommés tirés des fiches, jamais un cas fabriqué.
+
+**PLACE DANS L'ORDRE DES PRIORITÉS.** Après le piège du « 31 août », qui a une
+échéance ferme. Avant la joaillerie, qui n'en a pas.
+
 ## LA JOAILLERIE EST LE TROU DU RADAR (constat du 20/08/2026)
 
 Le site annonce à Google, dans sa propre description : « défilés, **haute
@@ -293,11 +337,14 @@ ouvert (« Accès réseau : Complet ») : la passe du 22/08 est la première à
 pouvoir vérifier dehors. Deux chantiers l'attendent, et ils ne sont pas
 également pressés :
 
-1. **D'ABORD le piège du « 31 août »** — 22 fiches d'établissements réels
-   portent une fin de saison qui est un bouchon. Elles DISPARAÎTRONT de l'écran
+1. **D'ABORD le piège du « 31 août »** — 14 fiches restantes au 22/08 (21 ont
+   été établies par la passe du matin). Ce sont des établissements réels dont
+   la fin de saison est un bouchon. Elles DISPARAÎTRONT de l'écran
    le 1er septembre, la plupart à tort. Échéance ferme, contenu vrai à sauver.
    Établir ces dates à leur source officielle passe avant tout le reste.
-2. **ENSUITE la joaillerie** — 8 fiches à créer. Aucune échéance.
+2. **PUIS les guides d'accès** — six à écrire, voir la section dédiée. C'est
+   le levier de visibilité le plus rentable et le moins entamé.
+3. **ENSUITE la joaillerie** — 8 fiches à créer. Aucune échéance.
 
 Perdre du contenu exact coûte plus cher que de ne pas encore en avoir ajouté.
 Une fois les 22 dates établies, revenir à la règle ci-dessous.
