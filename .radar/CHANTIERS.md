@@ -92,11 +92,49 @@ japonais, le hindi. Une seule tournure ridicule dans une langue, et le site perd
 sa crédibilité auprès de ce public — sans que personne ne le signale jamais.
 Priorité : les 12 accueils de langue, ce sont les pages vues en premier.
 
-**10 · Neuf doublons possibles nom + ville**
-Le doublon « Exposition Générale » a été trouvé le 20/08 : deux fiches pour la
-même exposition, l'une annonçant des dates fausses. Huit autres paires portent
-un nom et une ville proches. À trancher une par une — certaines sont peut-être
-deux éditions légitimes.
+**10 · ~~Neuf doublons possibles nom + ville~~ → RÉGLÉ le 22/08/2026**
+
+Le relevé a trouvé **sept** paires, pas neuf. **Quatre étaient de fausses
+alertes** : Art Basel et Art Central à Hong Kong, Airelles et Cheval Blanc à
+Courchevel, le Bal et le Concert du Nouvel An des Wiener Philharmoniker,
+Sottovento et JustMe à Porto Cervo. Deux noms proches, deux événements réels.
+
+**Trois étaient de vrais doublons**, tranchés après lecture des sources
+officielles et contre-expertise adversariale (deux avocats du maintien par
+paire, angle éditorial et angle factuel) : les trois ont conclu « fusionner »,
+aucune réfutation. 430 → 427 fiches.
+
+- **Qatar Prix de l'Arc de Triomphe** : les deux fiches ne se ressemblaient
+  pas, elles pointaient LA MÊME page de billetterie France Galop, en français
+  et en anglais. Conservée la version française ; greffées l'adresse postale
+  complète et la mention des prestataires d'hospitalité tiers (Racing Breaks),
+  qui ne figure que sur la page anglaise et aurait été perdue.
+
+- **Grand Palais d'été** : deux photographies d'une seule saison, prises à deux
+  moments. Celle qui portait une fin au 26 juillet aurait fait disparaître du
+  radar une saison ouverte jusqu'au 6 septembre. Fusionnée en « Grand Palais
+  d'été, édition 2026 » (02/06 → 06/09), avec sa vraie structure en deux temps :
+  spectacles et After Nef jusqu'au 18 juillet, installations de la Nef jusqu'au
+  26, puis Leandro Erlich seul jusqu'au 6 septembre. **La contre-expertise a
+  rattrapé une erreur que j'allais commettre** : Hilma af Klint n'est pas un
+  volet de la saison estivale mais une exposition distincte, coproduite avec le
+  Centre Pompidou, en galerie 8 jusqu'au 30 août.
+
+- **Les Grimaldines** : une seule 23e édition, en quatre mardis. La fiche
+  « soirées d'août » n'était pas un événement, c'était la seconde moitié de
+  l'autre, découpée arbitrairement, même URL et même billetterie. Fusionnée en
+  « Les Grimaldines, 23e édition », les quatre soirées au même rang.
+
+**Deux fiches renommées, donc deux anciennes adresses de page perdues** : leurs
+libellés annonçaient un mois qui ne les décrivait plus. Coût assumé et consigné.
+
+**Les 12 traductions ont été refaites** pour les deux fiches réécrites, 96
+chaînes : corriger le français sans les traductions aurait recréé la
+« divergence muette » de l'incident du 12/08.
+
+validate 0 bloqueur · perfcheck 0 régression · sitemap 6 866 URLs, 0 lien mort
+· healthcheck http=200, 427 fiches en ligne · aucune date modifiée ailleurs.
+
 
 **11 · ~~Le nom de domaine n'est pas verrouillé~~ → DÉJÀ FAIT, constaté le 21/08/2026**
 
