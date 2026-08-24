@@ -113,14 +113,18 @@ inventées (Chaumet Ion Orchard, Hublot, Swatch : « 01/07 → 31/07 ») sont
 à re-vérifier via le chantier 05.
 
 
-**08 · Le radar s'éteint au printemps 2027** — *consigne écrite le 22/08 avec
-HUIT dates vérifiées (TEFAF, Art Basel Hong Kong, Watches and Wonders, Salone
-del Mobile, Cannes, GemGenève, Grand Prix de Monaco, Royal Ascot). La routine
-les crée une par passe. Détail : doctrine, section « LE PRINTEMPS 2027 EST
-VIDE ».*
-janv. 15 · févr. 8 · mars 4 · **avril 0** · mai 4 · juin 1.
-Un visiteur qui prépare un voyage en mars 2027 ne trouve rien. Ce sont les
-mois où les grandes maisons publient déjà leurs dates.
+**08 · ~~Le radar s'éteint au printemps 2027~~ → SOCLE POSÉ le 24/08/2026**
+
+Les 8 ancres de la doctrine sont vérifiées et en ligne en 13 langues :
+TEFAF (13-18/03, previews 11-12), Watches and Wonders (05-11/04, week-end
+public porté à 3 jours), Salone del Mobile 65e + Fuorisalone (avril, deux
+fiches légitimes), Cannes 80e (11-22/05), GemGenève (11-14/05), Grand Prix
+de Monaco 84e (03-06/06, publié AVEC la mention « sous réserve FIA »
+maintenue par l'ACM, consigne acm.mc respectée, seconde expertise), Royal
+Ascot (15-19/06). Avril 2027 : 0 → 3 fiches. Reste l'ÉLARGISSEMENT
+(Fashion Weeks AH 27-28, Bal de la Rose, Chelsea Flower Show, Le Mans,
+Art Basel Bâle...) : une par passe, consigne inchangée dans la doctrine.
+
 
 **09 · Les 13 langues n'ont jamais été relues par un humain**
 433 fiches × 12 langues traduites automatiquement. Personne n'a lu l'arabe, le
