@@ -211,6 +211,29 @@ def main():
     def cat_label(c, lang):
         return i18n.get(lang, i18n["fr"]).get(CAT_I18N.get(c, "c_other"), c)
 
+    # Constat de la relecture native du 24/08/2026 : les libellés de lieux
+    # (accueils, hub, pages lieu, fil de navigation) sortaient en FRANÇAIS dans
+    # les 12 langues, alors que villes-i18n.json et geo-i18n.json existent.
+    # Un Italien lisait « Venise » et « Sardaigne » sur sa propre page.
+    _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    _DICOS_LIEUX = []
+    for _nom in ("geo-i18n.json", "villes-i18n.json"):
+        try:
+            with open(os.path.join(_RAD, _nom), encoding="utf-8") as _f:
+                _DICOS_LIEUX.append(json.load(_f))
+        except Exception:
+            pass  # un dictionnaire illisible ne doit jamais casser la génération
+
+    def place_label(k, lang):
+        """libellé d'un lieu dans la langue demandée ; repli : la clé française."""
+        if lang == "fr" or not k:
+            return k
+        for _d in _DICOS_LIEUX:
+            v = _d.get(k)
+            if isinstance(v, dict) and v.get(lang):
+                return v[lang]
+        return k
+
     def prefix(lang):
         return "" if lang == "fr" else f"/{lang}"
 
@@ -362,7 +385,7 @@ def main():
                 body.append(f"<p><a class=\"cta\" href=\"{esc(e['u'])}\" target=\"_blank\" rel=\"noopener nofollow\">{esc(UI['official'][lang])} →</a></p>")
             nav = []
             if lieu:
-                nav.append(f"<a href=\"{u_place(lieu, lang)}\">{esc(UI['all_in'][lang])} · {esc(pk)}</a>")
+                nav.append(f"<a href=\"{u_place(lieu, lang)}\">{esc(UI['all_in'][lang])} · {esc(place_label(pk, lang))}</a>")
             if cat:
                 nav.append(f"<a href=\"{u_cat(cat, lang)}\">{esc(cat_label(e.get('c','autre'), lang))}</a>")
             nav.append(f"<a href=\"{prefix(lang)}/\">← {esc(UI['back'][lang])}</a>")
@@ -412,7 +435,7 @@ def main():
             sitemap_urls.append(f"{BASE}{path}")
 
         for k, v in places.items():
-            list_page(k, u_place(v, lang), v["events"], v, u_place)
+            list_page(place_label(k, lang), u_place(v, lang), v["events"], v, u_place)
         for c, v in cats.items():
             list_page(cat_label(c, lang), u_cat(v, lang), v["events"], v, u_cat)
 
@@ -425,7 +448,7 @@ def main():
             hub.append(f"<a href=\"{u_cat(v, lang)}\">{esc(cat_label(c, lang))} ({len(v['events'])})</a>")
         hub.append(f"</div><h2 class=\"sub\">{esc(UI['by_place'][lang])}</h2><div class=\"chips\">")
         for k, v in sorted(places.items(), key=lambda kv: -len(kv[1]["events"])):
-            hub.append(f"<a href=\"{u_place(v, lang)}\">{esc(k)} ({len(v['events'])})</a>")
+            hub.append(f"<a href=\"{u_place(v, lang)}\">{esc(place_label(k, lang))} ({len(v['events'])})</a>")
         hub.append("</div>")
         htitle = f"{UI['hub_h1'][lang]} | ConstanceParis7"
         write(u_hub(lang), page(lang, htitle, UI["hub_intro"][lang], u_hub(lang), "".join(hub), hreflang_for(None, None)))
@@ -463,7 +486,7 @@ def main():
             if aff:
                 home.append(f"<h2 class=\"sub\">{esc(UI['affiche'][lang])}</h2><ul class=\"cards\">")
                 for e in aff:
-                    home.append(f"<li><div class=\"d\">{esc(e.get('d1',''))} · {esc(e.get('v',''))}</div>"
+                    home.append(f"<li><div class=\"d\">{esc(e.get('d1',''))} · {esc(place_label((e.get('v') or '').strip(), lang))}</div>"
                                 f"<div class=\"t\"><a href=\"{u_event(e, lang)}\">{esc(T(e, lang, 'n'))}</a></div></li>")
                 home.append("</ul>")
 
@@ -472,7 +495,7 @@ def main():
                 home.append(f"<a href=\"{u_cat(v, lang)}\">{esc(cat_label(c, lang))} ({len(v['events'])})</a>")
             home.append(f"</div><h2 class=\"sub\">{esc(UI['by_place'][lang])}</h2><div class=\"chips\">")
             for k, v in sorted(places.items(), key=lambda kv: -len(kv[1]["events"]))[:40]:
-                home.append(f"<a href=\"{u_place(v, lang)}\">{esc(k)} ({len(v['events'])})</a>")
+                home.append(f"<a href=\"{u_place(v, lang)}\">{esc(place_label(k, lang))} ({len(v['events'])})</a>")
             home.append(f"</div><p><a href=\"{u_hub(lang)}\">{esc(UI['places_cats'][lang])} →</a></p>")
 
             # Le radar ne lit sa langue que dans localStorage — il n'existe
