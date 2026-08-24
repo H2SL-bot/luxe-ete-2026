@@ -40,3 +40,4 @@
 {"ts":"2026-08-23T16:58:20Z","url":"https://constanceparis7.com/","http":"200","date_present":"yes","live_count":"424","expected_count":"427","expected_date":"23 août 2026 (ou 22 août 2026)","ok":"no"}
 {"ts":"2026-08-23T17:01:23Z","url":"https://constanceparis7.com/","http":"200","date_present":"yes","live_count":"424","expected_count":"424","expected_date":"23 août 2026 (ou 22 août 2026)","ok":"yes"}
 {"ts":"2026-08-23T22:00:04Z","url":"https://constanceparis7.com/","http":"200","date_present":"yes","live_count":"440","expected_count":"440","expected_date":"24 août 2026 (ou 23 août 2026)","ok":"yes"}
+{"ts":"2026-08-24T08:48:22Z","url":"https://constanceparis7.com/","http":"200","date_present":"yes","live_count":"444","expected_count":"444","expected_date":"24 août 2026 (ou 23 août 2026)","ok":"yes"}

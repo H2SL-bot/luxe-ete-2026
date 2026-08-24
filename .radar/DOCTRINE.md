@@ -332,8 +332,7 @@ desservirait :
 a aucune méthode à révéler, donc aucune recherche à capter. Le volume ne fait
 pas la valeur.
 
-**À CHAQUE PASSE**, tant que ces six guides n'existent pas : en écrire un, né
-COMPLET (voie d'entrée + séjour + 13 langues), dans l'ordre ci-dessus.
+**FAIT LE 24/08/2026 : les six guides existent.** Le n° 1 (accréditation) le 21/08 par la passe ; les n° 2 à 6 le 24/08, chacun rédigé depuis le corpus des fiches qui décrivent sa porte (aucun exemple inventé, vérification mécanique), contre-lu, publié en 13 langues. La consigne de passe devient : ENTRETENIR — quand une passe corrige une fiche citée en exemple dans un guide, vérifier que l'exemple reste vrai ; et signaler toute porte nouvelle qui mériterait un 7e guide.
 
 **Matière déjà disponible pour le guide n° 1**, sans rien inventer : les 145
 fiches concernées décrivent chacune une procédure d'accréditation réelle et
