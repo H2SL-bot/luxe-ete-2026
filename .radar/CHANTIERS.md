@@ -70,12 +70,34 @@ vérifié (14 lignes ajoutées, 0 retirée), réciprocité établie en ligne.
 Opérer le cœur de l'application pour gagner sur une page qui charge en une
 demi-seconde n'est pas justifié tant que les chantiers 12 et 07 sont ouverts.
 
-**07 · La joaillerie est absente**
-Fenêtre live : **92 festivals, 3 fiches de joaillerie.** Sur un radar du luxe
-qui vise les maisons, c'est le déséquilibre le plus coûteux : c'est justement
-la catégorie qui a des budgets et des attachés de presse.
-Rappel des catégories : festival 92 · art de vivre 49 · sport 47 · mode 45 ·
-art 40 · autre 22 · accès 10 · **joaillerie 3**.
+**07 · ~~La joaillerie est absente~~ → RÉGLÉ le 23-24/08/2026**
+
+Constance a donné le cap : « les maisons de la place Vendôme ». Chasse à
+8 chercheurs (un par maison ou groupe), chaque piste datée contre-vérifiée sur
+sources ouvertes. **16 pistes confirmées, 0 rejetée, 43 impasses consignées**
+(rien de daté chez Piaget, Chopard, Messika, Buccellati, Mellerio, Bulgari
+hors Biennale : dit honnêtement plutôt qu'inventé).
+
+**Joaillerie : 5 → 18 fiches**, publiées le 24/08 avec leurs 12 traductions
+(1 056 chaînes). Les temps forts : Boucheron ouvre le 26 place Vendôme aux
+Journées du Patrimoine (19-20/09, résa le 02/09 à 10h, à annoncer sur
+Instagram la veille) ; Chaumet au 12 et Repossi au 6 pour les Journées
+Particulières LVMH (16-18/10) ; L'École des Arts Joailliers à
+Mercy-Argenteau, Chantilly (« Le Diamant rose », 17/10 → 03/01/27) et
+Hong Kong ; Van Cleef & Arpels au MAK de Vienne ; Cartier au NGV de
+Melbourne ; Doha Jewellery and Watches Exhibition ; et la semaine des joyaux
+de Genève en novembre (Christie's, Sotheby's ×2, Phillips), expositions
+publiques des lots comprises. Plus 2 fiches art (studios Tiffany au Met,
+Vermeer à Osaka sous mécénat Mikimoto).
+
+Deux pièges de dates désamorcés en chemin : la fin du NGV est le 04/10 (pas
+le 23/08 recopié par des agendas) et Chantilly ferme le 03/01 (pas le 21/02).
+Toutes les dates de fin ont été LUES sur la source, aucune posée par défaut.
+
+Reste ouvert, plus petit : les 3 anciennes fiches joaillerie à dates
+inventées (Chaumet Ion Orchard, Hublot, Swatch : « 01/07 → 31/07 ») sont
+à re-vérifier via le chantier 05.
+
 
 **08 · Le radar s'éteint au printemps 2027** — *consigne écrite le 22/08 avec
 HUIT dates vérifiées (TEFAF, Art Basel Hong Kong, Watches and Wonders, Salone
