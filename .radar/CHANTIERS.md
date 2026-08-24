@@ -34,6 +34,20 @@ clause d'indépendance : « une place dans le radar ne s'achète pas ».
 
 ---
 
+## ✅ RÉGLÉ LE 24/08/2026
+
+**15 · Les guides d'accès : les 6 existent**
+Accréditation presse (145 fiches desservies, écrit le 21/08 par la passe), puis
+le 24/08 : agences de relations presse (82), listes d'invités et RSVP (99),
+tables réputées impossibles (123), vernissages et previews (40), tirages au
+sort (8 fiches en parlent, 3 seulement le pratiquent : dit honnêtement).
+Rédigés depuis le corpus des fiches du radar, zéro exemple inventé
+(vérification mécanique : 0 introuvable), contre-lecture indépendante ; le
+guide des tirages a reçu une contre-lecture manuelle finale, sa traduction
+`ds` retirée des 12 langues (repli français, règle de cohérence). Publiés en
+13 langues, 444 fiches en ligne. S'ajoute `llms.txt`, carte du site pour les
+assistants IA (38 visites venues de ChatGPT en un mois).
+
 ## 🔄 EN COURS
 
 **05 · 147 fiches à re-vérifier** → **120 restantes**
