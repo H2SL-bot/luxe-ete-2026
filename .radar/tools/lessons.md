@@ -799,3 +799,37 @@ pas recréé ou repartagé. À trancher : soit recréer un artifact et inscrire 
 URL dans la doctrine, soit retirer l'étape 10, qui fait aujourd'hui échouer une étape
 obligatoire de chaque passe. Ne pas la laisser échouer en silence : une étape qui
 échoue toujours finit par ne plus être lue, comme le seuil de cadence du 13/08.
+
+## 25/08/2026 — une affirmation « le bouchon est approprié » n'avait jamais été vérifiée
+L'entrée du 22/08 dans `a-reverifier.md` affirmait que « Milan en mode Ferragosto »
+n'avait pas besoin de correction car « son sujet même est intrinsèquement borné à la
+mi-août ». Personne n'avait vérifié cette hypothèse contre les sources CITÉES PAR LA
+FICHE ELLE-MÊME : les expositions qu'elle nomme (Fondazione Prada, Armani/Silos) courent
+en réalité jusqu'à fin septembre, fin octobre et le 20 décembre 2026. Le bouchon du
+31/08 était donc bien un défaut, caché sept jours par une supposition non vérifiée.
+RÈGLE : une décision « on ne corrige pas, c'est normal » est une affirmation comme une
+autre — elle doit être vérifiée à la source au moment où elle est écrite, jamais admise
+par défaut parce que le titre de la fiche « semble » borné dans le temps.
+
+## 25/08/2026 — condensation `iv` : deux pertes réelles malgré verif_faits.py, causes distinctes
+Sur 18 fiches condensées ce jour par 18 agents en parallèle (un agent par fiche, prompt
+identique), `verif_faits.py` a levé 7 alertes. 4 étaient des suppressions légitimes déjà
+signalées comme telles dans le texte source (tarif tiers réfuté, page presse vide,
+horodatage machine confondu avec un téléphone par le regex). 3 étaient de VRAIES pertes,
+toutes des URL secondaires (pages menu/cocktails d'un bar, page presse d'un office de
+tourisme, contact presse d'un sponsor) abrégées ou omises malgré la consigne explicite
+« chaque URL à l'identique ». Confirmation de la leçon du 21/08 : même avec la règle
+écrite noir sur blanc dans le prompt, un agent qui condense continue d'abréger des URL
+secondaires (pas les URL de contact principal, qu'il traite avec plus de soin). Corrigées
+manuellement avant publication. RÈGLE : `verif_faits.py` reste obligatoire même quand le
+prompt de l'agent répète déjà la consigne — la répétition dans le prompt ne suffit pas.
+
+## 25/08/2026 — le convention « d2=2027-12-31 » pour lieu permanent existait déjà, mais nulle part écrite
+Pour corriger La Gritta (bar ouvert 7j/7 sans fermeture) et Le Westminster/Touquet (hôtel
+à l'année), il a fallu chercher dans les données existantes comment le site représente
+un lieu sans fin de saison — trouvé par grep sur une autre fiche (« POINT D'ENTRÉE, Les
+lieux-scènes ouverts à la réservation », d2=2027-12-31), cette convention n'étant écrite
+nulle part dans la doctrine ni dans un commentaire de code. RÈGLE : la prochaine fois
+qu'une fiche permanente doit être créée ou corrigée, utiliser d2=2027-12-31 (revu à
+l'approche de cette date) — et cette leçon fait foi jusqu'à ce que la doctrine l'adopte
+explicitement.
