@@ -345,6 +345,24 @@ exemples nommés tirés des fiches, jamais un cas fabriqué.
 **PLACE DANS L'ORDRE DES PRIORITÉS.** Après le piège du « 31 août », qui a une
 échéance ferme. Avant la joaillerie, qui n'en a pas.
 
+## LES TEXTES SAISONNIERS DE L'INTERFACE (règle du 24/08/2026)
+
+La relecture native des 12 langues a trouvé l'accueil encore en « juillet et
+août » un 24 août : les textes éditoriaux de saison n'avaient aucun mécanisme
+de rafraîchissement. Le badge `brandline_season` bascule tout seul aux
+équinoxes (`saison.py`), mais personne ne bascule la prose.
+
+RÈGLE : trois clés du dictionnaire d'interface sont SAISONNIÈRES et datées :
+`brandsub`, `intl_p1`, `intl_p2` (le sous-titre et les deux paragraphes du
+circuit mondial). **À chaque équinoxe et solstice, quand `saison.py` change le
+badge, réécrire ces trois clés en français depuis les fiches de la saison,
+puis les retraduire dans les 12 langues.** Jamais l'inverse, jamais partiel :
+un français neuf avec des traductions anciennes est une divergence muette.
+
+Toutes les autres clés ont été rendues NEUTRES le 24/08/2026 (« cette
+saison », « la saison en cours ») précisément pour ne plus jamais périmer :
+ne pas y réintroduire de mois ni de saison nommée.
+
 ## LA JOAILLERIE EST LE TROU DU RADAR (constat du 20/08/2026)
 
 Le site annonce à Google, dans sa propre description : « défilés, **haute
