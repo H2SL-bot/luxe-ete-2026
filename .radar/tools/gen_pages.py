@@ -560,9 +560,9 @@ jour, il sera signalé comme tel, sur la fiche concernée.</p>
 <div class="chips"><a href="/">← Retour au radar</a><a href="/mentions-legales.html">Mentions légales</a></div>"""
     write("/a-propos.html",
           page("fr", "À propos · ConstanceParis7",
-               "Constance Lefebvre tient seule le radar des événements du luxe : sa "
-               "méthode de vérification, sa règle éditoriale, et comment la joindre "
-               "pour une collaboration.",
+               "Le radar des événements du luxe, tenu depuis le 7e arrondissement de "
+               "Paris : la méthode de vérification, la règle éditoriale, et comment "
+               "proposer une collaboration.",
                "/a-propos.html", AP,
                '<link rel="alternate" hreflang="fr" href="%s/a-propos.html">' % BASE))
     sitemap_urls.append(f"{BASE}/a-propos.html")
