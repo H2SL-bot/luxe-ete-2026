@@ -555,7 +555,7 @@ jour, il sera signalé comme tel, sur la fiche concernée.</p>
 </div>
 
 <h2 class="sub">Contact</h2>
-<p><a class="cta" href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a></p>
+<p><a class="cta" href="mailto:constanceparis75007@gmail.com">constanceparis75007@gmail.com</a></p>
 
 <div class="chips"><a href="/">← Retour au radar</a><a href="/mentions-legales.html">Mentions légales</a></div>"""
     write("/a-propos.html",
@@ -589,7 +589,7 @@ jour, il sera signalé comme tel, sur la fiche concernée.</p>
 
 <h2 class="sub">Éditrice du site</h2>
 <p>Ce site est édité par une personne physique, <b>à titre non professionnel</b>.<br>
-Contact : <a href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a></p>
+Contact : <a href="mailto:constanceparis75007@gmail.com">constanceparis75007@gmail.com</a></p>
 <p>Conformément à l'article 6, III, 2° de la loi n° 2004-575 du 21 juin 2004 pour la
 confiance dans l'économie numérique, l'éditrice, qui publie à titre non professionnel,
 préserve son anonymat : son identité et son adresse ne sont pas rendues publiques. Les
@@ -618,7 +618,7 @@ organisateurs cités.</p>
 tarifs et les conditions d'accès peuvent changer sans préavis :
 <b>confirmez toujours auprès de l'organisateur avant de vous déplacer ou de réserver.</b></p>
 <p>Une erreur vous a échappé ? Écrivez à
-<a href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a> :
+<a href="mailto:constanceparis75007@gmail.com">constanceparis75007@gmail.com</a> :
 correction ou retrait sous 48 heures, et la correction est mentionnée.</p>
 </div>
 
@@ -653,7 +653,7 @@ supprimés.</p>
 <p><b>Vos droits.</b> Conformément au Règlement général sur la protection des données
 et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de
 rectification, d'effacement et d'opposition. Pour l'exercer, écrivez à
-<a href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a>. Vous pouvez
+<a href="mailto:constanceparis75007@gmail.com">constanceparis75007@gmail.com</a>. Vous pouvez
 également introduire une réclamation auprès de la CNIL
 (<a href="https://www.cnil.fr" target="_blank" rel="noopener nofollow">cnil.fr</a>).</p>
 
