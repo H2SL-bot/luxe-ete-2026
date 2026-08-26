@@ -478,6 +478,17 @@ def main():
         for k, v in sorted(places.items(), key=lambda kv: -len(kv[1]["events"])):
             hub.append(f"<a href=\"{u_place(v, lang)}\">{esc(place_label(k, lang))} ({len(v['events'])})</a>")
         hub.append("</div>")
+        if lang == "fr":
+            hub.append("<h2 class=\"sub\">Explorer</h2><div class=\"chips\">"
+                "<a href=\"/moments/octobre-a-paris.html\">Octobre à Paris</a>"
+                "<a href=\"/moments/septembre-a-venise.html\">Septembre à Venise</a>"
+                "<a href=\"/moments/septembre-a-monaco.html\">Septembre à Monaco</a>"
+                "<a href=\"/moments/semaine-des-joyaux-geneve.html\">La semaine des joyaux de Genève</a>"
+                "<a href=\"/moments/le-reveillon-des-palaces.html\">Le Réveillon des palaces</a>"
+                "<a href=\"/moments/vienne-la-saison-des-bals.html\">Vienne, la saison des bals</a>"
+                "<a href=\"/adresses.html\">Les Adresses</a>"
+                "<a href=\"/vestiaire.html\">Le Vestiaire</a>"
+                "<a href=\"/methode.html\">La méthode</a></div>")
         htitle = f"{UI['hub_h1'][lang]} | ConstanceParis7"
         write(u_hub(lang), page(lang, htitle, UI["hub_intro"][lang], u_hub(lang), "".join(hub), hreflang_for(None, None)))
         sitemap_urls.append(f"{BASE}{u_hub(lang)}")
@@ -776,6 +787,35 @@ divergence, c'est lui qui fait foi, et la traduction est corrigée.</p>
                "Vente Christie's Magnificent Jewels, Genève",
                "Watches and Wonders Geneva 2027",
                "GemGenève 2027"]},
+     {"slug": "septembre-a-monaco",
+      "h1": "Septembre à Monaco",
+      "desc": "Le Yacht Show, le gala de la Fondation Prince Albert II et les dernières nuits du Jimmy'z : la Principauté en rentrée mondaine.",
+      "intro": "<p>La rentrée monégasque tient en une semaine : le Yacht Show amarre les plus grands navires du monde à Port Hercule, la Fondation Prince Albert II donne son dîner de gala, et le Jimmy'z joue ses toutes dernières nuits de la saison. Une seule semaine, quatre portes.</p>",
+      "noms": ["Monaco Yacht Show 2026",
+               "MY Yacht Monaco, soirée privée à bord pendant le Monaco Yacht Show",
+               "Monte-Carlo Gala for Planetary Health, dîner de gala de la Fondation Prince Albert II",
+               "Jimmy'z Monte-Carlo (saison 2026)",
+               "Sass Café Monte-Carlo, dîner-club des célébrités (soirées d'été)"]},
+     {"slug": "le-reveillon-des-palaces",
+      "h1": "Le Réveillon des palaces",
+      "desc": "De Saint-Moritz à Saint-Barth, de Marrakech à Rio : où le monde passe la nuit du 31 décembre.",
+      "intro": "<p>Une seule nuit, et une géographie entière : les galas alpins de Saint-Moritz et Gstaad, les dîners pieds dans le sable de Saint-Barth, les palais de Marrakech aux mille bougies, Dubaï et Rio en feux d'artifice. Les tables se réservent dès l'automne ; voici où elles se trouvent.</p>",
+      "noms": ["Gala du Nouvel An du Badrutt's Palace",
+               "Réouverture d'hiver du Gstaad Palace et Gala du Nouvel An",
+               "Réveillon d'Eden Rock, St Barths (dîner de gala et soirée dansante)",
+               "Dîner de gala du Réveillon au Cheval Blanc St-Barth Isle de France",
+               "Réveillon de la Saint-Sylvestre à La Mamounia",
+               "Réveillon du Nouvel An au Royal Mansour Marrakech",
+               "Réveillon du Nouvel An, Bulgari Resort Dubai (Yacht Club Gala & Festa di Capodanno)",
+               "Réveillon do Copacabana Palace"]},
+     {"slug": "vienne-la-saison-des-bals",
+      "h1": "Vienne, la saison des bals",
+      "desc": "Du Concert du Nouvel An au Bal de l'Opéra : l'hiver viennois, ses tirages au sort et ses valses.",
+      "intro": "<p>Nulle part l'hiver n'est aussi cérémonieux qu'à Vienne : le Concert du Nouvel An ouvre l'année, le Bal des Philharmoniker la poursuit, le Bal de l'Opéra la couronne. Les places s'y gagnent plus qu'elles ne s'achètent : tirages au sort, fenêtres d'inscription, quotas. Le guide des ballots explique la mécanique ; voici les dates.</p>",
+      "noms": ["Neujahrskonzert der Wiener Philharmoniker 2027",
+               "84. Ball der Wiener Philharmoniker",
+               "69. Wiener Opernball",
+               "POINT D'ENTRÉE, Comprendre les tirages au sort et les ballots"]},
      {"slug": "septembre-a-venise",
       "h1": "Septembre à Venise",
       "desc": "La Mostra ouvre la saison des tapis rouges, l'amfAR la couronne : dix jours où Venise devient la capitale du cinéma mondial.",
@@ -808,6 +848,88 @@ divergence, c'est lui qui fait foi, et la traduction est corrigée.</p>
                            "".join(corps),
                            '<link rel="alternate" hreflang="fr" href="%s%s">' % (BASE, chemin)))
         sitemap_urls.append(f"{BASE}{chemin}")
+
+
+    # --- Page Adresses (26/08/2026) : les lieux qui ne dépendent pas d'une date.
+    # V1 : assemblage de fiches EXISTANTES par ville (aucune duplication) ;
+    # les fiches d'adresses dédiées viendront après le 21/09 (décision Constance).
+    ADRESSES = [
+     ("Paris", ["Les Jardins de Bagatelle, Garden Club (saison estivale 2026)"]),
+     ("Londres", ["Clubs prives Mayfair - Annabel's, 5 Hertford Street, Oswald's (Birley)"]),
+     ("Monaco", ["Jimmy'z Monte-Carlo (saison 2026)",
+                 "Sass Café Monte-Carlo, dîner-club des célébrités (soirées d'été)"]),
+     ("Saint-Tropez & Pampelonne", ["Gaïo Saint-Tropez, dîner-cabaret & club 2026",
+                 "Sanctum Saint-Tropez, saison club 2026",
+                 "SAINT Ramatuelle, nouveau beach club d'exception (Bagatelle Group)",
+                 "Beach clubs de Pampelonne, Loulou, Casa Amor, Bagatelle, Gigi : soirées d'août"]),
+     ("Riviera italienne & Sardaigne", ["Covo di Nord-Est, club iconique de la Riviera",
+                 "Bagni Fiore Paraggi & Langosteria Paraggi (terrasse Dior)",
+                 "Phi Beach (Forte Cappellini), Saison 2026 sunset & club",
+                 "Sottovento Club Porto Cervo, Saison 2026",
+                 "Nammos Baja Sardinia, saison beach club 2026 (nouvelle ouverture)"]),
+     ("Ibiza & Baléares", ["Lio Ibiza, Cabaret dinner-show 'Halftime Show' & club",
+                 "Blue Marlin Ibiza, Beach club VIP (Cala Jondal)",
+                 "Nikki Beach Ibiza, Beach club (Santa Eulalia)"]),
+     ("Mykonos", ["Nammos Mykonos, Legendary Beach Party (quotidien)",
+                  "Principote, Beach club chic de Panormos"]),
+     ("Miami", ["LIV at Fontainebleau, nightclub iconique (soirees d'ete)",
+                "Nikki Beach Miami Beach, Amazing Sundays & Saturdance (beach club ADN Riviera)"]),
+    ]
+    corps = ["<div class=\"bc\"><a href=\"/\">Radar</a> · Adresses</div>",
+             "<h1>Les Adresses</h1>",
+             "<p class=\"meta\">Les lieux qui ne dépendent pas d'une date : clubs, beach clubs, dîners-spectacles. Comment on y entre, ce que ça coûte, à qui écrire.</p>",
+             "<p>À Paris, deux institutions se méritent plus qu'elles ne se réservent : le Silencio, club privé sur candidature, et les lieux-scènes du type Hôtel Costes ou Caves du Roy, dont les voies d'entrée sont détaillées dans les guides du radar, sur la page d'accueil.</p>",
+             "<p>Un événement se manque ; une adresse se retrouve. Cette page rassemble les lieux du radar dont la porte compte plus que le calendrier : chaque fiche dit la voie d'entrée, vérifiée comme le reste.</p>"]
+    absents_adr = []
+    for ville, noms in ADRESSES:
+        corps.append(f"<h2 class=\"sub\">{esc(ville)}</h2><ul class=\"cards\">")
+        for nom in noms:
+            e = par_nom.get(nom)
+            if not e:
+                absents_adr.append(nom); continue
+            sw = e.get("sw") or ""
+            corps.append(f"<li><a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(nom)}</a>"
+                         + (f"<div>{esc(sw[:130])}</div>" if sw else "") + "</li>")
+        corps.append("</ul>")
+    if absents_adr:
+        print(f"gen_pages: AVERTISSEMENT adresses : fiches introuvables {absents_adr}")
+    corps.append("<div class=\"chips\"><a href=\"/\">← Retour au radar</a><a href=\"/methode.html\">La méthode</a></div>")
+    write("/adresses.html", page("fr", "Les Adresses · ConstanceParis7",
+          "Clubs, beach clubs et dîners-spectacles du radar : les lieux qui comptent, et comment on y entre.",
+          "/adresses.html", "".join(corps),
+          '<link rel="alternate" hreflang="fr" href="%s/adresses.html">' % BASE))
+    sitemap_urls.append(f"{BASE}/adresses.html")
+
+    # --- Page Vestiaire (26/08/2026) : construite AUTOMATIQUEMENT depuis le
+    # champ dc des fiches (dress code). Elle grandit à mesure que les passes
+    # renseignent dc ; on n'affiche que ce qui est enregistré.
+    par_dc = {}
+    for e in pages:
+        dc = (e.get("dc") or "").strip()
+        if dc:
+            par_dc.setdefault(dc, []).append(e)
+    corps = ["<div class=\"bc\"><a href=\"/\">Radar</a> · Vestiaire</div>",
+             "<h1>Le Vestiaire</h1>",
+             "<p class=\"meta\">Comment s'habiller, événement par événement. Être mal habillée, c'est se voir refuser la porte : le dress code fait partie de la voie d'entrée.</p>",
+             "<p>Les tenues ci-dessous sont celles que les organisateurs publient ou exigent, relevées fiche par fiche. Quand un événement n'apparaît pas ici, c'est que son code vestimentaire n'est pas publié : dans le doute, l'élégance sobre ne se refuse nulle part.</p>"]
+    for dc in sorted(par_dc, key=lambda k: -len(par_dc[k])):
+        evs = sorted(par_dc[dc], key=lambda e: e.get("d1", ""))
+        corps.append(f"<h2 class=\"sub\">{esc(dc)}</h2><ul class=\"cards\">")
+        for e in evs:
+            corps.append(f"<li><div class=\"d\">{esc(e.get('d1',''))} · {esc(e.get('v',''))}</div>"
+                         f"<a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(e.get('n',''))}</a></li>")
+        corps.append("</ul>")
+    corps.append("<div class=\"box\"><h2>Le cas Royal Ascot</h2>"
+                 "<p>Le dress code le plus codifié du monde change selon l'enclosure : formel "
+                 "(morning dress, chapeaux) en Royal Enclosure et Queen Anne, style estival "
+                 "encouragé au Village, aucune exigence au Windsor. Le détail est sur la fiche "
+                 "<a href=\"/e/royal-ascot-2027-ascot-berkshire.html\">Royal Ascot 2027</a>.</p></div>")
+    corps.append("<div class=\"chips\"><a href=\"/\">← Retour au radar</a><a href=\"/methode.html\">La méthode</a></div>")
+    write("/vestiaire.html", page("fr", "Le Vestiaire · ConstanceParis7",
+          "Les dress codes publiés des événements du radar : tenue de soirée, black tie, tenue blanche, chapeaux. Ce qu'on porte, porte par porte.",
+          "/vestiaire.html", "".join(corps),
+          '<link rel="alternate" hreflang="fr" href="%s/vestiaire.html">' % BASE))
+    sitemap_urls.append(f"{BASE}/vestiaire.html")
 
     # --- sitemap ---
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
