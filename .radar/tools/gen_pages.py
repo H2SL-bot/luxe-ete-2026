@@ -290,6 +290,8 @@ def main():
      "v_ascot_t": "Le cas Royal Ascot",
      "v_ascot_p": "Le dress code le plus codifié du monde change selon l'enclosure : formel (morning dress, chapeaux) en Royal Enclosure et Queen Anne, style estival encouragé au Village, aucune exigence au Windsor. Le détail est sur la fiche",
      "retour": "Retour au radar",
+     "mem_h1": "La mémoire du radar",
+     "bc_memoire": "Mémoire",
      "mo_octobre-a-paris_h1": "Octobre à Paris",
      "mo_octobre-a-paris_desc": "Fashion Week, Arc de Triomphe, Journées Particulières, Art Basel Paris : le mois où Paris concentre le luxe mondial.",
      "mo_octobre-a-paris_intro": "Aucune ville ne concentre autant le calendrier du luxe qu'un mois d'octobre parisien : la Fashion Week s'achève, Longchamp couronne son champion, LVMH ouvre ses ateliers, puis le Grand Palais accueille le marché de l'art mondial, ventes du soir comprises. Voici les portes, dans l'ordre du calendrier.",
@@ -572,7 +574,8 @@ def main():
                                     "semaine-des-joyaux-geneve","le-reveillon-des-palaces","vienne-la-saison-des-bals"))
                 + f"<a href=\"{prefix(lang)}/adresses.html\">{esc(X(lang,'a_h1'))}</a>"
                 + f"<a href=\"{prefix(lang)}/vestiaire.html\">{esc(X(lang,'v_h1'))}</a>"
-                + f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
+                + f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a>"
+                + f"<a href=\"/changements.html\">{esc(X(lang,'mem_h1'))}</a></div>")
         htitle = f"{UI['hub_h1'][lang]} | ConstanceParis7"
         write(u_hub(lang), page(lang, htitle, UI["hub_intro"][lang], u_hub(lang), "".join(hub), hreflang_for(None, None)))
         sitemap_urls.append(f"{BASE}{u_hub(lang)}")
@@ -961,6 +964,68 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
 
     if absents_pages:
         print(f"gen_pages: AVERTISSEMENT pages éditoriales : fiches introuvables {sorted(absents_pages)}")
+
+
+    # --- Page Mémoire (27/08/2026) : le registre visible. Le radar consigne
+    # les dates qui bougent et les fenêtres de réservation ; cette page montre
+    # les 14 derniers jours. Chaque année qui passe rend ce registre plus
+    # précieux : personne ne peut racheter le temps.
+    MEM = []
+    try:
+        with open(os.path.join(_RAD, "memoire.ndjson"), encoding="utf-8") as _f:
+            for _l in _f:
+                _l = _l.strip()
+                if _l:
+                    try:
+                        MEM.append(json.loads(_l))
+                    except Exception:
+                        pass
+    except Exception:
+        pass
+    if MEM:
+        from datetime import timedelta
+        _seuil = (date.today() - timedelta(days=14)).isoformat()
+        chg = [m for m in MEM if m.get("type") == "changement_date" and m.get("date", "") >= _seuil]
+        fen = [m for m in MEM if m.get("type") in ("fenetre_annoncee", "fenetre_ouverte", "complet")]
+        obs = [m for m in MEM if m.get("type") == "observation" and m.get("date", "") >= _seuil]
+        corps = ["<div class=\"bc\"><a href=\"/\">Radar</a> · Mémoire</div>",
+                 "<h1>La mémoire du radar</h1>",
+                 "<p class=\"meta\">Les dates qui bougent, les fenêtres qui ouvrent, les salles qui se remplissent : le radar consigne ce que le temps enseigne, et le montre.</p>",
+                 "<p>Une information de luxe a une propriété que peu de sites mesurent : elle change. Une saison se prolonge, une billetterie ouvre, une salle part en deux heures. Ce registre garde la trace de ces mouvements, semaine après semaine ; d'année en année, il apprend au radar quand il faut réserver.</p>"]
+        if fen:
+            corps.append("<h2 class=\"sub\">Les fenêtres sous surveillance</h2><ul class=\"cards\">")
+            for m in sorted(fen, key=lambda x: x.get("date", ""), reverse=True):
+                e = par_nom.get(m.get("evenement"))
+                lien = (f"<a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(m['evenement'])}</a>" if e
+                        else f"<span class=\"t\">{esc(m.get('evenement',''))}</span>")
+                corps.append(f"<li><div class=\"d\">consigné le {esc(m.get('date',''))}</div>{lien}"
+                             f"<div>{esc(m.get('detail',''))}</div></li>")
+            corps.append("</ul>")
+        if chg:
+            corps.append(f"<h2 class=\"sub\">Les dates qui ont bougé (14 derniers jours)</h2><ul class=\"cards\">")
+            for m in sorted(chg, key=lambda x: x.get("date", ""), reverse=True)[:30]:
+                e = par_nom.get(m.get("evenement"))
+                lien = (f"<a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(m['evenement'])}</a>" if e
+                        else f"<span class=\"t\">{esc(m.get('evenement',''))}</span>")
+                corps.append(f"<li><div class=\"d\">{esc(m.get('date',''))}</div>{lien}"
+                             f"<div>{esc(m.get('detail',''))}</div></li>")
+            corps.append("</ul>")
+        if obs:
+            corps.append("<h2 class=\"sub\">Observations</h2><ul class=\"cards\">")
+            for m in sorted(obs, key=lambda x: x.get("date", ""), reverse=True):
+                e = par_nom.get(m.get("evenement"))
+                lien = (f"<a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(m['evenement'])}</a>" if e
+                        else f"<span class=\"t\">{esc(m.get('evenement',''))}</span>")
+                corps.append(f"<li><div class=\"d\">{esc(m.get('date',''))}</div>{lien}"
+                             f"<div>{esc(m.get('detail',''))}</div></li>")
+            corps.append("</ul>")
+        corps.append("<p class=\"meta\">Chaque entrée porte sa preuve au registre. Les corrections du site restent par ailleurs archivées, rien ne s'efface en silence : c'est la <a href=\"/methode.html\">méthode</a>.</p>")
+        corps.append("<div class=\"chips\"><a href=\"/\">← Retour au radar</a><a href=\"/methode.html\">La méthode</a></div>")
+        write("/changements.html", page("fr", "La mémoire du radar · ConstanceParis7",
+              "Les dates qui bougent, les billetteries qui ouvrent, les salles qui se remplissent : le registre vivant du radar.",
+              "/changements.html", "".join(corps),
+              '<link rel="alternate" hreflang="fr" href="%s/changements.html">' % BASE))
+        sitemap_urls.append(f"{BASE}/changements.html")
 
     # --- sitemap ---
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',

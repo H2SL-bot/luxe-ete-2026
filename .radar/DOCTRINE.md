@@ -345,6 +345,32 @@ exemples nommés tirés des fiches, jamais un cas fabriqué.
 **PLACE DANS L'ORDRE DES PRIORITÉS.** Après le piège du « 31 août », qui a une
 échéance ferme. Avant la joaillerie, qui n'en a pas.
 
+## LA MÉMOIRE DU RADAR (fondée le 27/08/2026)
+
+Le vrai trésor du site n'est pas ce qu'il sait : c'est DEPUIS QUAND il le
+sait. Personne ne peut racheter le temps. Le registre `.radar/memoire.ndjson`
+(append-only, jamais réécrit) consigne ce que le temps enseigne, et la page
+`/changements.html` en montre les 14 derniers jours.
+
+RÈGLES DE PASSE, chaque matin :
+1. `python3 tools/memoire.py changements` : consigne automatiquement les
+   dates de fiches qui ont bougé depuis 7 jours (appariement par nom exact,
+   jamais de doublon).
+2. CONSIGNER À LA MAIN (`memoire.py ajouter`) tout fait daté qui vaudra de
+   l'or l'an prochain : une billetterie qui OUVRE réellement
+   (`fenetre_ouverte`), un épuisement constaté avec son délai (`complet` :
+   « parti en 2 h »), une annonce de fenêtre (`fenetre_annoncee`), une
+   observation de structure (`observation` : « le week-end public passe de
+   2 à 3 jours »). Chaque entrée porte sa preuve.
+3. Ne JAMAIS supprimer ni réécrire une entrée : la valeur du registre est
+   son intégrité dans le temps.
+
+L'HORIZON : dans un an, le radar pourra écrire « l'an dernier, parti en
+2 heures — réservez dans la première heure ». C'est de l'intelligence que
+ni un concurrent ni une IA ne peut produire : il fallait être là avant.
+Premier rendez-vous de mesure : le 2 septembre 2026 à 10 h, ouverture des
+réservations Boucheron — consigner l'heure d'épuisement réelle.
+
 ## LE BANDEAU « OUVERTURES & DÉLAIS » (posé le 26/08/2026)
 
 L'accueil porte, sous le masthead, un bandeau `section.portes` : les fenêtres
