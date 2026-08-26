@@ -253,6 +253,93 @@ def main():
         """libellé d'un lieu dans la langue demandée ; repli : la clé française."""
         if lang == "fr" or not k:
             return k
+
+    # --- Pages éditoriales MULTILINGUES (Méthode, Moments, Adresses, Vestiaire).
+    # 26/08/2026 : nées en français ; 13 langues le même soir, à la demande de
+    # Constance. Le français ci-dessous est la RÉFÉRENCE ; les traductions
+    # vivent dans .radar/pages-i18n.json (produites par vague d'agents,
+    # posées sous garde-fous). Langue absente => repli français, jamais de vide.
+    PFR = {
+     "bc_moments": "Moments", "bc_adresses": "Adresses", "bc_vestiaire": "Vestiaire", "bc_methode": "Méthode",
+     "explorer": "Explorer",
+     "m_h1": "La méthode",
+     "m_meta": "Comment ce radar est fabriqué, et pourquoi vous pouvez vous y fier.",
+     "m_desc": "Les règles de vérification du radar : sources officielles, dates prouvées, doutes inscrits, corrections sous 48 heures.",
+     "m_intro": "Ce site est un travail de vérification avant d'être un travail de publication. Voici les règles qui le gouvernent. Elles ne souffrent pas d'exception.",
+     "m_rules_t": "Les règles",
+     "m_r1": "<b>Une date est vraie, ou elle n'existe pas.</b> Chaque information est prise à sa source officielle, puis datée. Une date de fin n'est jamais posée par défaut : elle est lue sur la source, ou le doute est écrit.",
+     "m_r2": "<b>Un doute n'est jamais publié comme une certitude.</b> Il est inscrit à un registre, puis tranché à la vérification suivante.",
+     "m_r3": "<b>Choisir est un art.</b> Le radar ne liste pas tout ce qui existe : il retient ce qui mérite de l'être, au niveau d'exigence de la Riviera.",
+     "m_r4": "<b>Rien ne s'efface en silence.</b> Un lieu fermé, un événement annulé : archivé avec sa preuve. Les archives restent consultables.",
+     "m_r5": "<b>Une place ne s'achète pas.</b> Aucun événement ne figure ici contre paiement. Les partenariats, s'ils existent, sont signalés sur la page concernée.",
+     "m_r6": "<b>Une erreur signalée est corrigée sous 48 heures</b>, et la correction est mentionnée.",
+     "m_signaler": "Signaler une erreur",
+     "m_badge_t": "Le badge « Vérifié à la source »",
+     "m_badge_p": "Sur les pages d'événement, la mention <b>« ✓ Vérifié à la source le… »</b> indique la date à laquelle l'information a été confrontée pour la dernière fois à sa source officielle. Elle ne s'affiche que lorsque cette vérification est consignée : pas de preuve, pas de badge.",
+     "m_langs_t": "Les langues",
+     "m_langs_p": "Chaque page existe en 13 langues. Le français est la référence : en cas de divergence, c'est lui qui fait foi, et la traduction est corrigée.",
+     "a_h1": "Les Adresses",
+     "a_meta": "Les lieux qui ne dépendent pas d'une date : clubs, beach clubs, dîners-spectacles. Comment on y entre, ce que ça coûte, à qui écrire.",
+     "a_desc": "Clubs, beach clubs et dîners-spectacles du radar : les lieux qui comptent, et comment on y entre.",
+     "a_p1": "À Paris, deux institutions se méritent plus qu'elles ne se réservent : le Silencio, club privé sur candidature, et les lieux-scènes du type Hôtel Costes ou Caves du Roy, dont les voies d'entrée sont détaillées dans les guides du radar, sur la page d'accueil.",
+     "a_p2": "Un événement se manque ; une adresse se retrouve. Cette page rassemble les lieux du radar dont la porte compte plus que le calendrier : chaque fiche dit la voie d'entrée, vérifiée comme le reste.",
+     "v_h1": "Le Vestiaire",
+     "v_meta": "Comment s'habiller, événement par événement. Être mal habillée, c'est se voir refuser la porte : le dress code fait partie de la voie d'entrée.",
+     "v_desc": "Les dress codes publiés des événements du radar : tenue de soirée, black tie, tenue blanche, chapeaux. Ce qu'on porte, porte par porte.",
+     "v_p1": "Les tenues ci-dessous sont celles que les organisateurs publient ou exigent, relevées fiche par fiche. Quand un événement n'apparaît pas ici, c'est que son code vestimentaire n'est pas publié : dans le doute, l'élégance sobre ne se refuse nulle part.",
+     "v_ascot_t": "Le cas Royal Ascot",
+     "v_ascot_p": "Le dress code le plus codifié du monde change selon l'enclosure : formel (morning dress, chapeaux) en Royal Enclosure et Queen Anne, style estival encouragé au Village, aucune exigence au Windsor. Le détail est sur la fiche",
+     "retour": "Retour au radar",
+     "mo_octobre-a-paris_h1": "Octobre à Paris",
+     "mo_octobre-a-paris_desc": "Fashion Week, Arc de Triomphe, Journées Particulières, Art Basel Paris : le mois où Paris concentre le luxe mondial.",
+     "mo_octobre-a-paris_intro": "Aucune ville ne concentre autant le calendrier du luxe qu'un mois d'octobre parisien : la Fashion Week s'achève, Longchamp couronne son champion, LVMH ouvre ses ateliers, puis le Grand Palais accueille le marché de l'art mondial, ventes du soir comprises. Voici les portes, dans l'ordre du calendrier.",
+     "mo_semaine-des-joyaux-geneve_h1": "La semaine des joyaux de Genève",
+     "mo_semaine-des-joyaux-geneve_desc": "Début novembre, Christie's, Sotheby's et Phillips exposent au public les plus beaux joyaux du monde avant de les vendre.",
+     "mo_semaine-des-joyaux-geneve_intro": "Chaque automne, les grandes maisons de vente convergent vers le Léman : diadèmes, diamants de couleur et provenances royales s'exposent au public pendant plusieurs jours, avant de passer sous le marteau. C'est la porte la plus accessible de la haute joaillerie : les expositions des lots sont ouvertes, souvent gratuitement.",
+     "mo_septembre-a-venise_h1": "Septembre à Venise",
+     "mo_septembre-a-venise_desc": "La Mostra ouvre la saison des tapis rouges, l'amfAR la couronne : dix jours où Venise devient la capitale du cinéma mondial.",
+     "mo_septembre-a-venise_intro": "Le premier tapis rouge de la rentrée se déroule sur le Lido : dix jours de Mostra, le gala de l'amfAR en apothéose, et une lagune entière en habits de première. Les palais d'art restent ouverts pendant le festival, et le grand bal du Carnaval se réserve déjà.",
+     "mo_septembre-a-monaco_h1": "Septembre à Monaco",
+     "mo_septembre-a-monaco_desc": "Le Yacht Show, le gala de la Fondation Prince Albert II et les dernières nuits du Jimmy'z : la Principauté en rentrée mondaine.",
+     "mo_septembre-a-monaco_intro": "La rentrée monégasque tient en une semaine : le Yacht Show amarre les plus grands navires du monde à Port Hercule, la Fondation Prince Albert II donne son dîner de gala, et le Jimmy'z joue ses toutes dernières nuits de la saison. Une seule semaine, quatre portes.",
+     "mo_le-reveillon-des-palaces_h1": "Le Réveillon des palaces",
+     "mo_le-reveillon-des-palaces_desc": "De Saint-Moritz à Saint-Barth, de Marrakech à Rio : où le monde passe la nuit du 31 décembre.",
+     "mo_le-reveillon-des-palaces_intro": "Une seule nuit, et une géographie entière : les galas alpins de Saint-Moritz et Gstaad, les dîners pieds dans le sable de Saint-Barth, les palais de Marrakech aux mille bougies, Dubaï et Rio en feux d'artifice. Les tables se réservent dès l'automne ; voici où elles se trouvent.",
+     "mo_vienne-la-saison-des-bals_h1": "Vienne, la saison des bals",
+     "mo_vienne-la-saison-des-bals_desc": "Du Concert du Nouvel An au Bal de l'Opéra : l'hiver viennois, ses tirages au sort et ses valses.",
+     "mo_vienne-la-saison-des-bals_intro": "Nulle part l'hiver n'est aussi cérémonieux qu'à Vienne : le Concert du Nouvel An ouvre l'année, le Bal des Philharmoniker la poursuit, le Bal de l'Opéra la couronne. Les places s'y gagnent plus qu'elles ne s'achètent : tirages au sort, fenêtres d'inscription, quotas. Le guide des ballots explique la mécanique ; voici les dates.",
+     "ville_paris": "Paris", "ville_londres": "Londres", "ville_monaco": "Monaco",
+     "ville_sttropez": "Saint-Tropez & Pampelonne", "ville_riviera": "Riviera italienne & Sardaigne",
+     "ville_ibiza": "Ibiza & Baléares", "ville_mykonos": "Mykonos", "ville_miami": "Miami",
+     "dc": {"Tenue de soirée / robe longue": "Tenue de soirée / robe longue",
+            "Chic décontracté (chapeau conseillé)": "Chic décontracté (chapeau conseillé)",
+            "Black tie (tenue de soirée)": "Black tie (tenue de soirée)",
+            "Élégance estivale (chapeau bienvenu)": "Élégance estivale (chapeau bienvenu)",
+            "Tenue stricte (veste-cravate)": "Tenue stricte (veste-cravate)",
+            "Tenue blanche exigée": "Tenue blanche exigée",
+            "Chic estival (panama, chapeau)": "Chic estival (panama, chapeau)"},
+    }
+    try:
+        with open(os.path.join(_RAD, "pages-i18n.json"), encoding="utf-8") as _f:
+            PTX = json.load(_f)
+    except Exception:
+        PTX = {}
+
+    def X(lang, cle):
+        v = (PTX.get(lang) or {}).get(cle)
+        return v if v else PFR.get(cle, "")
+
+    def Xdc(lang, dcfr):
+        v = ((PTX.get(lang) or {}).get("dc") or {}).get(dcfr)
+        return v if v else dcfr
+
+    def hl_page(chemin):
+        out = []
+        for L in LANGS:
+            out.append('<link rel="alternate" hreflang="%s" href="%s%s%s">' % (L, BASE, prefix(L), chemin))
+        out.append('<link rel="alternate" hreflang="x-default" href="%s%s">' % (BASE, chemin))
+        return "".join(out)
+
         for _d in _DICOS_LIEUX:
             v = _d.get(k)
             if isinstance(v, dict) and v.get(lang):
@@ -478,17 +565,14 @@ def main():
         for k, v in sorted(places.items(), key=lambda kv: -len(kv[1]["events"])):
             hub.append(f"<a href=\"{u_place(v, lang)}\">{esc(place_label(k, lang))} ({len(v['events'])})</a>")
         hub.append("</div>")
-        if lang == "fr":
-            hub.append("<h2 class=\"sub\">Explorer</h2><div class=\"chips\">"
-                "<a href=\"/moments/octobre-a-paris.html\">Octobre à Paris</a>"
-                "<a href=\"/moments/septembre-a-venise.html\">Septembre à Venise</a>"
-                "<a href=\"/moments/septembre-a-monaco.html\">Septembre à Monaco</a>"
-                "<a href=\"/moments/semaine-des-joyaux-geneve.html\">La semaine des joyaux de Genève</a>"
-                "<a href=\"/moments/le-reveillon-des-palaces.html\">Le Réveillon des palaces</a>"
-                "<a href=\"/moments/vienne-la-saison-des-bals.html\">Vienne, la saison des bals</a>"
-                "<a href=\"/adresses.html\">Les Adresses</a>"
-                "<a href=\"/vestiaire.html\">Le Vestiaire</a>"
-                "<a href=\"/methode.html\">La méthode</a></div>")
+        if True:
+            hub.append(f"<h2 class=\"sub\">{esc(X(lang,'explorer'))}</h2><div class=\"chips\">"
+                + "".join(f"<a href=\"{prefix(lang)}/moments/{s}.html\">{esc(X(lang,'mo_'+s+'_h1'))}</a>"
+                          for s in ("octobre-a-paris","septembre-a-venise","septembre-a-monaco",
+                                    "semaine-des-joyaux-geneve","le-reveillon-des-palaces","vienne-la-saison-des-bals"))
+                + f"<a href=\"{prefix(lang)}/adresses.html\">{esc(X(lang,'a_h1'))}</a>"
+                + f"<a href=\"{prefix(lang)}/vestiaire.html\">{esc(X(lang,'v_h1'))}</a>"
+                + f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
         htitle = f"{UI['hub_h1'][lang]} | ConstanceParis7"
         write(u_hub(lang), page(lang, htitle, UI["hub_intro"][lang], u_hub(lang), "".join(hub), hreflang_for(None, None)))
         sitemap_urls.append(f"{BASE}{u_hub(lang)}")
@@ -714,61 +798,8 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
     sitemap_urls.append(f"{BASE}/mentions-legales.html")
 
 
-    # --- Page Méthode (26/08/2026) : le manifeste public de la rigueur du radar.
-    # Le badge « Vérifié à la source » des pages événement pointe ici.
-    METHODE = """<div class="bc"><a href="/">Radar</a> · Méthode</div>
-<h1>La méthode</h1>
-<p class="meta">Comment ce radar est fabriqué, et pourquoi vous pouvez vous y fier.</p>
-
-<p>Ce site est un travail de vérification avant d'être un travail de publication.
-Voici les règles qui le gouvernent. Elles ne souffrent pas d'exception.</p>
-
-<div class="box">
-<h2>Les règles</h2>
-<ul>
-<li><b>Une date est vraie, ou elle n'existe pas.</b> Chaque information est prise à
-sa source officielle, puis datée. Une date de fin n'est jamais posée par défaut :
-elle est lue sur la source, ou le doute est écrit.</li>
-<li><b>Un doute n'est jamais publié comme une certitude.</b> Il est inscrit à un
-registre, puis tranché à la vérification suivante.</li>
-<li><b>Choisir est un art.</b> Le radar ne liste pas tout ce qui existe : il
-retient ce qui mérite de l'être, au niveau d'exigence de la Riviera.</li>
-<li><b>Rien ne s'efface en silence.</b> Un lieu fermé, un événement annulé :
-archivé avec sa preuve. Les archives restent consultables.</li>
-<li><b>Une place ne s'achète pas.</b> Aucun événement ne figure ici contre
-paiement. Les partenariats, s'ils existent, sont signalés sur la page concernée.</li>
-<li><b>Une erreur signalée est corrigée sous 48 heures</b>, et la correction est
-mentionnée. <a href="mailto:constanceparis75007@gmail.com">Signaler une erreur</a>.</li>
-</ul>
-</div>
-
-<h2 class="sub">Le badge « Vérifié à la source »</h2>
-<p>Sur les pages d'événement, la mention <b>« ✓ Vérifié à la source le… »</b>
-indique la date à laquelle l'information a été confrontée pour la dernière fois à
-sa source officielle. Elle ne s'affiche que lorsque cette vérification est
-consignée : pas de preuve, pas de badge.</p>
-
-<h2 class="sub">Les langues</h2>
-<p>Chaque page existe en 13 langues. Le français est la référence : en cas de
-divergence, c'est lui qui fait foi, et la traduction est corrigée.</p>
-
-<div class="chips"><a href="/">← Retour au radar</a><a href="/a-propos.html">À propos</a></div>"""
-    write("/methode.html",
-          page("fr", "La méthode · ConstanceParis7",
-               "Les règles de vérification du radar : sources officielles, dates "
-               "prouvées, doutes inscrits, corrections sous 48 heures.",
-               "/methode.html", METHODE,
-               '<link rel="alternate" hreflang="fr" href="%s/methode.html">' % BASE))
-    sitemap_urls.append(f"{BASE}/methode.html")
-
-    # --- Pages Moments (26/08/2026) : le radar raconté comme on voyage.
-    # Sélection par NOM EXACT de fiche, jamais par sous-chaîne. Français
-    # d'abord ; la mise en 13 langues viendra par vague dédiée.
     MOMENTS = [
      {"slug": "octobre-a-paris",
-      "h1": "Octobre à Paris",
-      "desc": "Fashion Week, Arc de Triomphe, Journées Particulières, Art Basel Paris : le mois où Paris concentre le luxe mondial.",
-      "intro": "<p>Aucune ville ne concentre autant le calendrier du luxe qu'un mois d'octobre parisien : la Fashion Week s'achève, Longchamp couronne son champion, LVMH ouvre ses ateliers, puis le Grand Palais accueille le marché de l'art mondial, ventes du soir comprises. Voici les portes, dans l'ordre du calendrier.</p>",
       "noms": ["Paris Fashion Week, Prêt-à-porter Printemps-Été 2027",
                "Qatar Prix de l'Arc de Triomphe 2026",
                "Les Journées Particulières LVMH 2026, 69 lieux ouverts dans 12 pays",
@@ -778,28 +809,24 @@ divergence, c'est lui qui fait foi, et la traduction est corrigée.</p>
                "Sotheby's Paris, vente du soir « Modernités » (orbite Art Basel Paris)",
                "Artcurial, vente « La Modernité en partage » (Collection Louis Grandchamp des Raux, orbite Art Basel Paris)"]},
      {"slug": "semaine-des-joyaux-geneve",
-      "h1": "La semaine des joyaux de Genève",
-      "desc": "Début novembre, Christie's, Sotheby's et Phillips exposent au public les plus beaux joyaux du monde avant de les vendre.",
-      "intro": "<p>Chaque automne, les grandes maisons de vente convergent vers le Léman : diadèmes, diamants de couleur et provenances royales s'exposent au public pendant plusieurs jours, avant de passer sous le marteau. C'est la porte la plus accessible de la haute joaillerie : les expositions des lots sont ouvertes, souvent gratuitement.</p>",
       "noms": ["Vente Sotheby's Fine Jewelry et exposition au Mandarin Oriental, Genève",
                "Phillips, The Geneva Jewels Auction VII, Hôtel Président",
                "Vente Sotheby's Royal & Noble Jewels, Genève",
                "Vente Christie's Magnificent Jewels, Genève",
                "Watches and Wonders Geneva 2027",
                "GemGenève 2027"]},
+     {"slug": "septembre-a-venise",
+      "noms": ["Mostra de Venise 2026, 83e Festival international du film",
+               "amfAR Gala Venezia 2026, 6e édition",
+               "Helter Skelter: Arthur Jafa and Richard Prince (Fondazione Prada Venise)",
+               "Il Ballo del Doge 2027, bal masqué de gala du Carnaval de Venise"]},
      {"slug": "septembre-a-monaco",
-      "h1": "Septembre à Monaco",
-      "desc": "Le Yacht Show, le gala de la Fondation Prince Albert II et les dernières nuits du Jimmy'z : la Principauté en rentrée mondaine.",
-      "intro": "<p>La rentrée monégasque tient en une semaine : le Yacht Show amarre les plus grands navires du monde à Port Hercule, la Fondation Prince Albert II donne son dîner de gala, et le Jimmy'z joue ses toutes dernières nuits de la saison. Une seule semaine, quatre portes.</p>",
       "noms": ["Monaco Yacht Show 2026",
                "MY Yacht Monaco, soirée privée à bord pendant le Monaco Yacht Show",
                "Monte-Carlo Gala for Planetary Health, dîner de gala de la Fondation Prince Albert II",
                "Jimmy'z Monte-Carlo (saison 2026)",
                "Sass Café Monte-Carlo, dîner-club des célébrités (soirées d'été)"]},
      {"slug": "le-reveillon-des-palaces",
-      "h1": "Le Réveillon des palaces",
-      "desc": "De Saint-Moritz à Saint-Barth, de Marrakech à Rio : où le monde passe la nuit du 31 décembre.",
-      "intro": "<p>Une seule nuit, et une géographie entière : les galas alpins de Saint-Moritz et Gstaad, les dîners pieds dans le sable de Saint-Barth, les palais de Marrakech aux mille bougies, Dubaï et Rio en feux d'artifice. Les tables se réservent dès l'automne ; voici où elles se trouvent.</p>",
       "noms": ["Gala du Nouvel An du Badrutt's Palace",
                "Réouverture d'hiver du Gstaad Palace et Gala du Nouvel An",
                "Réveillon d'Eden Rock, St Barths (dîner de gala et soirée dansante)",
@@ -809,127 +836,131 @@ divergence, c'est lui qui fait foi, et la traduction est corrigée.</p>
                "Réveillon du Nouvel An, Bulgari Resort Dubai (Yacht Club Gala & Festa di Capodanno)",
                "Réveillon do Copacabana Palace"]},
      {"slug": "vienne-la-saison-des-bals",
-      "h1": "Vienne, la saison des bals",
-      "desc": "Du Concert du Nouvel An au Bal de l'Opéra : l'hiver viennois, ses tirages au sort et ses valses.",
-      "intro": "<p>Nulle part l'hiver n'est aussi cérémonieux qu'à Vienne : le Concert du Nouvel An ouvre l'année, le Bal des Philharmoniker la poursuit, le Bal de l'Opéra la couronne. Les places s'y gagnent plus qu'elles ne s'achètent : tirages au sort, fenêtres d'inscription, quotas. Le guide des ballots explique la mécanique ; voici les dates.</p>",
       "noms": ["Neujahrskonzert der Wiener Philharmoniker 2027",
                "84. Ball der Wiener Philharmoniker",
-               "69. Wiener Opernball",
-               "POINT D'ENTRÉE, Comprendre les tirages au sort et les ballots"]},
-     {"slug": "septembre-a-venise",
-      "h1": "Septembre à Venise",
-      "desc": "La Mostra ouvre la saison des tapis rouges, l'amfAR la couronne : dix jours où Venise devient la capitale du cinéma mondial.",
-      "intro": "<p>Le premier tapis rouge de la rentrée se déroule sur le Lido : dix jours de Mostra, le gala de l'amfAR en apothéose, et une lagune entière en habits de première. Les palais d'art restent ouverts pendant le festival, et le grand bal du Carnaval se réserve déjà.</p>",
-      "noms": ["Mostra de Venise 2026, 83e Festival international du film",
-               "amfAR Gala Venezia 2026, 6e édition",
-               "Helter Skelter: Arthur Jafa and Richard Prince (Fondazione Prada Venise)",
-               "Il Ballo del Doge 2027, bal masqué de gala du Carnaval de Venise"]},
+               "69. Wiener Opernball"]},
     ]
-    par_nom = {e.get("n"): e for e in pages}
-    for mo in MOMENTS:
-        corps = [f"<div class=\"bc\"><a href=\"/\">{esc(UI['radar']['fr'])}</a> · Moments</div>",
-                 f"<h1>{esc(mo['h1'])}</h1>", mo["intro"], "<ul class=\"cards\">"]
-        absents = []
-        for nom in mo["noms"]:
-            e = par_nom.get(nom)
-            if not e:
-                absents.append(nom); continue
-            sw = e.get("sw") or ""
-            corps.append(f"<li><div class=\"d\">{esc(e.get('dt') or e.get('d1',''))}</div>"
-                         f"<a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(nom)}</a>"
-                         + (f"<div>{esc(sw[:140])}</div>" if sw else "") + "</li>")
-        corps.append("</ul>")
-        if absents:
-            print(f"gen_pages: AVERTISSEMENT moment {mo['slug']} : fiches introuvables {absents}")
-        corps.append(f"<div class=\"chips\"><a href=\"/\">← {esc(UI['back']['fr'])}</a>"
-                     f"<a href=\"{u_hub('fr')}\">{esc(UI['places_cats']['fr'])}</a></div>")
-        chemin = f"/moments/{mo['slug']}.html"
-        write(chemin, page("fr", f"{mo['h1']} · ConstanceParis7", mo["desc"], chemin,
-                           "".join(corps),
-                           '<link rel="alternate" hreflang="fr" href="%s%s">' % (BASE, chemin)))
-        sitemap_urls.append(f"{BASE}{chemin}")
-
-
-    # --- Page Adresses (26/08/2026) : les lieux qui ne dépendent pas d'une date.
-    # V1 : assemblage de fiches EXISTANTES par ville (aucune duplication) ;
-    # les fiches d'adresses dédiées viendront après le 21/09 (décision Constance).
     ADRESSES = [
-     ("Paris", ["Les Jardins de Bagatelle, Garden Club (saison estivale 2026)"]),
-     ("Londres", ["Clubs prives Mayfair - Annabel's, 5 Hertford Street, Oswald's (Birley)"]),
-     ("Monaco", ["Jimmy'z Monte-Carlo (saison 2026)",
+     ("ville_paris", ["Les Jardins de Bagatelle, Garden Club (saison estivale 2026)"]),
+     ("ville_londres", ["Clubs prives Mayfair - Annabel's, 5 Hertford Street, Oswald's (Birley)"]),
+     ("ville_monaco", ["Jimmy'z Monte-Carlo (saison 2026)",
                  "Sass Café Monte-Carlo, dîner-club des célébrités (soirées d'été)"]),
-     ("Saint-Tropez & Pampelonne", ["Gaïo Saint-Tropez, dîner-cabaret & club 2026",
+     ("ville_sttropez", ["Gaïo Saint-Tropez, dîner-cabaret & club 2026",
                  "Sanctum Saint-Tropez, saison club 2026",
                  "SAINT Ramatuelle, nouveau beach club d'exception (Bagatelle Group)",
                  "Beach clubs de Pampelonne, Loulou, Casa Amor, Bagatelle, Gigi : soirées d'août"]),
-     ("Riviera italienne & Sardaigne", ["Covo di Nord-Est, club iconique de la Riviera",
+     ("ville_riviera", ["Covo di Nord-Est, club iconique de la Riviera",
                  "Bagni Fiore Paraggi & Langosteria Paraggi (terrasse Dior)",
                  "Phi Beach (Forte Cappellini), Saison 2026 sunset & club",
                  "Sottovento Club Porto Cervo, Saison 2026",
                  "Nammos Baja Sardinia, saison beach club 2026 (nouvelle ouverture)"]),
-     ("Ibiza & Baléares", ["Lio Ibiza, Cabaret dinner-show 'Halftime Show' & club",
+     ("ville_ibiza", ["Lio Ibiza, Cabaret dinner-show 'Halftime Show' & club",
                  "Blue Marlin Ibiza, Beach club VIP (Cala Jondal)",
                  "Nikki Beach Ibiza, Beach club (Santa Eulalia)"]),
-     ("Mykonos", ["Nammos Mykonos, Legendary Beach Party (quotidien)",
+     ("ville_mykonos", ["Nammos Mykonos, Legendary Beach Party (quotidien)",
                   "Principote, Beach club chic de Panormos"]),
-     ("Miami", ["LIV at Fontainebleau, nightclub iconique (soirees d'ete)",
+     ("ville_miami", ["LIV at Fontainebleau, nightclub iconique (soirees d'ete)",
                 "Nikki Beach Miami Beach, Amazing Sundays & Saturdance (beach club ADN Riviera)"]),
     ]
-    corps = ["<div class=\"bc\"><a href=\"/\">Radar</a> · Adresses</div>",
-             "<h1>Les Adresses</h1>",
-             "<p class=\"meta\">Les lieux qui ne dépendent pas d'une date : clubs, beach clubs, dîners-spectacles. Comment on y entre, ce que ça coûte, à qui écrire.</p>",
-             "<p>À Paris, deux institutions se méritent plus qu'elles ne se réservent : le Silencio, club privé sur candidature, et les lieux-scènes du type Hôtel Costes ou Caves du Roy, dont les voies d'entrée sont détaillées dans les guides du radar, sur la page d'accueil.</p>",
-             "<p>Un événement se manque ; une adresse se retrouve. Cette page rassemble les lieux du radar dont la porte compte plus que le calendrier : chaque fiche dit la voie d'entrée, vérifiée comme le reste.</p>"]
-    absents_adr = []
-    for ville, noms in ADRESSES:
-        corps.append(f"<h2 class=\"sub\">{esc(ville)}</h2><ul class=\"cards\">")
-        for nom in noms:
-            e = par_nom.get(nom)
-            if not e:
-                absents_adr.append(nom); continue
-            sw = e.get("sw") or ""
-            corps.append(f"<li><a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(nom)}</a>"
-                         + (f"<div>{esc(sw[:130])}</div>" if sw else "") + "</li>")
-        corps.append("</ul>")
-    if absents_adr:
-        print(f"gen_pages: AVERTISSEMENT adresses : fiches introuvables {absents_adr}")
-    corps.append("<div class=\"chips\"><a href=\"/\">← Retour au radar</a><a href=\"/methode.html\">La méthode</a></div>")
-    write("/adresses.html", page("fr", "Les Adresses · ConstanceParis7",
-          "Clubs, beach clubs et dîners-spectacles du radar : les lieux qui comptent, et comment on y entre.",
-          "/adresses.html", "".join(corps),
-          '<link rel="alternate" hreflang="fr" href="%s/adresses.html">' % BASE))
-    sitemap_urls.append(f"{BASE}/adresses.html")
-
-    # --- Page Vestiaire (26/08/2026) : construite AUTOMATIQUEMENT depuis le
-    # champ dc des fiches (dress code). Elle grandit à mesure que les passes
-    # renseignent dc ; on n'affiche que ce qui est enregistré.
+    par_nom = {e.get("n"): e for e in pages}
     par_dc = {}
     for e in pages:
-        dc = (e.get("dc") or "").strip()
-        if dc:
-            par_dc.setdefault(dc, []).append(e)
-    corps = ["<div class=\"bc\"><a href=\"/\">Radar</a> · Vestiaire</div>",
-             "<h1>Le Vestiaire</h1>",
-             "<p class=\"meta\">Comment s'habiller, événement par événement. Être mal habillée, c'est se voir refuser la porte : le dress code fait partie de la voie d'entrée.</p>",
-             "<p>Les tenues ci-dessous sont celles que les organisateurs publient ou exigent, relevées fiche par fiche. Quand un événement n'apparaît pas ici, c'est que son code vestimentaire n'est pas publié : dans le doute, l'élégance sobre ne se refuse nulle part.</p>"]
-    for dc in sorted(par_dc, key=lambda k: -len(par_dc[k])):
-        evs = sorted(par_dc[dc], key=lambda e: e.get("d1", ""))
-        corps.append(f"<h2 class=\"sub\">{esc(dc)}</h2><ul class=\"cards\">")
-        for e in evs:
-            corps.append(f"<li><div class=\"d\">{esc(e.get('d1',''))} · {esc(e.get('v',''))}</div>"
-                         f"<a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(e.get('n',''))}</a></li>")
-        corps.append("</ul>")
-    corps.append("<div class=\"box\"><h2>Le cas Royal Ascot</h2>"
-                 "<p>Le dress code le plus codifié du monde change selon l'enclosure : formel "
-                 "(morning dress, chapeaux) en Royal Enclosure et Queen Anne, style estival "
-                 "encouragé au Village, aucune exigence au Windsor. Le détail est sur la fiche "
-                 "<a href=\"/e/royal-ascot-2027-ascot-berkshire.html\">Royal Ascot 2027</a>.</p></div>")
-    corps.append("<div class=\"chips\"><a href=\"/\">← Retour au radar</a><a href=\"/methode.html\">La méthode</a></div>")
-    write("/vestiaire.html", page("fr", "Le Vestiaire · ConstanceParis7",
-          "Les dress codes publiés des événements du radar : tenue de soirée, black tie, tenue blanche, chapeaux. Ce qu'on porte, porte par porte.",
-          "/vestiaire.html", "".join(corps),
-          '<link rel="alternate" hreflang="fr" href="%s/vestiaire.html">' % BASE))
-    sitemap_urls.append(f"{BASE}/vestiaire.html")
+        _dc = (e.get("dc") or "").strip()
+        if _dc:
+            par_dc.setdefault(_dc, []).append(e)
+    ascot = par_nom.get("Royal Ascot 2027")
+    absents_pages = set()
+
+    for lang in LANGS:
+        # ----- Méthode -----
+        corps = [f"<div class=\"bc\"><a href=\"{prefix(lang)}/\">{esc(UI['radar'][lang])}</a> · {esc(X(lang,'bc_methode'))}</div>",
+                 f"<h1>{esc(X(lang,'m_h1'))}</h1>",
+                 f"<p class=\"meta\">{esc(X(lang,'m_meta'))}</p>",
+                 f"<p>{esc(X(lang,'m_intro'))}</p>",
+                 f"<div class=\"box\"><h2>{esc(X(lang,'m_rules_t'))}</h2><ul>"]
+        for k in ("m_r1", "m_r2", "m_r3", "m_r4", "m_r5"):
+            corps.append(f"<li>{X(lang,k)}</li>")
+        corps.append(f"<li>{X(lang,'m_r6')} <a href=\"mailto:constanceparis75007@gmail.com\">{esc(X(lang,'m_signaler'))}</a>.</li></ul></div>")
+        corps.append(f"<h2 class=\"sub\">{esc(X(lang,'m_badge_t'))}</h2><p>{X(lang,'m_badge_p')}</p>")
+        corps.append(f"<h2 class=\"sub\">{esc(X(lang,'m_langs_t'))}</h2><p>{esc(X(lang,'m_langs_p'))}</p>")
+        corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/\">← {esc(X(lang,'retour'))}</a><a href=\"{prefix(lang)}/a-propos.html\">À propos</a></div>"
+                     if lang == "fr" else
+                     f"<div class=\"chips\"><a href=\"{prefix(lang)}/\">← {esc(X(lang,'retour'))}</a></div>")
+        chemin = "/methode.html"
+        write(prefix(lang) + chemin, page(lang, f"{X(lang,'m_h1')} · ConstanceParis7", X(lang, "m_desc"),
+              prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
+        sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
+
+        # ----- Moments -----
+        for mo in MOMENTS:
+            s = mo["slug"]
+            corps = [f"<div class=\"bc\"><a href=\"{prefix(lang)}/\">{esc(UI['radar'][lang])}</a> · {esc(X(lang,'bc_moments'))}</div>",
+                     f"<h1>{esc(X(lang,'mo_'+s+'_h1'))}</h1>",
+                     f"<p class=\"meta\">{esc(X(lang,'mo_'+s+'_intro'))}</p>", "<ul class=\"cards\">"]
+            for nom in mo["noms"]:
+                e = par_nom.get(nom)
+                if not e:
+                    absents_pages.add(nom); continue
+                sw = T(e, lang, "sw") or ""
+                corps.append(f"<li><div class=\"d\">{esc(T(e,lang,'dt') or e.get('d1',''))}</div>"
+                             f"<a class=\"t\" href=\"{u_event(e,lang)}\">{esc(T(e,lang,'n'))}</a>"
+                             + (f"<div>{esc(sw[:140])}</div>" if sw else "") + "</li>")
+            corps.append("</ul>")
+            if s == "vienne-la-saison-des-bals" and lang == "fr":
+                corps.append("<p><a href=\"/vestiaire.html\">Le Vestiaire</a> dit comment s'y habiller ; le guide des tirages au sort, comment s'y inscrire.</p>")
+            corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/\">← {esc(X(lang,'retour'))}</a>"
+                         f"<a href=\"{u_hub(lang)}\">{esc(UI['places_cats'][lang])}</a></div>")
+            chemin = f"/moments/{s}.html"
+            write(prefix(lang) + chemin, page(lang, f"{X(lang,'mo_'+s+'_h1')} · ConstanceParis7",
+                  X(lang, "mo_" + s + "_desc"), prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
+            sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
+
+        # ----- Adresses -----
+        corps = [f"<div class=\"bc\"><a href=\"{prefix(lang)}/\">{esc(UI['radar'][lang])}</a> · {esc(X(lang,'bc_adresses'))}</div>",
+                 f"<h1>{esc(X(lang,'a_h1'))}</h1>",
+                 f"<p class=\"meta\">{esc(X(lang,'a_meta'))}</p>",
+                 f"<p>{esc(X(lang,'a_p1'))}</p>", f"<p>{esc(X(lang,'a_p2'))}</p>"]
+        for cle_ville, noms in ADRESSES:
+            corps.append(f"<h2 class=\"sub\">{esc(X(lang,cle_ville))}</h2><ul class=\"cards\">")
+            for nom in noms:
+                e = par_nom.get(nom)
+                if not e:
+                    absents_pages.add(nom); continue
+                sw = T(e, lang, "sw") or ""
+                corps.append(f"<li><a class=\"t\" href=\"{u_event(e,lang)}\">{esc(T(e,lang,'n'))}</a>"
+                             + (f"<div>{esc(sw[:130])}</div>" if sw else "") + "</li>")
+            corps.append("</ul>")
+        corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/\">← {esc(X(lang,'retour'))}</a>"
+                     f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
+        chemin = "/adresses.html"
+        write(prefix(lang) + chemin, page(lang, f"{X(lang,'a_h1')} · ConstanceParis7", X(lang, "a_desc"),
+              prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
+        sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
+
+        # ----- Vestiaire -----
+        corps = [f"<div class=\"bc\"><a href=\"{prefix(lang)}/\">{esc(UI['radar'][lang])}</a> · {esc(X(lang,'bc_vestiaire'))}</div>",
+                 f"<h1>{esc(X(lang,'v_h1'))}</h1>",
+                 f"<p class=\"meta\">{esc(X(lang,'v_meta'))}</p>",
+                 f"<p>{esc(X(lang,'v_p1'))}</p>"]
+        for dcfr in sorted(par_dc, key=lambda k: -len(par_dc[k])):
+            evs = sorted(par_dc[dcfr], key=lambda e: e.get("d1", ""))
+            corps.append(f"<h2 class=\"sub\">{esc(Xdc(lang, dcfr))}</h2><ul class=\"cards\">")
+            for e in evs:
+                corps.append(f"<li><div class=\"d\">{esc(e.get('d1',''))} · {esc(place_label((e.get('v') or '').strip(), lang))}</div>"
+                             f"<a class=\"t\" href=\"{u_event(e,lang)}\">{esc(T(e,lang,'n'))}</a></li>")
+            corps.append("</ul>")
+        if ascot:
+            corps.append(f"<div class=\"box\"><h2>{esc(X(lang,'v_ascot_t'))}</h2>"
+                         f"<p>{esc(X(lang,'v_ascot_p'))} <a href=\"{u_event(ascot,lang)}\">{esc(T(ascot,lang,'n'))}</a>.</p></div>")
+        corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/\">← {esc(X(lang,'retour'))}</a>"
+                     f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
+        chemin = "/vestiaire.html"
+        write(prefix(lang) + chemin, page(lang, f"{X(lang,'v_h1')} · ConstanceParis7", X(lang, "v_desc"),
+              prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
+        sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
+
+    if absents_pages:
+        print(f"gen_pages: AVERTISSEMENT pages éditoriales : fiches introuvables {sorted(absents_pages)}")
 
     # --- sitemap ---
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
