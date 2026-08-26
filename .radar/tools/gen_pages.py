@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """gen_pages.py — pages statiques INDEXABLES, MULTILINGUES (11 langues), en AJOUT pur.
 
 Le site visible est index.html : ce script NE LE MODIFIE JAMAIS. Il crée des
@@ -59,6 +60,29 @@ def parse_price(e):
         return 0, "EUR"
     return None
 
+_RX_VERIF = re.compile(r"(?:v[ée]rifi\w*|contr[oô]l[ée]\w*|checked)[^0-9]{0,30}?(\d{1,2}/\d{1,2}/\d{4})", re.I)
+def date_verif(e):
+    """Dernière date de vérification ÉCRITE dans les sources de la fiche ; None sinon.
+    Constat du 26/08/2026 : il n'existe pas de champ structuré (dc = dress code),
+    mais 122+ fiches portent « vérifié le JJ/MM/AAAA » dans so ou iv. On affiche
+    seulement ce qui est écrit : pas de date trouvée, pas de badge."""
+    textes = [str(e.get("so") or "")]
+    iv = e.get("iv")
+    if isinstance(iv, dict):
+        textes += [str(v) for v in iv.values() if isinstance(v, str)]
+    meilleurs = []
+    for tx in textes:
+        for m in _RX_VERIF.finditer(tx):
+            j, mo, a = m.group(1).split("/")
+            try:
+                meilleurs.append((int(a), int(mo), int(j)))
+            except ValueError:
+                pass
+    if not meilleurs:
+        return None
+    a, mo, j = max(meilleurs)
+    return f"{j:02d}/{mo:02d}/{a}"
+
 def org_name_from_iv(e):
     iv = e.get("iv")
     if not (isinstance(iv, dict) and iv.get("o")):
@@ -79,6 +103,7 @@ CAT_I18N = {"art": "c_art", "mode": "c_mode", "artdevivre": "c_art2",
 
 # Micro-libellés d'interface (à relire par le workflow multilingue).
 UI = {
+ "verified":{"fr":"Vérifié à la source le","en":"Verified at the source on","es":"Verificado en la fuente el","it":"Verificato alla fonte il","pt":"Verificado na fonte a","de":"An der Quelle geprüft am","ru":"Проверено по источнику:","ar":"تم التحقق من المصدر بتاريخ","zh":"已于源头核实：","ja":"公式情報で確認：","ko":"공식 출처 확인:","hi":"स्रोत से सत्यापित:","tr":"Kaynağından doğrulandı:"},
  "radar":   {"fr":"Radar","en":"Radar","es":"Radar","it":"Radar","pt":"Radar","de":"Radar","ru":"Радар","ar":"الرادار","zh":"雷达","ja":"レーダー","ko":"레이더","hi":"रडार","tr":"Radar"},
  "all":     {"fr":"Tout","en":"All","es":"Todo","it":"Tutto","pt":"Tudo","de":"Alle","ru":"Все","ar":"الكل","zh":"全部","ja":"すべて","ko":"전체","hi":"सभी","tr":"Tümü"},
  "affiche": {"fr":"À l'affiche","en":"Line-up","es":"En cartel","it":"In scena","pt":"Em cartaz","de":"Programm","ru":"В программе","ar":"المشاركون","zh":"阵容","ja":"出演","ko":"라인업","hi":"कार्यक्रम-सूची","tr":"Program"},
@@ -321,7 +346,7 @@ def main():
             pk = e.get("_pk"); lieu = places.get(pk) if pk else None
             cat = cats.get(e.get("c", "autre"))
             n = T(e, lang, "n"); ville = e.get("v") or (pk or "")
-            title = f"{n} — {ville} | ConstanceParis7"
+            title = f"{n} · {ville} | ConstanceParis7"
             desc = (T(e, lang, "sw") or T(e, lang, "ds") or "")[:155]
             bc = f"<div class=\"bc\"><a href=\"{prefix(lang)}/\">{esc(UI['radar'][lang])}</a>"
             if lieu:
@@ -336,6 +361,9 @@ def main():
             if cat:
                 meta.append(f"<a href=\"{u_cat(cat, lang)}\">{esc(cat_label(e.get('c','autre'), lang))}</a>")
             body.append("<div class=\"meta\">" + " · ".join(meta) + "</div>")
+            dv = date_verif(e)
+            if dv:
+                body.append(f"<div class=\"bc\">✓ {esc(UI['verified'][lang])} {dv}</div>")
             if T(e, lang, "ds"):
                 body.append(f"<p>{esc(T(e,lang,'ds'))}</p>")
             if T(e, lang, "pe"):

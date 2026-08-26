@@ -307,6 +307,19 @@ def main():
                     tr_hh += 1
     if esper:
         wrn(f"{esper} champ(s) traduits contiennent « &amp; » — l'esperluette ne doit jamais être échappée")
+    # --- Bandeau « Ouvertures & délais » (posé le 26/08/2026) : une entrée
+    # périmée ferait mentir la vitrine. Chaque entrée porte data-exp ; on
+    # signale (sans bloquer) celles dont la date est passée, à retirer à la
+    # prochaine passe.
+    portes_perimees = 0
+    mp = re.search(r'<section class="portes".*?</section>', html, re.S)
+    if mp:
+        for me in re.finditer(r'data-exp="(\d{4}-\d{2}-\d{2})"', mp.group(0)):
+            if me.group(1) < today.isoformat():
+                portes_perimees += 1
+    if portes_perimees:
+        wrn(f"bandeau Ouvertures & délais : {portes_perimees} entrée(s) périmée(s) à retirer")
+
     if tr_hh:
         wrn(f"{tr_hh} champ(s) traduits gardent un horaire à la française (20h / 20h30) au lieu de 20:00")
 

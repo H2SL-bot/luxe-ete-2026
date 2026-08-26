@@ -345,6 +345,28 @@ exemples nommés tirés des fiches, jamais un cas fabriqué.
 **PLACE DANS L'ORDRE DES PRIORITÉS.** Après le piège du « 31 août », qui a une
 échéance ferme. Avant la joaillerie, qui n'en a pas.
 
+## LE BANDEAU « OUVERTURES & DÉLAIS » (posé le 26/08/2026)
+
+L'accueil porte, sous le masthead, un bandeau `section.portes` : les fenêtres
+de réservation qui ouvrent ou ferment (ex. « Boucheron : réservations le
+2 sept, 10 h »). C'est la signature du site rendue visible : arriver avant
+les autres. C'est aussi l'antichambre de la lettre d'information du 21/09,
+qui dira la même chose par courriel.
+
+RÈGLE DE PASSE : à chaque passe, (a) AJOUTER toute nouvelle fenêtre datée
+découverte dans les fiches (ouverture de billetterie, d'inscriptions, de
+candidatures) ; (b) RETIRER les entrées périmées : chaque entrée porte un
+`data-exp="AAAA-MM-JJ"` et validate.py signale celles dont la date est
+passée. 3 à 6 entrées maximum : c'est une vitrine, pas une liste. Entrées
+en français compact, chiffres universels, lien vers la fiche. Le titre du
+bandeau est traduit (clé i18n `portes_t`).
+
+LE BADGE « VÉRIFIÉ À LA SOURCE » : les pages événement affichent la date de
+vérification quand elle est ÉCRITE dans `so` ou `iv` (motif « vérifié le
+JJ/MM/AAAA ») — 128 pages au 26/08. Pas de date écrite, pas de badge : on
+n'affiche jamais une rigueur qu'on ne peut pas prouver. En consigner une à
+chaque vraie vérification augmente la couverture naturellement.
+
 ## LES TEXTES SAISONNIERS DE L'INTERFACE (règle du 24/08/2026)
 
 La relecture native des 12 langues a trouvé l'accueil encore en « juillet et
