@@ -192,10 +192,18 @@ visiteurs quotidiens repartent sans laisser de trace, et rien ne permet de les
 retrouver. C'est le seul actif qui appartiendrait vraiment à Constance : le
 site dépend de Google, une liste d'adresses ne dépend de personne.
 
-**13 · Il n'existe aucune offre de partenariat**
-La page « à propos » invite les maisons à écrire. Si l'une répond « que
-proposez-vous ? », il n'y a rien à envoyer. À écrire : ce qui est vendu, à quel
-prix, et ce qui ne se vend jamais (la place dans le radar).
+**13 · ~~Il n'existe aucune offre de partenariat~~ → RÉGLÉ le 26/08/2026**
+
+Document validé par Constance et remis en PDF (2 pages, identité du site).
+Trois offres : le partenariat média (échange couverture contre accès presse,
+placé en premier : c'est sa vraie monnaie), l'encart de l'événement du mois
+(un seul par mois, AUCUN prix publié : « conditions sur demande », grille
+interne de lancement à 150 €/mois), et le Cercle en annonce. Quatre refus
+écrits : présence payante dans le radar, hors-luxe, revente de billets,
+affiliation dans les contenus (cohérence avec les mentions légales).
+Aucun encaissement avant la structure du 21/09. Ni nom ni âge dans le
+document. Clause d'indépendance reformulée en clair sur retour de Constance.
+
 
 **14 · Sept établissements sans adresse utilisable**
 Issu du chantier 05. Quatre ont une mauvaise boîte (Principote → boîte de
