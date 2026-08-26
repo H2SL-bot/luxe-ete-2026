@@ -1,6 +1,6 @@
 # ConstanceParis7, the luxury events radar
 
-> Independent, human-verified calendar of luxury events worldwide: galas, festivals, fashion weeks, regattas, high jewelry exhibitions, palace seasons and private views. Every entry carries its dates, venue, official source, pricing when published, and the concrete ways to get in (tickets, guest lists, press accreditation, ballots). Published in 13 languages. Edited by Constance Lefebvre, Paris.
+> Independent, human-verified calendar of luxury events worldwide: galas, festivals, fashion weeks, regattas, high jewelry exhibitions, palace seasons and private views. Every entry carries its dates, venue, official source, pricing when published, and the concrete ways to get in (tickets, guest lists, press accreditation, ballots). Published in 13 languages. Edited from the 7th arrondissement of Paris, by Constance.
 
 Data quality: each event is checked against its official source before publication, and end dates are read from the source, never assumed. Events that can no longer be verified are removed. The site states what is confirmed and says so when something is not.
 

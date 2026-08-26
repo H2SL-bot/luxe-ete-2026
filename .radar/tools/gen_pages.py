@@ -91,10 +91,10 @@ UI = {
  "events":  {"fr":"événements","en":"events","es":"eventos","it":"eventi","pt":"eventos","de":"Veranstaltungen","ru":"событий","ar":"فعاليات","zh":"项活动","ja":"件のイベント","ko":"개 이벤트","hi":"कार्यक्रम","tr":"etkinlik"},
  "tagline": {"fr":"Sélection au niveau Riviera : dates, lieux et modes d'accès.","en":"A Riviera-level selection: dates, venues and how to get in.","es":"Una selección de nivel Riviera: fechas, lugares y cómo acceder.","it":"Una selezione di livello Riviera: date, luoghi e come accedere.","pt":"Uma seleção ao nível da Riviera: datas, locais e como aceder.","de":"Eine Auswahl auf Riviera-Niveau: Termine, Orte und Zugang.","ru":"Подборка уровня Ривьеры: даты, места и как попасть.","ar":"اختيار بمستوى الريفييرا: التواريخ والأماكن وكيفية الدخول.","zh":"蔚蓝海岸级别的精选：日期、地点与入场方式。","ja":"リヴィエラ級のセレクション：日程、会場、入場方法。","ko":"리비에라급 셀렉션: 날짜, 장소, 입장 방법.","hi":"रिवेरा स्तर का चयन : तिथियाँ, स्थान और प्रवेश के तरीके।","tr":"Riviera düzeyinde bir seçki: tarihler, mekânlar ve giriş yolları."},
  "hub_h1":  {"fr":"Tous les événements du luxe","en":"All luxury events","es":"Todos los eventos de lujo","it":"Tutti gli eventi del lusso","pt":"Todos os eventos de luxo","de":"Alle Luxus-Veranstaltungen","ru":"Все события мира роскоши","ar":"جميع فعاليات الفخامة","zh":"全部奢华活动","ja":"すべてのラグジュアリー・イベント","ko":"모든 럭셔리 이벤트","hi":"विलासिता के सभी कार्यक्रम","tr":"Tüm lüks etkinlikler"},
- "hub_intro":{"fr":"Parcourez par lieu ou par catégorie. Le radar complet, en direct et en 13 langues, est sur ConstanceParis7.","en":"Browse by place or by category. The full radar, live and in 13 languages, is on ConstanceParis7.","es":"Explore por lugar o por categoría. El radar completo, en directo y en 13 idiomas, está en ConstanceParis7.","it":"Sfoglia per luogo o per categoria. Il radar completo, in diretta e in 13 lingue, è su ConstanceParis7.","pt":"Navegue por local ou por categoria. O radar completo, em direto e em 13 línguas, está no ConstanceParis7.","de":"Stöbern Sie nach Ort oder Kategorie. Das vollständige Radar, live und in 13 Sprachen, finden Sie auf ConstanceParis7.","ru":"Ищите по месту или категории. Полный радар — в реальном времени и на 13 языках — на ConstanceParis7.","ar":"تصفّح حسب المكان أو الفئة. الرادار الكامل، مباشرةً وبثلاث عشرة لغة، على ConstanceParis7.","zh":"按地点或类别浏览。完整雷达，实时更新、13 种语言，尽在 ConstanceParis7。","ja":"場所またはカテゴリーで探せます。完全版レーダー（ライブ・13言語）は ConstanceParis7 にて。","ko":"장소 또는 카테고리로 탐색하세요. 실시간 13개 언어의 전체 레이더는 ConstanceParis7에서.","hi":"स्थान या श्रेणी के अनुसार देखें। पूरा रडार — सीधा प्रसारण, 13 भाषाओं में — ConstanceParis7 पर उपलब्ध है।","tr":"Mekâna veya kategoriye göre göz atın. Canlı ve 13 dildeki tam radar ConstanceParis7'de."},
+ "hub_intro":{"fr":"Parcourez par lieu ou par catégorie. Le radar complet, en direct et en 13 langues, est sur ConstanceParis7.","en":"Browse by place or by category. The full radar, live and in 13 languages, is on ConstanceParis7.","es":"Explore por lugar o por categoría. El radar completo, en directo y en 13 idiomas, está en ConstanceParis7.","it":"Sfoglia per luogo o per categoria. Il radar completo, in diretta e in 13 lingue, è su ConstanceParis7.","pt":"Navegue por local ou por categoria. O radar completo, em direto e em 13 línguas, está no ConstanceParis7.","de":"Stöbern Sie nach Ort oder Kategorie. Das vollständige Radar, live und in 13 Sprachen, finden Sie auf ConstanceParis7.","ru":"Ищите по месту или категории. Полный радар, в реальном времени и на 13 языках, на ConstanceParis7.","ar":"تصفّح حسب المكان أو الفئة. الرادار الكامل، مباشرةً وبثلاث عشرة لغة، على ConstanceParis7.","zh":"按地点或类别浏览。完整雷达，实时更新、13 种语言，尽在 ConstanceParis7。","ja":"場所またはカテゴリーで探せます。完全版レーダー（ライブ・13言語）は ConstanceParis7 にて。","ko":"장소 또는 카테고리로 탐색하세요. 실시간 13개 언어의 전체 레이더는 ConstanceParis7에서.","hi":"स्थान या श्रेणी के अनुसार देखें। पूरा रडार — सीधा प्रसारण, 13 भाषाओं में — ConstanceParis7 पर उपलब्ध है।","tr":"Mekâna veya kategoriye göre göz atın. Canlı ve 13 dildeki tam radar ConstanceParis7'de."},
  "by_cat":  {"fr":"Par catégorie","en":"By category","es":"Por categoría","it":"Per categoria","pt":"Por categoria","de":"Nach Kategorie","ru":"По категориям","ar":"حسب الفئة","zh":"按类别","ja":"カテゴリー別","ko":"카테고리별","hi":"श्रेणी के अनुसार","tr":"Kategoriye göre"},
  "by_place":{"fr":"Par lieu","en":"By place","es":"Por lugar","it":"Per luogo","pt":"Por local","de":"Nach Ort","ru":"По местам","ar":"حسب المكان","zh":"按地点","ja":"場所別","ko":"장소별","hi":"स्थान के अनुसार","tr":"Mekâna göre"},
- "footer":  {"fr":"ConstanceParis7 — le radar des événements du luxe, mis à jour chaque jour.","en":"ConstanceParis7 — the radar of luxury events, updated every day.","es":"ConstanceParis7 — el radar de los eventos de lujo, actualizado cada día.","it":"ConstanceParis7 — il radar degli eventi del lusso, aggiornato ogni giorno.","pt":"ConstanceParis7 — o radar dos eventos de luxo, atualizado todos os dias.","de":"ConstanceParis7 — das Radar der Luxus-Veranstaltungen, täglich aktualisiert.","ru":"ConstanceParis7 — радар событий мира роскоши, обновляется каждый день.","ar":"ConstanceParis7 — رادار فعاليات الفخامة، يُحدَّث كل يوم.","zh":"ConstanceParis7 — 奢华活动雷达，每日更新。","ja":"ConstanceParis7 — ラグジュアリー・イベントのレーダー。毎日更新。","ko":"ConstanceParis7 — 매일 업데이트되는 럭셔리 이벤트 레이더.","hi":"ConstanceParis7 — विलासिता के कार्यक्रमों का रडार, प्रतिदिन अद्यतन।","tr":"ConstanceParis7 — her gün güncellenen lüks etkinlik radarı."},
+ "footer":  {"fr":"ConstanceParis7 · le radar des événements du luxe, mis à jour chaque jour.","en":"ConstanceParis7 · the radar of luxury events, updated every day.","es":"ConstanceParis7 · el radar de los eventos de lujo, actualizado cada día.","it":"ConstanceParis7 · il radar degli eventi del lusso, aggiornato ogni giorno.","pt":"ConstanceParis7 · o radar dos eventos de luxo, atualizado todos os dias.","de":"ConstanceParis7 · das Radar der Luxus-Veranstaltungen, täglich aktualisiert.","ru":"ConstanceParis7 · радар событий мира роскоши, обновляется каждый день.","ar":"ConstanceParis7 · رادار فعاليات الفخامة، يُحدَّث كل يوم.","zh":"ConstanceParis7 · 奢华活动雷达，每日更新。","ja":"ConstanceParis7 · ラグジュアリー・イベントのレーダー。毎日更新。","ko":"ConstanceParis7 · 매일 업데이트되는 럭셔리 이벤트 레이더.","hi":"ConstanceParis7 · विलासिता के कार्यक्रमों का रडार, प्रतिदिन अद्यतन।","tr":"ConstanceParis7 · her gün güncellenen lüks etkinlik radarı."},
  "see_live":{"fr":"Voir tout le radar en direct","en":"See the full radar live","es":"Ver todo el radar en directo","it":"Vedi tutto il radar in diretta","pt":"Ver todo o radar em direto","de":"Das ganze Radar live ansehen","ru":"Смотреть весь радар в реальном времени","ar":"شاهد الرادار الكامل مباشرةً","zh":"查看完整实时雷达","ja":"完全版レーダーをライブで見る","ko":"전체 레이더 실시간 보기","hi":"पूरा रडार लाइव देखें","tr":"Radarın tamamını canlı izleyin"},
  "stay":{"fr":"Le séjour clé en main","en":"The turnkey stay","es":"La estancia llave en mano","it":"Il soggiorno chiavi in mano","pt":"A estadia chave na mão","de":"Der schlüsselfertige Aufenthalt","ru":"Поездка «под ключ»","ar":"الإقامة المتكاملة","zh":"一站式行程","ja":"すべて手配済みの滞在","ko":"턴키 스테이","hi":"संपूर्ण प्रवास","tr":"Anahtar teslim konaklama"},
  "stay_hotels":{"fr":"Où dormir","en":"Where to stay","es":"Dónde alojarse","it":"Dove dormire","pt":"Onde ficar","de":"Wo übernachten","ru":"Где остановиться","ar":"أين تقيم","zh":"住宿之选","ja":"滞在先","ko":"숙소","hi":"कहाँ ठहरें","tr":"Nerede kalınır"},
@@ -468,7 +468,7 @@ def main():
             def tk(key, defaut=""):
                 return L18.get(key) or i18n["fr"].get(key) or defaut
 
-            home = [f"<h1>ConstanceParis7 — {esc(UI['luxury_events'][lang])}</h1>",
+            home = [f"<h1>ConstanceParis7 · {esc(UI['luxury_events'][lang])}</h1>",
                     f"<p class=\"meta\">{esc(tk('brandsub', UI['tagline'][lang]))}</p>",
                     f"<p><a class=\"cta\" href=\"/\">{esc(UI['see_live'][lang])} →</a></p>"]
 
@@ -505,7 +505,7 @@ def main():
 
             hl_home = "".join(f'<link rel="alternate" hreflang="{L}" href="{BASE}{u_home(L)}">'
                               for L in LANGS) + f'<link rel="alternate" hreflang="x-default" href="{BASE}/">'
-            write(p_home(lang), page(lang, f"ConstanceParis7 — {UI['luxury_events'][lang]}",
+            write(p_home(lang), page(lang, f"ConstanceParis7 · {UI['luxury_events'][lang]}",
                                      tk('brandsub', UI['tagline'][lang])[:155],
                                      u_home(lang), "".join(home), hl_home))
             sitemap_urls.append(f"{BASE}{u_home(lang)}")
@@ -515,66 +515,51 @@ def main():
     # radar et POURQUOI on peut le croire. Générée comme les autres.
     AP = """<div class="bc"><a href="/">Radar</a> · À propos</div>
 <h1>À propos</h1>
-<p class="meta">Le radar — et la personne derrière.</p>
+<p class="meta">Le radar, et la personne qui le tient.</p>
 
-<p>Je m'appelle <b>Constance Lefebvre</b>. Je suis lycéenne, et je tiens
-ce radar seule.</p>
-
-<h2 class="sub">Ce qui me passionne</h2>
-<p>Les palaces, la haute couture, la haute joaillerie — <b>l'élégance à la
-française</b>. C'est mon sujet depuis toujours, et c'est le monde dans lequel je
-veux travailler. Je n'ai pas envie de le regarder depuis un écran : j'ai envie
-d'y être, d'y rencontrer des gens, de comprendre comment il fonctionne de
-l'intérieur. Ce radar a commencé exactement comme ça — en cartographiant, une
-par une, les portes d'entrée.</p>
+<p>Je m'appelle <b>Constance</b>. J'habite le 7e arrondissement de Paris, celui
+qui a donné son nom à ce site. Je tiens ce radar seule.</p>
 
 <h2 class="sub">Ce qu'est ConstanceParis7</h2>
-<p>Un radar, pas un blog. <b>309 événements à venir</b>, dans <b>129 villes</b>,
-publiés en <b>13 langues</b>, et remis à jour <b>chaque jour</b>.</p>
-<p>Avec une règle qui ne bouge pas : un événement n'entre dans le radar que s'il
-vient avec <b>une voie d'entrée et un séjour</b>. Savoir qu'une soirée existe ne
-sert à rien si personne ne dit comment y aller.</p>
+<p>Un radar des événements du luxe : galas, festivals, semaines de la mode,
+haute joaillerie, saisons de palaces. <b>Plus de 400 événements</b>, publiés en
+<b>13 langues</b> et remis à jour <b>chaque jour</b>.</p>
+<p>La règle ne change pas : un événement n'entre dans le radar qu'accompagné de
+<b>sa voie d'entrée</b>. Une date sans mode d'accès n'a pas d'utilité.</p>
 
 <div class="box">
-<h2>Comment je travaille</h2>
+<h2>Méthode</h2>
 <ul>
 <li>Chaque information est prise <b>à sa source officielle</b>, puis <b>datée</b>.</li>
-<li>Un doute n'est jamais transformé en affirmation : il est inscrit, et tranché
-à la vérification suivante.</li>
-<li>Un lieu fermé, un événement annulé : archivé avec sa preuve, jamais effacé
-en silence.</li>
+<li>Un doute n'est jamais publié comme une certitude : il est inscrit, puis
+tranché à la vérification suivante.</li>
+<li>Un lieu fermé ou un événement annulé est archivé avec sa preuve, jamais
+effacé en silence.</li>
 <li>Une erreur signalée est corrigée <b>sous 48 heures</b>, et la correction est
 mentionnée.</li>
 </ul>
-<p>C'est exigeant, et c'est tout l'intérêt du site : dans ce domaine,
-l'information périmée est partout.</p>
 </div>
 
-<h2 class="sub">D'où ça vient</h2>
-<p>Le radar est né d'un projet mené avec mon père, qui connaissait ma passion et
-m'a aidée à le mettre sur pied. <b>J'en ai repris seule la conduite en août
-2026</b> : la ligne éditoriale, les vérifications, les publications.</p>
+<h2 class="sub">Origine</h2>
+<p>Le site a été conçu avec mon père. <b>J'en assure seule la conduite depuis
+août 2026</b> : la ligne éditoriale, les vérifications, les publications.</p>
 
 <h2 class="sub">Travailler ensemble</h2>
 <p>Maisons, palaces, hôtels, clubs, restaurants, joailliers, organisateurs :
-<b>écrivez-moi</b>. Je suis ouverte aux collaborations sérieuses, et c'est
-précisément le milieu dans lequel je veux évoluer.</p>
+<b>écrivez-moi</b>. J'étudie toute proposition sérieuse.</p>
 <div class="box">
 <h2>Une chose ne se négocie pas</h2>
 <p><b>Une place dans le radar ne s'achète pas.</b> Un événement y figure parce
 qu'il est vérifié, jamais parce qu'il est payé. Si un partenariat existe un
 jour, il sera signalé comme tel, sur la fiche concernée.</p>
-<p>C'est la condition pour que ce site garde la seule chose qui fasse sa
-valeur : la confiance de celles et ceux qui le lisent.</p>
 </div>
 
-<h2 class="sub">Me joindre</h2>
+<h2 class="sub">Contact</h2>
 <p><a class="cta" href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a></p>
-<p>Une proposition, une correction, une invitation : je lis tout.</p>
 
 <div class="chips"><a href="/">← Retour au radar</a><a href="/mentions-legales.html">Mentions légales</a></div>"""
     write("/a-propos.html",
-          page("fr", "À propos — ConstanceParis7",
+          page("fr", "À propos · ConstanceParis7",
                "Constance Lefebvre tient seule le radar des événements du luxe : sa "
                "méthode de vérification, sa règle éditoriale, et comment la joindre "
                "pour une collaboration.",
@@ -590,32 +575,32 @@ valeur : la confiance de celles et ceux qui le lisent.</p>
     # fait TOUTE SEULE le matin du 21/09/2026 : rien à penser, rien à cliquer.
     MAJORITE = date(2026, 9, 21)
     if date.today() >= MAJORITE:
-        DIRPUB = "Constance Lefebvre, éditrice du site."
+        DIRPUB = ("La directrice de la publication est l'éditrice du site. Conformément à "
+                  "l'article 6, III, 2° de la LCEN, son identité n'est pas rendue publique ; "
+                  "elle a été communiquée à l'hébergeur.")
     else:
-        DIRPUB = ("Gerald Lefebvre, représentant légal de l'éditrice.<br>"
-                  "<span style=\"color:#9fb0bd\">Constance Lefebvre reprendra la "
-                  "direction de la publication à sa majorité.</span>")
+        DIRPUB = ("Le directeur de la publication est le représentant légal de l'éditrice. "
+                  "Conformément à l'article 6, III, 2° de la LCEN, son identité n'est pas "
+                  "rendue publique ; elle a été communiquée à l'hébergeur.")
 
-    # --- mentions légales (obligation de l'article 6 de la LCEN) -----------
-    # Page générée comme les autres pour hériter du même habillage et entrer
-    # au plan du site. Rédigée en français : c'est un texte de droit français.
     ML = """<div class="bc"><a href="/">Radar</a> · Mentions légales</div>
 <h1>Mentions légales</h1>
-<p class="meta">Dernière mise à jour : <b>20 août 2026</b></p>
+<p class="meta">Dernière mise à jour : <b>26 août 2026</b></p>
 
 <h2 class="sub">Éditrice du site</h2>
-<p><b>Constance Lefebvre</b>, personne physique éditant ce site à titre non professionnel.<br>
+<p>Ce site est édité par une personne physique, <b>à titre non professionnel</b>.<br>
 Contact : <a href="mailto:constanceparis7e@gmail.com">constanceparis7e@gmail.com</a></p>
 <p>Conformément à l'article 6, III, 2° de la loi n° 2004-575 du 21 juin 2004 pour la
 confiance dans l'économie numérique, l'éditrice, qui publie à titre non professionnel,
-ne rend pas publique son adresse postale. Les éléments d'identification prévus par la
-loi sont détenus par l'hébergeur, qui les tient à la disposition de l'autorité judiciaire.</p>
+préserve son anonymat : son identité et son adresse ne sont pas rendues publiques. Les
+éléments d'identification prévus par la loi ont été communiqués à l'hébergeur, qui les
+tient à la disposition de l'autorité judiciaire.</p>
 
 <h2 class="sub">Directeur de la publication</h2>
 <p>__DIRPUB__</p>
 
 <h2 class="sub">Hébergeur</h2>
-<p>GitHub, Inc. — service GitHub Pages<br>
+<p>GitHub, Inc. · service GitHub Pages<br>
 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
 <a href="https://github.com" target="_blank" rel="noopener nofollow">github.com</a></p>
 
@@ -624,7 +609,7 @@ loi sont détenus par l'hébergeur, qui les tient à la disposition de l'autorit
 (<a href="https://www.gandi.net" target="_blank" rel="noopener nofollow">gandi.net</a>).</p>
 
 <div class="box">
-<h2>Ce que ce site est — et ce qu'il n'est pas</h2>
+<h2>Ce que ce site est, et ce qu'il n'est pas</h2>
 <p>ConstanceParis7 recense des événements organisés par des tiers : maisons, hôtels,
 festivals, musées, clubs. Le site <b>n'organise aucun événement, ne vend aucun billet,
 ne perçoit aucune commission</b> et n'entretient aucun lien contractuel avec les
@@ -682,7 +667,7 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
 
 <div class="chips"><a href="/">← Retour au radar</a></div>"""
     write("/mentions-legales.html",
-          page("fr", "Mentions légales — ConstanceParis7",
+          page("fr", "Mentions légales · ConstanceParis7",
                "Éditrice, directrice de la publication, hébergeur, propriété "
                "intellectuelle et données personnelles du radar ConstanceParis7.",
                "/mentions-legales.html", ML.replace("__DIRPUB__", DIRPUB),
