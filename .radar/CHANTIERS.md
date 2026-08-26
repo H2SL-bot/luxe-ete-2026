@@ -48,6 +48,36 @@ guide des tirages a reçu une contre-lecture manuelle finale, sa traduction
 13 langues, 444 fiches en ligne. S'ajoute `llms.txt`, carte du site pour les
 assistants IA (38 visites venues de ChatGPT en un mois).
 
+## ✅ FONDATIONS DU 26-27/08/2026
+
+**Le site est devenu un monde.** En trois jours : le bandeau « Ouvertures &
+délais » sur l'accueil, le badge « Vérifié à la source » (128 pages, relié à
+la page Méthode), les pages Méthode / 6 Moments / Adresses / Vestiaire en
+13 langues (117 pages, 792 chaînes traduites sous garde-fous), et **la
+Mémoire du radar** (registre append-only + détection automatique des dates
+qui bougent + vitrine /changements.html ; première récolte : 22 entrées ;
+premier rendez-vous de mesure : l'épuisement Boucheron du 02/09 à 10 h).
+L'à-propos a été réécrit (professionnel, anonyme : le nom de famille a
+disparu de tout le site public, régime LCEN 6-III-2), l'offre de
+partenariat validée et remise en PDF, le contact bascule sur
+constanceparis75007@gmail.com tant que l'ancienne boîte est suspendue.
+
+## 🎯 LA CAMPAGNE PRESSE FASHION WEEK (préparée le 27/08/2026)
+
+Objectif : les premières accréditations de Constance, PFW du 28/09 au 06/10.
+- **Kit média** : PDF 2 pages sur le Bureau (« Kit Media Constance Paris 7 »),
+  audience publiquement vérifiable (compteur GoatCounter) comme argument.
+- **17 cibles vérifiées** (contacts presse lus sur pages ouvertes, zéro
+  adresse devinée) : 8 présentations de jeunes maisons (priorité), 6 jeunes
+  maisons à défilés, 3 agences (Lucien Pagès et Karla Otto : demander
+  l'ajout au fichier presse, pas les défilés des géantes).
+- **17 mails pré-remplis** (FR/EN selon la maison) + relance unique du 18.
+- **Fenêtre d'envoi : du 5 au 12 septembre**, 2-3 par jour, kit en pièce
+  jointe, depuis la boîte de Constance. Revérifier les horaires sur
+  fhcm.paris avant l'envoi (calendrier provisoire).
+- FHCM : accréditation de septembre close ; dossier pour MARS 2027 à
+  déposer dès l'ouverture des demandes (surveiller fhcm.paris).
+
 ## 🔄 EN COURS
 
 **05 · 147 fiches à re-vérifier** → **120 restantes**
