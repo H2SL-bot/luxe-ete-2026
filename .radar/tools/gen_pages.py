@@ -363,7 +363,7 @@ def main():
             body.append("<div class=\"meta\">" + " · ".join(meta) + "</div>")
             dv = date_verif(e)
             if dv:
-                body.append(f"<div class=\"bc\">✓ {esc(UI['verified'][lang])} {dv}</div>")
+                body.append(f"<div class=\"bc\"><a href=\"/methode.html\">✓ {esc(UI['verified'][lang])} {dv}</a></div>")
             if T(e, lang, "ds"):
                 body.append(f"<p>{esc(T(e,lang,'ds'))}</p>")
             if T(e, lang, "pe"):
@@ -701,6 +701,113 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
                "/mentions-legales.html", ML.replace("__DIRPUB__", DIRPUB),
                '<link rel="alternate" hreflang="fr" href="%s/mentions-legales.html">' % BASE))
     sitemap_urls.append(f"{BASE}/mentions-legales.html")
+
+
+    # --- Page Méthode (26/08/2026) : le manifeste public de la rigueur du radar.
+    # Le badge « Vérifié à la source » des pages événement pointe ici.
+    METHODE = """<div class="bc"><a href="/">Radar</a> · Méthode</div>
+<h1>La méthode</h1>
+<p class="meta">Comment ce radar est fabriqué, et pourquoi vous pouvez vous y fier.</p>
+
+<p>Ce site est un travail de vérification avant d'être un travail de publication.
+Voici les règles qui le gouvernent. Elles ne souffrent pas d'exception.</p>
+
+<div class="box">
+<h2>Les règles</h2>
+<ul>
+<li><b>Une date est vraie, ou elle n'existe pas.</b> Chaque information est prise à
+sa source officielle, puis datée. Une date de fin n'est jamais posée par défaut :
+elle est lue sur la source, ou le doute est écrit.</li>
+<li><b>Un doute n'est jamais publié comme une certitude.</b> Il est inscrit à un
+registre, puis tranché à la vérification suivante.</li>
+<li><b>Choisir est un art.</b> Le radar ne liste pas tout ce qui existe : il
+retient ce qui mérite de l'être, au niveau d'exigence de la Riviera.</li>
+<li><b>Rien ne s'efface en silence.</b> Un lieu fermé, un événement annulé :
+archivé avec sa preuve. Les archives restent consultables.</li>
+<li><b>Une place ne s'achète pas.</b> Aucun événement ne figure ici contre
+paiement. Les partenariats, s'ils existent, sont signalés sur la page concernée.</li>
+<li><b>Une erreur signalée est corrigée sous 48 heures</b>, et la correction est
+mentionnée. <a href="mailto:constanceparis75007@gmail.com">Signaler une erreur</a>.</li>
+</ul>
+</div>
+
+<h2 class="sub">Le badge « Vérifié à la source »</h2>
+<p>Sur les pages d'événement, la mention <b>« ✓ Vérifié à la source le… »</b>
+indique la date à laquelle l'information a été confrontée pour la dernière fois à
+sa source officielle. Elle ne s'affiche que lorsque cette vérification est
+consignée : pas de preuve, pas de badge.</p>
+
+<h2 class="sub">Les langues</h2>
+<p>Chaque page existe en 13 langues. Le français est la référence : en cas de
+divergence, c'est lui qui fait foi, et la traduction est corrigée.</p>
+
+<div class="chips"><a href="/">← Retour au radar</a><a href="/a-propos.html">À propos</a></div>"""
+    write("/methode.html",
+          page("fr", "La méthode · ConstanceParis7",
+               "Les règles de vérification du radar : sources officielles, dates "
+               "prouvées, doutes inscrits, corrections sous 48 heures.",
+               "/methode.html", METHODE,
+               '<link rel="alternate" hreflang="fr" href="%s/methode.html">' % BASE))
+    sitemap_urls.append(f"{BASE}/methode.html")
+
+    # --- Pages Moments (26/08/2026) : le radar raconté comme on voyage.
+    # Sélection par NOM EXACT de fiche, jamais par sous-chaîne. Français
+    # d'abord ; la mise en 13 langues viendra par vague dédiée.
+    MOMENTS = [
+     {"slug": "octobre-a-paris",
+      "h1": "Octobre à Paris",
+      "desc": "Fashion Week, Arc de Triomphe, Journées Particulières, Art Basel Paris : le mois où Paris concentre le luxe mondial.",
+      "intro": "<p>Aucune ville ne concentre autant le calendrier du luxe qu'un mois d'octobre parisien : la Fashion Week s'achève, Longchamp couronne son champion, LVMH ouvre ses ateliers, puis le Grand Palais accueille le marché de l'art mondial, ventes du soir comprises. Voici les portes, dans l'ordre du calendrier.</p>",
+      "noms": ["Paris Fashion Week, Prêt-à-porter Printemps-Été 2027",
+               "Qatar Prix de l'Arc de Triomphe 2026",
+               "Les Journées Particulières LVMH 2026, 69 lieux ouverts dans 12 pays",
+               "Chaumet ouvre le 12 place Vendôme, Journées Particulières LVMH",
+               "Repossi ouvre le 6 place Vendôme, Journées Particulières LVMH",
+               "Art Basel Paris 2026, Grand Palais",
+               "Sotheby's Paris, vente du soir « Modernités » (orbite Art Basel Paris)",
+               "Artcurial, vente « La Modernité en partage » (Collection Louis Grandchamp des Raux, orbite Art Basel Paris)"]},
+     {"slug": "semaine-des-joyaux-geneve",
+      "h1": "La semaine des joyaux de Genève",
+      "desc": "Début novembre, Christie's, Sotheby's et Phillips exposent au public les plus beaux joyaux du monde avant de les vendre.",
+      "intro": "<p>Chaque automne, les grandes maisons de vente convergent vers le Léman : diadèmes, diamants de couleur et provenances royales s'exposent au public pendant plusieurs jours, avant de passer sous le marteau. C'est la porte la plus accessible de la haute joaillerie : les expositions des lots sont ouvertes, souvent gratuitement.</p>",
+      "noms": ["Vente Sotheby's Fine Jewelry et exposition au Mandarin Oriental, Genève",
+               "Phillips, The Geneva Jewels Auction VII, Hôtel Président",
+               "Vente Sotheby's Royal & Noble Jewels, Genève",
+               "Vente Christie's Magnificent Jewels, Genève",
+               "Watches and Wonders Geneva 2027",
+               "GemGenève 2027"]},
+     {"slug": "septembre-a-venise",
+      "h1": "Septembre à Venise",
+      "desc": "La Mostra ouvre la saison des tapis rouges, l'amfAR la couronne : dix jours où Venise devient la capitale du cinéma mondial.",
+      "intro": "<p>Le premier tapis rouge de la rentrée se déroule sur le Lido : dix jours de Mostra, le gala de l'amfAR en apothéose, et une lagune entière en habits de première. Les palais d'art restent ouverts pendant le festival, et le grand bal du Carnaval se réserve déjà.</p>",
+      "noms": ["Mostra de Venise 2026, 83e Festival international du film",
+               "amfAR Gala Venezia 2026, 6e édition",
+               "Helter Skelter: Arthur Jafa and Richard Prince (Fondazione Prada Venise)",
+               "Il Ballo del Doge 2027, bal masqué de gala du Carnaval de Venise"]},
+    ]
+    par_nom = {e.get("n"): e for e in pages}
+    for mo in MOMENTS:
+        corps = [f"<div class=\"bc\"><a href=\"/\">{esc(UI['radar']['fr'])}</a> · Moments</div>",
+                 f"<h1>{esc(mo['h1'])}</h1>", mo["intro"], "<ul class=\"cards\">"]
+        absents = []
+        for nom in mo["noms"]:
+            e = par_nom.get(nom)
+            if not e:
+                absents.append(nom); continue
+            sw = e.get("sw") or ""
+            corps.append(f"<li><div class=\"d\">{esc(e.get('dt') or e.get('d1',''))}</div>"
+                         f"<a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(nom)}</a>"
+                         + (f"<div>{esc(sw[:140])}</div>" if sw else "") + "</li>")
+        corps.append("</ul>")
+        if absents:
+            print(f"gen_pages: AVERTISSEMENT moment {mo['slug']} : fiches introuvables {absents}")
+        corps.append(f"<div class=\"chips\"><a href=\"/\">← {esc(UI['back']['fr'])}</a>"
+                     f"<a href=\"{u_hub('fr')}\">{esc(UI['places_cats']['fr'])}</a></div>")
+        chemin = f"/moments/{mo['slug']}.html"
+        write(chemin, page("fr", f"{mo['h1']} · ConstanceParis7", mo["desc"], chemin,
+                           "".join(corps),
+                           '<link rel="alternate" hreflang="fr" href="%s%s">' % (BASE, chemin)))
+        sitemap_urls.append(f"{BASE}{chemin}")
 
     # --- sitemap ---
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
