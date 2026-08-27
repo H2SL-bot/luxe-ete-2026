@@ -371,6 +371,38 @@ ni un concurrent ni une IA ne peut produire : il fallait être là avant.
 Premier rendez-vous de mesure : le 2 septembre 2026 à 10 h, ouverture des
 réservations Boucheron — consigner l'heure d'épuisement réelle.
 
+## LA NOTE DU RADAR (institution du 27/08/2026)
+
+Décision de Constance : assumer publiquement la notation des événements,
+« comme on note un restaurant », en notant l'engouement (« la hype »).
+La note EXISTAIT depuis l'origine : c'est le score du Classement Prestige.
+On l'a sortie de l'ombre, sans créer de deuxième formule.
+
+UNE SEULE SOURCE DE VÉRITÉ : la formule du JS de l'accueil, portée à
+l'identique dans note_radar() de gen_pages.py :
+  note = round(0.4*sv + 0.3*sp + 0.2*sl + 0.1*proximité_date)
+  proximité_date : 100 si en cours ; max(15, 100 - 2.2*j) avant ;
+  max(0, 55 - 4*j) après. Diamants ✦ aux mêmes paliers que l'accueil
+  (88/76/62/48). Si le JS de l'accueil change, note_radar() DOIT suivre.
+
+CE QUE ÇA PRODUIT :
+- sceau « ✦✦✦✦ Note du radar : NN/100 » sur chaque page événement
+  (13 langues, libellé UI['note']), lien vers /note.html ;
+- /note.html : le barème public (FR). Doctrine du texte : « on note la
+  porte, pas la fête » : des faits documentés (accès, personnalités,
+  lieu, date), jamais un ressenti. Vitrine « du moment » : seuls les
+  événements datés (durée <= 90 j, non terminés), jamais les fiches à
+  l'année, sinon la vitrine ne bougerait pas ;
+- lien « Comment cette note est calculée : le barème » sous l'intro du
+  Classement Prestige de l'accueil (clé i18n note_bareme, 13 langues).
+
+À VENIR (validés dans l'esprit, pas encore construits) :
+- la Mémoire affinera le critère d'accès (« complet en deux heures ») ;
+- mention « vécu et vérifié sur place » quand Constance y était
+  (premier candidat : Boucheron le 19/09/2026) ;
+- traduction de /note.html à la prochaine vague de pages éditoriales ;
+- « les Sceaux de l'année » en décembre (palmarès annuel des notes).
+
 ## LE BANDEAU « OUVERTURES & DÉLAIS » (posé le 26/08/2026)
 
 L'accueil porte, sous le masthead, un bandeau `section.portes` : les fenêtres

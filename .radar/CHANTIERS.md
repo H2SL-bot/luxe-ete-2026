@@ -252,3 +252,5 @@ La Gritta). Cap-Ferrat a perdu la sienne : elle était nominative.
 5. **05 — finir les re-vérifications.** La routine s'en charge une fois le
    réseau cloud débloqué.
 6. Le reste au fil de l'eau.
+
+- 27/08 : LA NOTE DU RADAR lancée (validée par Constance). Sceau sur 420 fiches x13 langues, /note.html (bareme public), lien accueil sous Classement Prestige. Reste : traduction de /note.html (prochaine vague), mention « vécu et vérifié sur place » (des le 19/09), Sceaux de l'année (decembre).

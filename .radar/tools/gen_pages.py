@@ -83,6 +83,37 @@ def date_verif(e):
     a, mo, j = max(meilleurs)
     return f"{j:02d}/{mo:02d}/{a}"
 
+def note_radar(e):
+    """La Note du radar (institution du 27/08/2026) : le score du Classement
+    Prestige, sorti de l'ombre et porté sur chaque fiche. Portage FIDÈLE de
+    la formule du JS de l'accueil (une seule source de vérité) : quatre
+    critères publiés depuis l'origine dans sec_prestige_intro, avec leurs
+    poids : exclusivité de l'accès 4, personnalités attendues 3, lieu 2,
+    proximité de la date 1 (recalculée à chaque génération). On note la
+    porte, pas la fête : des faits documentés, jamais un ressenti."""
+    sv, sp, sl = e.get("sv"), e.get("sp"), e.get("sl")
+    if sv is None or sp is None or sl is None:
+        return None
+    arrondi = lambda x: int(x + 0.5)  # Math.round du JS, pas le round bancaire
+    t = TODAY
+    d1, d2 = str(e.get("d1") or ""), str(e.get("d2") or "")
+    try:
+        if d1 <= t <= d2:
+            ds = 100
+        elif d1 > t:
+            j = (date.fromisoformat(d1) - date.fromisoformat(t)).days
+            ds = max(15, arrondi(100 - 2.2 * j))
+        else:
+            j = (date.fromisoformat(t) - date.fromisoformat(d2)).days
+            ds = max(0, arrondi(55 - 4 * j))
+    except ValueError:
+        return None
+    return arrondi(0.4 * sv + 0.3 * sp + 0.2 * sl + 0.1 * ds)
+
+def diamants(n):
+    """Mêmes paliers que diamonds() du JS de l'accueil."""
+    return "✦" * (5 if n >= 88 else 4 if n >= 76 else 3 if n >= 62 else 2 if n >= 48 else 1)
+
 def org_name_from_iv(e):
     iv = e.get("iv")
     if not (isinstance(iv, dict) and iv.get("o")):
@@ -105,6 +136,7 @@ CAT_I18N = {"art": "c_art", "mode": "c_mode", "artdevivre": "c_art2",
 UI = {
  "verified":{"fr":"Vérifié à la source le","en":"Verified at the source on","es":"Verificado en la fuente el","it":"Verificato alla fonte il","pt":"Verificado na fonte a","de":"An der Quelle geprüft am","ru":"Проверено по источнику:","ar":"تم التحقق من المصدر بتاريخ","zh":"已于源头核实：","ja":"公式情報で確認：","ko":"공식 출처 확인:","hi":"स्रोत से सत्यापित:","tr":"Kaynağından doğrulandı:"},
  "radar":   {"fr":"Radar","en":"Radar","es":"Radar","it":"Radar","pt":"Radar","de":"Radar","ru":"Радар","ar":"الرادار","zh":"雷达","ja":"レーダー","ko":"레이더","hi":"रडार","tr":"Radar"},
+ "note":    {"fr":"Note du radar","en":"Radar score","es":"Nota del radar","it":"Voto del radar","pt":"Nota do radar","de":"Radar-Note","ru":"Оценка радара","ar":"تقييم الرادار","zh":"雷达评分","ja":"レーダースコア","ko":"레이더 점수","hi":"रडार स्कोर","tr":"Radar notu"},
  "all":     {"fr":"Tout","en":"All","es":"Todo","it":"Tutto","pt":"Tudo","de":"Alle","ru":"Все","ar":"الكل","zh":"全部","ja":"すべて","ko":"전체","hi":"सभी","tr":"Tümü"},
  "affiche": {"fr":"À l'affiche","en":"Line-up","es":"En cartel","it":"In scena","pt":"Em cartaz","de":"Programm","ru":"В программе","ar":"المشاركون","zh":"阵容","ja":"出演","ko":"라인업","hi":"कार्यक्रम-सूची","tr":"Program"},
  "access":  {"fr":"Comment y accéder","en":"How to get in","es":"Cómo acceder","it":"Come accedere","pt":"Como aceder","de":"So kommen Sie hinein","ru":"Как попасть","ar":"كيفية الدخول","zh":"如何进入","ja":"アクセス方法","ko":"입장 방법","hi":"प्रवेश कैसे पाएँ","tr":"İçeri nasıl girilir"},
@@ -450,6 +482,9 @@ def main():
             if cat:
                 meta.append(f"<a href=\"{u_cat(cat, lang)}\">{esc(cat_label(e.get('c','autre'), lang))}</a>")
             body.append("<div class=\"meta\">" + " · ".join(meta) + "</div>")
+            nr = note_radar(e)
+            if nr is not None:
+                body.append(f"<div class=\"bc\"><a href=\"/note.html\">{diamants(nr)} {esc(UI['note'][lang])} : {nr}/100</a></div>")
             dv = date_verif(e)
             if dv:
                 body.append(f"<div class=\"bc\"><a href=\"/methode.html\">✓ {esc(UI['verified'][lang])} {dv}</a></div>")
@@ -575,7 +610,8 @@ def main():
                 + f"<a href=\"{prefix(lang)}/adresses.html\">{esc(X(lang,'a_h1'))}</a>"
                 + f"<a href=\"{prefix(lang)}/vestiaire.html\">{esc(X(lang,'v_h1'))}</a>"
                 + f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a>"
-                + f"<a href=\"/changements.html\">{esc(X(lang,'mem_h1'))}</a></div>")
+                + f"<a href=\"/changements.html\">{esc(X(lang,'mem_h1'))}</a>"
+                + f"<a href=\"/note.html\">{esc(UI['note'][lang])}</a></div>")
         htitle = f"{UI['hub_h1'][lang]} | ConstanceParis7"
         write(u_hub(lang), page(lang, htitle, UI["hub_intro"][lang], u_hub(lang), "".join(hub), hreflang_for(None, None)))
         sitemap_urls.append(f"{BASE}{u_hub(lang)}")
@@ -1026,6 +1062,55 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
               "/changements.html", "".join(corps),
               '<link rel="alternate" hreflang="fr" href="%s/changements.html">' % BASE))
         sitemap_urls.append(f"{BASE}/changements.html")
+
+    # --- la Note du radar : le barème public (institution du 27/08/2026) ---
+    # La note existait depuis l'origine, en coulisses du Classement Prestige.
+    # Ici elle sort de l'ombre : sceau sur chaque fiche, barème publié.
+    notes = sorted(((note_radar(e), e) for e in pages if note_radar(e) is not None),
+                   key=lambda t: -t[0])
+    def _evenement_date(e):
+        """Vrai événement daté (pour la vitrine « du moment ») : pas fini,
+        et pas une fiche à l'année dont la proximité de date vaut toujours
+        le maximum, sinon la vitrine ne bougerait jamais."""
+        try:
+            d1, d2 = date.fromisoformat(str(e.get("d1"))), date.fromisoformat(str(e.get("d2")))
+        except (TypeError, ValueError):
+            return False
+        return d2 >= date.fromisoformat(TODAY) and (d2 - d1).days <= 90
+    vitrine = [(nr, e) for nr, e in notes if _evenement_date(e)][:3]
+    if notes:
+        corps = ["<div class=\"bc\"><a href=\"/\">Radar</a> · La Note</div>",
+                 "<h1>La Note du radar</h1>",
+                 "<p class=\"meta\">Chaque événement du radar porte une note sur 100. Voici le barème, publié en entier : ce que la note mesure, et ce qu'elle ne prétend pas mesurer.</p>",
+                 "<p>Un restaurant a ses étoiles, un palace a son classement. Les événements n'avaient rien : la Note du radar comble ce vide. Elle mesure l'engouement autour d'un événement : la difficulté d'y entrer, qui s'y montre, où il se tient, et à quel point c'est maintenant.</p>",
+                 "<h2 class=\"sub\">On note la porte, pas la fête</h2>",
+                 "<p>La Note ne juge pas si une soirée fut réussie : personne ne peut le savoir sans y avoir été, et le radar ne prétend jamais savoir ce qu'il n'a pas vérifié. Elle mesure ce qui se documente : ce qu'un événement exige, publie et promet. C'est le principe des agences de notation : lire les faits. Le ressenti, lui, n'entre pas dans la formule.</p>",
+                 "<h2 class=\"sub\">Quatre critères, des poids assumés</h2>",
+                 "<ul>",
+                 "<li><b>L'exclusivité de l'accès (poids 4).</b> Billetterie ouverte à tous, invitation seule, liste tenue par la maison : la sélection à l'entrée, les prix publiés, la jauge.</li>",
+                 "<li><b>Les personnalités attendues (poids 3).</b> Qui vient, qui organise, qui parraine, d'après les éditions précédentes documentées.</li>",
+                 "<li><b>Le lieu (poids 2).</b> Un palace centenaire, un hôtel particulier fermé au public, une plage privatisée : le standing d'un lieu est un fait.</li>",
+                 "<li><b>La proximité de la date (poids 1).</b> Un événement en cours vaut le maximum ; un événement lointain attend son heure. Ce critère est recalculé à chaque mise à jour du site : la Note respire avec le calendrier.</li>",
+                 "</ul>",
+                 "<p>La somme pondérée fait la Note, sur 100. Le Classement Prestige de l'accueil ordonne tous les événements selon cette même note : une seule formule, du haut en bas du site.</p>",
+                 "<h2 class=\"sub\">Les diamants</h2>",
+                 "<p>La note se lit aussi en diamants : ✦✦✦✦✦ à partir de 88, ✦✦✦✦ à partir de 76, ✦✦✦ à partir de 62, ✦✦ à partir de 48, ✦ en dessous.</p>",
+                 f"<h2 class=\"sub\">Aujourd'hui sur le radar</h2>",
+                 f"<p>{len(notes)} événements notés. Les plus hautes notes du moment :</p>",
+                 "<ul class=\"cards\">"]
+        for nr, e in vitrine:
+            corps.append(f"<li><div class=\"d\">{diamants(nr)} {nr}/100</div>"
+                         f"<a class=\"t\" href=\"{u_event(e,'fr')}\">{esc(e.get('n',''))}</a></li>")
+        corps.append("</ul>")
+        corps.append("<h2 class=\"sub\">Ce que la Note apprendra encore</h2>")
+        corps.append("<p>La <a href=\"/changements.html\">Mémoire du radar</a> consigne les fenêtres de réservation et les épuisements constatés. « Complet en deux heures » est une mesure d'engouement qu'aucune formule ne remplace : d'année en année, ces relevés viendront affiner le critère d'accès. Et lorsque la rédaction franchit elle-même les portes, la fiche portera la mention « vécu et vérifié sur place ».</p>")
+        corps.append("<p class=\"meta\">La façon dont chaque information est vérifiée est publiée : c'est la <a href=\"/methode.html\">méthode</a>.</p>")
+        corps.append("<div class=\"chips\"><a href=\"/\">← Retour au radar</a><a href=\"/methode.html\">La méthode</a><a href=\"/changements.html\">La mémoire</a></div>")
+        write("/note.html", page("fr", "La Note du radar · ConstanceParis7",
+              "Le barème public de la Note du radar : quatre critères documentés, l'accès, les personnalités, le lieu, la date. On note la porte, pas la fête.",
+              "/note.html", "".join(corps),
+              '<link rel="alternate" hreflang="fr" href="%s/note.html">' % BASE))
+        sitemap_urls.append(f"{BASE}/note.html")
 
     # --- sitemap ---
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
