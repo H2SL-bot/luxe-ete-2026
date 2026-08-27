@@ -403,6 +403,32 @@ CE QUE ÇA PRODUIT :
 - traduction de /note.html à la prochaine vague de pages éditoriales ;
 - « les Sceaux de l'année » en décembre (palmarès annuel des notes).
 
+## LE PROTOCOLE (institution du 27/08/2026)
+
+Le troisième pilier, validé par Constance (« tu peux faire le protocole ») :
+le radar dit où aller et comment entrer, le Vestiaire dit quoi porter,
+le Protocole dit comment se tenir. Pages /protocole.html + /protocole/
+{le-gala, la-vente-aux-encheres, l-opera-et-le-bal, les-courses,
+le-club-prive, le-vernissage-et-la-foire}.html, en 13 langues.
+
+DOCTRINE DU CONTENU, non négociable :
+- deux registres seulement, jamais mélangés : « Ce que les institutions
+  publient » (règles PUBLIÉES par les institutions, reformulées) et
+  « L'usage, selon la maison » (conseil éditorial assumé comme tel).
+  Jamais de folklore présenté comme règle.
+- CHAQUE règle publiée vient d'une page officielle réellement chargée,
+  PUIS contre-vérifiée par un second passage sceptique (36 règles au
+  lancement : 23 confirmées, 13 corrigées, 0 invérifiable). Le registre
+  complet (institution, document, URL, extrait, verdict, date) vit dans
+  `.radar/protocole.json` : source unique, gen_pages y injecte les
+  règles sous les clés pr_<slug>_rN.
+- À L'ENTRETENIR : re-vérifier les règles à chaque équinoxe (comme les
+  textes saisonniers) ; les règles datées (Frieze : preview du
+  14/10/2026, mercredi) doivent être rafraîchies après l'édition.
+- Pour ajouter une règle : même chemin (chargement réel de la source,
+  contre-vérification, entrée au registre avec extrait), jamais de
+  raccourci.
+
 ## LE BANDEAU « OUVERTURES & DÉLAIS » (posé le 26/08/2026)
 
 L'accueil porte, sous le masthead, un bandeau `section.portes` : les fenêtres

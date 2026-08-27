@@ -1,0 +1,356 @@
+[
+ {
+  "slug": "le-gala",
+  "regles": [
+   {
+    "institution": "Debrett's",
+    "document": "Deconstructing Dress Codes",
+    "url": "https://debretts.com/deconstructing-dress-codes/",
+    "extrait": "Men should wear a black, wool, single-breasted dinner jacket, with no vents, silk peaked lapels or a shawl collar",
+    "regle": "Le black tie impose un smoking noir en laine, à boutonnage droit, sans fentes, à revers en soie pointus ou châle, avec un nœud papillon que l'on noue soi-même.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Debrett's",
+    "document": "Deconstructing Dress Codes",
+    "url": "https://debretts.com/deconstructing-dress-codes/",
+    "extrait": "a black single-breasted tailcoat, with silk lapels, worn unbuttoned ... A white shirt is fastened with studs not buttons",
+    "regle": "Le white tie, code le plus formel et le plus rare, exige un frac noir à revers de soie porté ouvert, sur une chemise blanche fermée par des boutons de plastron amovibles.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Debrett's",
+    "document": "Interpreting Invitations",
+    "url": "https://debretts.com/interpreting-invitations/",
+    "extrait": "All invitations require a prompt reply, whether it is an acceptance or refusal.",
+    "regle": "Toute invitation appelle une réponse rapide, acceptation ou refus, et revenir sur sa parole au dernier moment est jugé grossier.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "amfAR, The Foundation for AIDS Research",
+    "document": "Communiqué « amfAR Returns to Cannes »",
+    "url": "https://www.amfar.org/press-releases/amfar-returns-to-cannes/",
+    "extrait": "The exclusive black-tie event will include cocktails, dinner and an exciting live auction led by renowned auctioneer Simon de Pury.",
+    "regle": "Le gala amfAR de Cannes se présente dans les communiqués de la fondation comme un événement black tie : cocktails, dîner, puis vente aux enchères en direct.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Monte-Carlo Société des Bains de Mer",
+    "document": "Agenda « Gala de la Croix-Rouge monégasque »",
+    "url": "https://www.montecarlosbm.com/en/agenda/monaco-red-cross-gala",
+    "extrait": "gala attire ... Dinner: 08:30 pm ... Minimum age: 7 years",
+    "regle": "Au Gala de la Croix-Rouge monégasque, la tenue de gala est exigée, le dîner est servi à 20h30 et l'accès est réservé aux convives de 7 ans et plus.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Monte-Carlo Société des Bains de Mer",
+    "document": "Communiqué de presse du 77e Gala de la Croix-Rouge monégasque",
+    "url": "https://fr.montecarlosbm-corporate.com/wp-content/uploads/2026/07/mcsbm-communique-de-presse-77e-gala-de-la-croix-rouge-monegasque.pdf",
+    "extrait": "Les donateurs de la Croix-Rouge monégasque sont attendus dès 19h45 dans la mythique Salle des Etoiles",
+    "regle": "Les donateurs du Gala de la Croix-Rouge monégasque sont attendus dès 19h45 dans la Salle des Etoiles, où la soirée débute par le dîner de gala suivi d'une tombola, ponctuée par le feu d'artifice tiré depuis la mer juste avant le spectacle.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   }
+  ]
+ },
+ {
+  "slug": "la-vente-aux-encheres",
+  "regles": [
+   {
+    "institution": "Christie's",
+    "document": "How to bid at an auction (Buying guide)",
+    "url": "https://www.christies.com.cn/en/help/buying-guide/register-and-bid",
+    "extrait": "Bring your photo ID and a proof of address to collect a paddle before the auction begins.",
+    "regle": "Pour enchérir en salle, Christie's recommande de s'enregistrer au moins 24 heures avant la vente, et le paddle se retire sur présentation d'une pièce d'identité avec photo et d'un justificatif de domicile.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Christie's",
+    "document": "How to bid at an auction (Buying guide)",
+    "url": "https://www.christies.com.cn/en/help/buying-guide/register-and-bid",
+    "extrait": "Bidding generally opens below the low estimate and advances in increments of up to 10%, subject to the auctioneer's discretion.",
+    "regle": "Les enchères ouvrent en général sous l'estimation basse et progressent par paliers pouvant atteindre 10 pour cent, à la discrétion du commissaire-priseur.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Christie's",
+    "document": "How to bid at an auction (Buying guide)",
+    "url": "https://www.christies.com.cn/en/help/buying-guide/register-and-bid",
+    "extrait": "Please note, you cannot cancel a bid once it's been submitted.",
+    "regle": "Une enchère est irrévocable : une fois émise, elle ne peut plus être annulée.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Sotheby's",
+    "document": "Guide for Buyers (Global)",
+    "url": "https://help.sothebys.com/en/support/solutions/articles/44002518078-guide-for-buyers-global",
+    "extrait": "All lots sold will be invoiced to the name and address in which the paddle has been registered",
+    "regle": "Tout lot adjugé est facturé au nom et à l'adresse sous lesquels le paddle a été enregistré, sans transfert possible vers un autre nom ou une autre adresse.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Sotheby's",
+    "document": "Guide for Buyers (Global)",
+    "url": "https://help.sothebys.com/en/support/solutions/articles/44002518078-guide-for-buyers-global",
+    "extrait": "should you handle any items on view at our premises, you do so at your own risk",
+    "regle": "Manipuler un objet exposé dans les locaux de la maison de vente se fait aux risques et périls du visiteur.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Phillips",
+    "document": "Buying (phillips.com, page officielle Buy)",
+    "url": "https://www.phillips.com/buysell/buy",
+    "extrait": "submit via fax or email at least 24 hours before the sale",
+    "regle": "Les ordres d'achat et les demandes d'enchères téléphoniques doivent parvenir à Phillips au moins 24 heures avant la vente.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   }
+  ]
+ },
+ {
+  "slug": "l-opera-et-le-bal",
+  "regles": [
+   {
+    "institution": "Wiener Staatsoper (Wiener Opernball)",
+    "document": "Vienna Opera Ball, page The Ball Evening (Dress Code)",
+    "url": "https://www.opernball.at/en/the-evening/",
+    "extrait": "black tailcoat, white dress shirt, white bowtie, black patent leather shoes. A gala uniform is also permitted as an option.",
+    "regle": "Au Bal de l'Opéra de Vienne, le dress code impose aux messieurs le frac noir avec chemise blanche, nœud papillon blanc et souliers vernis noirs, l'uniforme de gala étant également admis en option.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Wiener Staatsoper (Wiener Opernball)",
+    "document": "Vienna Opera Ball, page The Ball Evening (Dress Code)",
+    "url": "https://www.opernball.at/en/the-evening/",
+    "extrait": "floor-length ball gown, any color is allowed, no traditional costume or festive Dirndl",
+    "regle": "Les dames doivent porter une robe de bal longue jusqu'au sol, de n'importe quelle couleur, le costume traditionnel et le dirndl de fête étant expressément exclus.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Wiener Staatsoper (Wiener Opernball)",
+    "document": "Vienna Opera Ball, page The Ball Evening (Order of Events)",
+    "url": "https://www.opernball.at/en/the-evening/",
+    "extrait": "Midnight Quadrille 00:00, Quadrille 02:00, Quadrille 04:00, End 05:00",
+    "regle": "La soirée obéit à un ordre fixe: entrée à 20 h 15, ouverture à 22 h, quadrille de minuit à 0 h, quadrilles à 2 h et 4 h, fin du bal à 5 h du matin.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Wiener Philharmoniker",
+    "document": "84th Vienna Philharmonic Ball",
+    "url": "https://www.wienerphilharmoniker.at/en/vienna-philharmonic-ball/2027",
+    "extrait": "Dress Code: Floor-Length Evening Gown, Tails",
+    "regle": "Au Bal des Wiener Philharmoniker au Musikverein, la robe du soir longue et le frac sont exigés, les portes ouvrant à 21 h pour un début à 22 h et une fin à 5 h.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Opéra national de Paris",
+    "document": "Règlement de venue à l'Opéra",
+    "url": "https://www.operadeparis.fr/conditions-generales/reglement-de-venue-a-lopera",
+    "extrait": "les spectateurs retardataires ne peuvent être placés qu'à l'entracte si le déroulé du spectacle le prévoit",
+    "regle": "A l'Opéra de Paris, les portes des salles sont fermées dès que la représentation a commencé et les retardataires ne peuvent être placés qu'à l'entracte si le déroulé du spectacle le prévoit, sans échange ni remboursement du billet.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Teatro alla Scala",
+    "document": "Information (Informations for audience)",
+    "url": "https://www.teatroallascala.org/en/visit/information/information.html",
+    "extrait": "People wearing shorts or sleeveless T-shirts will not be allowed inside the auditorium; in this case, tickets will not be reimbursed.",
+    "regle": "La Scala refuse l'accès à la salle aux spectateurs en short ou en débardeur, et le billet n'est alors pas remboursé.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   }
+  ]
+ },
+ {
+  "slug": "les-courses",
+  "regles": [
+   {
+    "institution": "Ascot Racecourse (Royal Ascot)",
+    "document": "Royal Enclosure Dress Code",
+    "url": "https://www.ascot.com/royal-ascot/what-to-wear-royal-enclosure",
+    "extrait": "Hats must be worn. However, a headpiece or hatinator with a minimum base diameter of 4 inches / 10cm is acceptable.",
+    "regle": "Dans le Royal Enclosure de Royal Ascot, le chapeau est obligatoire pour les femmes : un bibi n'est accepté que si sa base mesure au moins 10 cm de diamètre, et les fascinators sont interdits sauf pour les moins de 17 ans.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Ascot Racecourse (Royal Ascot)",
+    "document": "Royal Enclosure Dress Code",
+    "url": "https://www.ascot.com/royal-ascot/what-to-wear-royal-enclosure",
+    "extrait": "Shoulder straps that are a minimum width of 1 inch / 2.5cm",
+    "regle": "Dans le Royal Enclosure, les bretelles des robes doivent mesurer au moins 2,5 cm de large, et sont interdits les robes et hauts bustier, à une épaule, à épaules dénudées, à col halter dos ouvert ou à bretelles spaghetti, ainsi que les tissus transparents.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Ascot Racecourse (Royal Ascot)",
+    "document": "Royal Enclosure Dress Code",
+    "url": "https://www.ascot.com/royal-ascot/what-to-wear-royal-enclosure",
+    "extrait": "A black or grey top hat (may be removed within a restaurant or Private Box)",
+    "regle": "Avec la jaquette noire, grise ou marine, le haut-de-forme noir ou gris est obligatoire et ne peut être retiré que dans un restaurant, une loge privée, un espace assis extérieur clos, une terrasse, un balcon ou un jardin, toute personnalisation du haut-de-forme (rubans colorés, plumes, ornements) étant interdite.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Henley Royal Regatta",
+    "document": "Stewards' Enclosure Dress Code",
+    "url": "https://www.hrr.co.uk/stewards-enclosure-dress-code/",
+    "extrait": "required to wear dresses or skirts with a hemline below the knee",
+    "regle": "Dans la Stewards' Enclosure de Henley, les femmes doivent porter une robe ou une jupe dont l'ourlet tombe sous le genou, ou un pantalon avec veste ou blazer, ou un tailleur-pantalon, l'entrée étant refusée à toute personne dont la tenue n'est pas conforme.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Henley Royal Regatta",
+    "document": "Stewards' Enclosure Facilities & Rules",
+    "url": "https://www.hrr.co.uk/stewards-enclosure-facilities-rules/",
+    "extrait": "if you wish to make and receive phone calls, then we ask that you leave the Stewards' Enclosure before doing so",
+    "regle": "Le téléphone peut servir à consulter les résultats des courses dans la Stewards' Enclosure, mais il faut sortir de l'enceinte pour passer ou recevoir un appel.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "France Galop",
+    "document": "Comment s'habiller pour le Qatar Prix de l'Arc de Triomphe ? (billetterie officielle France Galop)",
+    "url": "https://billetterie.france-galop.com/univers-hippique/comment-shabiller-pour-le-qatar-prix-de-larc-de-triomphe/",
+    "extrait": "Évitez les talons trop hauts qui risquent de vous gêner pour marcher",
+    "regle": "Pour le Qatar Prix de l'Arc de Triomphe à ParisLongchamp, France Galop recommande une tenue élégante mais décontractée, rappelle que le chapeau est toujours le bienvenu et conseille d'éviter les talons trop hauts qui gênent pour marcher dans l'hippodrome.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   }
+  ]
+ },
+ {
+  "slug": "le-club-prive",
+  "regles": [
+   {
+    "institution": "Soho House",
+    "document": "House Rules",
+    "url": "https://www.sohohouse.com/en-us/terms-and-policies/house-rules",
+    "extrait": "No cameras, video or other recording devices ... may be used while in the Houses",
+    "regle": "Toute prise de photo ou de vidéo, y compris avec un téléphone, est interdite à l'intérieur des maisons Soho House.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Soho House",
+    "document": "House Rules",
+    "url": "https://www.sohohouse.com/en-us/terms-and-policies/house-rules",
+    "extrait": "Members may not be separated from their guests within the House or allow their guests to remain in the House when they leave.",
+    "regle": "Un membre, limité à trois invités, ne peut ni s'en séparer dans le club ni les y laisser après son départ.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Casa Cipriani New York",
+    "document": "Club Membership Bylaws",
+    "url": "https://www.casaciprianinewyork.com/membership/membership-bylaws",
+    "extrait": "refrain from speaking on mobile phones, using portable computers or other electronic devices after 6:00 PM",
+    "regle": "Après 18 heures, membres et invités sont priés de garder leur téléphone en mode silencieux et de s'abstenir de téléphoner ou d'utiliser un ordinateur portable, les SMS restant permis et les appels possibles dans les espaces désignés du club.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Casa Cipriani New York",
+    "document": "Club Membership Bylaws",
+    "url": "https://www.casaciprianinewyork.com/membership/membership-bylaws",
+    "extrait": "Persons under the age of 21 are not permitted in the Club, except during Brunch Hours on the weekend",
+    "regle": "Les moins de 21 ans ne sont pas admis au club, sauf au brunch du week-end, accompagnés d'un membre dans les espaces désignés.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "The Arts Club",
+    "document": "Important Information",
+    "url": "https://theartsclub.co.uk/important-information/",
+    "extrait": "Laptops, phones, tablets and business papers may be used in the club until 5.00pm",
+    "regle": "Ordinateurs, téléphones, tablettes et documents de travail ne sont tolérés que jusqu'à 17 heures, et jamais dans les salles à manger ni à l'Oscuro.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Debrett's",
+    "document": "A History of Private Members' Clubs",
+    "url": "https://debretts.com/a-history-of-private-members-clubs/",
+    "extrait": "Do not tip club servants. If you want to offer them some reward, there is usually a 'Holiday Box.'",
+    "regle": "On ne donne jamais de pourboire au personnel d'un club : pour le récompenser, il existe généralement une caisse commune appelée Holiday Box, dont les contributions sont partagées entre tous les employés.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   }
+  ]
+ },
+ {
+  "slug": "le-vernissage-et-la-foire",
+  "regles": [
+   {
+    "institution": "Frieze London & Frieze Masters",
+    "document": "FAQs | Frieze London & Frieze Masters",
+    "url": "https://www.frieze.com/fairs/frieze-london-frieze-masters/faqs",
+    "extrait": "The invitation-only preview will be held on Wednesday 14 October.",
+    "regle": "Le premier jour de la foire, le mercredi 14 octobre 2026, est réservé aux seuls invités, et le jeudi de 11h à 13h reste réservé aux membres et invités avant l'admission générale.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Frieze London & Frieze Masters",
+    "document": "FAQs | Frieze London & Frieze Masters",
+    "url": "https://www.frieze.com/fairs/frieze-london-frieze-masters/faqs",
+    "extrait": "Backpacks must be hand-carried, not worn.",
+    "regle": "Tout sac ou objet dépassant 40 x 20 x 40 cm est refusé à l'entrée, et les sacs à dos admis doivent être portés à la main, jamais sur le dos.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "TEFAF",
+    "document": "TEFAF Terms and Conditions (Visitors)",
+    "url": "https://www.tefaf.com/terms-and-conditions",
+    "extrait": "No flashes, extendable camera devices or video recordings are permitted.",
+    "regle": "Les photos sont autorisées à la foire uniquement pour un usage personnel et en lien avec une éventuelle acquisition d'une œuvre, sans flash, sans dispositif de prise de vue télescopique et sans aucun enregistrement vidéo.",
+    "verdict": "corrige",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "TEFAF",
+    "document": "TEFAF Terms and Conditions (Visitors)",
+    "url": "https://www.tefaf.com/terms-and-conditions",
+    "extrait": "Visitors may be asked to submit to a body search by specially trained staff.",
+    "regle": "Les visiteurs peuvent être soumis à une fouille corporelle par un personnel spécialement formé, et le refus de s'y prêter peut entraîner un refus d'accès à la foire.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "Art Basel",
+    "document": "Miami Beach Ticket & Entrance Disclaimer",
+    "url": "https://www.artbasel.com/miami-beach/ticket-and-entrance-disclaimer",
+    "extrait": "Holder may not conduct any live broadcasting or streaming from Show Sites during the Show.",
+    "regle": "Toute diffusion en direct ou streaming depuis les sites de la foire est interdite pendant Art Basel Miami Beach, et publier l'image d'un autre visiteur exige sa permission expresse.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   },
+   {
+    "institution": "La Biennale di Venezia",
+    "document": "Biennale Arte 2026, page Information",
+    "url": "https://www.labiennale.org/en/art/2026/information",
+    "extrait": "The tickets do not allow you to leave the exhibition and go back in",
+    "regle": "Le billet ordinaire vaut pour une seule admission dans chaque lieu d'exposition: sortir de l'enceinte interdit d'y revenir avec le même billet.",
+    "verdict": "confirme",
+    "verifie": "2026-08-27"
+   }
+  ]
+ }
+]

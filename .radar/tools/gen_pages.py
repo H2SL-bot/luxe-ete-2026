@@ -324,6 +324,41 @@ def main():
      "retour": "Retour au radar",
      "mem_h1": "La mémoire du radar",
      "bc_memoire": "Mémoire",
+     "bc_protocole": "Protocole",
+     "pr_h1": "Le Protocole",
+     "pr_desc": "Le savoir-être des événements du luxe : ce que les institutions exigent, publié et vérifié à la source. Galas, ventes aux enchères, bals, courses, clubs privés, foires d'art.",
+     "pr_meta": "Savoir entrer ne suffit pas. Le radar dit où aller et comment entrer ; le Vestiaire dit quoi porter ; le Protocole dit comment se tenir.",
+     "pr_intro": "Chaque monde a ses règles, et les grandes institutions les publient : codes vestimentaires au centimètre près, horaires immuables, téléphones proscrits. Le Protocole les rassemble, vérifiées à la source, puis y ajoute l'usage : ce qui ne s'écrit nulle part mais se remarque partout.",
+     "pr_or_t": "La règle d'or",
+     "pr_or_p": "On ne publie ici que deux choses : les règles écrites par les institutions elles-mêmes, consultées à la source, et l'usage que la maison assume comme son propre conseil. Jamais de folklore, jamais de règle inventée.",
+     "pr_regles_t": "Ce que les institutions publient",
+     "pr_usage_t": "L'usage, selon la maison",
+     "pr_radar_t": "Sur le radar",
+     "pr_verifie": "Chaque règle est reprise du document publié par l'institution, consulté à son adresse officielle le 27/08/2026.",
+     "pr_le-gala_h1": "Le gala",
+     "pr_le-gala_desc": "Black tie, white tie, réponse à l'invitation, horaires : le protocole des galas et dîners de charité, vérifié aux sources.",
+     "pr_le-gala_intro": "Un gala est une mécanique de précision : une invitation qui appelle une réponse, un code vestimentaire qui ne se discute pas, un déroulé réglé à la minute. Voici ce que publient les autorités de l'étiquette et les maisons qui les donnent.",
+     "pr_le-gala_usage": "On répond à une invitation dans les jours qui suivent, jamais la veille. On arrive à l'heure du cocktail, pas à celle du dîner ; on ne change pas de place à table. Pendant la vente aux enchères du gala, on applaudit les lots des autres. Le téléphone reste en poche : un gala se raconte le lendemain, pas en direct.",
+     "pr_la-vente-aux-encheres_h1": "La vente aux enchères",
+     "pr_la-vente-aux-encheres_desc": "S'enregistrer, lever le paddle, ne jamais annuler : le protocole des ventes aux enchères selon Christie's, Sotheby's et Phillips.",
+     "pr_la-vente-aux-encheres_intro": "La salle des ventes est l'un des derniers théâtres à rituel strict du monde du luxe : on s'y enregistre, on y lève un carton numéroté, et chaque geste engage. Les maisons publient leurs règles ; les voici.",
+     "pr_la-vente-aux-encheres_usage": "On visite l'exposition avant la vente, et l'on demande avant de toucher. On s'assied avant le premier lot, on garde ses gestes pour soi et l'on lève son paddle franchement : dans une salle des ventes, c'est le commissaire-priseur qu'on regarde. Le silence pendant les lots des autres est la première élégance.",
+     "pr_l-opera-et-le-bal_h1": "L'opéra et le bal",
+     "pr_l-opera-et-le-bal_desc": "Frac obligatoire, robe longue jusqu'au sol, retardataires placés à l'entracte : le protocole de l'opéra et des grands bals viennois.",
+     "pr_l-opera-et-le-bal_intro": "Nulle part le protocole n'est plus explicite qu'à Vienne : les bals publient leur code au mot près, et les maisons d'opéra leurs règlements. Ce qui suit n'est pas un conseil de style, c'est le règlement.",
+     "pr_l-opera-et-le-bal_usage": "On arrive avant la fermeture des portes : l'opéra ne connaît pas le retard élégant. On n'applaudit ni entre les mouvements ni pendant un silence du chef. Dans un bal, on ne traverse pas la piste pendant une quadrille, et la révérence d'ouverture appartient aux débutants : on la regarde, on ne la mime pas.",
+     "pr_les-courses_h1": "Les courses",
+     "pr_les-courses_desc": "Chapeau obligatoire, ourlet sous le genou, téléphone hors de l'enceinte : le protocole de Royal Ascot, Henley et ParisLongchamp.",
+     "pr_les-courses_intro": "Les courses anglaises ont mis leur étiquette par écrit, au centimètre près, et l'appliquent à la porte. Paris recommande plus qu'il n'impose. Dans les deux cas, mieux vaut connaître le texte avant de choisir sa tenue.",
+     "pr_les-courses_usage": "On se renseigne sur son enclosure avant de s'habiller : chaque enceinte a son code, et l'on ne passe pas librement de l'une à l'autre. On parie avec discrétion, on gagne avec flegme. Et l'on garde ses jumelles pour la piste, pas pour les tribunes.",
+     "pr_le-club-prive_h1": "Le club privé",
+     "pr_le-club-prive_desc": "Pas de photos, pas d'appels, pas de pourboires : les règles publiées des clubs privés, de Mayfair à New York.",
+     "pr_le-club-prive_intro": "Un club privé est une maison dont les règles sont un contrat : les House Rules sont publiées, acceptées à l'entrée, appliquées sans exception. Elles disent toutes la même chose : ce qui se passe au club reste au club.",
+     "pr_le-club-prive_usage": "On ne demande jamais qui était là. On ne se présente pas soi-même à une personnalité : on attend qu'un membre fasse les présentations. On traite le personnel par son nom et avec égards. Être invité n'est pas être membre : on suit, on ne précède pas.",
+     "pr_le-vernissage-et-la-foire_h1": "Le vernissage et la foire",
+     "pr_le-vernissage-et-la-foire_desc": "Preview sur invitation, photos sans flash, sacs portés à la main : le protocole des foires d'art et des vernissages.",
+     "pr_le-vernissage-et-la-foire_intro": "Le marché de l'art a codifié jusqu'à la taille des sacs. Les foires publient leurs conditions d'accès et leurs interdits ; le vernissage, lui, obéit à des usages que personne n'écrit. Les deux se maîtrisent.",
+     "pr_le-vernissage-et-la-foire_usage": "Au vernissage, on regarde les œuvres avant de chercher les visages. On ne négocie jamais un prix à voix haute : on s'approche du stand et l'on demande la liste. On ne monopolise ni l'artiste ni le galeriste, et les points rouges se commentent en partant, pas devant l'artiste.",
      "mo_octobre-a-paris_h1": "Octobre à Paris",
      "mo_octobre-a-paris_desc": "Fashion Week, Arc de Triomphe, Journées Particulières, Art Basel Paris : le mois où Paris concentre le luxe mondial.",
      "mo_octobre-a-paris_intro": "Aucune ville ne concentre autant le calendrier du luxe qu'un mois d'octobre parisien : la Fashion Week s'achève, Longchamp couronne son champion, LVMH ouvre ses ateliers, puis le Grand Palais accueille le marché de l'art mondial, ventes du soir comprises. Voici les portes, dans l'ordre du calendrier.",
@@ -353,6 +388,20 @@ def main():
             "Tenue blanche exigée": "Tenue blanche exigée",
             "Chic estival (panama, chapeau)": "Chic estival (panama, chapeau)"},
     }
+    # --- le Protocole (institution du 27/08/2026) : le savoir-être. Les
+    # règles vivent dans .radar/protocole.json (source unique : institution,
+    # document, url, extrait, verdict du contre-passage, date de consultation)
+    # et sont injectées dans PFR sous les clés pr_<slug>_rN, traduisibles par
+    # la même vague que le reste des pages éditoriales.
+    try:
+        with open(os.path.join(_RAD, "protocole.json"), encoding="utf-8") as _f:
+            PROTO = json.load(_f)
+    except Exception:
+        PROTO = []
+    for _t in PROTO:
+        for _i, _r in enumerate(_t.get("regles") or []):
+            PFR[f"pr_{_t['slug']}_r{_i+1}"] = _r["regle"]
+
     try:
         with open(os.path.join(_RAD, "pages-i18n.json"), encoding="utf-8") as _f:
             PTX = json.load(_f)
@@ -609,6 +658,7 @@ def main():
                                     "semaine-des-joyaux-geneve","le-reveillon-des-palaces","vienne-la-saison-des-bals"))
                 + f"<a href=\"{prefix(lang)}/adresses.html\">{esc(X(lang,'a_h1'))}</a>"
                 + f"<a href=\"{prefix(lang)}/vestiaire.html\">{esc(X(lang,'v_h1'))}</a>"
+                + f"<a href=\"{prefix(lang)}/protocole.html\">{esc(X(lang,'pr_h1'))}</a>"
                 + f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a>"
                 + f"<a href=\"/changements.html\">{esc(X(lang,'mem_h1'))}</a>"
                 + f"<a href=\"/note.html\">{esc(UI['note'][lang])}</a></div>")
@@ -992,11 +1042,74 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
             corps.append(f"<div class=\"box\"><h2>{esc(X(lang,'v_ascot_t'))}</h2>"
                          f"<p>{esc(X(lang,'v_ascot_p'))} <a href=\"{u_event(ascot,lang)}\">{esc(T(ascot,lang,'n'))}</a>.</p></div>")
         corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/\">← {esc(X(lang,'retour'))}</a>"
+                     f"<a href=\"{prefix(lang)}/protocole.html\">{esc(X(lang,'pr_h1'))}</a>"
                      f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
         chemin = "/vestiaire.html"
         write(prefix(lang) + chemin, page(lang, f"{X(lang,'v_h1')} · ConstanceParis7", X(lang, "v_desc"),
               prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
         sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
+
+        # ----- Protocole (institution du 27/08/2026) -----
+        # Le troisième pilier : le radar dit où aller, le Vestiaire quoi
+        # porter, le Protocole comment se tenir. Règles publiées par les
+        # institutions (contre-vérifiées, registre .radar/protocole.json)
+        # + l'usage, assumé comme conseil de la maison.
+        if PROTO:
+            pr_liens = {
+                "le-gala": [("f", "Monte-Carlo Gala for Planetary Health, dîner de gala de la Fondation Prince Albert II"),
+                            ("f", "amfAR Gala Venezia 2026, 6e édition")],
+                "la-vente-aux-encheres": [("p", "/moments/semaine-des-joyaux-geneve.html", "mo_semaine-des-joyaux-geneve_h1")],
+                "l-opera-et-le-bal": [("p", "/moments/vienne-la-saison-des-bals.html", "mo_vienne-la-saison-des-bals_h1")],
+                "les-courses": [("f", "Royal Ascot 2027"), ("f", "Qatar Prix de l'Arc de Triomphe 2026")],
+                "le-club-prive": [("p", "/adresses.html", "a_h1")],
+                "le-vernissage-et-la-foire": [("p", "/moments/octobre-a-paris.html", "mo_octobre-a-paris_h1")],
+            }
+            corps = [f"<div class=\"bc\"><a href=\"{prefix(lang)}/\">{esc(UI['radar'][lang])}</a> · {esc(X(lang,'bc_protocole'))}</div>",
+                     f"<h1>{esc(X(lang,'pr_h1'))}</h1>",
+                     f"<p class=\"meta\">{esc(X(lang,'pr_meta'))}</p>",
+                     f"<p>{esc(X(lang,'pr_intro'))}</p>",
+                     f"<div class=\"box\"><h2>{esc(X(lang,'pr_or_t'))}</h2><p>{esc(X(lang,'pr_or_p'))}</p></div>",
+                     "<ul class=\"cards\">"]
+            for t in PROTO:
+                s = t["slug"]
+                corps.append(f"<li><a class=\"t\" href=\"{prefix(lang)}/protocole/{s}.html\">{esc(X(lang,'pr_'+s+'_h1'))}</a>"
+                             f"<div>{esc(X(lang,'pr_'+s+'_desc'))}</div></li>")
+            corps.append("</ul>")
+            corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/\">← {esc(X(lang,'retour'))}</a>"
+                         f"<a href=\"{prefix(lang)}/vestiaire.html\">{esc(X(lang,'v_h1'))}</a>"
+                         f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
+            chemin = "/protocole.html"
+            write(prefix(lang) + chemin, page(lang, f"{X(lang,'pr_h1')} · ConstanceParis7", X(lang, "pr_desc"),
+                  prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
+            sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
+
+            for t in PROTO:
+                s = t["slug"]
+                corps = [f"<div class=\"bc\"><a href=\"{prefix(lang)}/\">{esc(UI['radar'][lang])}</a> · "
+                         f"<a href=\"{prefix(lang)}/protocole.html\">{esc(X(lang,'bc_protocole'))}</a></div>",
+                         f"<h1>{esc(X(lang,'pr_'+s+'_h1'))}</h1>",
+                         f"<p class=\"meta\">{esc(X(lang,'pr_'+s+'_intro'))}</p>",
+                         f"<div class=\"box\"><h2>{esc(X(lang,'pr_regles_t'))}</h2><ul>"]
+                for i, r in enumerate(t["regles"]):
+                    corps.append(f"<li><b>{esc(r['institution'])}.</b> {esc(X(lang, f'pr_{s}_r{i+1}'))}</li>")
+                corps.append(f"</ul><p class=\"meta\">{esc(X(lang,'pr_verifie'))}</p></div>")
+                corps.append(f"<h2 class=\"sub\">{esc(X(lang,'pr_usage_t'))}</h2><p>{esc(X(lang,'pr_'+s+'_usage'))}</p>")
+                puces = []
+                for lien in pr_liens.get(s, []):
+                    if lien[0] == "f":
+                        e = par_nom.get(lien[1])
+                        if e:
+                            puces.append(f"<a href=\"{u_event(e, lang)}\">{esc(T(e, lang, 'n'))}</a>")
+                    else:
+                        puces.append(f"<a href=\"{prefix(lang)}{lien[1]}\">{esc(X(lang, lien[2]))}</a>")
+                if puces:
+                    corps.append(f"<h2 class=\"sub\">{esc(X(lang,'pr_radar_t'))}</h2><div class=\"chips\">" + "".join(puces) + "</div>")
+                corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/protocole.html\">← {esc(X(lang,'pr_h1'))}</a>"
+                             f"<a href=\"{prefix(lang)}/vestiaire.html\">{esc(X(lang,'v_h1'))}</a></div>")
+                chemin = f"/protocole/{s}.html"
+                write(prefix(lang) + chemin, page(lang, f"{X(lang,'pr_'+s+'_h1')} · ConstanceParis7",
+                      X(lang, "pr_" + s + "_desc"), prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
+                sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
 
     if absents_pages:
         print(f"gen_pages: AVERTISSEMENT pages éditoriales : fiches introuvables {sorted(absents_pages)}")
