@@ -833,3 +833,25 @@ nulle part dans la doctrine ni dans un commentaire de code. RÈGLE : la prochain
 qu'une fiche permanente doit être créée ou corrigée, utiliser d2=2027-12-31 (revu à
 l'approche de cette date) — et cette leçon fait foi jusqu'à ce que la doctrine l'adopte
 explicitement.
+
+## 29/08/2026 — un vérificateur qui cherche sur le site GLOBAL peut rater le microsite régional
+Vague de 14 séjours joaillerie (backfill des fiches nées incomplètes le 20/08). Le contrôleur
+adverse de la fiche 408 (« Precious Coral », L'École des Arts Joailliers, Hong Kong) a rendu
+fiable=false : il n'a trouvé l'exposition ni sur `lecolevancleefarpels.com/en/exhibitions`
+(qui n'affiche que l'exposition phare parisienne « Daniel Brush »), ni sur le site de K11 Musea
+(404). Avant de retirer l'événement du site, j'ai reproduit la vérification en ciblant l'URL `so`
+exacte déjà enregistrée dans la fiche : `lecolevancleefarpels.com/hk/en/exhibition/exhibition-
+precious-coral-curiosity-treasures` — un sous-site régional (`/hk/en/`) distinct du hub global.
+Cette page charge parfaitement, avec les dates exactes citées mot pour mot (« May 23rd to
+October 11th, 2026 », horaires « 10 a.m. - 7 p.m. »). L'événement est réel ; le vérificateur
+avait cherché au mauvais endroit.
+RÈGLE : pour une maison qui publie des microsites par pays/région (L'École des Arts Joailliers,
+et probablement d'autres maisons de luxe internationales), une page hub globale qui ne liste
+QUE les expositions du site historique n'est PAS une preuve d'absence pour une antenne
+régionale. Avant de conclure « introuvable », toujours retester l'URL `so`/`u` DÉJÀ enregistrée
+dans la fiche (elle porte souvent le bon sous-domaine régional) plutôt que de se limiter à la
+page de listing générale du domaine. Cette leçon complète celle du 12/08 (Ritz : 403 → changer
+d'outil) : ici la page répondait bien, mais au mauvais niveau du site.
+Conséquence pratique ce jour : les 13 autres fiches ont été condensées en séjour+invitation
+complets et publiées ; la 408 reste à traiter à la prochaine passe (retester spécifiquement
+l'URL `/hk/en/` avant de relancer les agents de composition/vérification).

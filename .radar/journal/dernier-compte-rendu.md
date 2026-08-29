@@ -1,103 +1,81 @@
-# Compte rendu — passe du 28/08/2026 (routine cloud, radar-routine-claude)
+# Compte rendu — passe du 29/08/2026
 
-## Ce qui a été fait, dans l'ordre
+Bonjour Gérald,
 
-### 1. Purge (précheck bloquait au démarrage)
-`validate.py` bloquait sur 1 fiche zombie (`d2=2026-07-28`, au-delà du plancher
-de 30 jours) : « Soldes d'été 2026 à Paris (prolongés jusqu'au 28 juillet) ».
-Purgée avant tout le reste (436 → 435 fiches). Les 13 pages générées associées
-(FR + 12 langues) ont été supprimées avec elle par `gen_pages.py`.
+## Résumé en une phrase
+Passe complète : purge de 4 fiches zombies, condensation de 20 fiches (dérive « journal
+d'enquête » → mode d'emploi visiteur), et 13 fiches joaillerie nées incomplètes le 20/08
+sont désormais complètes (voie d'invitation + séjour clé en main), recherche réelle et
+vérification adversariale à chaque étape.
 
-### 2. Condensation `iv` (priorité de la passe, doctrine)
-**20 fiches condensées**, sélectionnées au seuil WARN de `validate.py`
-(≥1200 caractères sur `iv.o`/`iv.g`/`iv.w`), les plus imminentes de la fenêtre
-live en tête (25/04 → 01/07, dont deux guides POINT D'ENTRÉE à date
-conventionnelle) : Villa Carmignac, Biennale Arte 2026, Dolce & Gabbana Beach
-Club (Gurney's Montauk), Yves Saint Laurent and Photography (ICP), POINT
-D'ENTRÉE Ventes aux enchères, POINT D'ENTRÉE Ventes presse et privées mode,
-Villa Louis Vuitton/White 1921, Exposition On aura tout vu : Icônes (Sofitel),
-Chanel boutique estivale (villa La Mistralée), Tisser broder sublimer (Palais
-Galliera), Dior Saint-Tropez, Armani/Silos, Grand Hôtel de Cala Rossa, Hôtel &
-Spa des Pêcheurs (Cavallo), Soirées d'été Casino Barrière Le Touquet, Clubs
-privés Mayfair (Annabel's/5 Hertford Street/Oswald's), DaV Mare/Splendido Mare
-(Belmond), Sottovento Club Porto Cervo, David Guetta Ushuaia Ibiza, Lio Ibiza.
+## 1. Purge
+4 fiches zombies purgées (d2 antérieur à aujourd'hui-30j, non purgées automatiquement) :
+La Réserve à la Plage (soirées brasero), Festival de Saint-Paul-de-Vence 15e édition,
+Expositions du Lavoir Vasserot, Polo Parade. 435 → 431 événements.
 
-Méthode : un agent par fiche (20 en parallèle, deux lots de 10), consigne
-stricte (garder tout fait dur — nom, fonction, e-mail, téléphone, adresse,
-URL entière, tarif, horaire —, jeter le journal d'enquête, viser 400 car./champ
-sans jamais sacrifier un fait, ne jamais republier une donnée que la fiche
-source signale elle-même comme réfutée/périmée/invalide). Contrôle mécanique
-`verif_faits.py` ensuite : **4 alertes sur 20**, toutes examinées une à une
-et confirmées légitimes après lecture du texte source — aucune vraie perte :
-- fiche White 1921 : les deux prix (200 €/185 €) explicitement signalés
-  contradictoires par la fiche elle-même (« PRIX : NE RIEN AFFICHER ») ;
-- fiche Palais Galliera : l'URL de location d'espaces retirée avec le
-  paragraphe « PRIVATISATION : À RETIRER EN L'ÉTAT » qui l'accompagnait
-  (le lieu n'est pas dans la liste officielle des lieux privatisables) ;
-- fiche Sottovento : les deux e-mails explicitement signalés comme
-  « adresses invalides » par la fiche source ;
-- fiche David Guetta/Ushuaia : les deux URL de presse en 404 documenté et
-  l'adresse `jobs@` (hors sujet presse), plus des tarifs tiers contradictoires
-  explicitement écartés par la fiche (« aucun n'est repris ici »).
+## 2. Condensation de la dérive « journal d'enquête » (priorité de la passe)
+20 fiches de la fenêtre live condensées (les plus imminentes d'abord, du 13/09 au 22/11) :
+iv.o/iv.g/iv.w réécrits en mode d'emploi visiteur, tournures d'enquêteur et titres de
+section retirés, tous les faits durs conservés à l'identique. Contrôle mécanique
+`verif_faits.py` passé sur les 20 fiches : 7 alertes initiales, 5 vraies pertes corrigées
+(fourchettes de prix compressées sans le €, détail de tarif plage, URL alias manquante,
+formulation d'année collée au prix), 2 exclusions légitimes confirmées (adresse et URL
+explicitement signalées erronées par le texte source lui-même).
+Compteurs `validate.py` : iv.g 33 → 29 fiches au-dessus du seuil, iv.w 58 → 48.
+Reste 29 (iv.g) + 48 (iv.w) fiches à condenser aux prochaines passes.
 
-WARN `validate.py` : `iv.g` 42→33 fiches au-dessus du seuil, `iv.w` 64→58
-(excédent total en baisse d'environ 17 500 caractères). **39 fiches restent
-au-dessus du seuil dans la fenêtre live** (contre 47 avant cette passe) — à
-poursuivre par lots de 15-20 aux prochaines passes.
+## 3. LOI DU SITE — 13 fiches joaillerie nées complètes aujourd'hui
+Constat de la passe : les 14 fiches joaillerie créées le 20/08 (place Vendôme JEP/Journées
+Particulières LVMH, expositions Van Cleef & Arpels Vienne, Cartier Melbourne, Doha
+Jewellery, Mikimoto Osaka, ventes Christie's/Sotheby's/Phillips Genève) étaient toutes
+nées SANS séjour ni invitation — une violation de la LOI DU SITE passée inaperçue.
+13 des 14 ont été recherchées, composées puis vérifiées par un contrôleur adverse dédié
+(séjour et invitation séparément, 1 agent par fiche et par étape) :
+- **Séjours** : 13/14 fiables (hôtels, tables, expériences réels, vérifiés de première
+  main). La 14e (« Precious Coral » Hong Kong, fiche 408) a été jugée à tort fiable=false
+  par son vérificateur — voir section 4.
+- **Invitations** : 13/13 composées et vérifiées ; garde-fou RGPD appliqué strictement à
+  chaque étape (plusieurs contacts nominatifs et mobiles personnels trouvés en cours de
+  vérification ont été volontairement écartés, seules les voies de service publiées).
+  Un lien de billetterie (universe.com, fiche Boucheron) a été détecté comme un HTTP 200
+  trompeur (page vide quel que soit l'identifiant testé) et retiré.
 
-### 3. Entretien
-- Date de l'eyebrow mise à jour : « vérifié le 28 août 2026 ».
-- Bandeau « Ouvertures & délais » : les 5 entrées existantes (Boucheron,
-  L'École des Arts Joailliers, Journées Particulières LVMH, Grand Prix de
-  Monaco 2027, Royal Ascot 2027) ont toutes une échéance future — rien à
-  retirer, rien de nouveau ajouté faute de temps disponible dans cette passe.
-- `memoire.py changements` : rien à consigner (pas de commit d'index.html
-  assez ancien disponible pour comparaison dans cette session).
-- Relevé de visites du jour effectué (`relever_visites.py`).
+Séjours clé en main : 361 → 374 (reste 57, dont probablement peu en fenêtre live).
+Voies d'invitation : 398 → 411 (reste 20).
+KPI ACCÈS mondain (iv) : 92 % → 96 % (284/293 fiches mondaines de la fenêtre live).
 
-## KPI (fenêtre live, aujourd'hui → +90 jours)
+## 4. La fiche 408 n'a pas été retirée — le vérificateur avait cherché au mauvais endroit
+Le contrôleur adverse du séjour 408 (« Precious Coral », L'École des Arts Joailliers, Hong
+Kong) a conclu à tort que l'exposition n'existait pas pour 2026, faute de la trouver sur le
+hub global de la maison. Avant de retirer l'événement, j'ai retesté l'URL `so` déjà
+enregistrée dans la fiche (`lecolevancleefarpels.com/hk/en/exhibition/...`, sous-site
+Hong Kong) : elle charge parfaitement et confirme les dates exactes (23 mai → 11 octobre
+2026). L'événement est réel et reste en ligne. Leçon consignée dans `tools/lessons.md`
+(vérifier l'URL déjà enregistrée, pas seulement le hub global, pour les maisons à
+microsites régionaux). **Reste à faire à la prochaine passe** : composer et vérifier le
+séjour + l'invitation de la fiche 408 en ciblant directement ce sous-site.
 
-- **435 événements** en ligne (436 → 435 après purge du zombie).
-- Traductions : **435/435 (100 %)** au global.
-- Séjours (`sej`) : 74 manquants au global, **24 dans la fenêtre live**.
-- Invitations (`iv`) : 34 manquantes au global, **24 dans la fenêtre live**.
-- KPI accès mondain (`iv` sur fiches mondaines) : 275/297 (92 %).
-- Dérive « journal d'enquête » (`iv.g`/`iv.w` ≥1200 car.) : **39 fiches dans
-  la fenêtre live** (47 avant cette passe), 91 au global.
+## 5. Traductions
+431/431 fiches traduites dans les 13 langues — 0 manquante.
 
-Ni séjours ni invitations manquants n'ont été retravaillés aujourd'hui : la
-priorité de la passe, fixée par la doctrine, était la condensation.
+## 6. Ce qui n'a pas pu être vérifié / signalé sans agir
+- 6 nouvelles fiches (les invitations joaillerie composées aujourd'hui) ont un `iv.o` ou
+  dépassent le seuil WARN de 1200 caractères — à condenser à une prochaine passe (la plus
+  longue : Christie's Genève, 2307 car.).
+- La date d'ouverture des réservations Boucheron JEP (« 2 septembre 10h ») trouvée par
+  l'agent de recherche n'a pas pu être confirmée indépendamment par le vérificateur — non
+  ajoutée au bandeau « Ouvertures & Délais » par prudence (source unique, non recoupée).
+- Branding de saison : « Été » toujours affiché au 29/08. Proposition à Gérald : passer à
+  « Automne 2026 » (jamais renommé sans son accord).
+- Fiche 408 : reste sans séjour ni invitation (voir section 4).
 
-## Publication
+## 7. Publication et contrôles
+`validate.py` : 0 blocker, 4 warnings (iv.o/iv.g/iv.w journal d'enquête résiduel + branding
+saison) à chaque étape avant publication. 4 commits publiés au fil de l'eau (purge,
+condensation, séjours, invitations). `healthcheck.sh` : OK (http=200, 431/431 événements,
+date fraîche).
 
-1 lot publié au fil de l'eau (purge + condensation), validé (`validate.py` :
-0 bloqueur, 3 warnings non bloquants), poussé **directement sur `main`**
-(aucun repli sur branche `claude/*` nécessaire). `healthcheck.sh` : http=200,
-date fraîche, 435/435 événements en ligne, cohérent. `perfcheck.py` : 0
-régression (poids -0,01 Mo, -1 événement, +0 séjour vs dernier point,
-cohérent avec la purge).
-
-## Analyse des visites
-
-Compteur GoatCounter cumulé : 2 299 aujourd'hui contre 2 217 hier (+82) —
-net rebond après le ralentissement du 27/08 (+11 seulement). Pas d'accès à
-la répartition détaillée par pays/source dans cette session ; pas de chiffre
-inventé sur ce point.
-
-## Ce qui n'a pas pu être vérifié / reste ouvert
-
-- **39 fiches** restent avec `iv.g`/`iv.w` en dérive « journal d'enquête »
-  (≥1200 caractères) dans la fenêtre live — condensation à poursuivre par
-  lots de 15-20 aux prochaines passes.
-- **24 séjours et 24 invitations manquants** dans la fenêtre live — non
-  traités aujourd'hui (priorité condensation).
-- Branding « Été » toujours affiché (WARN non bloquant, connu depuis le
-  25/08) — décision de rafraîchissement « Automne » à proposer à
-  Constance/Gérald, non tranchée par une routine automatique.
-- Les doutes ouverts dans `a-reverifier.md` (JustMe Porto Cervo, Soirées
-  Barrière Deauville, doublon Été impérial Hôtel du Palais/Été Hôtel du
-  Palais Biarritz) n'ont pas été rouverts aujourd'hui — non prioritaires
-  devant la condensation.
-- Recherche de nouveaux événements (couverture mondiale, joaillerie, guides
-  d'accès) non entamée aujourd'hui : la priorité de doctrine était la
-  condensation `iv`, qui n'est pas encore résorbée.
+## 8. Réseau
+`WebSearch` épuisé (200/200) après les premières recherches de séjours/invitations ; bascule
+systématique des agents sur `WebFetch`/`curl` direct sur les sites officiels pour la suite de
+la passe — signalé par la quasi-totalité des agents de recherche/vérification tardifs.
