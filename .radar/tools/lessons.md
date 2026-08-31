@@ -855,3 +855,18 @@ d'outil) : ici la page répondait bien, mais au mauvais niveau du site.
 Conséquence pratique ce jour : les 13 autres fiches ont été condensées en séjour+invitation
 complets et publiées ; la 408 reste à traiter à la prochaine passe (retester spécifiquement
 l'URL `/hk/en/` avant de relancer les agents de composition/vérification).
+
+## 31/08/2026 — j'ai failli signaler une panne du plancher automatique qui n'existait pas
+18 blockers « zombie non purgé (d2=2026-07-31) » au démarrage. Premier réflexe : soupçonner
+une panne de `passe-quotidienne.yml`, qui tourne pourtant « avec succès » chaque jour (vérifié
+sur l'historique GitHub Actions, `mcp__github__actions_list`). Avant d'écrire cette anomalie au
+compte rendu, calcul du seuil exact : `d2 < aujourd'hui - 30 jours`. Pour d2=2026-07-31, le seuil
+n'est franchi que le 31/08/2026 (31/07 + 30 jours = 30/08 ; la veille, d2 était encore ÉGAL à la
+limite, donc pas strictement inférieur, donc pas encore purgeable). Ces 18 fiches sont devenues
+zombies aujourd'hui même, pas avant : le plancher automatique de 8h40 Paris les aurait purgées
+lui aussi, à quelques heures près. Aucune panne.
+RÈGLE : avant d'écrire dans un compte rendu qu'un mécanisme automatique a failli, refaire le
+calcul exact plutôt que de conclure sur la seule coïncidence temporelle (« ça fait des jours que
+c'est là, le workflow tourne pourtant »). Complète la leçon du 25/08 (« une affirmation 'c'est
+normal' doit être vérifiée ») : ici c'est l'affirmation inverse, « ce n'est pas normal », qui
+demandait la même vérification avant d'être publiée.
