@@ -402,6 +402,46 @@ def main():
         for _i, _r in enumerate(_t.get("regles") or []):
             PFR[f"pr_{_t['slug']}_r{_i+1}"] = _r["regle"]
 
+    # --- SEO : titres-requêtes (décision de Constance du 01/09/2026).
+    # Les gens ne tapent pas « Le Protocole » dans Google : ils tapent
+    # « dress code Royal Ascot » ou « comment enchérir ». Le <title>
+    # français épouse la requête ; le h1 garde le nom d'institution.
+    # FR seulement pour l'instant : autres langues à la prochaine vague.
+    SEOT_FR = {
+        "/vestiaire.html": "Dress codes des événements du luxe : comment s'habiller",
+        "/protocole.html": "Étiquette et protocole des événements du luxe",
+        "/protocole/le-gala.html": "Black tie, white tie : le protocole du gala",
+        "/protocole/la-vente-aux-encheres.html": "Comment enchérir aux enchères : le protocole",
+        "/protocole/l-opera-et-le-bal.html": "Dress code de l'opéra et des bals de Vienne",
+        "/protocole/les-courses.html": "Dress code Royal Ascot et protocole des courses",
+        "/protocole/le-club-prive.html": "Les règles des clubs privés : photos, invités, pourboires",
+        "/protocole/le-vernissage-et-la-foire.html": "Protocole des foires d'art et vernissages",
+        "/adresses.html": "Clubs et beach clubs du luxe : comment entrer",
+        "/note.html": "La Note du radar : le barème des événements du luxe",
+    }
+    def titre_seo(chemin, lang, defaut):
+        if lang == "fr" and chemin in SEOT_FR:
+            return SEOT_FR[chemin] + " · ConstanceParis7"
+        return defaut
+
+    # Questions-réponses (rich results Google) sur les pages Protocole FR :
+    # la question telle qu'on la tape, la réponse = la règle vérifiée (index
+    # 1-based dans .radar/protocole.json). FR d'abord, autres langues ensuite.
+    FAQ_FR = {
+        "le-gala": [("Que signifie le dress code black tie ?", 1),
+                    ("Comment répond-on à une invitation de gala ?", 3)],
+        "la-vente-aux-encheres": [("Comment enchérir dans une vente aux enchères ?", 1),
+                                  ("Peut-on annuler une enchère ?", 3)],
+        "l-opera-et-le-bal": [("Quel est le dress code du Bal de l'Opéra de Vienne ?", 1),
+                              ("Peut-on entrer à l'Opéra de Paris après le début ?", 5)],
+        "les-courses": [("Quel est le dress code du Royal Enclosure de Royal Ascot ?", 1),
+                        ("Y a-t-il un dress code au Prix de l'Arc de Triomphe ?", 6)],
+        "le-club-prive": [("Peut-on prendre des photos dans un club privé ?", 1),
+                          ("Laisse-t-on un pourboire dans un club privé ?", 6)],
+        "le-vernissage-et-la-foire": [("Peut-on photographier dans une foire d'art ?", 3),
+                                      ("Comment accéder au preview d'une foire d'art ?", 1)],
+    }
+
     try:
         with open(os.path.join(_RAD, "pages-i18n.json"), encoding="utf-8") as _f:
             PTX = json.load(_f)
@@ -1022,7 +1062,7 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
         corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/\">← {esc(X(lang,'retour'))}</a>"
                      f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
         chemin = "/adresses.html"
-        write(prefix(lang) + chemin, page(lang, f"{X(lang,'a_h1')} · ConstanceParis7", X(lang, "a_desc"),
+        write(prefix(lang) + chemin, page(lang, titre_seo(chemin, lang, f"{X(lang,'a_h1')} · ConstanceParis7"), X(lang, "a_desc"),
               prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
         sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
 
@@ -1045,7 +1085,7 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
                      f"<a href=\"{prefix(lang)}/protocole.html\">{esc(X(lang,'pr_h1'))}</a>"
                      f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
         chemin = "/vestiaire.html"
-        write(prefix(lang) + chemin, page(lang, f"{X(lang,'v_h1')} · ConstanceParis7", X(lang, "v_desc"),
+        write(prefix(lang) + chemin, page(lang, titre_seo(chemin, lang, f"{X(lang,'v_h1')} · ConstanceParis7"), X(lang, "v_desc"),
               prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
         sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
 
@@ -1079,7 +1119,7 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
                          f"<a href=\"{prefix(lang)}/vestiaire.html\">{esc(X(lang,'v_h1'))}</a>"
                          f"<a href=\"{prefix(lang)}/methode.html\">{esc(X(lang,'m_h1'))}</a></div>")
             chemin = "/protocole.html"
-            write(prefix(lang) + chemin, page(lang, f"{X(lang,'pr_h1')} · ConstanceParis7", X(lang, "pr_desc"),
+            write(prefix(lang) + chemin, page(lang, titre_seo(chemin, lang, f"{X(lang,'pr_h1')} · ConstanceParis7"), X(lang, "pr_desc"),
                   prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
             sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
 
@@ -1107,8 +1147,17 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
                 corps.append(f"<div class=\"chips\"><a href=\"{prefix(lang)}/protocole.html\">← {esc(X(lang,'pr_h1'))}</a>"
                              f"<a href=\"{prefix(lang)}/vestiaire.html\">{esc(X(lang,'v_h1'))}</a></div>")
                 chemin = f"/protocole/{s}.html"
-                write(prefix(lang) + chemin, page(lang, f"{X(lang,'pr_'+s+'_h1')} · ConstanceParis7",
-                      X(lang, "pr_" + s + "_desc"), prefix(lang) + chemin, "".join(corps), hl_page(chemin)))
+                faq = None
+                if lang == "fr" and s in FAQ_FR:
+                    faq = {"@context": "https://schema.org", "@type": "FAQPage",
+                           "mainEntity": [{"@type": "Question", "name": q,
+                                           "acceptedAnswer": {"@type": "Answer",
+                                                              "text": X(lang, f"pr_{s}_r{n}")}}
+                                          for q, n in FAQ_FR[s]]}
+                write(prefix(lang) + chemin, page(lang,
+                      titre_seo(chemin, lang, f"{X(lang,'pr_'+s+'_h1')} · ConstanceParis7"),
+                      X(lang, "pr_" + s + "_desc"), prefix(lang) + chemin, "".join(corps),
+                      hl_page(chemin), ld=faq))
                 sitemap_urls.append(f"{BASE}{prefix(lang)}{chemin}")
 
     if absents_pages:
@@ -1219,7 +1268,7 @@ L'éditrice n'exerce aucun contrôle sur ces sites et décline toute responsabil
         corps.append("<p>La <a href=\"/changements.html\">Mémoire du radar</a> consigne les fenêtres de réservation et les épuisements constatés. « Complet en deux heures » est une mesure d'engouement qu'aucune formule ne remplace : d'année en année, ces relevés viendront affiner le critère d'accès. Et lorsque la rédaction franchit elle-même les portes, la fiche portera la mention « vécu et vérifié sur place ».</p>")
         corps.append("<p class=\"meta\">La façon dont chaque information est vérifiée est publiée : c'est la <a href=\"/methode.html\">méthode</a>.</p>")
         corps.append("<div class=\"chips\"><a href=\"/\">← Retour au radar</a><a href=\"/methode.html\">La méthode</a><a href=\"/changements.html\">La mémoire</a></div>")
-        write("/note.html", page("fr", "La Note du radar · ConstanceParis7",
+        write("/note.html", page("fr", titre_seo("/note.html", "fr", "La Note du radar · ConstanceParis7"),
               "Le barème public de la Note du radar : quatre critères documentés, l'accès, les personnalités, le lieu, la date. On note la porte, pas la fête.",
               "/note.html", "".join(corps),
               '<link rel="alternate" hreflang="fr" href="%s/note.html">' % BASE))
