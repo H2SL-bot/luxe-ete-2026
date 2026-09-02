@@ -870,3 +870,45 @@ calcul exact plutôt que de conclure sur la seule coïncidence temporelle (« ç
 c'est là, le workflow tourne pourtant »). Complète la leçon du 25/08 (« une affirmation 'c'est
 normal' doit être vérifiée ») : ici c'est l'affirmation inverse, « ce n'est pas normal », qui
 demandait la même vérification avant d'être publiée.
+
+## 02/09/2026 — la condensation `iv` a débusqué deux doublons et des coordonnées personnelles republiées à tort
+En lisant intégralement les 27 candidats au seuil WARN pour trier dérive réelle vs contenu
+légitimement dense (méthode de la leçon du 20-21/08), deux effets de bord sont apparus :
+
+1. **Deux doublons exacts/quasi exacts existaient parmi les fiches les plus « denses ».**
+   « Calder. Rêver en équilibre » avait deux fiches distinctes (même lieu, mêmes dates), et
+   « Monte-Carlo Summer Festival » aussi (même URL officielle, même source `so`, une fiche pour
+   tout le festival et une pour le seul volet août). Chaque duplication double mécaniquement la
+   probabilité de dépasser le seuil WARN sur CHAQUE copie (deux jeux de contacts, deux
+   raisonnements d'enquêteur) — le doublon n'était pas visible au comptage global (`reste.py`,
+   compteurs de `validate.py`), seule la LECTURE l'a révélé. RÈGLE : quand deux fiches partagent
+   `l`/`u`/`so` quasi identiques ET des dates qui se recouvrent, vérifier un doublon AVANT de
+   condenser chacune séparément — condenser un doublon sans le fusionner republie deux fois le
+   même travail et laisse deux fiches vivre indépendamment au prochain enrichissement.
+
+2. **Des lignes explicitement qualifiées « ligne directe »/« portable » avaient été republiées
+   après le 20/08/2026**, dans `iv.o` ET dans le tableau structuré `iv.c` — sur au moins 3 fiches
+   (Monte-Carlo x2, Sommets Musicaux de Gstaad, plus un numéro format mobile UK sur Cowes Week),
+   en violation directe du GARDE-FOU ABSOLU de la doctrine. Ces fiches ont probablement été
+   composées ou enrichies par des agents qui ne connaissaient pas la règle du 20/08 (elle vit dans
+   la doctrine, pas dans le gabarit de composition). RÈGLE : le gabarit de composition/recherche
+   (`.radar/session/gabarits/`) devrait rappeler explicitement l'interdiction des lignes
+   « directe »/« portable » et des e-mails `prenom.nom@`, pas seulement la doctrine — sinon la
+   règle se perd à chaque nouvelle fiche créée après un rappel ponctuel.
+
+3. **`contacts_nettoyer.py --blanc` (l'outil censé automatiser ce nettoyage) a un taux de faux
+   positifs qui interdit de le lancer `--appliquer` en l'état** : sur 39 coordonnées qu'il propose
+   de retirer, plusieurs sont des standards explicitement écrits « standard » ou « ligne fixe, non
+   nominative » dans leur propre libellé (ex. « +33 1 40 73 73 73 : standard Christian Dior
+   Couture (ligne fixe, non nominative) »), et des boîtes de billetterie (`ticket@grimaldiforum.com`,
+   `ticketsales@dubairacingclub.com`, `ticket@taoarte.it`) — retirées à tort dès qu'un nom de
+   personne apparaît dans le même segment de texte que le numéro/email. Une entrée `{"t":"nom"}`
+   portant une raison sociale et un numéro SIRET (Twiga Porto Cervo S.R.L.) a aussi été traitée
+   comme une coordonnée personnelle. RÈGLE : avant de faire confiance à un outil de nettoyage
+   automatique sur l'ensemble du site, relire le rapport `--blanc` entrée par entrée — un
+   classifieur qui ignore les marqueurs explicites d'un standard dans son propre texte source
+   (« standard », « non nominatif ») produira des faux positifs à chaque fiche qui documente
+   sérieusement pourquoi un numéro n'est PAS personnel. Correctif à apporter à
+   `contacts_nettoyer.py` : exempter un numéro dont le libellé contient explicitement
+   « standard » ou « non nominatif », et ne classer `{"t":"nom"}` comme personne que si la valeur
+   matche un vrai motif de nom (pas une raison sociale suivie d'un SIRET).
