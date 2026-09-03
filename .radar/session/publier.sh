@@ -50,7 +50,8 @@ if [ -z "$(git status --porcelain)" ]; then echo "· rien de neuf"; exit 0; fi
 git add -A
 git commit -q -m "$MSG
 
-Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JRyTnDUWpbLSg2Hef7kFRs"
 if git push -q origin main 2>/dev/null; then echo "POUSSÉ"; else
   echo "⚠️ push refusé — la routine a publié en parallèle, remise à plat"
   git reset --hard -q HEAD~1
