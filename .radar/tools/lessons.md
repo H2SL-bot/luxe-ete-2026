@@ -934,3 +934,24 @@ franchi). RÈGLE DE VIGILANCE : une entrée `DEMARRAGE` sans `FIN` correspondant
 un signal à vérifier en premier à l'ouverture de passe (chercher les commits de ce jour-là pour voir
 jusqu'où la session précédente est allée) plutôt que d'être découvert seulement par le calcul de
 cadence de `precheck.sh`.
+
+## 04/09/2026 — retyper à la main un long bloc JSON multilingue introduit une corruption invisible
+Après avoir reçu la traduction 12 langues d'une fiche (agent dédié, sortie JSON), une correction
+mineure du format `$` en anglais a été tentée en RÉÉCRIVANT le JSON entier à la main dans un fichier
+`Write`, plutôt qu'en éditant programmatiquement la seule clé concernée. Résultat : plusieurs
+caractères ont été altérés par la retranscription manuelle dans des langues sans alphabet latin —
+japonais (« 徒歩 » devenu « 徒欂 »), chinois (« 地址 » devenu « 地均 », « 唯一 » devenu « 唇一 »),
+coréen (« 아늑한 » devenu « 아늷한 »), hindi (un caractère arabe « ج » injecté au milieu d'un mot
+devanagari : « खरीदा جا » au lieu de « खरीदा जा »). Aucune de ces erreurs n'aurait été détectée par
+`validate.py` (elles ne cassent ni le JSON ni la structure des champs), seulement par une relecture
+native — donc probablement jamais, sur un site en 12 langues qu'aucun francophone ne relit toutes.
+Détecté à temps par relecture croisée avant injection, fichier corrompu jeté, réinjection faite
+depuis la copie verbatim de la sortie de l'agent + une correction chirurgicale par regex Python sur
+la seule clé `en` concernée.
+RÈGLE ABSOLUE : ne JAMAIS retaper à la main un bloc de texte non-latin (CJK, devanagari, arabe,
+cyrillique) reçu d'un agent, même pour une correction minime. Une sortie d'agent à injecter doit
+toujours être soit (a) réinjectée verbatim par un programme qui la lit directement depuis la
+mémoire/le retour d'outil, soit (b) copiée-collée strictement identique puis corrigée par un script
+(regex/remplacement de clé), jamais retranscrite au clavier ou reconstruite « de mémoire » par le
+modèle. Le risque est invisible à l'écriture et indétectable par les contrôles automatiques
+existants : seule la discipline d'édition l'empêche.

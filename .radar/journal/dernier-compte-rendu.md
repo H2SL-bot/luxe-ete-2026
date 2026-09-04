@@ -1,129 +1,116 @@
-# Compte rendu — passe du 02/09/2026
+# Compte rendu — passe du 04/09/2026
 
 Bonjour Constance,
 
 ## Résumé en une phrase
-Purge de 3 fiches zombies, condensation de 8 fiches en dérive « journal d'enquête »,
-découverte et fusion de 2 doublons exacts/quasi exacts trouvés au passage (Calder,
-Monte-Carlo Summer Festival), retrait de 3 lignes personnelles (mobile/directe)
-publiées à tort en violation de la règle du 20/08 — tout publié sur main au fil de
-l'eau, 0 blocker, healthcheck OK.
+Cadence rattrapée après un jour sauté (03/09) ; purge de 4 zombies ; condensation exhaustive de la
+dérive « journal d'enquête » (1 seul cas réel trouvé et corrigé) ; 3 fiches joaillerie/art nées
+COMPLÈTES (voie d'invitation + séjour + 12 traductions), vérifiées par un contrôleur adverse puis
+corrigées sur ses 2 remarques réelles — la LOI DU SITE est désormais honorée à 100 % sur toute la
+fenêtre live (0 séjour manquant, 0 invitation manquante) ; publié en 4 commits au fil de l'eau,
+0 blocker, healthcheck OK.
 
-## 1. Démarrage
-`precheck.sh` : arbre propre, verrou posé. `validate.py` initial : 405 événements,
-**3 blockers** — zombies non purgées (d2=2026-08-02, Polo Exhibition Week & Practices,
-Jumping International de Dinard, Concerts au Palais Princier). Purgées en premier,
-publiées (405 → 402 événements).
+## 1. Démarrage — anomalie de cadence
+`precheck.sh` a signalé un run vieux de 47 h (seuil 30 h) : aucune passe complète n'a tourné le
+03/09/2026. Investigation : un seul commit isolé à 04h08 ce jour-là (condensation de 2 fiches), sans
+`DEMARRAGE` ni `FIN` correspondants dans `passages.log` — une session a démarré, fait un geste, puis
+s'est arrêtée sans finir, cause non identifiée. Traité comme rattrapage normal (le seuil de tolérance
+de 2 jours documenté n'était pas franchi). Leçon consignée pour surveiller ce signal plus tôt à
+l'avenir.
 
-## 2. Condensation `iv` (priorité de la passe)
-Sélection sur le seuil WARN de `validate.py` (≥1200 caractères sur o/g/w). Sur les
-27 candidats détectés, la grande majorité (Villa Carmignac, Biennale Arte, POINT
-D'ENTRÉE, Armani/Silos, Grand Hôtel de Cala Rossa, Dubai Racing Carnival, Saint-Barth
-Cata Cup, F1 Abu Dhabi, Gstaad New Year Music Festival, etc.) sont légitimement denses
-— grilles tarifaires, horaires, contacts réels — et n'ont pas été retouchées, conforme
-à la leçon du 20-21/08 (« le seuil de sélection redétecte le travail bien fait »).
+## 2. Purge
+4 fiches zombies purgées (d2=2026-08-04, expirées de plus de 30 jours) : Tennis Star Event Martina
+Hingis (Evian), Twiga Porto Cervo (Carl Cox + Andrea Oliva), Nikki Beach Saint-Tropez « La Fête
+Foraine », Black Coffee résidence Shellona. 400 → 396 événements.
 
-**8 fiches réellement en dérive, condensées** (lecture intégrale, faits durs
-recopiés à l'identique, raisonnement d'enquêteur jeté) :
-- BALLET - The Making of an Etoile (Alliance Française Singapour)
-- LINDER: Goddess of the Mind (Chanel Nexus Hall, Tokyo)
-- Monte-Carlo Sporting Summer Festival 2026 (après fusion, voir §3)
-- Polo, Côte d'Azur Cup
-- Bow Wow Meow Ball 2026 (ARF Hamptons)
-- Cowes Week 2026 (Bicentenaire)
-- SantAnna Mykonos, Nuits headline
-- Calder. Rêver en équilibre (après fusion, voir §3)
+## 3. Condensation `iv` (priorité de la passe)
+Recherche EXHAUSTIVE, pas seulement au seuil de longueur `validate.py` (17 fiches > 1200 caractères,
+déjà vérifiées légitimement denses lors des passes précédentes) : recherche de marqueurs de dérive
+réels (« OUI :/NON :», « contre-vérification », « verdict », tournures de méthode) sur les 396 fiches
+complètes. Résultat : **1 seule fiche en dérive réelle** — « Terrasses et jardins d'été des palaces
+parisiens », dont `iv.g` ouvrait sur « OUI : voie presse nominative confirmée après contre-
+vérification du 11/08/2026, chaque coordonnée relue à la source » — condensée en mode d'emploi
+visiteur (887 → 462 caractères), tous les faits (Isabelle Maurin, Fanny Crawford, dates, canal)
+conservés à l'identique.
+**Constat honnête à consigner** : la dérive massive détectée le 19/08 (255 fiches, dont 159 en
+fenêtre live) a été résorbée par les passes successives depuis le 20/08 — il n'en reste
+essentiellement plus trace mesurable aujourd'hui, ni au seuil de longueur ni aux marqueurs de style.
+La consigne de passe (« condenser 15-20 fiches tant qu'il en reste ») ne peut donc plus être remplie
+au sens littéral : il n'y avait qu'une fiche à corriger, et l'avoir fait. À surveiller à la marge
+plutôt qu'à traiter en lot désormais.
 
-Compteurs `validate.py` iv.g/iv.w avant/après (sur l'état déjà purgé) :
-iv.g 10 → 3 fiches au-dessus du seuil (excédent 9373 → 3084 car.),
-iv.w 26 → 18 fiches (excédent 18491 → 8540 car.).
+## 4. LOI DU SITE — 3 fiches nées complètes, fenêtre live à 100 %
+Recompte des 3 compteurs sur 396 fiches : traductions 396/396 (déjà à jour), séjours 364/396 (reste
+32, dont 3 seulement en fenêtre live), invitations 381/396 (reste 15, mêmes 3 en fenêtre live) — les
+3 fiches identifiées étaient toutes des expositions joaillerie/art en attente depuis le 20-29/08 :
+- **Exposition « Precious Coral »**, L'École des Arts Joailliers, Hong Kong (K11 Musea, jusqu'au
+  11/10/2026, entrée gratuite sur inscription) — voie d'invitation : réservation accutics.li,
+  contact officiel `hk.lecole@vancleefarpels.com` + agence Agnès Renoult ; séjour : Rosewood Hong
+  Kong (même quartier Victoria Dockside), table The Legacy House (1 étoile Michelin), spa Asaya.
+- **Exposition « Le Diamant rose »**, château de Chantilly (Musée Condé, 17/10/2026-03/01/2027) —
+  voie d'invitation : bureau de presse du château + agence Agnès Renoult (Donatienne De Varine,
+  Miliana Faranda) ; séjour : Auberge du Jeu de Paume (Relais & Châteaux, dans le domaine même),
+  table du Connétable, expérience Musée vivant du Cheval.
+- **Exposition « Designing the Gilded Age »**, studios Tiffany, Met Fifth Avenue (22/10/2026-
+  07/02/2027) — voie d'invitation : Communications Department du Met (aucun nom nominatif publié,
+  dit franchement) ; séjour : The Carlyle, A Rosewood Hotel (Upper East Side), table Dowling's,
+  expérience Café Carlyle.
+Chaque fiche composée puis **vérifiée par un agent contrôleur adverse** (recherche indépendante,
+webfetch des sources primaires) : verdict global FIABLE sur la quasi-totalité des faits (aucun nom,
+email ou téléphone fabriqué détecté), **2 corrections réelles appliquées** avant publication :
+(a) retrait d'une affirmation biographique non sourcée sur le contact presse de Hong Kong ;
+(b) précision que le tarif « pay-what-you-wish » du Met n'est accessible aux étudiants qu'au guichet
+physique, pas en ligne (la fiche initiale laissait croire à une parité de canal avec les résidents
+new-yorkais).
+Les 12 traductions (voie + séjour) ont ensuite été produites par 3 agents dédiés et injectées.
+**Résultat : la fenêtre live (aujourd'hui → +90 jours) est désormais à 0 séjour manquant et
+0 invitation manquante — la LOI DU SITE y est honorée à 100 %.** Les 29/396 séjours et 12/396
+invitations qui restent sont tous au-delà de +90 jours (les 8 ancres du printemps 2027 identifiées
+le 22/08, à traiter par une prochaine passe sans urgence de fenêtre).
 
-## 3. Découverte en chemin : deux doublons exacts/quasi exacts
-En condensant, deux paires de fiches sur le MÊME événement sont apparues :
-- **« Calder. Rêver en équilibre »** existait en double (même lieu, mêmes dates
-  15/04-16/08, deux créations à des passes différentes) — fusionnées en une seule
-  fiche, tous les faits distincts des deux versions conservés (dont les contacts
-  internationaux Meagan Jones/Isabella Capece Galeota).
-- **« Monte-Carlo Summer Festival »** existait en double (même URL officielle, même
-  source, même lieu — une fiche pour tout le festival, une pour le seul volet
-  dîners-spectacles d'août) — fusionnées, tous les contacts presse nommés (Bourgeat,
-  Cristin, Esteve, Burg, Dominici) et tarifs conservés.
-Déclarées dans `.radar/renommages.json` avec motif complet, pour que le filet
-anti-perte de données ne les prenne pas pour une suppression.
+## 5. La Mémoire du radar
+Rendez-vous manqué de peu à la passe du 02/09 (l'ouverture des réservations Boucheron, place
+Vendôme, 2 septembre 10h, tombait après l'horaire de cette passe-là). Vérifié aujourd'hui : la page
+de réservation affiche « COMPLET » (aucune liste d'attente). Consigné dans `.radar/memoire.ndjson`
+(type `complet`) : épuisé en moins de 48 h, délai exact non mesurable faute d'accès en direct à
+l'ouverture — honnêtement borné plutôt qu'inventé.
 
-## 4. Découverte en chemin : coordonnées nominatives republiées à tort
-En relisant ces fiches, plusieurs contenaient des **lignes personnelles explicitement
-qualifiées de « directe » ou « portable »**, en violation de la règle du 20/08/2026 —
-probablement réintroduites par des passes de composition postérieures à cette date :
-- Monte-Carlo (x2, fusionnées) : 4 « lignes fixes directes, publiées » nominatives
-  (Bourgeat, Cristin, Dominici, Esteve) et leurs e-mails `prenom.nom@sbm.mc` — retirés,
-  noms et fonctions conservés, repli sur `presse@sbm.mc` (boîte de service).
-- Cowes Week 2026 : un numéro tenu par Grace Murray (format mobile UK, `iv.c`) — retiré.
-- Sommets Musicaux de Gstaad 2027 : le « portable direct » d'Alexandra Egli
-  (+41 79 293 84 10) — retiré de `iv.o` et de `iv.c`, repli sur l'agence Music Planet.
+## 6. Bandeau « Ouvertures & délais » et eyebrow
+Entrée Boucheron retirée du bandeau (échéance passée et désormais complète) ; 4 entrées restantes,
+toutes à échéance future. Date de l'eyebrow mise à jour : 3 → 4 septembre 2026.
+`memoire.py changements` : 0 changement de date à consigner sur 7 jours.
 
-**Signalement pour la suite** : j'ai testé `contacts_nettoyer.py --blanc` (l'outil
-prévu pour ce nettoyage à l'échelle du site) et il propose de retirer 39 coordonnées
-sur 20 fiches — mais une lecture des candidats montre un **taux de faux positifs
-significatif** : des standards explicitement écrits « standard », « ligne fixe, non
-nominative » ou des boîtes de billetterie (`ticket@grimaldiforum.com`,
-`ticketsales@dubairacingclub.com`) sont retirés à tort dès qu'un nom de personne
-apparaît dans le même segment de texte, et une entrée `{"t":"nom"}` portant une
-raison sociale (SIRET Twiga Porto Cervo) est traitée comme une coordonnée
-personnelle. **Ne pas lancer `--appliquer` en l'état** : le classifieur de
-`RE_MOBILE_FR`/`LIGNE_DIRECTE` doit apprendre à exempter un numéro explicitement
-qualifié de « standard »/« non nominatif » dans son propre libellé avant d'être fiable
-à l'échelle du site. J'ai traité les cas identifiés manuellement (voir ci-dessus) et
-consigné la leçon dans `lessons.md`.
+## 7. Outillage
+- **`publier.sh` corrigé** : le trailer `Claude-Session` du message de commit était figé sur l'ID
+  d'une session du 18/08/2026 (celle qui a écrit le script) — chaque passe depuis attribuait donc
+  tous ses commits à cette session mère. Reconstruit désormais dynamiquement depuis
+  `$CLAUDE_CODE_REMOTE_SESSION_ID`. Sans impact sur le bulletin quotidien (qui lit `user.name`/
+  `user.email`, jamais ce trailer), mais l'historique git était trompeur sur la provenance.
+- **Leçon outillage** : une tentative de correction mineure sur une traduction 12 langues a montré
+  qu'il ne faut JAMAIS retaper à la main un bloc de texte non-latin reçu d'un agent — la
+  retranscription manuelle a introduit des altérations de caractères invisibles (japonais, chinois,
+  coréen, hindi) qu'aucun contrôle automatique ne peut détecter. Détecté par relecture avant
+  injection, corrigé en repartant du texte verbatim + une correction programmatique ciblée. Consigné
+  dans `lessons.md` comme règle absolue.
 
-## 5. Autres tâches
-- Date de l'eyebrow mise à jour : 1er → 2 septembre 2026.
-- `memoire.py changements` : rien à consigner (aucun commit d'index.html vieux de
-  7 jours à comparer ce jour).
-- Bandeau « Ouvertures & délais » : 5 entrées, toutes à échéance future ou du jour
-  même (02/09 → 31/01/2027), rien à retirer.
-- **Rendez-vous de mémoire manqué de peu** : la doctrine fixe au 2 septembre 2026
-  10h l'ouverture des réservations Boucheron (place Vendôme), premier rendez-vous de
-  mesure pour `.radar/memoire.ndjson` (« consigner l'heure d'épuisement réelle »).
-  Cette passe s'exécute à 6h15 Paris, avant l'ouverture : impossible de constater
-  l'épuisement aujourd'hui. À vérifier lors d'une prochaine connexion dans la
-  journée ou à la passe de demain (la fenêtre de vente reste identifiable via le
-  bandeau, `data-exp="2026-09-02"`).
-- LOI DU SITE (recompte, sur 400 fiches) : traductions 400/400 (0 manquante) ;
-  séjours 372/400 (reste 28, dont **2 seulement en fenêtre live** — les deux fiches
-  joaillerie Diamant rose/Chantilly et Designing the Gilded Age/Met, d1 respectivement
-  17/10 et 22/10/2026) ; invitations 384/400 (reste 16, mêmes 2 en fenêtre live).
-  KPI accès mondain (iv) : 97 % (262/270, fenêtre live).
-  Ces 2 fiches restent au backlog joaillerie pour une prochaine passe (recherche +
-  vérification adversariale, hors priorité de condensation du jour).
+## 8. Publication et contrôles
+4 commits publiés au fil de l'eau sur `main` via `.radar/session/publier.sh` : (1) purge + bandeau +
+condensation + 3 fiches + mémoire + correctif publier.sh ; (2) corrections post-vérification adverse
+(2 fiches) ; (3) journal des leçons ; (4) traductions 12 langues des 3 fiches. `validate.py` final :
+0 blocker, 3 warnings (17 fiches iv.g/iv.w denses mais légitimes, déjà vérifiées ; branding de saison
+« Été » toujours affiché — proposition « Automne 2026 » maintenue à Constance, jamais renommé seul).
+`healthcheck.sh` : OK (http=200, 396/396 événements, date fraîche). Aucun repli sur branche
+`claude/*` n'a été nécessaire : le push direct sur `main` a été accepté à chaque fois dans cette
+session.
 
-## 6. Ce qui n'a pas été fait / signalé sans agir
-- Branding de saison : « Été » toujours affiché au 02/09. Proposition maintenue à
-  Constance : passer à « Automne 2026 » — jamais renommé sans accord explicite.
-- Il reste 3 fiches (iv.g) et 18 fiches (iv.w) au-dessus du seuil WARN de 1200
-  caractères, toutes vérifiées une par une aujourd'hui et jugées légitimement denses
-  (aucune dérive « journal d'enquête » détectée) — sauf « Sommets Musicaux de
-  Gstaad 2027 » et « The I.C.E. St. Moritz », partiellement denses avec une mise en
-  forme d'enquêteur (listes numérotées, gras, verdicts « OUI »/« NON ») mais sans
-  perte de valeur informative : à trancher lot par lot à une prochaine passe si le
-  format continue de gêner la lecture.
-- Recherche de nouveaux événements non entamée : la priorité de purge, condensation,
-  fusion des doublons et nettoyage des coordonnées personnelles a occupé la passe
-  entière — conforme à la consigne (« PRIORITAIRE sur la recherche de nouveaux
-  événements »).
-- `contacts_nettoyer.py --appliquer` non lancé (voir §4) : la correction de son
-  taux de faux positifs est laissée en tâche pour une prochaine passe ou pour
-  Constance/Gérald.
+## 9. Analyse des visites
+Non consultée cette passe (GoatCounter) — priorité donnée au rattrapage de cadence, à la
+condensation exhaustive et à la fermeture de la LOI DU SITE sur la fenêtre live. À reprendre à la
+prochaine passe.
 
-## 7. Publication et contrôles
-Cinq commits publiés au fil de l'eau via `.radar/session/publier.sh` (purge zombies ;
-condensation + fusion des doublons ; retrait ligne mobile Gstaad ; date eyebrow).
-`validate.py` final : 0 blocker, 3 warnings (iv.g/iv.w résiduels légitimes + branding
-saison). `healthcheck.sh` : OK (http=200, 400/400 événements, date fraîche).
-
-## 8. Analyse des visites
-Compteur GoatCounter (cumulatif) : 2 449 ce matin contre 2 427 hier — progression
-régulière d'une vingtaine de visites/jour, dans la continuité de la semaine (2206 →
-2449 du 26/08 au 02/09). Rien d'anormal à signaler ; pas de rupture de tendance.
-Répartition pays/sources non consultée en détail cette passe (priorité donnée au
-nettoyage) — à reprendre à la prochaine passe.
+## 10. Ce qui reste à faire
+- 29 séjours et 12 invitations manquants, tous au-delà de +90 jours (ancres printemps 2027) : pas
+  d'urgence de fenêtre, à traiter par lots aux prochaines passes.
+- Recherche de nouveaux événements jet-set non entamée cette passe : la priorité de cadence,
+  condensation et fermeture de la LOI DU SITE sur la fenêtre live a occupé la séance entière.
+- Répartition pays/sources des visites non consultée (voir §9).
