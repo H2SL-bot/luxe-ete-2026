@@ -48,10 +48,21 @@ case "$V" in
 esac
 if [ -z "$(git status --porcelain)" ]; then echo "· rien de neuf"; exit 0; fi
 git add -A
+# Le trailer Claude-Session pointait un ID figé au jour où ce script a été
+# écrit (18/08/2026) : chaque passe suivante republiait donc l'attribution
+# d'UNE AUTRE session. Reconstruit ici depuis l'ID de session réel de
+# l'exécution en cours (variable d'environnement posée par le runtime),
+# avec un repli propre si le script tourne hors de Claude Code (04/09/2026).
+_SID="${CLAUDE_CODE_REMOTE_SESSION_ID#cse_}"
+if [ -n "$_SID" ]; then
+  _TRAILER="Claude-Session: https://claude.ai/code/session_$_SID"
+else
+  _TRAILER="Claude-Session: (session id indisponible — exécution hors Claude Code)"
+fi
 git commit -q -m "$MSG
 
 Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01JRyTnDUWpbLSg2Hef7kFRs"
+$_TRAILER"
 if git push -q origin main 2>/dev/null; then echo "POUSSÉ"; else
   echo "⚠️ push refusé — la routine a publié en parallèle, remise à plat"
   git reset --hard -q HEAD~1
