@@ -912,3 +912,25 @@ légitimement dense (méthode de la leçon du 20-21/08), deux effets de bord son
    `contacts_nettoyer.py` : exempter un numéro dont le libellé contient explicitement
    « standard » ou « non nominatif », et ne classer `{"t":"nom"}` comme personne que si la valeur
    matche un vrai motif de nom (pas une raison sociale suivie d'un SIRET).
+
+## 04/09/2026 — le trailer `Claude-Session` de `publier.sh` était figé sur une session morte
+Le script portait en dur `Claude-Session: https://claude.ai/code/session_01JRyTnDUWpbLSg2Hef7kFRs`
+(l'ID de la session du 18/08/2026, qui l'a écrit). Chaque passe depuis attribuait donc tous ses
+commits à CETTE session précise au lieu de la session réelle qui publiait. Sans conséquence sur
+le bulletin quotidien (qui lit `user.name`/`user.email`, jamais ce trailer), mais l'historique
+git mentait sur la provenance. CORRIGÉ : le script lit désormais `$CLAUDE_CODE_REMOTE_SESSION_ID`
+(posée par le runtime, ex. `cse_0125jcoenCz3jc8m78i1XpRx`) et reconstruit l'URL à la volée ; repli
+propre si la variable est absente (exécution hors Claude Code). RÈGLE GÉNÉRALE : ne jamais coder en
+dur, dans un script versionné destiné à être rejoué par des sessions futures, un identifiant propre
+à LA session qui l'écrit — le dériver de l'environnement d'exécution à chaque lancement.
+
+## 04/09/2026 — la cadence a sauté un jour sans que rien ne l'indique clairement
+`precheck.sh` a signalé un run vieux de 47h (> 30h de seuil) au démarrage de cette passe : aucune
+passe complète n'a tourné le 03/09/2026 (seul un commit isolé de condensation à 04h08, sans
+DEMARRAGE ni FIN dans `passages.log`, suggère une session qui a démarré, fait un geste, puis s'est
+arrêtée avant la fin — cause non identifiée, aucune trace d'erreur dans le dépôt). Traité comme une
+passe de rattrapage normale (le seuil de 2 jours de tolérance documenté dans DOCTRINE.md n'était pas
+franchi). RÈGLE DE VIGILANCE : une entrée `DEMARRAGE` sans `FIN` correspondante le jour précédent est
+un signal à vérifier en premier à l'ouverture de passe (chercher les commits de ce jour-là pour voir
+jusqu'où la session précédente est allée) plutôt que d'être découvert seulement par le calcul de
+cadence de `precheck.sh`.
