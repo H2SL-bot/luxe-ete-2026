@@ -955,3 +955,26 @@ mémoire/le retour d'outil, soit (b) copiée-collée strictement identique puis 
 (regex/remplacement de clé), jamais retranscrite au clavier ou reconstruite « de mémoire » par le
 modèle. Le risque est invisible à l'écriture et indétectable par les contrôles automatiques
 existants : seule la discipline d'édition l'empêche.
+
+## 05/09/2026 — un renvoi vers une page de contact peut réintroduire une coordonnée personnelle sans la citer
+En composant la fiche Fuorisalone 2027 (naissance des 8 ancres printemps 2027), un premier jet
+respectait la LETTRE du garde-fou du 20/08 (aucun email/mobile personnel écrit dans le champ) mais
+en violait l'ESPRIT : le texte nommait « Elena Pardini, responsable presse » et renvoyait vers
+« fuorisalone.it/en/contacts » — page qui affiche EN CLAIR son mobile et son email personnels
+(vérifié par le contrôleur adverse). Le fichier pointait donc délibérément le lecteur vers ces
+coordonnées à un clic, sans jamais les recopier lui-même.
+Trois autres cas apparentés trouvés le même jour par les contrôleurs adverses sur les 8 ancres :
+un email `prenom.nom@` sur un domaine institutionnel officiel (TEFAF : magda.grigorian@tefaf.com —
+banni malgré le domaine corporate, le format `prenom.nom@` est la caractéristique interdite, pas
+le nom de domaine), un format `initiale+nom@` (Grand Prix Monaco : SSimmonds@f1.com, variante du
+motif `p.nom@` explicitement banni), et une attribution nominative invérifiable à un mandat presse
+2027 encore non confirmé (GemGenève : Christine Urfer/Pur PR — le nom et l'agence existent
+réellement, mais aucune source ne confirmait ce mandat précis pour l'édition 2027).
+RÈGLE GÉNÉRALE : le garde-fou de protection des personnes porte sur l'INTENTION, pas seulement sur
+la présence littérale d'un numéro/email dans le champ. (1) Ne jamais nommer une personne physique
+ET renvoyer vers la page exacte où sa coordonnée personnelle est publiée — garder nom+fonction et
+diriger vers le contact INSTITUTIONNEL (info@, press@) plutôt que « voir la page contacts ». (2)
+Traiter tout format `prenom.nom@`/`p.nom@`/`initiale+nom@` comme banni quel que soit le domaine,
+corporate compris. (3) Une attribution nominative non confirmée par une source indépendante pour
+l'ANNÉE EN COURS de l'événement est un risque du même ordre qu'une coordonnée inventée — à retirer
+au profit du contact générique tant que le mandat n'est pas vérifiable.
