@@ -155,6 +155,22 @@ Ascot (15-19/06). Avril 2027 : 0 → 3 fiches. Reste l'ÉLARGISSEMENT
 (Fashion Weeks AH 27-28, Bal de la Rose, Chelsea Flower Show, Le Mans,
 Art Basel Bâle...) : une par passe, consigne inchangée dans la doctrine.
 
+**Bal de la Rose (Monte-Carlo) — recherche faite le 06/09/2026, PAS encore
+publiable.** Vérifié directement sur montecarlosbm.com : la 71e édition
+(2027) n'a AUCUNE date annoncée à ce jour (la 70e s'est tenue le 21/03/2026,
+Salle des Étoiles, Sporting Monte-Carlo). Conformément au garde-fou anti-
+fabrication, aucune date n'a été devinée. Tout le reste est déjà réuni pour
+une naissance complète dès l'annonce (généralement fin d'année ou début
+d'année suivante, selon un revendeur tiers qui affiche déjà une page 2027) :
+organisateur (SBM Group, direction artistique S.A.R. la Princesse de Hanovre,
+bénéficiaire Fondation Princesse Grace), contact réservation (+377 98 06 63
+40, standard SBM +377 98 06 36 36 — l'email nominatif trouvé par résumé
+WebSearch reste à reconfirmer par lecture directe avant publication, cf.
+garde-fou coordonnées), tarif indicatif ~1800 €/pers. (presse, non officiel),
+séjour (Hôtel de Paris/Hermitage/Monte-Carlo Bay, Louis XV/Blue Bay, Casino
+de Monte-Carlo, Thermes Marins), tenue black tie obligatoire. À reprendre dès
+que montecarlosbm.com/en/agenda/bal-de-la-rose publie la date 2027.
+
 
 **09 · Les 13 langues n'ont jamais été relues par un humain**
 433 fiches × 12 langues traduites automatiquement. Personne n'a lu l'arabe, le

@@ -1,93 +1,100 @@
-# Compte rendu — passe du 05/09/2026
+# Compte rendu — passe du 06/09/2026
 
-## Priorité du moment : condensation des voies d'invitation
+## Priorité du moment : condensation des voies d'invitation — chantier vérifié quasi soldé
 
-16 fiches condensées (tout le stock au-dessus du seuil WARN de 1200 caractères sur `iv.o`/`iv.g`/
-`iv.w`, toutes dans la fenêtre live sauf 2) : Villa Carmignac, Biennale Arte 2026, Yves Saint
-Laurent and Photography, POINT D'ENTRÉE (ventes aux enchères), Armani/Silos, Dior Spa Cheval Blanc,
-Grand Hôtel de Cala Rossa, Hôtel & Spa des Pêcheurs, Scene yacht Ibiza-Formentera, Dubai Racing
-Carnival, Saint-Barth Cata Cup, Formula 1 Abu Dhabi GP, Gstaad New Year Music Festival, St Barth
-Music Festival, Cavo Paradiso, Black Coffee Residency. Méthode : un agent par fiche, puis contrôle
-mécanique `verif_faits.py` (entrée vs sortie) sur les 16 — les quelques alertes levées étaient soit
-des suppressions légitimes déjà signalées comme fausses/périmées dans le texte source, soit des
-faux positifs de format (montants sans € répété dans une liste). Aucune perte réelle de fait dur.
+Contrôle exhaustif fait ce jour : seules **10 fiches** dépassent encore le seuil WARN de
+1200 caractères sur `iv.o`/`iv.g`/`iv.w` (1 champ `iv.g` + 10 champs `iv.w`, avec
+recoupement). J'ai **relu intégralement le texte des 10** (POINT D'ENTRÉE ventes aux
+enchères, Formula 1 Abu Dhabi GP, Yves Saint Laurent and Photography/ICP, Gstaad New
+Year Music Festival, Grand Hôtel de Cala Rossa, Villa Carmignac, Biennale Arte 2026,
+Saint-Barth Cata Cup, Dubai Racing Carnival, Scene yacht Ibiza-Formentera) pour trancher
+dérive réelle vs contenu légitimement dense (méthode des leçons du 20-21/08).
 
-**Reliquat** : après condensation, il ne reste que des fiches légitimement denses au-dessus du
-seuil (plusieurs contacts/tarifs distincts qu'on ne peut pas couper sans perdre un fait — POINT
-D'ENTRÉE et Abu Dhabi GP). Le défaut « journal d'enquête » signalé le 12-19/08 est traité.
+**Verdict : aucune dérive « journal d'enquête ».** Les dix textes s'adressent au
+visiteur, sans tournure d'enquêteur, sans titre de section numéroté, sans commentaire de
+méthode, sans redite entre `o`/`g`/`w`. Ils restent au-dessus de 1200 caractères parce
+qu'ils portent légitimement de nombreux faits distincts et vérifiés (jusqu'à une dizaine
+de contacts, tarifs ou horaires par fiche — ex. la grille tarifaire complète de l'ICP
+avec 8 paliers d'adhésion, ou les 13 ventes du calendrier Christie's Paris). J'ai aussi
+recherché systématiquement les marqueurs de dérive doctrinaux (« OUI, une voie existe,
+mais… », « CE QUE LA MAISON MET RÉELLEMENT… », titres numérotés, jargon de vérification)
+sur l'ensemble des 392 fiches : aucune occurrence restante. **Le défaut signalé le
+12-19/08 (255 fiches touchées) est donc traité à zéro dérive résiduelle** — ce que
+confirme la trajectoire des passes précédentes (255 → 121/137 → ... → 11 → 10
+aujourd'hui, chaque lot condensé restant légitimement dense ensuite).
+Aucune fiche condensée aujourd'hui : il n'y avait rien à condenser sans perdre un fait,
+ce qui serait contraire à la règle « on ne supprime aucun fait ».
 
-## Naissance complète des 8 ancres printemps 2027 (LOI DU SITE)
+## Plancher du jour (purge, liens, date)
 
-Les 8 ancres identifiées le 22/08 (TEFAF Maastricht, Watches and Wonders Geneva, Salone del Mobile
-Milano 65e, Fuorisalone, Festival de Cannes 80e, GemGenève, Grand Prix de Monaco, Royal Ascot)
-existaient sans `iv` ni `sej`. Composées aujourd'hui par recherche web réelle, puis **vérifiées par
-8 agents adverses indépendants** : 6 corrections réelles trouvées et appliquées avant publication
-— 2 URLs mortes (Bayview/W&W, 10 Corso Como/Fuorisalone), 3 violations du garde-fou coordonnées
-personnelles (voir leçon ajoutée à `lessons.md`), 1 tarif faux (Royal Ascot Queen Anne : 264£ →
-85-125£ réel), 1 numéro de téléphone erroné attribué à la mauvaise personne (TEFAF). Puis traduites
-en 12 langues (agents parallèles, un par langue). Complété aussi le 66e International Red Cross
-Ball, qui avait des contacts RSVP réels mais aucun texte de synthèse `iv.o/g/w` — rédigé à partir
-de ses propres données déjà vérifiées, sans rien ajouter.
+`passe_automatique.py --apply` : purge de **3 zombies** (d2=06/08/2026, franchi le seuil
+des 30 jours aujourd'hui même — Gilles Peterson/Impressions, Concerts au Palais
+Princier/Kazuki Yamada, Sublime Summer Party), **119 liens testés** sur les plus
+imminents (0 mort), eyebrow mis à jour au 6 septembre 2026. Publié en premier via
+`publier.sh` (0 blocker), avant tout le reste — c'est le socle qui débloquait `validate.py`
+(3 zombies bloquaient la publication en tout début de passe).
 
-**Résultat : fenêtre live (aujourd'hui → +90j, 290 fiches) à 0 séjour manquant et 0 invitation
-manquante — LOI DU SITE honorée à 100 % sur ce qui est réellement montré aux visiteurs.**
+## LOI DU SITE — recomptée sur la fenêtre live (aujourd'hui → +90j)
 
-## Purge et liens
+| | fenêtre live |
+|---|---|
+| Traductions manquantes (13 langues) | 0 |
+| Séjours manquants | **0** |
+| Invitations manquantes | **0** |
 
-- 1 zombie purgé (Délices Sonores, fin 05/08, franchi le seuil des 30 jours aujourd'hui même —
-  vérifié : ce n'est pas une panne du plancher automatique, la fenêtre de purge venait de s'ouvrir).
-- 4 liens morts détectés par la passe automatique et confirmés par `curl -sL` (corps + titre de
-  page), tous sur des événements EN COURS dans la fenêtre live : Petit Palais (mauvais chemin,
-  corrigé vers `/en/we-are-still-here`), Hôtel de Crillon (URL de communiqué expirée, redirigée
-  vers la page hôtel), Bagatelle Bodrum (article de presse tiers mort, redirigé vers le site
-  officiel), Verde Beach (page ligne-up morte, redirigée vers l'accueil du site). Corrigés et
-  republiés.
-- 119 liens testés au total par la passe automatique du matin, aucune autre casse.
+100 % honoré sur ce qui est réellement montré aux visiteurs (392 fiches au total, dont
+97 dans la fenêtre live ; les 19 séjours et 4 invitations manquants au global sont tous
+hors fenêtre — événements déjà passés conservés 30 jours, ou au-delà de +90 jours).
+Joaillerie : **15 fiches en fenêtre live** (seuil de vigilance de la doctrine : 10) — le
+trou signalé le 20/08 reste comblé.
 
-## Chiffres (recomptés, fenêtre live = aujourd'hui → +90j)
+## Recherche de nouveauté : Bal de la Rose de Monte-Carlo — non publiable, honnêtement
 
-| | avant la passe | après la passe |
-|---|---|---|
-| Traductions manquantes (13 langues) | 0 | 0 |
-| Séjours manquants (fenêtre live) | 8 | **0** |
-| Invitations manquantes (fenêtre live) | 9 | **0** |
-| Événements publiés | 396 | 395 (1 zombie purgé, 0 ajout net — pas de recherche de nouveaux
-événements aujourd'hui, priorité donnée à la condensation et au rattrapage LOI DU SITE) |
-| KPI accès mondain (`iv`) | 262/267 (98%) | 266/267 (99%) |
+Recherche complète (organisateur, contact de réservation, tarif indicatif, séjour
+palace/table/expérience, code vestimentaire) sur le Bal de la Rose du Sporting
+Monte-Carlo, absent du site et identifié dans `CHANTIERS.md` comme cible d'élargissement
+printemps 2027. **Aucune date 2027 n'est encore annoncée** (vérifié directement sur
+montecarlosbm.com : la 70e édition, seule confirmée, s'est tenue le 21/03/2026).
+Conformément au garde-fou anti-fabrication, je n'ai pas deviné de date ni créé de fiche.
+Tous les autres faits (organisateur SBM/Fondation Princesse Grace, contact réservation,
+tarif indicatif ~1800 €/pers. — presse, non officiel —, séjour Hôtel de
+Paris/Hermitage/Monte-Carlo Bay + Louis XV/Blue Bay + Casino/Thermes Marins, tenue black
+tie) sont consignés dans `.radar/CHANTIERS.md` (chantier 08) pour une naissance complète
+dès l'annonce officielle de la date, probablement en fin d'année 2026.
+
+## Autres vérifications faites ce jour
+
+- **Grand Prix de Monaco 2027** : statut « sous réserve d'approbation FIA » reconfirmé
+  par recherche web (annonce du calendrier 2027 attendue à l'automne 2026) — aucun
+  changement à la fiche.
+- **JustMe Porto Cervo** (doute ouvert le 20/08, d2=07/09 demain, nom inquiétant « Mamacita
+  Closing Party ») : tentative de revérification via WebFetch — page rendue côté client,
+  aucune date d'événement lisible par cette méthode. Doute non tranché, laissé ouvert
+  dans `a-reverifier.md` ; sans conséquence pratique immédiate (la fiche sort de la
+  fenêtre live dès demain de toute façon).
+- `.radar/a-reverifier.md` (20 doutes ouverts, dont plusieurs avec des `d2` déjà dépassés
+  ou très proches) : pas repris intégralement aujourd'hui, faute de temps — signalé pour
+  une prochaine passe, le fichier commence à redevenir volumineux (428 lignes).
+
+## Mémoire et visites
+
+- `memoire.py changements` : 0 changement de date consigné sur 7 jours.
+- Visites : **2529** aujourd'hui contre 2519 hier (+0,4 %), progression continue et
+  régulière depuis 8 jours (2388 → 2529, soit +5,9 %). Pas de rupture ni de pic. Pas de
+  recoupement pays/source fait aujourd'hui (aucun outil de répartition public disponible
+  au-delà du compteur total GoatCounter).
 
 ## Ce qui n'a pas pu être vérifié / reste en suspens
 
-- La 66e édition du Red Cross Ball et sa date (08/01/2027) restent une **extrapolation non
-  confirmée officiellement** (déjà noté dans `dt` de la fiche) — à reconfirmer auprès du chapitre
-  Floride du Sud avant la saison.
-- Le Grand Prix de Monaco 2027 reste **sous réserve d'approbation FIA** (statut confirmé encore
-  valide par le contrôleur adverse aujourd'hui) — à revérifier sur acm.mc à chaque passe tant que
-  le calendrier F1 2027 définitif n'est pas publié.
-- Traductions de la correction du Red Cross Ball (iv.o/g/w nouvellement écrits) : laissées en
-  français dans les 12 langues pour l'instant (repli documenté et sûr) — à traduire à une prochaine
-  passe, volume trop mineur pour justifier 12 agents ce jour.
-- Pas de recherche de nouveaux événements aujourd'hui : la journée a été consacrée en totalité à la
-  priorité de condensation puis au rattrapage LOI DU SITE des 8 ancres, comme la doctrine le prescrit
-  quand ces chantiers ont un reliquat.
-- Analyse des visites : 2519 visiteurs/pages vues aujourd'hui, en progression régulière depuis 5
-  jours (2427 → 2519, +3,8 %). Pas de recoupement pays/source fait aujourd'hui (temps consacré au
-  rattrapage LOI DU SITE) — à reprendre à la prochaine passe.
-- Branding de saison : toujours « Été » au 05/09 alors que le rafraîchissement « Automne » aurait
-  dû être proposé vers le 25/08 (déjà signalé par les passes précédentes) — décision toujours en
-  attente de qui de droit (Constance, depuis la passation du 18/08), pas prise seul.
+- Le rafraîchissement de saison « Été » → « Automne » reste en attente depuis fin août :
+  décision qui appartient à Constance (branding jamais touché seul).
+- `a-reverifier.md` : reprise complète différée, fichier à re-consolider bientôt (lesson
+  du 20/08 : un registre qui s'allonge sans dédoublonnage devient illisible).
+- Bal de la Rose 2027 : à reprendre dès l'annonce officielle de la date (voir ci-dessus).
 
-## Contrôles
+## Contrôles finaux
 
-`validate.py` : 0 blocage, 3 avertissements (2 `iv` légitimement denses au-dessus de 1200
-caractères, 1 rappel de saison). `coherence_i18n.py` : OK, aucune divergence. `healthcheck.sh` :
-OK (http=200, compte live=395=attendu, date fraîche). Publication faite en 5 commits successifs au
-fil de l'eau, tous directement sur `main` (aucun repli de branche nécessaire aujourd'hui).
-
-## Leçon ajoutée à `lessons.md`
-
-« Un renvoi vers une page de contact peut réintroduire une coordonnée personnelle sans la citer » —
-le garde-fou de protection des personnes porte sur l'intention (ne pas conduire le lecteur vers une
-coordonnée personnelle), pas seulement sur la présence littérale d'un numéro/email dans le champ.
-Complète aussi la liste des formats interdits (`prenom.nom@` et `initiale+nom@`, quel que soit le
-domaine, corporate compris) et ajoute un cas nouveau : une attribution nominative non confirmée
-pour l'édition en cours d'un événement futur est un risque du même ordre qu'un contact inventé.
+`validate.py` : 0 blocage, 3 avertissements (les 10 fiches `iv` légitimement denses +
+1 rappel de saison). `healthcheck.sh` : OK (http=200, compte live=392=attendu, date
+fraîche). Publication faite en 2 commits sur `main` (plancher, relevé de visites), aucun
+repli de branche nécessaire aujourd'hui.
